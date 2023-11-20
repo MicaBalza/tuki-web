@@ -6,6 +6,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ROUTES } from "./constants";
 import { usePathname } from "next/navigation";
+import SocialLinks from "../SocialLinks";
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -25,6 +26,7 @@ const Navbar = () => {
               {route.text}
             </Link>
           ))}
+          <SocialLinks />
         </div>
       </div>
     </nav>
