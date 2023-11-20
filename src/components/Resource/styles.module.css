@@ -1,0 +1,55 @@
+.wrapper {
+  display: flex;
+  padding: 52px 0 0 24px;
+  gap: 56px;
+}
+
+.illustration {
+  background-color: var(--green);
+}
+
+.animation {
+  background-color: var(--pink);
+  flex-direction: row-reverse;
+  padding: 52px 24px 0 0;
+}
+
+.social-media {
+  background-color: var(--purple);
+}
+
+.editorial {
+  background-color: var(--red);
+  flex-direction: row-reverse;
+  padding: 0 24px 52px 0;
+}
+
+.branding {
+  background-color: var(--yellow);
+}
+
+.motion-graphics {
+  background-color: var(--green);
+  flex-direction: row-reverse;
+  padding: 52px 24px 0 0;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 36px;
+  max-width: 280px;
+  color: var(--white);
+}
+
+.title {
+  font-size: 1.875rem;
+  font-weight: 700;
+}
+
+.description {
+  font-size: 1.125rem;
+  text-align: center;
+}

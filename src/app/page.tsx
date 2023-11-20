@@ -1,95 +1,46 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import Button from "@/components/Button";
+import styles from "./page.module.css";
+import Resource from "@/components/Resource";
 
 export default function Home() {
   return (
     <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+      <section className={styles.hero}>
+        <div className={`container ${styles.container}`}>
+          <div className={styles.text}>
+            <p className={styles.subtitle}>Estudio de diseño en Barcelona</p>
+            <p className={styles.title}>Animamos tus ideas.</p>
+            <Button text="Conoce nuestros trabajos" />
+          </div>
+          <div className={styles.gifPlaceholder}>Gif recontra re copado</div>
         </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+      </section>
+      <section className={styles.video}>
+        <p>Esto es lo que hacemos</p>
+        <iframe
+          width="1044"
+          height="586"
+          src="https://www.youtube.com/embed/tgbNymZ7vqY"
+        ></iframe>
+      </section>
+      <section className={styles.services}>
+        <Resource variant="illustration" />
+        <Resource variant="animation" />
+      </section>
+      <section className={styles.services}>
+        <Resource variant="social-media" />
+        <Resource variant="editorial" />
+      </section>
+      <section className={styles.services}>
+        <Resource variant="branding" />
+        <Resource variant="motion-graphics" />
+      </section>
+      <section className={styles.clients}>
+        <p className={styles.title}>Quienes nos eligen</p>
+        <p className={styles.clientNames}>
+          Levi’s · Cabify · Pernord Ricard · Western Union · Nestlè
+        </p>
+      </section>
     </main>
-  )
+  );
 }

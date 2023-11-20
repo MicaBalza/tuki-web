@@ -1,0 +1,11 @@
+.button {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: var(--light-green);
+  border: 2px solid var(--purple);
+  color: var(--purple);
+  font-size: 1rem;
+  border-radius: 24px;
+  height: 48px;
+  line-height: 0;
+}

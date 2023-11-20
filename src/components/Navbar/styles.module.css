@@ -1,0 +1,27 @@
+.navbar {
+  padding: 24px 0;
+  background-color: var(--nude);
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navlinks {
+  display: flex;
+  gap: 100px;
+}
+
+.navlink {
+  color: var(--purple);
+  font-size: 0.875rem;
+  text-transform: uppercase;
+}
+
+.active {
+  font-weight: 700;
+  border-bottom: 2px solid var(--purple);
+  padding-bottom: 8px;
+}
