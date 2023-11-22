@@ -10,6 +10,7 @@ export const ROUTES = [
   {
     path: "/us",
     text: "Nosotras",
+    color: "light-purple",
   },
   {
     path: "/contact-us",

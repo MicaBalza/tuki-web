@@ -10,8 +10,12 @@ import SocialLinks from "../SocialLinks";
 
 const Navbar = () => {
   const pathname = usePathname();
+
+  const color =
+    ROUTES.find((route) => route.path === pathname)?.color || "nude";
+
   return (
-    <nav className={styles.navbar}>
+    <nav className={`${styles.navbar} bg-${color}`}>
       <div className={`container ${styles.container}`}>
         <Image src="/tuki-logo.png" alt="me" width="150" height="70" />
         <div className={styles.navlinks}>

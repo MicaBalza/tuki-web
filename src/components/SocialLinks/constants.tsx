@@ -1,5 +1,5 @@
 import InstagramIcon from "@/assets/icons/Instagram";
-import LinkedinIcon from "@/assets/icons/LInkedin";
+import LinkedinIcon from "@/assets/icons/Linkedin";
 import MailIcon from "@/assets/icons/Mail";
 import VimeoIcon from "@/assets/icons/Vimeo";
 
@@ -10,14 +10,14 @@ export const LINKS = [
   },
   {
     icon: <InstagramIcon />,
-    link: "",
+    link: "a",
   },
   {
     icon: <LinkedinIcon />,
-    link: "",
+    link: "b",
   },
   {
     icon: <VimeoIcon />,
-    link: "",
+    link: "c",
   },
 ];

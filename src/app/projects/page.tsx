@@ -15,19 +15,19 @@ export default function Page() {
         />
       </div>
       <div className={styles.projects}>
-        <div>
+        <div className={styles.project}>
           <div></div>
           <p>Ilustración</p>
         </div>
-        <div>
+        <div className={styles.project}>
           <div></div>
           <p>Ilustración</p>
         </div>
-        <div>
+        <div className={styles.project}>
           <div></div>
           <p>Ilustración</p>
         </div>
-        <div>
+        <div className={styles.project}>
           <div></div>
           <p>Ilustración</p>
         </div>

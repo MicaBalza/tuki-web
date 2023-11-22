@@ -22,5 +22,12 @@
 .projects {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 30px 100px;
   padding-top: 140px;
+}
+
+.project > div {
+  width: 660px;
+  height: 352px;
+  background-color: gray;
 }
