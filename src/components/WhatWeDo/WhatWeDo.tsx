@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const WhatWeDo = () => {
   return (
-    <section className={styles.video}>
+    <section className={`column align-center g-40 ${styles.container}`}>
       <div className={styles.titleContainer}>
         <Image
           src={`/static/images/shape1.svg`}
@@ -15,11 +15,7 @@ const WhatWeDo = () => {
         />
         <h2 className={styles.title}>Esto es lo que hacemos</h2>
       </div>
-      <iframe
-        width="1044"
-        height="586"
-        src="https://www.youtube.com/embed/tgbNymZ7vqY"
-      ></iframe>
+      <video controls src="/static/reel.mp4" className={styles.video}></video>
     </section>
   );
 };
