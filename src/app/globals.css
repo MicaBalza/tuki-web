@@ -29,3 +29,55 @@ a {
 .bg-light-purple {
   background-color: var(--light-purple);
 }
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 2.25rem;
+  font-weight: 400;
+}
+
+h3 {
+  font-size: 1.875rem;
+}
+
+p {
+  font-size: 1.125rem;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.g-24 {
+  gap: 24px;
+}
+
+.g-32 {
+  gap: 32px;
+}
+
+.g-48 {
+  gap: 48px;
+}
+
+.g-96 {
+  gap: 96px;
+}

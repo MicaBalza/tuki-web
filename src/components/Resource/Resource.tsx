@@ -18,7 +18,7 @@ const Resource = ({ variant }: Props) => {
   return (
     <div className={`${styles.wrapper} ${styles[variant]}`}>
       <div className={styles.text}>
-        <p className={styles.title}>{CONTENT[variant].title}</p>
+        <h3 className={styles.title}>{CONTENT[variant].title}</h3>
         <p className={styles.description}>{CONTENT[variant].description}</p>
         <Button text="Echa un vistazo" />
       </div>

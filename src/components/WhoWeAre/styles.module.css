@@ -1,0 +1,6 @@
+.container {
+  padding: 108px 0;
+  background: url("../../../public/static/images/whoweare-background.png");
+  background-position: center;
+  background-size: cover;
+}

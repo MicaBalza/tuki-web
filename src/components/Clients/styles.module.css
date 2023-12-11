@@ -1,0 +1,36 @@
+.clients {
+  padding: 80px 36px;
+  background-color: var(--yellow);
+  text-align: center;
+
+  .title {
+    color: var(--purple);
+    margin-bottom: 52px;
+  }
+}
+
+.imageContainer {
+  flex-shrink: 0;
+  position: relative;
+  width: 150px;
+  height: 100px;
+}
+
+.marqueeContainer {
+  width: 100%;
+  height: 90px;
+  overflow: hidden;
+}
+
+.marquee {
+  animation: scrolling 10s linear infinite;
+}
+
+@keyframes scrolling {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}

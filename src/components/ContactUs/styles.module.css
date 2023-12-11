@@ -1,0 +1,20 @@
+.container {
+  padding: 48px 0;
+  background-color: var(--light-purple);
+}
+
+.titleContainer {
+  position: relative;
+}
+
+.title {
+  position: relative;
+  color: var(--white);
+  z-index: 1;
+}
+
+.misc {
+  position: absolute;
+  top: -8px;
+  left: -44px;
+}

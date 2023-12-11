@@ -1,0 +1,36 @@
+.hero {
+  background-color: var(--nude);
+  padding: 24px 0;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.subtitle {
+  color: var(--purple);
+  margin-bottom: 12px;
+}
+
+.title {
+  color: var(--purple);
+  margin-bottom: 72px;
+}
+
+.gifPlaceholder {
+  display: grid;
+  place-content: center;
+  width: 60%;
+  height: 500px;
+  background-color: var(--purple);
+}
