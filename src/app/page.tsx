@@ -1,3 +1,5 @@
+"use client";
+
 import styles from "./page.module.css";
 import Resource from "@/components/Resource";
 import Hero from "@/components/Hero";
@@ -5,10 +7,11 @@ import WhatWeDo from "@/components/WhatWeDo";
 import WhoWeAre from "@/components/WhoWeAre";
 import Clients from "@/components/Clients";
 import ContactUs from "@/components/ContactUs";
+import PageContainer from "@/components/PageContainer";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
+    <PageContainer className={styles.main}>
       <Hero />
       <WhatWeDo />
       <section className="row">
@@ -26,6 +29,6 @@ export default function Home() {
       <WhoWeAre />
       <Clients />
       <ContactUs />
-    </main>
+    </PageContainer>
   );
 }

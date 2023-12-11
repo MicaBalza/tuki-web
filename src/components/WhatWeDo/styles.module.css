@@ -1,9 +1,11 @@
 .container {
   padding: 60px 0;
+  background-color: var(--white);
 }
 
 .video {
-  width: 400px;
+  width: 100%;
+  max-width: 1044px;
   height: auto;
 }
 
@@ -11,9 +13,13 @@
   position: relative;
 }
 
+.title {
+  position: relative;
+  z-index: 1;
+}
+
 .misc {
   position: absolute;
-  z-index: -1;
   top: -8px;
   left: -44px;
 }

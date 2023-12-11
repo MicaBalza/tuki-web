@@ -7,6 +7,7 @@ import Image from "next/image";
 import { ROUTES } from "./constants";
 import { usePathname } from "next/navigation";
 import SocialLinks from "../SocialLinks";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -23,10 +24,14 @@ const Navbar = () => {
             <Link
               href={route.path}
               key={route.text}
-              className={`${styles.navlink} ${
-                pathname === route.path ? styles.active : ""
-              }`}
+              className={`${styles.navlink}`}
             >
+              {pathname === route.path && (
+                <motion.span
+                  layoutId="underline"
+                  className={styles.underline}
+                />
+              )}
               {route.text}
             </Link>
           ))}

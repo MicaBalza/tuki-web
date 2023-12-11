@@ -6,18 +6,18 @@ import VimeoIcon from "@/assets/icons/Vimeo";
 export const LINKS = [
   {
     icon: <MailIcon />,
-    link: "mailto:elcorreoquequieres@correo.com",
+    link: "mailto:hello@tukistudio.es",
   },
   {
     icon: <InstagramIcon />,
-    link: "a",
+    link: "https://www.instagram.com/tukistudio/",
   },
-  {
-    icon: <LinkedinIcon />,
-    link: "b",
-  },
-  {
-    icon: <VimeoIcon />,
-    link: "c",
-  },
+  // {
+  //   icon: <LinkedinIcon />,
+  //   link: "b",
+  // },
+  // {
+  //   icon: <VimeoIcon />,
+  //   link: "c",
+  // },
 ];

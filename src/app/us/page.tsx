@@ -1,10 +1,13 @@
+"use client";
+
 import Image from "next/image";
 import styles from "./page.module.css";
 import Button from "@/components/Button";
+import PageContainer from "@/components/PageContainer";
 
 export default function Us() {
   return (
-    <>
+    <PageContainer>
       <div className={styles.hero}>
         <div className={`container ${styles.container}`}>
           <div className={styles.text}>
@@ -54,6 +57,6 @@ export default function Us() {
           </div>
         </div>
       </div>
-    </>
+    </PageContainer>
   );
 }

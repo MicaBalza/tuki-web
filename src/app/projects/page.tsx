@@ -1,9 +1,12 @@
+"use client";
+
 import Image from "next/image";
 import styles from "./page.module.css";
+import PageContainer from "@/components/PageContainer";
 
 export default function Page() {
   return (
-    <>
+    <PageContainer>
       <div className={styles.hero}>
         <p className={styles.heroText}>Esto es lo que hacemos</p>
         <Image
@@ -32,6 +35,6 @@ export default function Page() {
           <p>Ilustración</p>
         </div>
       </div>
-    </>
+    </PageContainer>
   );
 }
