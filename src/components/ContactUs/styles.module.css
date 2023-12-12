@@ -1,6 +1,7 @@
 .container {
   padding: 48px 0;
   background-color: var(--light-purple);
+  cursor: pointer;
 }
 
 .titleContainer {

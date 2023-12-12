@@ -18,7 +18,7 @@ const Footer = () => {
     <section className={styles.clients}>
       <h2 className={styles.title}>Quienes nos eligen</h2>
       <div className={styles.marqueeContainer}>
-        <div className={`row ${styles.marquee}`}>
+        <div className={styles.marquee}>
           {LOGOS.map((logo) => (
             <div key={logo} className={styles.imageContainer}>
               <Image
@@ -29,16 +29,8 @@ const Footer = () => {
               />
             </div>
           ))}
-          {LOGOS.map((logo) => (
-            <div key={logo} className={styles.imageContainer}>
-              <Image
-                src={`/static/images/logos/${logo}.png`}
-                alt={logo}
-                fill
-                className={styles.image}
-              />
-            </div>
-          ))}
+        </div>
+        <div className={styles.marquee} aria-hidden="true">
           {LOGOS.map((logo) => (
             <div key={logo} className={styles.imageContainer}>
               <Image

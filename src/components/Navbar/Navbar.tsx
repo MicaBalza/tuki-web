@@ -18,7 +18,7 @@ const Navbar = () => {
   return (
     <nav className={`${styles.navbar} bg-${color}`}>
       <div className={`container ${styles.container}`}>
-        <Image src="/tuki-logo.png" alt="me" width="150" height="70" />
+        <Image src="/tuki-logo.svg" alt="me" width="150" height="68" />
         <div className={styles.navlinks}>
           {ROUTES.map((route) => (
             <Link

@@ -1,11 +1,16 @@
 import React from "react";
 import styles from "./styles.module.css";
 import Image from "next/image";
-import Button from "../Button";
+import { useRouter } from "next/navigation";
 
 const WhatWeDo = () => {
+  const { push } = useRouter();
+
   return (
-    <section className={`column ${styles.container} align-center`}>
+    <section
+      className={`column ${styles.container} align-center`}
+      onClick={() => push("/contact-us")}
+    >
       <div className={styles.titleContainer}>
         <Image
           src={`/static/images/shape2.svg`}

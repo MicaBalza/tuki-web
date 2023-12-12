@@ -22,12 +22,6 @@
   text-transform: uppercase;
 }
 
-.active {
-  /* font-weight: 700;
-  border-bottom: 2px solid var(--purple);
-  padding-bottom: 8px; */
-}
-
 .underline {
   position: absolute;
   bottom: 0;
