@@ -4,10 +4,4 @@
   gap: 24px;
   width: 100%;
   padding: 36px 24px;
-  background-color: var(--light-purple);
-  color: var(--white);
-}
-
-.links > a > svg path {
-  fill: white;
 }

@@ -31,6 +31,34 @@ a {
   background-color: var(--light-purple);
 }
 
+.bg-purple {
+  background-color: var(--purple);
+}
+
+.bg-green {
+  background-color: var(--green);
+}
+
+.bg-pink {
+  background-color: var(--pink);
+}
+
+.text-white {
+  color: var(--white);
+}
+
+.text-purple {
+  color: var(--purple);
+}
+
+.fill-purple * {
+  fill: var(--purple);
+}
+
+.fill-white * {
+  fill: var(--white);
+}
+
 h1 {
   font-size: 2.5rem;
   font-weight: 400;
