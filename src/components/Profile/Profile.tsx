@@ -16,6 +16,7 @@ const Profile = ({ person, illustration }: Props) => {
         alt="Illustration"
         width={360}
         height={360}
+        unoptimized={true}
       />
       <div className="column align-center">
         <h3 className={styles.name}>{CONTENT[person].name}</h3>

@@ -27,6 +27,7 @@ const Resource = ({ variant }: Props) => {
         alt="Illustration"
         width={360}
         height={360}
+        unoptimized={true}
       />
     </div>
   );

@@ -9,7 +9,7 @@
 }
 
 .animation {
-  background-color: var(--pink);
+  background-color: var(--yellow);
   flex-direction: row-reverse;
   padding: 52px 24px 0 0;
 }
@@ -25,11 +25,11 @@
 }
 
 .branding {
-  background-color: var(--yellow);
+  background-color: var(--pink);
 }
 
 .motion-graphics {
-  background-color: var(--green);
+  background-color: var(--light-purple);
   flex-direction: row-reverse;
   padding: 52px 24px 0 0;
 }
