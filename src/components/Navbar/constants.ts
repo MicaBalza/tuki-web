@@ -15,5 +15,6 @@ export const ROUTES = [
   {
     path: "/contact-us",
     text: "Contacto",
+    color: "pink",
   },
 ];

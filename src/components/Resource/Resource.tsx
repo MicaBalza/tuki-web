@@ -3,6 +3,7 @@ import { CONTENT } from "./constants";
 import styles from "./styles.module.css";
 import Button from "../Button";
 import Image from "next/image";
+import { Player, Controls } from "@lottiefiles/react-lottie-player";
 
 export interface Props {
   variant:
@@ -29,6 +30,14 @@ const Resource = ({ variant }: Props) => {
         height={360}
         unoptimized={true}
       />
+      {/* <Player
+        autoplay
+        loop
+        src="/static/lottie/motion-graphics.lottie.json"
+        style={{ height: "300px", width: "300px" }}
+      >
+        <Controls buttons={["play", "repeat", "frame", "debug"]} />
+      </Player> */}
     </div>
   );
 };

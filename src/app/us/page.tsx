@@ -5,8 +5,10 @@ import styles from "./page.module.css";
 import Button from "@/components/Button";
 import PageContainer from "@/components/PageContainer";
 import Profile from "@/components/Profile";
+import { useRouter } from "next/navigation";
 
 export default function Us() {
+  const { push } = useRouter();
   return (
     <PageContainer>
       <div className={styles.hero}>
@@ -20,7 +22,10 @@ export default function Us() {
               Trabajando en conjunto con nuestros clientes, materializamos sus
               ideas e inspiramos a su público objetivo.
             </p>
-            <Button text="Trabajemos juntos" />
+            <Button
+              text="Trabajemos juntos"
+              onClick={() => push("/contact-us")}
+            />
           </div>
           <Image
             src={"/static/images/us.png"}
@@ -39,7 +44,7 @@ export default function Us() {
       </div>
       <div className={`column align-center g-24 ${styles.ready}`}>
         <h2>¿Listx para trabajar juntxs?</h2>
-        <Button text="Escribenos" />
+        <Button text="Escribenos" onClick={() => push("/contact-us")} />
       </div>
     </PageContainer>
   );

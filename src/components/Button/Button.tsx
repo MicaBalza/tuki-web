@@ -1,12 +1,16 @@
-import React from "react";
+import React, { ButtonHTMLAttributes } from "react";
 import styles from "./styles.module.css";
 
-interface Props {
+interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
   text: string;
 }
 
-const Button = ({ text }: Props) => {
-  return <button className={styles.button}>{text}</button>;
+const Button = ({ text, ...props }: Props) => {
+  return (
+    <button className={styles.button} {...props}>
+      {text}
+    </button>
+  );
 };
 
 export default Button;
