@@ -48,7 +48,6 @@ export default function Page() {
                 </SwiperSlide>
               ))}
             </Swiper>
-            <p className="text-gray">{service}</p>
           </div>
         ))}
       </div>

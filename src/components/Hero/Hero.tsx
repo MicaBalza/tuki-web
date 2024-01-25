@@ -8,7 +8,7 @@ const Hero = () => {
 
   return (
     <section className={styles.hero}>
-      <div className={`container ${styles.container}`}>
+      <div className={`${styles.container}`}>
         <div className={styles.text}>
           <p className={`body ${styles.subtitle}`}>
             Estudio de diseño en Barcelona
@@ -19,7 +19,15 @@ const Hero = () => {
             onClick={() => push("/projects")}
           />
         </div>
-        <div className={styles.gifPlaceholder}>Gif recontra re copado</div>
+        <video
+          autoPlay
+          muted
+          loop
+          src={`/static/main.mp4`}
+          className={styles.video}
+          width={900}
+          height={500}
+        ></video>
       </div>
     </section>
   );

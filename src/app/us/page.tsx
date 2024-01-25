@@ -39,7 +39,7 @@ export default function Us() {
         <h2 className={styles.usTitle}>Tuki esta hecho por...</h2>
         <div className={styles.usContainer}>
           <Profile person="flor" />
-          <Profile person="nati" />
+          <Profile person="nat" />
         </div>
       </div>
       <div className={`column align-center g-24 ${styles.ready}`}>

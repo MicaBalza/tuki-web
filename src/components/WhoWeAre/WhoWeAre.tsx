@@ -10,8 +10,8 @@ const WhatWeDo = () => {
   return (
     <section className={`row g-96 ${styles.container} justify-center`}>
       <div className="row g-48">
-        <Profile person="flor" illustration />
-        <Profile person="nati" illustration />
+        <Profile person="flor" />
+        <Profile person="nat" />
       </div>
       <div className="column g-24">
         <h2 className="text-purple">¿Quiénes somos?</h2>

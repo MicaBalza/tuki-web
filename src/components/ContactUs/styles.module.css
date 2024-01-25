@@ -1,21 +1,21 @@
 .container {
-  padding: 48px 0;
-  background-color: var(--light-purple);
+  position: relative;
+  background-color: var(--pink);
   cursor: pointer;
+  max-height: 600px;
+  overflow: hidden;
 }
 
 .titleContainer {
-  position: relative;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  top: 48px;
 }
 
 .title {
   position: relative;
   color: var(--white);
   z-index: 1;
-}
-
-.misc {
-  position: absolute;
-  top: -8px;
-  left: -44px;
 }

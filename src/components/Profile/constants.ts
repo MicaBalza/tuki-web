@@ -3,7 +3,7 @@ export const CONTENT = {
     name: "Flor Castarataro",
     title: "Estrategia & Dirección de Arte",
   },
-  nati: {
+  nat: {
     name: "Natalia Balza",
     title: "Directora Creativa",
   },
