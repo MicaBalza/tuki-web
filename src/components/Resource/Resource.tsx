@@ -23,13 +23,22 @@ const Resource = ({ variant }: Props) => {
         <p className={styles.description}>{CONTENT[variant].description}</p>
         <Button text="Echa un vistazo" />
       </div>
-      <Image
+      <video
+        autoPlay
+        muted
+        loop
+        src={`/static/video/${variant}.mp4`}
+        className={styles.video}
+        width={360}
+        height={360}
+      ></video>
+      {/* <Image
         src={`/static/images/${variant}.gif`}
         alt="Illustration"
         width={360}
         height={360}
         unoptimized={true}
-      />
+      /> */}
       {/* <Player
         autoplay
         loop
