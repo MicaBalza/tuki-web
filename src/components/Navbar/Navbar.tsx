@@ -12,8 +12,7 @@ import { motion } from "framer-motion";
 const Navbar = () => {
   const pathname = usePathname();
 
-  const color =
-    ROUTES.find((route) => route.path === pathname)?.color || "nude";
+  const color = ROUTES.find((route) => route.path === pathname)?.color || "red";
 
   return (
     <nav className={`${styles.navbar} bg-${color}`}>
@@ -24,7 +23,9 @@ const Navbar = () => {
             <Link
               href={route.path}
               key={route.text}
-              className={`${styles.navlink}`}
+              className={`${styles.navlink} ${
+                color === "red" ? "text-white" : "text-purple"
+              }`}
             >
               {pathname === route.path && (
                 <motion.span
@@ -35,7 +36,7 @@ const Navbar = () => {
               {route.text}
             </Link>
           ))}
-          <SocialLinks />
+          <SocialLinks className={color === "red" ? "fill-white" : ""} />
         </div>
       </div>
     </nav>

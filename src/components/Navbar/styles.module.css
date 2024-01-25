@@ -17,7 +17,6 @@
 
 .navlink {
   position: relative;
-  color: var(--purple);
   font-size: 0.875rem;
   text-transform: uppercase;
 }

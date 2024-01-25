@@ -24,7 +24,7 @@ const Resource = ({ variant }: Props) => {
         <Button text="Echa un vistazo" />
       </div>
       <Image
-        src={`/static/images/${variant}.png`}
+        src={`/static/images/${variant}.gif`}
         alt="Illustration"
         width={360}
         height={360}

@@ -27,6 +27,7 @@ const WhatWeDo = () => {
         alt=""
         width={718}
         height={426}
+        unoptimized={true}
       />
     </section>
   );
