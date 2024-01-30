@@ -23,7 +23,7 @@ const Hero = () => {
           autoPlay
           muted
           loop
-          src={`/static/main.mp4`}
+          src={`/static/video/main.mp4`}
           className={styles.video}
           width={900}
           height={500}
