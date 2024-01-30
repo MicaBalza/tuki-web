@@ -1,6 +1,6 @@
 .wrapper {
   display: flex;
-  padding: 52px 0 0 24px;
+  padding: 0 0 0 24px;
   gap: 56px;
 }
 
@@ -11,7 +11,7 @@
 .animation {
   background-color: var(--yellow);
   flex-direction: row-reverse;
-  padding: 52px 24px 0 0;
+  padding: 0 24px 0 0;
 }
 
 .social-media {
@@ -21,7 +21,7 @@
 .editorial {
   background-color: var(--red);
   flex-direction: row-reverse;
-  padding: 0 24px 52px 0;
+  padding: 0 24px 0 0;
 }
 
 .branding {
@@ -31,7 +31,7 @@
 .motion-graphics {
   background-color: var(--light-purple);
   flex-direction: row-reverse;
-  padding: 52px 24px 0 0;
+  padding: 0 24px 0 0;
 }
 
 .text {

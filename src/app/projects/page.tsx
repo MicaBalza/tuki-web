@@ -20,6 +20,14 @@ export default function Page() {
     <PageContainer>
       <div className={styles.hero}>
         <h2 className="text-purple">Esto es lo que hacemos</h2>
+        <Image
+          src="/static/images/projects.gif"
+          alt="Workaholic"
+          width={400}
+          height={400}
+          style={{ objectFit: "cover" }}
+          unoptimized={true}
+        />
       </div>
       <div className={styles.projects}>
         {SERVICES.map((service) => (

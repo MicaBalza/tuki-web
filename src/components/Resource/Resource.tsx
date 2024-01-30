@@ -23,15 +23,6 @@ const Resource = ({ variant }: Props) => {
         <p className={styles.description}>{CONTENT[variant].description}</p>
         <Button text="Echa un vistazo" />
       </div>
-      {/* <video
-        autoPlay
-        muted
-        loop
-        src={`/static/video/${variant}.mp4`}
-        className={styles.video}
-        width={360}
-        height={360}
-      ></video> */}
       <Image
         src={`/static/images/${variant}.gif`}
         alt="Illustration"
@@ -39,14 +30,6 @@ const Resource = ({ variant }: Props) => {
         height={360}
         unoptimized={true}
       />
-      {/* <Player
-        autoplay
-        loop
-        src="/static/lottie/motion-graphics.lottie.json"
-        style={{ height: "300px", width: "300px" }}
-      >
-        <Controls buttons={["play", "repeat", "frame", "debug"]} />
-      </Player> */}
     </div>
   );
 };

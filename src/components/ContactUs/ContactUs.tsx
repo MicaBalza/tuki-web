@@ -22,15 +22,15 @@ const WhatWeDo = () => {
         />
         <h2 className={styles.title}>Contáctanos</h2>
       </div>
-      <video
-        autoPlay
-        muted
-        loop
-        src={`/static/video/hamburguer.mp4`}
-        className={styles.video}
-        width={600}
-        height={600}
-      ></video>
+      <div className={styles.imageContainer}>
+        <Image
+          src={`/static/images/hamburguer.gif`}
+          alt=""
+          width={600}
+          height={600}
+          unoptimized={true}
+        />
+      </div>
     </section>
   );
 };

@@ -1,8 +1,8 @@
 .container {
   position: relative;
+  padding-top: 40px;
   background-color: var(--pink);
   cursor: pointer;
-  max-height: 600px;
   overflow: hidden;
 }
 
@@ -18,4 +18,8 @@
   position: relative;
   color: var(--white);
   z-index: 1;
+}
+
+.imageContainer img {
+  margin-bottom: -100px;
 }

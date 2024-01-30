@@ -28,7 +28,7 @@ export default function Us() {
             />
           </div>
           <Image
-            src={"/static/images/us.png"}
+            src={"/static/images/us.gif"}
             alt=""
             width={896}
             height={552}

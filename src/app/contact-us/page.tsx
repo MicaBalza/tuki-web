@@ -23,20 +23,21 @@ export default function Page() {
             <input type="tel" placeholder="Móvil" />
             <select required>
               <option value="null" selected>
-                ¿Cómo nos encontraste?
+                ¿Cómo nos has encontrado?
               </option>
               <option value="Instagram">Instagram</option>
-              <option value="Mail">Mail</option>
+              <option value="Mail">Internet</option>
+              <option value="Mail">Conocidxs</option>
             </select>
             <textarea placeholder="Mensaje" />
             <Button text="Enviar" type="submit" />
           </form>
         </div>
         <Image
-          src={`/static/images/contact-us.png`}
+          src={`/static/images/hamburguer.gif`}
           alt="Illustration"
           width={745}
-          height={784}
+          height={745}
           unoptimized={true}
         />
       </div>
