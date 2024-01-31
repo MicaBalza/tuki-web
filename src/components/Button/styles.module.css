@@ -12,7 +12,18 @@
   cursor: pointer;
 }
 
+.inverted {
+  background-color: var(--purple);
+  color: var(--light-green);
+  border: 2px solid var(--light-green);
+}
+
 .button:hover {
   background-color: var(--purple);
   color: var(--white);
+}
+
+.inverted:hover {
+  background-color: var(--light-green);
+  color: var(--purple);
 }

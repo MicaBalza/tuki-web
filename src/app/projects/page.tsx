@@ -9,9 +9,10 @@ import PageContainer from "@/components/PageContainer";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/bundle";
-import { Keyboard, Mousewheel } from "swiper/modules";
+import { Autoplay, Keyboard, Mousewheel } from "swiper/modules";
 import { PROJECTS } from "@/constants/images";
 import { useRouter } from "next/navigation";
+import Button from "@/components/Button";
 
 export default function Page() {
   const { push } = useRouter();
@@ -32,14 +33,19 @@ export default function Page() {
       <div className={styles.projects}>
         {SERVICES.map((service) => (
           <div
-            className={styles.project}
+            className={`${styles.project} ${
+              styles[service.toLowerCase().replace(/ /g, "-")]
+            }`}
             key={service}
-            onClick={() => push(`/projects/${service.toLowerCase()}`)}
           >
             <Swiper
-              mousewheel={true}
-              keyboard={true}
-              modules={[Mousewheel, Keyboard]}
+              autoplay={{
+                delay: 2000,
+                disableOnInteraction: false,
+              }}
+              speed={1000}
+              loop={true}
+              modules={[Autoplay]}
               className={styles.swiper}
             >
               {PROJECTS[service].map((project) => (
@@ -56,6 +62,11 @@ export default function Page() {
                 </SwiperSlide>
               ))}
             </Swiper>
+            <Button
+              text={service}
+              inverted
+              onClick={() => push(`/projects/${service.toLowerCase()}`)}
+            />
           </div>
         ))}
       </div>

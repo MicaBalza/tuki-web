@@ -9,17 +9,61 @@
 
 .projects {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, 440px);
+  grid-template-areas:
+    "illustration illustration illustration illustration animation animation"
+    "editorial editorial motion-graphics motion-graphics motion-graphics motion-graphics "
+    "social-media social-media social-media branding branding branding";
+  gap: 24px;
+  padding: 48px;
   background-color: var(--white);
 }
 
+.illustration {
+  grid-area: illustration;
+}
+
+.animation {
+  grid-area: animation;
+}
+
+.editorial {
+  grid-area: editorial;
+}
+
+.motion-graphics {
+  grid-area: motion-graphics;
+}
+
+.social-media {
+  grid-area: social-media;
+}
+
+.branding {
+  grid-area: branding;
+}
+
 .project {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 24px;
   min-width: 0;
-  height: 352px;
+  height: 440 px;
+  box-shadow: none;
+  transition: all 0.5s ease-out;
+}
+
+.project:hover {
+  box-shadow: 2px 2px 8px 4px rgba(0, 0, 0, 0.1);
+}
+
+.project button {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  z-index: 1;
 }
 
 .swiper {

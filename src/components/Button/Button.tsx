@@ -3,12 +3,18 @@ import styles from "./styles.module.css";
 
 interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
   text: string;
+  inverted?: boolean;
   className?: string;
 }
 
-const Button = ({ text, className, ...props }: Props) => {
+const Button = ({ text, inverted, className, ...props }: Props) => {
   return (
-    <button className={`${styles.button} ${className}`} {...props}>
+    <button
+      className={`${styles.button} ${
+        inverted ? styles.inverted : ""
+      } ${className}`}
+      {...props}
+    >
       {text}
     </button>
   );
