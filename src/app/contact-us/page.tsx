@@ -14,7 +14,7 @@ export default function Page() {
       <div className={`row bg-pink justify-between ${styles.container}`}>
         <div className={`column g-48`}>
           <h2 className="text-purple">
-            ¿Estáis listos para comenzar? ¡Nosotrxs también!
+            ¿Estáis listxs para comenzar? ¡Nosotrxs también!
           </h2>
           <p className="text-purple">
             Envíanos un correo a hello@tukistudio.tv ó completa el siguiente
@@ -38,16 +38,16 @@ export default function Page() {
           <div className="row justify-between align-start">
             <div className="row align-start g-12">
               <PhoneIcon />
-              <div>
-                <p className="text-purple semibold">MÓVIL</p>
+              <div className="text-purple">
+                <p className="semibold">MÓVIL</p>
                 <p>+34 667054921</p>
                 <p>+34 697805746</p>
               </div>
             </div>
             <div className="row align-start g-12">
               <EmailIcon />
-              <div>
-                <p className="text-purple semibold">EMAIL</p>
+              <div className="text-purple">
+                <p className="semibold">EMAIL</p>
                 <p>hello@tukistudio.tv</p>
               </div>
             </div>
