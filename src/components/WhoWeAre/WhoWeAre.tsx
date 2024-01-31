@@ -15,7 +15,7 @@ const WhatWeDo = () => {
       </div>
       <div className="column g-24">
         <h2 className="text-purple">¿Quiénes somos?</h2>
-        <Button text="Conocenos" onClick={() => push("/us")} />
+        <Button text="Conócenos" onClick={() => push("/us")} />
       </div>
     </section>
   );

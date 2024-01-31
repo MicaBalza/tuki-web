@@ -11,7 +11,7 @@ const SocialLinks = ({ className }: Props) => {
   return (
     <div className={`${className} ${styles.container}`}>
       {LINKS.map((link) => (
-        <Link key={link.link} href={link.link} target="blank">
+        <Link key={link.link} href={link.link}>
           {link.icon}
         </Link>
       ))}

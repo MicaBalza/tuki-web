@@ -8,7 +8,7 @@ const WhatWeDo = () => {
 
   return (
     <section
-      className={`column ${styles.container} align-center g-24`}
+      className={`column ${styles.container} align-center`}
       onClick={() => push("/contact-us")}
     >
       <div className={styles.titleContainer}>

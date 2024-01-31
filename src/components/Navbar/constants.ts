@@ -11,7 +11,7 @@ export const ROUTES = [
   },
   {
     path: "/us",
-    text: "Nosotras",
+    text: "¿Quiénes somos?",
     color: "light-purple",
   },
   {

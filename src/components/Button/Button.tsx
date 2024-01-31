@@ -3,11 +3,12 @@ import styles from "./styles.module.css";
 
 interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
   text: string;
+  className?: string;
 }
 
-const Button = ({ text, ...props }: Props) => {
+const Button = ({ text, className, ...props }: Props) => {
   return (
-    <button className={styles.button} {...props}>
+    <button className={`${styles.button} ${className}`} {...props}>
       {text}
     </button>
   );

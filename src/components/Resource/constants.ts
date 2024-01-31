@@ -7,11 +7,12 @@ export const CONTENT: Record<
   illustration: {
     title: "Ilustración",
     description:
-      "Dibujamos mucho: personajes, libros ilustrados, packaging y todas tus ideas.",
+      "Nos gusta dibujar personajes, libros ilustrados, packaging y todas tus ideas.",
   },
   animation: {
     title: "Animación",
-    description: "Nos gusta movernos: de GIFs a videos explicativos.",
+    description:
+      "Nos gusta movernos: GIFs, lanzamiento de producto, videos explicativos, visuales para eventos y más.",
   },
   "social-media": {
     title: "Social Media",
@@ -20,7 +21,7 @@ export const CONTENT: Record<
   editorial: {
     title: "Editorial",
     description:
-      "Diseñamos y maquetamos libros, revistas, folletos, diarios - dónde sea que vivan las letras.",
+      "Diseñamos y maquetamos libros, revistas, folletos, diarios - donde sea que vivan las letras.",
   },
   branding: {
     title: "Branding",

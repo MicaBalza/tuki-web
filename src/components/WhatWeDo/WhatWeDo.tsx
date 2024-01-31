@@ -15,7 +15,7 @@ const WhatWeDo = () => {
           width={82}
           height={56}
         />
-        <h3>Esto es lo que hacemos</h3>
+        <h2 className="text-purple">Esto es lo que hacemos</h2>
       </div>
       <div className={styles.videoContainer}>
         {!isPlaying && (

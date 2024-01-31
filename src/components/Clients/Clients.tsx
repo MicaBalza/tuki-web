@@ -16,7 +16,17 @@ const LOGOS = [
 const Footer = () => {
   return (
     <section className={styles.clients}>
-      <h2 className={styles.title}>Quienes nos eligen</h2>
+      <div className={styles.titleContainer}>
+        <Image
+          src={`/static/images/shape3.svg`}
+          alt=""
+          width={82}
+          height={56}
+          className={styles.misc}
+          unoptimized={true}
+        />
+        <h2 className={styles.title}>Quienes nos eligen...</h2>
+      </div>
       <div className={styles.marqueeContainer}>
         <div className={styles.marquee}>
           {LOGOS.map((logo) => (
