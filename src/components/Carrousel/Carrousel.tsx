@@ -3,7 +3,7 @@ import { ServiceType } from "@/types/services";
 import { useRouter } from "next/navigation";
 import { Swiper, SwiperRef, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
-import { PROJECTS } from "@/constants/images";
+import { PROJECTS } from "@/constants/projects";
 import Image from "next/image";
 import Button from "../Button";
 
@@ -11,6 +11,7 @@ import "swiper/css";
 import "swiper/css/bundle";
 
 import styles from "./styles.module.css";
+import { capitalizeFirstLetter } from "@/utils/string";
 
 interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
   service: ServiceType;
@@ -34,9 +35,7 @@ const Carrousel = ({ service }: Props) => {
   };
   return (
     <div
-      className={`${styles.project} ${
-        styles[service.toLowerCase().replace(/ /g, "-")]
-      }`}
+      className={`${styles.project} ${styles[service]}`}
       key={service}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
@@ -51,11 +50,9 @@ const Carrousel = ({ service }: Props) => {
         className={styles.swiper}
       >
         {PROJECTS[service].map((project) => (
-          <SwiperSlide key={project}>
+          <SwiperSlide key={project.name}>
             <Image
-              src={`/static/images/${service
-                .toLowerCase()
-                .replace(/ /g, "-")}/${project}/1.jpeg`}
+              src={`/static/images/${service}/${project.folderName}/1.jpeg`}
               alt="Illustration"
               fill
               style={{ objectFit: "cover" }}
@@ -65,9 +62,9 @@ const Carrousel = ({ service }: Props) => {
         ))}
       </Swiper>
       <Button
-        text={service}
+        text={capitalizeFirstLetter(service.replace("-", " "))}
         inverted
-        onClick={() => push(`/projects/${service.toLowerCase()}`)}
+        onClick={() => push(`/projects/${service}`)}
       />
     </div>
   );
