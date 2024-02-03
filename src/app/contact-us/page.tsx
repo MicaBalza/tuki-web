@@ -3,7 +3,7 @@ import React from "react";
 import PageContainer from "@/components/PageContainer";
 import Image from "next/image";
 import styles from "./page.module.css";
-import Button from "@/components/Button";
+import ContactForm from "@/components/ContactForm";
 
 import PhoneIcon from "@/assets/icons/Contact-Phone";
 import EmailIcon from "@/assets/icons/Contact-Email";
@@ -20,21 +20,7 @@ export default function Page() {
             Envíanos un correo a hello@tukistudio.tv ó completa el siguiente
             formulario:
           </p>
-          <form className="column g-16">
-            <input type="text" required placeholder="Name" />
-            <input type="email" required placeholder="Email" />
-            <input type="tel" placeholder="Móvil" />
-            <select required>
-              <option value="null" selected>
-                ¿Cómo nos has encontrado?
-              </option>
-              <option value="Instagram">Instagram</option>
-              <option value="Mail">Internet</option>
-              <option value="Mail">Conocidxs</option>
-            </select>
-            <textarea placeholder="Mensaje" />
-            <Button text="Enviar" type="submit" className="fullWidth" />
-          </form>
+          <ContactForm />
           <div className="row justify-between align-start">
             <div className="row align-start g-12">
               <PhoneIcon />
