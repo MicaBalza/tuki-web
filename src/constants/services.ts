@@ -1,17 +1,3 @@
-export const SERVICES = [
-  "Illustration",
-  "Animation",
-  "Social Media",
-  "Editorial",
-  "Branding",
-  "Motion Graphics",
-];
+import { ServiceType } from "@/types/services";
 
-export enum SERVICES_ENUM {
-  ILLUSTRATION = "Illustration",
-  ANIMATION = "Animation",
-  SOCIAL_MEDIA = "Social Media",
-  EDITORIAL = "Editorial",
-  BRANDING = "Branding",
-  MOTION_GRAPHICS = "Motion Graphics",
-}
+export const SERVICES = Object.values(ServiceType);

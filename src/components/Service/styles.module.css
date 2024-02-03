@@ -12,6 +12,10 @@
   background-color: var(--yellow);
   flex-direction: row-reverse;
   padding: 0 24px 0 0;
+
+  .text {
+    color: var(--purple);
+  }
 }
 
 .social-media {
@@ -26,6 +30,10 @@
 
 .branding {
   background-color: var(--pink);
+
+  .text {
+    color: var(--purple);
+  }
 }
 
 .motion-graphics {

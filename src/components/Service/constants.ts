@@ -1,7 +1,7 @@
-import { Props } from "./Resource";
+import { Props } from "./Service";
 
 export const CONTENT: Record<
-  Props["variant"],
+  Props["service"],
   { title?: string; description?: string }
 > = {
   illustration: {
