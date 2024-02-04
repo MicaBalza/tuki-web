@@ -305,18 +305,24 @@ const BRANDING_PROJECTS = [
     country: "España",
     description: "Branding y posts de RRSS",
     folderName: "bardo",
+    gridType: "one-wide",
+    imageQuantity: 6,
   },
   {
     name: "Viuty",
     country: "España",
     description: "Rediseño de branding y post de RRSS",
     folderName: "viuty",
+    gridType: "two",
+    imageQuantity: 28,
   },
   {
     name: "Malcriada",
     country: "Argentina",
     description: "Brand refresh",
     folderName: "malcriada",
+    gridType: "oneonethreetwothree",
+    imageQuantity: 10,
   },
   {
     name: "Baba Studio",
@@ -324,6 +330,8 @@ const BRANDING_PROJECTS = [
     description:
       "Logo - Identidad Visual - Catalogo - Etiquetas - Redes Sociales",
     folderName: "baba-studio",
+    gridType: "oneonefourtwo",
+    imageQuantity: 8,
   },
   {
     name: "Harmony",
@@ -331,30 +339,40 @@ const BRANDING_PROJECTS = [
     description:
       "Creación de packaging de una línea de productos dermatológicos.",
     folderName: "harmony",
+    gridType: "onetwoonefour",
+    imageQuantity: 9,
   },
   {
     name: "Logofolio",
     country: "",
     description: "Desarrollo de logos para diferentes marcas",
     folderName: "logofolio",
+    gridType: "one",
+    imageQuantity: 10,
   },
   {
     name: "Iamskin",
     country: "España",
     description: "Diseño grafico, RRSS, fotografia, edicion de video",
     folderName: "iamskin",
+    gridType: "one",
+    imageQuantity: 5,
   },
   {
     name: "Desquiciado",
     country: "Argentina",
     description: "Ilustracion para etiqueta",
     folderName: "desquiciado",
+    gridType: "onetwoonetwotwo",
+    imageQuantity: 6,
   },
   {
     name: "Fig creme",
     country: "Argentina",
     description: "Ilustración cientifica packaging",
     folderName: "fig-creme",
+    gridType: "onetwoonetwotwo",
+    imageQuantity: 8,
   },
 ];
 
