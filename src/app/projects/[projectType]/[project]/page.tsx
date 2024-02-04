@@ -56,6 +56,15 @@ export default function DynamicPage() {
           ></video>
         </div>
       )}
+      {projectData?.hasSecondVideo && (
+        <div className={styles.videoContainer}>
+          <video
+            controls
+            src={`/static/images/${projectType}/${projectData.folderName}/second-video.mp4`}
+            className={styles.video}
+          ></video>
+        </div>
+      )}
       {projectData?.videoUrl && (
         <div className={styles.videoContainer}>
           <iframe

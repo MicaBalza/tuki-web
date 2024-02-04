@@ -53,7 +53,7 @@ const Carrousel = ({ service }: Props) => {
           <SwiperSlide key={project.name}>
             <Image
               src={`/static/images/${service}/${project.folderName}/1.jpeg`}
-              alt="Illustration"
+              alt={project.name}
               fill
               style={{ objectFit: "cover" }}
               unoptimized={true}

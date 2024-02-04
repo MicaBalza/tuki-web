@@ -7,4 +7,5 @@ export type ProjectData = {
   imageQuantity?: number;
   videoUrl?: string;
   hasVideo?: boolean;
+  hasSecondVideo?: boolean;
 };
