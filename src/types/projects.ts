@@ -5,4 +5,6 @@ export type ProjectData = {
   folderName: string;
   gridType?: "onetwoonefour" | string;
   imageQuantity?: number;
+  videoUrl?: string;
+  hasVideo?: boolean;
 };

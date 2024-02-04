@@ -25,7 +25,8 @@ export default function Page() {
           <div
             key={project.name}
             className={`${styles.project} ${
-              PROJECTS[projectType as string].length - 1 === index
+              PROJECTS[projectType as string].length - 1 === index &&
+              PROJECTS[projectType as string].length % 2 !== 0
                 ? styles.lastItem
                 : ""
             } pointer`}

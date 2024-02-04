@@ -19,7 +19,7 @@ export default function DynamicPage() {
   );
 
   return (
-    <PageContainer>
+    <PageContainer className={`${styles.container} bg-light-purple`}>
       <div className={`${styles.hero} text-white`}>
         <h4>{capitalizeFirstLetter((project as string).replace(/-/g, " "))}</h4>
         <p>{projectData?.description}</p>
@@ -45,6 +45,25 @@ export default function DynamicPage() {
               />
             </div>
           ))}
+        </div>
+      )}
+      {projectData?.hasVideo && (
+        <div className={styles.videoContainer}>
+          <video
+            controls
+            src={`/static/images/${projectType}/${projectData.folderName}/video.mp4`}
+            className={styles.video}
+          ></video>
+        </div>
+      )}
+      {projectData?.videoUrl && (
+        <div className={styles.videoContainer}>
+          <iframe
+            src={projectData.videoUrl}
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            className={styles.video}
+          ></iframe>
         </div>
       )}
     </PageContainer>
