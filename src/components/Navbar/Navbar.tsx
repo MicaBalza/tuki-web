@@ -5,11 +5,12 @@ import styles from "./styles.module.css";
 import Link from "next/link";
 import Image from "next/image";
 import { ROUTES } from "./constants";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import SocialLinks from "../SocialLinks";
 import { motion } from "framer-motion";
 
 const Navbar = () => {
+  const { push } = useRouter();
   const pathname = usePathname();
 
   const color = ROUTES.find((route) => route.path === pathname)?.color || "red";
@@ -17,7 +18,14 @@ const Navbar = () => {
   return (
     <nav className={`${styles.navbar} bg-${color}`}>
       <div className={`container ${styles.container}`}>
-        <Image src="/tuki-logo.svg" alt="me" width="150" height="68" />
+        <Image
+          src="/tuki-logo.svg"
+          alt="me"
+          width="150"
+          height="68"
+          onClick={() => push("/")}
+          className="pointer"
+        />
         <div className={styles.navlinks}>
           {ROUTES.map((route) => (
             <Link
@@ -25,7 +33,7 @@ const Navbar = () => {
               key={route.text}
               className={`${styles.navlink} ${
                 color === "red" ? "text-white" : "text-purple"
-              }`}
+              } pointer`}
             >
               {pathname === route.path && (
                 <motion.span

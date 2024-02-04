@@ -82,6 +82,11 @@ h3 {
   font-size: 1.875rem;
 }
 
+h4 {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
 p {
   font-size: 1.125rem;
 }
@@ -164,4 +169,8 @@ textarea {
   resize: none;
   height: 100px;
   font-family: inherit;
+}
+
+.pointer {
+  cursor: pointer;
 }

@@ -5,11 +5,12 @@ import Image from "next/image";
 
 import styles from "./page.module.css";
 
-import { useParams } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
 import { capitalizeFirstLetter } from "@/utils/string";
 import { PROJECTS } from "@/constants/projects";
 
 export default function Page() {
+  const { push } = useRouter();
   const { projectType } = useParams();
 
   return (
@@ -27,7 +28,10 @@ export default function Page() {
               PROJECTS[projectType as string].length - 1 === index
                 ? styles.lastItem
                 : ""
-            }`}
+            } pointer`}
+            onClick={() =>
+              push(`/projects/${projectType}/${project.folderName}`)
+            }
           >
             <div className={styles.projectHover}>
               <p className="text-white">{project.name}</p>
