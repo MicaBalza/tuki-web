@@ -1,7 +1,6 @@
-import React from "react";
-import styles from "./styles.module.css";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import styles from "./styles.module.css";
 
 const WhatWeDo = () => {
   const { push } = useRouter();
@@ -20,7 +19,7 @@ const WhatWeDo = () => {
           className={styles.misc}
           unoptimized={true}
         />
-        <h2 className={styles.title}>Contáctanos</h2>
+        <h2 className="text-purple">Contáctanos</h2>
       </div>
       <div className={styles.imageContainer}>
         <Image

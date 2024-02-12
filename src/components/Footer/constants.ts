@@ -2,7 +2,7 @@ export const COLOR_BY_PATH = [
   {
     path: "/",
     bgColor: "pink",
-    color: "white",
+    color: "purple",
   },
   {
     path: "/projects",

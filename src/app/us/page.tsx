@@ -1,11 +1,11 @@
 "use client";
 
-import Image from "next/image";
-import styles from "./page.module.css";
 import Button from "@/components/Button";
 import PageContainer from "@/components/PageContainer";
 import Profile from "@/components/Profile";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
+import styles from "./page.module.css";
 
 export default function Us() {
   const { push } = useRouter();
@@ -36,7 +36,7 @@ export default function Us() {
         </div>
       </div>
       <div className={styles.us}>
-        <h2 className={styles.usTitle}>Tuki esta hecho por...</h2>
+        <h2 className={styles.usTitle}>Tuki está hecho por...</h2>
         <div className={styles.usContainer}>
           <Profile person="flor" />
           <Profile person="nat" />

@@ -1,17 +1,17 @@
-import React, { ButtonHTMLAttributes, useEffect, useRef } from "react";
-import { ServiceType } from "@/types/services";
-import { useRouter } from "next/navigation";
-import { Swiper, SwiperRef, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules";
 import { PROJECTS } from "@/constants/projects";
+import { ServiceType } from "@/types/services";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
+import { ButtonHTMLAttributes, useEffect, useRef } from "react";
+import { Autoplay } from "swiper/modules";
+import { Swiper, SwiperRef, SwiperSlide } from "swiper/react";
 import Button from "../Button";
 
 import "swiper/css";
 import "swiper/css/bundle";
 
-import styles from "./styles.module.css";
 import { capitalizeFirstLetter } from "@/utils/string";
+import styles from "./styles.module.css";
 
 interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
   service: ServiceType;
@@ -35,10 +35,11 @@ const Carrousel = ({ service }: Props) => {
   };
   return (
     <div
-      className={`${styles.project} ${styles[service]}`}
+      className={`${styles.project} ${styles[service]} pointer`}
       key={service}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
+      onClick={() => push(`/projects/${service}`)}
     >
       <Swiper
         ref={swiperRef}
