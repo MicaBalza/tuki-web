@@ -16,7 +16,6 @@ const WhatWeDo = () => {
           alt=""
           width={82}
           height={56}
-          className={styles.misc}
           unoptimized={true}
         />
         <h2 className="text-purple">Contáctanos</h2>

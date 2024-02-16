@@ -1,6 +1,5 @@
-import React from "react";
-import styles from "./styles.module.css";
 import Image from "next/image";
+import styles from "./styles.module.css";
 
 const LOGOS = [
   "levis",
@@ -22,8 +21,6 @@ const Footer = () => {
           alt=""
           width={82}
           height={56}
-          className={styles.misc}
-          unoptimized={true}
         />
         <h2 className={styles.title}>Quienes nos eligen...</h2>
       </div>

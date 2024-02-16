@@ -1,0 +1,44 @@
+.hero {
+  background-color: var(--light-purple);
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-right: 0;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 40px;
+  color: var(--white);
+}
+
+.us {
+  background-image: url("/static/images/us-background.png");
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 88px;
+  height: 812px;
+  padding: 60px 0;
+}
+
+.usTitle {
+  color: var(--purple);
+}
+
+.usContainer {
+  display: flex;
+  justify-content: center;
+  gap: 120px;
+}
+
+.ready {
+  padding: 40px 0;
+  background-color: var(--green);
+  color: var(--white);
+}
