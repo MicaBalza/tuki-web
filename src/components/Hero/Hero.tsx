@@ -1,7 +1,6 @@
-import React from "react";
-import styles from "./styles.module.css";
-import Button from "../Button";
 import { useRouter } from "next/navigation";
+import Button from "../Button";
+import styles from "./styles.module.css";
 
 const Hero = () => {
   const { push } = useRouter();

@@ -20,3 +20,10 @@ export const ROUTES = [
     color: "pink",
   },
 ];
+
+export const NAVBAR_COLORS: Record<string, string> = {
+  "/": "nude",
+  "//projects": "nude",
+  "//us": "light-purple",
+  "//contact-us": "pink",
+};

@@ -5,18 +5,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { useParams, usePathname, useRouter } from "next/navigation";
 import SocialLinks from "../SocialLinks";
-import { ROUTES } from "./constants";
+import { NAVBAR_COLORS, ROUTES } from "./constants";
 import styles from "./styles.module.css";
 
 const Navbar = () => {
   const { push } = useRouter();
   const pathname = usePathname();
-  console.log("🌸 ~ Navbar ~ pathname:", pathname);
   const { lng } = useParams();
 
-  // MEJOR QUE EL DEFAULT SEA NUDE Y VER COMO SETEARLE EL ROJO A PROYECTOS
-  const color =
-    ROUTES.find((route) => `/${lng}${route.path}` === pathname)?.color || "red";
+  const color = NAVBAR_COLORS[pathname.replace(`${lng}`, "")] || "red";
 
   return (
     <nav className={`${styles.navbar} bg-${color}`}>
