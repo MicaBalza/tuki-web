@@ -1,10 +1,12 @@
-import React from "react";
-import styles from "./styles.module.css";
-import Profile from "../Profile";
+import { useTranslation } from "@/i18n/client";
+import { useParams, useRouter } from "next/navigation";
 import Button from "../Button";
-import { useRouter } from "next/navigation";
+import Profile from "../Profile";
+import styles from "./styles.module.css";
 
 const WhatWeDo = () => {
+  const { lng } = useParams();
+  const { t } = useTranslation(lng as string, "who-we-are");
   const { push } = useRouter();
 
   return (
@@ -14,8 +16,8 @@ const WhatWeDo = () => {
         <Profile person="nat" />
       </div>
       <div className="column g-24">
-        <h2 className="text-purple">¿Quiénes somos?</h2>
-        <Button text="Conócenos" onClick={() => push("/us")} />
+        <h2 className="text-purple">{t("title")}</h2>
+        <Button text={t("button")} onClick={() => push("/us")} />
       </div>
     </section>
   );

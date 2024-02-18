@@ -1,25 +1,26 @@
-import React from "react";
-import { CONTENT } from "./constants";
-import styles from "./styles.module.css";
-import Button from "../Button";
-import Image from "next/image";
-import { useRouter } from "next/navigation";
+import { useTranslation } from "@/i18n/client";
 import { ServiceType } from "@/types/services";
+import Image from "next/image";
+import { useParams, useRouter } from "next/navigation";
+import Button from "../Button";
+import styles from "./styles.module.css";
 
 export interface Props {
   service: ServiceType;
 }
 
 const Service = ({ service }: Props) => {
+  const { lng } = useParams();
+  const { t } = useTranslation(lng as string, "services");
   const { push } = useRouter();
 
   return (
     <div className={`${styles.wrapper} ${styles[service]}`}>
       <div className={styles.text}>
-        <h3 className={styles.title}>{CONTENT[service].title}</h3>
-        <p className={styles.description}>{CONTENT[service].description}</p>
+        <h3 className={styles.title}>{t(`${service}.title`)}</h3>
+        <p className={styles.description}>{t(`${service}.description`)}</p>
         <Button
-          text="Echa un vistazo"
+          text={t("button")}
           onClick={() => push(`/projects/${service}`)}
         />
       </div>

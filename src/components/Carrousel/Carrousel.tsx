@@ -1,7 +1,7 @@
 import { PROJECTS } from "@/constants/projects";
 import { ServiceType } from "@/types/services";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
 import { ButtonHTMLAttributes, useEffect, useRef } from "react";
 import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperRef, SwiperSlide } from "swiper/react";
@@ -10,7 +10,7 @@ import Button from "../Button";
 import "swiper/css";
 import "swiper/css/bundle";
 
-import { capitalizeFirstLetter } from "@/utils/string";
+import { useTranslation } from "@/i18n/client";
 import styles from "./styles.module.css";
 
 interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
@@ -18,6 +18,8 @@ interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 const Carrousel = ({ service }: Props) => {
+  const { lng } = useParams();
+  const { t } = useTranslation(lng as string, "services");
   const { push } = useRouter();
 
   const swiperRef = useRef<SwiperRef>(null);
@@ -63,7 +65,7 @@ const Carrousel = ({ service }: Props) => {
         ))}
       </Swiper>
       <Button
-        text={capitalizeFirstLetter(service.replace("-", " "))}
+        text={t(`${service}.title`)}
         inverted
         onClick={() => push(`/projects/${service}`)}
       />

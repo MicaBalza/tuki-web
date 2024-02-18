@@ -1,6 +1,8 @@
-import React, { ButtonHTMLAttributes } from "react";
-import styles from "./styles.module.css";
+import { useTranslation } from "@/i18n/client";
+import { useParams } from "next/navigation";
+import { ButtonHTMLAttributes } from "react";
 import Button from "../Button";
+import styles from "./styles.module.css";
 
 interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
   text?: string;
@@ -9,6 +11,9 @@ interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 const ContactForm = ({ ...props }: Props) => {
+  const { lng } = useParams();
+  const { t } = useTranslation(lng as string, "contact-us");
+
   async function sendMail(formData: FormData) {
     const rawFormData = {
       name: formData.get("name"),
@@ -27,7 +32,7 @@ const ContactForm = ({ ...props }: Props) => {
         name="name"
         type="text"
         required
-        placeholder="Name"
+        placeholder={t("form.name")}
         className={styles.input}
       />
       <input
@@ -40,17 +45,21 @@ const ContactForm = ({ ...props }: Props) => {
       <input
         name="tel"
         type="tel"
-        placeholder="Móvil"
+        placeholder={t("form.mobile")}
         className={styles.input}
       />
       <select name="source" required className={styles.select}>
-        <option value="">¿Cómo nos has encontrado?</option>
+        <option value="">{t("form.source")}</option>
         <option value="Instagram">Instagram</option>
         <option value="Mail">Internet</option>
-        <option value="Mail">Conocidxs</option>
+        <option value="Mail">{t("form.acquaintances")}</option>
       </select>
-      <textarea name="message" placeholder="Mensaje" className={styles.input} />
-      <Button text="Enviar" type="submit" className="fullWidth" />
+      <textarea
+        name="message"
+        placeholder={t("form.message")}
+        className={styles.input}
+      />
+      <Button text={t("form.button")} type="submit" className="fullWidth" />
     </form>
   );
 };

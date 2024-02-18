@@ -1,6 +1,6 @@
-import { languages } from "@/app/i18n/settings";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
+import { languages } from "@/i18n/settings";
 import "@/styles/globals.css";
 import { PageProps } from "@/types/i18n";
 import { dir } from "i18next";

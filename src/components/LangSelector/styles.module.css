@@ -1,0 +1,6 @@
+.langLink {
+  display: flex;
+  align-items: flex-start;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+}

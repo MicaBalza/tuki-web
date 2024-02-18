@@ -1,8 +1,11 @@
+import { useTranslation } from "@/i18n/client";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
 import styles from "./styles.module.css";
 
 const WhatWeDo = () => {
+  const { lng } = useParams();
+  const { t } = useTranslation(lng as string, "contact-us");
   const { push } = useRouter();
 
   return (
@@ -18,7 +21,7 @@ const WhatWeDo = () => {
           height={56}
           unoptimized={true}
         />
-        <h2 className="text-purple">Contáctanos</h2>
+        <h2 className="text-purple">{t("title")}</h2>
       </div>
       <div className={styles.imageContainer}>
         <Image

@@ -1,22 +1,21 @@
-import { useRouter } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
+
+import { useTranslation } from "@/i18n/client";
 import Button from "../Button";
 import styles from "./styles.module.css";
 
 const Hero = () => {
+  const { lng } = useParams();
+  const { t } = useTranslation(lng as string, "hero");
   const { push } = useRouter();
 
   return (
     <section className={styles.hero}>
       <div className={`${styles.container}`}>
         <div className={styles.text}>
-          <p className={`body ${styles.subtitle}`}>
-            Estudio de diseño en Barcelona
-          </p>
-          <h1 className={styles.title}>Le damos vida a tus ideas.</h1>
-          <Button
-            text="Conoce nuestros trabajos"
-            onClick={() => push("/projects")}
-          />
+          <p className={`body ${styles.subtitle}`}>{t("subtitle")}</p>
+          <h1 className={styles.title}>{t("title")}</h1>
+          <Button text={t("button")} onClick={() => push("/projects")} />
         </div>
         <video
           autoPlay

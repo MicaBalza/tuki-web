@@ -6,26 +6,24 @@ import styles from "./page.module.css";
 
 import EmailIcon from "@/assets/icons/Contact-Email";
 import PhoneIcon from "@/assets/icons/Contact-Phone";
+import { useTranslation } from "@/i18n/client";
 import { PageProps } from "@/types/i18n";
 
 export default function Page({ params: { lng } }: PageProps) {
+  const { t } = useTranslation(lng, "contact-us");
+
   return (
     <PageContainer>
       <div className={`row bg-pink justify-between ${styles.container}`}>
         <div className={`column g-48`}>
-          <h2 className="text-purple">
-            ¿Estáis listxs para comenzar? ¡Nosotrxs también!
-          </h2>
-          <p className="text-purple">
-            Envíanos un correo a hello@tukistudio.tv ó completa el siguiente
-            formulario:
-          </p>
+          <h2 className="text-purple">{t("page.title")}</h2>
+          <p className="text-purple">{t("page.description")}</p>
           <ContactForm />
           <div className="row justify-between align-start">
             <div className="row align-start g-12">
               <PhoneIcon />
               <div className="text-purple">
-                <p className="semibold">MÓVIL</p>
+                <p className="semibold">{t("page.mobile")}</p>
                 <p>+34 667054921</p>
                 <p>+34 697805746</p>
               </div>

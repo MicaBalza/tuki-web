@@ -1,0 +1,16 @@
+{
+  "title": "Contact us",
+  "page": {
+    "title": "Are you ready to start? We are too!",
+    "description": "Send us an email to hello@tukistudio.tv or fill out the following form:",
+    "mobile": "MOBILE"
+  },
+  "form": {
+    "name": "Name",
+    "mobile": "Mobile",
+    "source": "How did you find us?",
+    "acquaintances": "Acquaintances",
+    "message": "Message",
+    "button": "Send"
+  }
+}

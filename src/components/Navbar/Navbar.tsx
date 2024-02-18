@@ -1,9 +1,11 @@
 "use client";
 
+import { useTranslation } from "@/i18n/client";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { useParams, usePathname, useRouter } from "next/navigation";
+import LangSelector from "../LangSelector";
 import SocialLinks from "../SocialLinks";
 import { NAVBAR_COLORS, ROUTES } from "./constants";
 import styles from "./styles.module.css";
@@ -12,6 +14,7 @@ const Navbar = () => {
   const { push } = useRouter();
   const pathname = usePathname();
   const { lng } = useParams();
+  const { t } = useTranslation(lng as string, "navbar");
 
   const color = NAVBAR_COLORS[pathname.replace(`${lng}`, "")] || "red";
 
@@ -41,9 +44,10 @@ const Navbar = () => {
                   className={styles.underline}
                 />
               )}
-              {route.text}
+              {t(route.text)}
             </Link>
           ))}
+          <LangSelector />
           <SocialLinks className={color === "red" ? "fill-white" : ""} />
         </div>
       </div>

@@ -1,8 +1,12 @@
-import React, { LegacyRef, useRef, useState } from "react";
-import styles from "./styles.module.css";
+import { useTranslation } from "@/i18n/client";
 import Image from "next/image";
+import { useParams } from "next/navigation";
+import { useRef, useState } from "react";
+import styles from "./styles.module.css";
 
 const WhatWeDo = () => {
+  const { lng } = useParams();
+  const { t } = useTranslation(lng as string, "what-we-do");
   const video = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
 
@@ -15,7 +19,7 @@ const WhatWeDo = () => {
           width={82}
           height={56}
         />
-        <h2 className="text-purple">Esto es lo que hacemos</h2>
+        <h2 className="text-purple">{t("title")}</h2>
       </div>
       <div className={styles.videoContainer}>
         {!isPlaying && (

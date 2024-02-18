@@ -1,22 +1,22 @@
 export const ROUTES = [
   {
     path: "/",
-    text: "Inicio",
+    text: "home",
     color: "nude",
   },
   {
     path: "/projects",
-    text: "Proyectos",
+    text: "projects",
     color: "nude",
   },
   {
     path: "/us",
-    text: "¿Quiénes somos?",
+    text: "who-we-are",
     color: "light-purple",
   },
   {
     path: "/contact-us",
-    text: "Contacto",
+    text: "contact",
     color: "pink",
   },
 ];

@@ -1,0 +1,27 @@
+{
+  "illustration": {
+    "title": "Illustration",
+    "description": "We love to draw characters, illustrated books, packaging, and all your ideas."
+  },
+  "animation": {
+    "title": "Animation",
+    "description": "We love to move: GIFs, product launches, explainer videos, visuals for events, and more."
+  },
+  "social-media": {
+    "title": "Social Media",
+    "description": "We create audiovisual content to enhance your brand."
+  },
+  "editorial": {
+    "title": "Editorial",
+    "description": "We design and layout books, magazines, brochures, newspapers - wherever words live."
+  },
+  "branding": {
+    "title": "Branding",
+    "description": "We create the elements your brand needs to stand out."
+  },
+  "motion-graphics": {
+    "title": "Motion Graphics",
+    "description": "We explore new ways to stay in motion: corporate videos, explainer videos, product launches, etc."
+  },
+  "button": "Take a look"
+}

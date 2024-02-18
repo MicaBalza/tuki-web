@@ -1,4 +1,6 @@
+import { useTranslation } from "@/i18n/client";
 import Image from "next/image";
+import { useParams } from "next/navigation";
 import styles from "./styles.module.css";
 
 const LOGOS = [
@@ -13,6 +15,9 @@ const LOGOS = [
 ];
 
 const Footer = () => {
+  const { lng } = useParams();
+  const { t } = useTranslation(lng as string, "clients");
+
   return (
     <section className={styles.clients}>
       <div className={styles.titleContainer}>
@@ -22,7 +27,7 @@ const Footer = () => {
           width={82}
           height={56}
         />
-        <h2 className={styles.title}>Quienes nos eligen...</h2>
+        <h2 className={styles.title}>{t("title")}</h2>
       </div>
       <div className={styles.marqueeContainer}>
         <div className={styles.marquee}>

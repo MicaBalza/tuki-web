@@ -1,0 +1,16 @@
+{
+  "title": "Contáctanos",
+  "page": {
+    "title": "¿Estáis listxs para comenzar? ¡Nosotrxs también!",
+    "description": "Envíanos un correo a hello@tukistudio.tv ó completa el siguiente formulario:",
+    "mobile": "MÓVIL"
+  },
+  "form": {
+    "name": "Nombre",
+    "mobile": "Móvil",
+    "source": "¿Cómo nos has encontrado?",
+    "acquaintances": "Conocidxs",
+    "message": "Mensaje",
+    "button": "Enviar"
+  }
+}
