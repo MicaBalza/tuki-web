@@ -1,16 +1,22 @@
-.hero {
+.header {
   width: 100%;
   padding: 80px 0;
   background-color: var(--red);
   text-align: center;
 }
 
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  background-color: var(--nude);
+  padding: 24px 48px 48px;
+}
+
 .projects {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 24px;
-  padding: 48px;
-  background-color: var(--white);
 }
 
 .project {

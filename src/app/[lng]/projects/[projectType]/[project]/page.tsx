@@ -5,7 +5,9 @@ import Image from "next/image";
 import PageContainer from "@/components/PageContainer";
 import styles from "./page.module.css";
 
+import Breadcrumb from "@/components/Breadcrumb";
 import { PROJECTS } from "@/constants/projects";
+import { useTranslation } from "@/i18n/client";
 import { PageProps } from "@/types/i18n";
 import { capitalizeFirstLetter } from "@/utils/string";
 import { useParams } from "next/navigation";
@@ -13,6 +15,7 @@ import "swiper/css";
 import "swiper/css/bundle";
 
 export default function DynamicPage({ params: { lng } }: PageProps) {
+  const { t } = useTranslation(lng, "services");
   const { projectType, project } = useParams();
 
   const projectData = PROJECTS[projectType as string].find(
@@ -21,6 +24,17 @@ export default function DynamicPage({ params: { lng } }: PageProps) {
 
   return (
     <PageContainer className={`${styles.container} bg-light-purple`}>
+      <Breadcrumb
+        dark
+        crumbs={[
+          { text: "Projects", path: "/projects" },
+          {
+            text: t(`${projectType as string}.title`),
+            path: `/projects/${projectType as string}`,
+          },
+          { text: projectData?.name || "" },
+        ]}
+      />
       <div className={`${styles.hero} text-white`}>
         <h4>{capitalizeFirstLetter((project as string).replace(/-/g, " "))}</h4>
         <p>{projectData?.description}</p>

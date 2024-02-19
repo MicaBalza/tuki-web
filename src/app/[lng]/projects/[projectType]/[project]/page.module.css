@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   gap: 48px;
+  padding: 24px 48px 0;
 }
 
 .hero {
@@ -9,7 +10,7 @@
   flex-direction: column;
   gap: 16px;
   width: 100%;
-  padding-top: 80px;
+  padding-top: 40px;
   text-align: center;
 }
 
@@ -19,7 +20,6 @@
 
 .imagesContainer {
   display: grid;
-  padding: 48px;
   gap: 40px;
 }
 
