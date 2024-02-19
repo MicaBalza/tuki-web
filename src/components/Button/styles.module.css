@@ -5,6 +5,7 @@
   padding: 8px 16px;
   background-color: var(--light-green);
   color: var(--purple);
+  font-family: inherit;
   font-size: 1rem;
   line-height: 0;
   border: 2px solid var(--purple);

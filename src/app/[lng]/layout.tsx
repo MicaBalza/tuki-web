@@ -5,11 +5,21 @@ import "@/styles/globals.css";
 import { PageProps } from "@/types/i18n";
 import { dir } from "i18next";
 import type { Metadata } from "next";
-import { Roboto } from "next/font/google";
+import localFont from "next/font/local";
 
-const roboto = Roboto({
-  weight: ["400", "700"],
-  subsets: ["latin"],
+const RethinkFont = localFont({
+  src: [
+    {
+      path: "../../assets/fonts/RethinkSans-Regular.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../../assets/fonts/RethinkSans-Bold.ttf",
+      weight: "700",
+      style: "bold",
+    },
+  ],
 });
 
 export const metadata: Metadata = {
@@ -29,7 +39,7 @@ export default function RootLayout({
 } & PageProps) {
   return (
     <html lang={lng} dir={dir(lng)}>
-      <body className={roboto.className}>
+      <body className={RethinkFont.className}>
         <header>
           <Navbar />
         </header>

@@ -22,7 +22,7 @@ export default function Us({ params: { lng } }: PageProps) {
             <Button text={t("button")} onClick={() => push("/contact-us")} />
           </div>
           <Image
-            src={"/static/images/us.gif"}
+            src={"/static/images/us.png"}
             alt=""
             width={896}
             height={552}

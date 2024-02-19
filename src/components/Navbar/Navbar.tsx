@@ -38,7 +38,8 @@ const Navbar = () => {
                 color === "red" ? "text-white" : "text-purple"
               } pointer`}
             >
-              {pathname === route.path && (
+              {(pathname.replace(`/${lng}`, "") === route.path ||
+                pathname.replace(`${lng}`, "") === route.path) && (
                 <motion.span
                   layoutId="underline"
                   className={styles.underline}

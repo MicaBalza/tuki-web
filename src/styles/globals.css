@@ -19,6 +19,10 @@ a {
   text-decoration: none;
 }
 
+img {
+  pointer-events: none;
+}
+
 .container {
   width: min(95%, 1380px);
   margin: 0 auto;
