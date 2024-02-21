@@ -74,6 +74,28 @@ export default function DynamicPage({ params: { lng } }: PageProps) {
           ))}
         </div>
       )}
+      {projectData?.gridGifType && projectData?.gifQuantity && (
+        <div
+          className={`${styles.imagesContainer} ${
+            styles[projectData.gridGifType]
+          }`}
+        >
+          {Array.from(
+            { length: projectData.gifQuantity || 0 },
+            (_, i) => i + 1
+          ).map((value, index) => (
+            <div key={value} className={`${styles.projectImage}`}>
+              <Image
+                src={`/static/images/${projectType}/${projectData.folderName}/${value}.gif`}
+                alt=""
+                fill
+                style={{ objectFit: "cover" }}
+                unoptimized={true}
+              />
+            </div>
+          ))}
+        </div>
+      )}
       {projectData?.hasVideo && (
         <div className={styles.videoContainer}>
           <video

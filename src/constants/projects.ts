@@ -162,6 +162,9 @@ export const ANIMATION_PROJECTS = [
     folderName: "zion",
     gridType: "onetwoonetwotwo-wide",
     imageQuantity: 6,
+    hasGifs: true,
+    gridGifType: "three-wide",
+    gifQuantity: 3,
   },
   {
     name: "ADEvantage",
@@ -216,8 +219,8 @@ const EDITORIAL_PROJECTS = [
     country: "España",
     description: "Libro de colorear para adultos",
     folderName: "birdwatchers",
-    gridType: "one-wide",
-    imageQuantity: 5,
+    gridType: "onetwoonetwotwo-wide",
+    imageQuantity: 11,
   },
   {
     name: "Tinta",

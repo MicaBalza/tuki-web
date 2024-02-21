@@ -8,4 +8,7 @@ export type ProjectData = {
   videoUrl?: string;
   hasVideo?: boolean;
   hasSecondVideo?: boolean;
+  hasGifs?: boolean;
+  gridGifType?: string;
+  gifQuantity?: number;
 };
