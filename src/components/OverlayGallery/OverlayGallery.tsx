@@ -4,6 +4,7 @@ import styles from "./styles.module.css";
 
 interface Props {
   show: boolean;
+  setShow: (value: boolean) => void;
   project: {
     type: string;
     folderName: string;
@@ -15,6 +16,7 @@ interface Props {
 
 const OverlayGallery = ({
   show,
+  setShow,
   project,
   images,
   currentIndex,
@@ -38,8 +40,23 @@ const OverlayGallery = ({
 
   return show
     ? createPortal(
-        <div className={styles.backdrop}>
-          <div className={styles.gallery}>
+        <div className={styles.backdrop} onClick={() => setShow(false)}>
+          <div
+            onClick={(e) => {
+              e.stopPropagation();
+              prevImage();
+            }}
+            className="pointer"
+          >
+            <p className={styles.arrow}>&#8249;</p>
+          </div>
+          <div
+            className={styles.gallery}
+            onClick={(e) => {
+              e.stopPropagation();
+              prevImage();
+            }}
+          >
             <Image
               src={`/static/images/${project.type}/${project.folderName}/${
                 currentIndex + 1
@@ -48,8 +65,28 @@ const OverlayGallery = ({
               width={0}
               height={0}
               sizes="100vw"
-              style={{ width: "80vw", height: "auto" }}
+              style={{
+                width: "80vw",
+                height: "auto",
+                maxHeight: "80vh",
+                objectFit: "contain",
+              }}
             />
+          </div>
+          <div
+            onClick={(e) => {
+              e.stopPropagation();
+              nextImage();
+            }}
+            className="pointer"
+          >
+            <p className={styles.arrow}>&#8250;</p>
+          </div>
+          <div
+            className={`${styles.closeButton} pointer`}
+            onClick={() => setShow(false)}
+          >
+            <p className={styles.cross}>&#10799;</p>
           </div>
         </div>,
         document.body

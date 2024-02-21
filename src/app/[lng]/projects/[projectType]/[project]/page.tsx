@@ -21,7 +21,6 @@ export default function DynamicPage({ params: { lng } }: PageProps) {
   const { projectType, project } = useParams();
 
   const [showGallery, setShowGallery] = useState(false);
-  console.log("🌸 ~ DynamicPage ~ showGallery:", showGallery);
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const projectData = PROJECTS[projectType as string].find(
@@ -105,6 +104,7 @@ export default function DynamicPage({ params: { lng } }: PageProps) {
       )}
       <OverlayGallery
         show={showGallery}
+        setShow={setShowGallery}
         currentIndex={currentIndex}
         setCurrentIndex={setCurrentIndex}
         project={{

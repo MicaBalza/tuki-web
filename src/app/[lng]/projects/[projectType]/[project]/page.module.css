@@ -16,6 +16,15 @@
 
 .projectImage {
   position: relative;
+  transition: all 0.3s ease;
+}
+
+.projectImage:hover {
+  transform: scale(1.01);
+}
+
+.projectImage:not(:hover) {
+  transform: scale(1);
 }
 
 .imagesContainer {
