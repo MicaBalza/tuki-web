@@ -17,18 +17,21 @@ const Navbar = () => {
   const { t } = useTranslation(lng as string, "navbar");
 
   const color = NAVBAR_COLORS[pathname.replace(`${lng}`, "")] || "red";
+  const bgIsRed = color === "red";
 
   return (
     <nav className={`${styles.navbar} bg-${color}`}>
       <div className={`container ${styles.container}`}>
-        <Image
-          src="/static/tuki-logo.svg"
-          alt="me"
-          width="150"
-          height="68"
-          onClick={() => push("/")}
-          className="pointer"
-        />
+        <div onClick={() => push("/")} className="pointer">
+          <Image
+            src={
+              bgIsRed ? "/static/tuki-logo-white.png" : "/static/tuki-logo.gif"
+            }
+            alt="Tuki Logo"
+            width="179"
+            height="100"
+          />
+        </div>
         <div className={styles.navlinks}>
           {ROUTES.map((route) => (
             <Link

@@ -46,7 +46,7 @@ const Carrousel = ({ service }: Props) => {
       <Swiper
         ref={swiperRef}
         autoplay={{
-          delay: 1000,
+          delay: 100,
         }}
         speed={1000}
         modules={[Autoplay]}

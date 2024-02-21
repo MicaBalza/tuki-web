@@ -9,7 +9,6 @@ import Breadcrumb from "@/components/Breadcrumb";
 import { PROJECTS } from "@/constants/projects";
 import { useTranslation } from "@/i18n/client";
 import { PageProps } from "@/types/i18n";
-import { capitalizeFirstLetter } from "@/utils/string";
 import { useParams, useRouter } from "next/navigation";
 
 export default function Page({ params: { lng } }: PageProps) {
@@ -20,9 +19,7 @@ export default function Page({ params: { lng } }: PageProps) {
   return (
     <PageContainer>
       <div className={`${styles.header}`}>
-        <h2 className="text-white">
-          {capitalizeFirstLetter(projectType as string)}
-        </h2>
+        <h2 className="text-white">{t(`${projectType as string}.title`)}</h2>
       </div>
       <div className={styles.content}>
         <Breadcrumb

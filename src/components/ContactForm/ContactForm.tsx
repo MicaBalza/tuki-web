@@ -22,15 +22,27 @@ const ContactForm = ({ ...props }: Props) => {
   ];
 
   async function sendMail(formData: FormData) {
+    const apiEndpoint = "/api/email";
     const rawFormData = {
       name: formData.get("name"),
       email: formData.get("email"),
-      tel: formData.get("phone"),
-      source: formData.get("source"),
-      message: formData.get("message"),
+      tel: formData.get("phone") || "",
+      source: formData.get("source") || "",
+      message: formData.get("message") || "",
     };
 
-    console.log(rawFormData);
+    fetch(apiEndpoint, {
+      method: "POST",
+      body: JSON.stringify(rawFormData),
+    })
+      .then((res) => res.json())
+      .then((response) => {
+        alert(response.message);
+      })
+      .catch((err) => {
+        console.log(err);
+        alert(err);
+      });
   }
 
   return (

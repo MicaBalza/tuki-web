@@ -23,7 +23,12 @@ const WhatWeDo = () => {
       </div>
       <div className={styles.videoContainer}>
         {!isPlaying && (
-          <>
+          <div
+            onClick={() => {
+              setIsPlaying(true);
+              video.current?.play();
+            }}
+          >
             <div className={styles.black} />
             <Image
               src="/static/images/reel.jpg"
@@ -37,12 +42,8 @@ const WhatWeDo = () => {
               width={146}
               height={155}
               className={styles.videoPlay}
-              onClick={() => {
-                setIsPlaying(true);
-                video.current?.play();
-              }}
             />
-          </>
+          </div>
         )}
         <video
           src="/static/video/reel.mp4"

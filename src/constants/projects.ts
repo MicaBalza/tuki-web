@@ -376,11 +376,50 @@ const BRANDING_PROJECTS = [
   },
 ];
 
+const MOTION_GRAPHICS_PROJECTS = [
+  {
+    name: "Caixa Bank",
+    country: "España",
+    description: "",
+    folderName: "caixa-bank",
+    gridType: "one-wide",
+    imageQuantity: 1,
+    videoUrl: "https://www.youtube.com/embed/QxKkaIeGTT0?si=UcKX8CVSd2ws5Dnc",
+  },
+  {
+    name: "Imagin",
+    country: "España",
+    description: "",
+    folderName: "imagin",
+    gridType: "one-wide",
+    imageQuantity: 1,
+    videoUrl: "https://www.youtube.com/embed/SBWsGniboWc",
+  },
+  {
+    name: "Olistic",
+    country: "España",
+    description: "",
+    folderName: "olistic",
+    gridType: "one-wide",
+    imageQuantity: 1,
+    videoUrl: "https://www.youtube.com/embed/RExi03yD3Sk?si=mn5_7nj-aICLk_dn",
+  },
+  {
+    name: "Taj-Mahal",
+    country: "España",
+    description: "",
+    folderName: "taj-mahal",
+    gridType: "one-wide",
+    imageQuantity: 1,
+    videoUrl: "https://www.youtube.com/embed/pzx7Wznkp3E?si=ieDe3siC_6t-IcO9",
+  },
+];
+
 export const PROJECTS: Record<string, ProjectData[]> = {
   [ServiceType.ILLUSTRATION]: ILLUSTRATION_PROJECTS,
   [ServiceType.ANIMATION]: ANIMATION_PROJECTS,
   [ServiceType.EDITORIAL]: EDITORIAL_PROJECTS,
   [ServiceType.SOCIAL_MEDIA]: SOCIAL_MEDIA_PROJECTS,
   [ServiceType.BRANDING]: BRANDING_PROJECTS,
-  [ServiceType.MOTION_GRAPHICS]: [],
+  [ServiceType.MOTION_GRAPHICS]: MOTION_GRAPHICS_PROJECTS,
 };

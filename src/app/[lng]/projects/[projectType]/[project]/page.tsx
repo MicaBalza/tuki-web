@@ -6,17 +6,23 @@ import PageContainer from "@/components/PageContainer";
 import styles from "./page.module.css";
 
 import Breadcrumb from "@/components/Breadcrumb";
+import OverlayGallery from "@/components/OverlayGallery";
 import { PROJECTS } from "@/constants/projects";
 import { useTranslation } from "@/i18n/client";
 import { PageProps } from "@/types/i18n";
 import { capitalizeFirstLetter } from "@/utils/string";
 import { useParams } from "next/navigation";
+import { useState } from "react";
 import "swiper/css";
 import "swiper/css/bundle";
 
 export default function DynamicPage({ params: { lng } }: PageProps) {
   const { t } = useTranslation(lng, "services");
   const { projectType, project } = useParams();
+
+  const [showGallery, setShowGallery] = useState(false);
+  console.log("🌸 ~ DynamicPage ~ showGallery:", showGallery);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   const projectData = PROJECTS[projectType as string].find(
     (p) => p.folderName === project
@@ -32,7 +38,7 @@ export default function DynamicPage({ params: { lng } }: PageProps) {
             text: t(`${projectType as string}.title`),
             path: `/projects/${projectType as string}`,
           },
-          { text: projectData?.name || "" },
+          { text: projectData?.name ?? "" },
         ]}
       />
       <div className={`${styles.hero} text-white`}>
@@ -49,8 +55,15 @@ export default function DynamicPage({ params: { lng } }: PageProps) {
           {Array.from(
             { length: projectData.imageQuantity },
             (_, i) => i + 1
-          ).map((value) => (
-            <div key={value} className={`${styles.projectImage} pointer`}>
+          ).map((value, index) => (
+            <div
+              key={value}
+              className={`${styles.projectImage} pointer`}
+              onClick={() => {
+                setCurrentIndex(index);
+                setShowGallery(true);
+              }}
+            >
               <Image
                 src={`/static/images/${projectType}/${projectData.folderName}/${value}.jpeg`}
                 alt=""
@@ -90,6 +103,22 @@ export default function DynamicPage({ params: { lng } }: PageProps) {
           ></iframe>
         </div>
       )}
+      <OverlayGallery
+        show={showGallery}
+        currentIndex={currentIndex}
+        setCurrentIndex={setCurrentIndex}
+        project={{
+          type: projectType as string,
+          folderName: projectData?.folderName || "",
+        }}
+        images={Array.from(
+          { length: projectData?.imageQuantity || 0 },
+          (_, i) => i + 1
+        ).map((value) => ({
+          src: `/static/images/${projectType}/${projectData?.folderName}/${value}.jpeg`,
+          alt: "",
+        }))}
+      />
     </PageContainer>
   );
 }

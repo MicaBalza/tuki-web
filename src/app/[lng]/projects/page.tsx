@@ -19,7 +19,7 @@ export default function Page({ params: { lng } }: PageProps) {
         <Image
           src="/static/images/projects.gif"
           alt="Workaholic"
-          width={400}
+          width={600}
           height={400}
           style={{ objectFit: "cover" }}
           unoptimized={true}
