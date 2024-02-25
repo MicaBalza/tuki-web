@@ -133,6 +133,14 @@ p {
   align-items: flex-start;
 }
 
+.self-center {
+  align-self: center;
+}
+
+.g-8 {
+  gap: 12px;
+}
+
 .g-12 {
   gap: 12px;
 }

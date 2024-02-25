@@ -1,4 +1,4 @@
-import React, { ButtonHTMLAttributes } from "react";
+import { ButtonHTMLAttributes } from "react";
 import styles from "./styles.module.css";
 
 interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
@@ -10,9 +10,9 @@ interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
 const Button = ({ text, inverted, className, ...props }: Props) => {
   return (
     <button
-      className={`${styles.button} ${
-        inverted ? styles.inverted : ""
-      } ${className}`}
+      className={`${styles.button} ${inverted ? styles.inverted : ""} ${
+        className || ""
+      }`}
       {...props}
     >
       {text}

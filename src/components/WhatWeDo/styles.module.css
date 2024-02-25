@@ -44,3 +44,25 @@
   max-width: 1044px;
   height: auto;
 }
+
+.shape {
+  animation: shake 2s linear infinite; /* Apply the animation */
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  75% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}

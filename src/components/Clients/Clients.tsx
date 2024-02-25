@@ -26,6 +26,7 @@ const Footer = () => {
           alt=""
           width={82}
           height={56}
+          className={styles.shape}
         />
         <h2 className={styles.title}>{t("title")}</h2>
       </div>

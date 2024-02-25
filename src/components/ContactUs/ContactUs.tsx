@@ -20,6 +20,7 @@ const WhatWeDo = () => {
           width={82}
           height={56}
           unoptimized={true}
+          className={styles.shape}
         />
         <h2 className="text-purple">{t("title")}</h2>
       </div>

@@ -54,3 +54,22 @@
     transform: translateX(calc(-100% - var(--gap)));
   }
 }
+
+.shape {
+  animation: spin 5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  35% {
+    transform: rotate(360deg);
+  }
+  75% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
