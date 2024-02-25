@@ -47,33 +47,57 @@ export default function DynamicPage({ params: { lng } }: PageProps) {
               return (
                 <div className={styles.coverContainer} key={i}>
                   <div className={styles.coverText}>
-                    <p>{element.name}</p>
-                    <p>{element.country}</p>
-                    <p>{element.description}</p>
-                    {element.goal && (
-                      <>
-                        <p>Objetivo</p>
-                        <p>{element.goal}</p>
-                      </>
-                    )}
-                    {element.creativity && (
-                      <>
-                        <p>Creatividad</p>
-                        <p>{element.creativity}</p>
-                      </>
-                    )}
-                    {element.production && (
-                      <>
-                        <p>Producción</p>
-                        <p>{element.production}</p>
-                      </>
-                    )}
-                    {element.projectManagement && (
-                      <>
-                        <p>Project Management</p>
-                        <p>{element.projectManagement}</p>
-                      </>
-                    )}
+                    <div className={`${styles.projectNameCountry} bg-white`}>
+                      <h3>{element.name}</h3>
+                      <p>{element.country}</p>
+                    </div>
+                    <p
+                      className={`${styles.projectDescription} bg-purple text-white`}
+                    >
+                      {element.description}
+                    </p>
+                    <div className={styles.projectInfo}>
+                      {element.goal && (
+                        <div>
+                          <p className={styles.projectInfoTitle}>Objetivo</p>
+                          <div
+                            dangerouslySetInnerHTML={{ __html: element.goal }}
+                          />
+                        </div>
+                      )}
+                      {element.creativity && (
+                        <div>
+                          <p className={styles.projectInfoTitle}>Creatividad</p>
+                          <div
+                            dangerouslySetInnerHTML={{
+                              __html: element.creativity,
+                            }}
+                          />
+                        </div>
+                      )}
+                      {element.production && (
+                        <div>
+                          <p className={styles.projectInfoTitle}>Producción</p>
+                          <div
+                            dangerouslySetInnerHTML={{
+                              __html: element.production,
+                            }}
+                          />
+                        </div>
+                      )}
+                      {element.projectManagement && (
+                        <div>
+                          <p className={styles.projectInfoTitle}>
+                            Project Management
+                          </p>
+                          <div
+                            dangerouslySetInnerHTML={{
+                              __html: element.projectManagement,
+                            }}
+                          />
+                        </div>
+                      )}
+                    </div>
                   </div>
                   <div className={styles.coverImg}>
                     <Image

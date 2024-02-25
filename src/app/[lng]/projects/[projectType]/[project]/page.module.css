@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   gap: 48px;
-  padding: 24px 48px 0;
+  padding-top: 24px;
 }
 
 .hero {
@@ -203,6 +203,8 @@
 
 .coverContainer {
   display: flex;
+  gap: 12px;
+  padding-right: 48px;
 }
 
 .coverText {
@@ -214,10 +216,31 @@
   width: 70%;
 }
 
+.projectNameCountry {
+  padding: 8px 0 8px 48px;
+}
+
+.projectDescription {
+  padding: 8px 0 8px 48px;
+}
+
+.projectInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 28px 12px 12px 48px;
+}
+
+.projectInfoTitle {
+  color: var(--white);
+  text-transform: uppercase;
+}
+
 .threeWide {
   display: flex;
   gap: 8px;
   height: 15vw;
+  padding: 0 48px;
 }
 
 .flexItem {
@@ -230,6 +253,7 @@
   align-items: center;
   gap: 24px;
   height: 24vw;
+  padding: 0 48px;
 }
 
 .finalResultText > * {

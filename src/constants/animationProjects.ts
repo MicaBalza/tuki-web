@@ -4,14 +4,9 @@ export const shutterfly = [
     name: "Shutterfly",
     country: "USA",
     description: "PROJECT SCOPE - vía MyeVideo",
-    goal: `Realizar un video explicativo para la comunicación interna empresarial.
-        Lograr integrar nuevas subempresas a la empresa madre.
-        Explicar las diferencias y beneficios de esta integración.`,
-    creativity: `Conceptualización creativa
-        Dirección de arte`,
-    production: `Definición del estilo gráfico
-        Creación de styleframes
-        Ilustración`,
+    goal: `Realizar un video explicativo para la comunicación interna empresarial.<br>Lograr integrar nuevas subempresas a la empresa madre.<br>Explicar las diferencias y beneficios de esta integración.`,
+    creativity: `Conceptualización creativa.<br>Dirección de arte`,
+    production: `Definición del estilo gráfico.<br>Creación de styleframes<br>Ilustración`,
     projectManagement:
       "Comunicación entre el cliente y los diferentes artistas involucrados (storyboard artists, ilustradores, animadores, ingenieros de sonido)",
   },
