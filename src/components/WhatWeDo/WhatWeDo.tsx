@@ -12,14 +12,16 @@ const WhatWeDo = () => {
 
   return (
     <section className={`column align-center g-40 ${styles.container}`}>
-      <div className="row g-32">
-        <Image
-          src={`/static/images/shape1.svg`}
-          alt=""
-          width={82}
-          height={56}
-          className={styles.shape}
-        />
+      <div className={styles.titleContainer}>
+        <div className={styles.shapeContainer}>
+          <Image
+            src={`/static/images/shape1.svg`}
+            alt=""
+            fill
+            className={styles.shape}
+          />
+        </div>
+
         <h2 className="text-purple">{t("title")}</h2>
       </div>
       <div className={styles.videoContainer}>

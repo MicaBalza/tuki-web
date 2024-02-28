@@ -11,13 +11,22 @@ const WhatWeDo = () => {
 
   return (
     <section className={`row g-96 ${styles.container} justify-center`}>
-      <div className="row g-48">
+      <Button
+        text={t("button")}
+        onClick={() => push("/us")}
+        className={styles.mobileButton}
+      />
+      <div className={styles.persons}>
         <Profile person="flor" />
         <Profile person="nat" />
       </div>
       <div className="column g-24">
         <h2 className="text-purple">{t("title")}</h2>
-        <Button text={t("button")} onClick={() => push("/us")} />
+        <Button
+          text={t("button")}
+          onClick={() => push("/us")}
+          className={styles.desktopButton}
+        />
       </div>
     </section>
   );

@@ -1,6 +1,5 @@
 .hero {
   background-color: var(--nude);
-  padding: 0;
   width: 100%;
 }
 
@@ -16,6 +15,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  width: 40%;
+  padding: 24px 0;
 }
 
 .subtitle {
@@ -25,13 +26,38 @@
 
 .title {
   color: var(--purple);
-  margin-bottom: 72px;
+  margin-bottom: 4vw;
 }
 
-.gifPlaceholder {
-  display: grid;
-  place-content: center;
+.videoContainer {
+  position: relative;
+  cursor: pointer;
   width: 60%;
-  height: 500px;
-  background-color: var(--purple);
+}
+
+.video {
+  width: 100%;
+}
+
+.videoSound {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+}
+
+@media (max-width: 576px) {
+  .container {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 0;
+    padding: 0;
+  }
+
+  .videoContainer {
+    width: 100%;
+  }
+
+  .text {
+    width: 90vw;
+  }
 }

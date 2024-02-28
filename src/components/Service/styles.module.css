@@ -1,7 +1,16 @@
 .wrapper {
+  --padding: 24px;
   display: flex;
-  padding: 0 0 0 24px;
-  gap: 56px;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 0 0 0 var(--padding);
+}
+
+.imgContainer {
+  position: relative;
+  width: 360px;
+  height: 360px;
+  flex-shrink: 0;
 }
 
 .illustration {
@@ -11,10 +20,14 @@
 .animation {
   background-color: var(--yellow);
   flex-direction: row-reverse;
-  padding: 0 24px 0 0;
+  padding: 0 var(--padding) 0 0;
 
   .text {
     color: var(--purple);
+  }
+
+  .imgContainer {
+    transform: scaleX(-1);
   }
 }
 
@@ -25,7 +38,7 @@
 .editorial {
   background-color: var(--red);
   flex-direction: row-reverse;
-  padding: 0 24px 0 0;
+  padding: 0 var(--padding) 0 0;
 }
 
 .branding {
@@ -39,7 +52,7 @@
 .motion-graphics {
   background-color: var(--light-purple);
   flex-direction: row-reverse;
-  padding: 0 24px 0 0;
+  padding: 0 var(--padding) 0 0;
 }
 
 .text {
@@ -48,7 +61,7 @@
   justify-content: center;
   align-items: center;
   gap: 36px;
-  max-width: 280px;
+  max-width: min(280px, 50vw);
   color: var(--white);
 }
 
@@ -58,4 +71,44 @@
 
 .description {
   text-align: center;
+}
+
+@media (max-width: 1024px) {
+  .wrapper {
+    --padding: 20vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    --padding: 10vw;
+  }
+
+  .text {
+    gap: 12px;
+  }
+}
+
+@media (max-width: 576px) {
+  .wrapper {
+    --padding: 5vw;
+    justify-content: center;
+    min-height: 220px;
+  }
+
+  .imgContainer {
+    width: 180px;
+    height: 180px;
+  }
+
+  .illustration,
+  .social-media,
+  .branding {
+    align-items: center;
+  }
+
+  .animation .imgContainer,
+  .motion-graphics .imgContainer {
+    align-self: flex-end;
+  }
 }

@@ -24,13 +24,14 @@ const Service = ({ service }: Props) => {
           onClick={() => push(`/projects/${service}`)}
         />
       </div>
-      <Image
-        src={`/static/images/${service}.gif`}
-        alt="Illustration"
-        width={360}
-        height={360}
-        unoptimized={true}
-      />
+      <div className={styles.imgContainer}>
+        <Image
+          src={`/static/images/${service}.gif`}
+          alt={service}
+          fill
+          unoptimized={true}
+        />
+      </div>
     </div>
   );
 };

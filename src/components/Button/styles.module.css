@@ -1,12 +1,11 @@
 .button {
   display: inline-block;
   min-width: fit-content;
-  height: 48px;
-  padding: 8px 16px;
+  padding: 1.25em 1em;
   background-color: var(--light-green);
   color: var(--purple);
   font-family: inherit;
-  font-size: 1rem;
+  font-size: clamp(0.75rem, 1.12vw, 1rem);
   line-height: 0;
   border: 2px solid var(--purple);
   border-radius: 24px;

@@ -5,3 +5,37 @@
   background-size: cover;
   background-color: var(--white);
 }
+
+.persons {
+  display: flex;
+  gap: 48px;
+}
+
+.mobileButton {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column-reverse;
+    gap: 36px;
+  }
+
+  .desktopButton {
+    display: none;
+  }
+
+  .mobileButton {
+    display: inline-block;
+  }
+}
+
+@media (max-width: 768px) {
+}
+
+@media (max-width: 576px) {
+  .persons {
+    flex-direction: column;
+    gap: 24px;
+  }
+}

@@ -1,12 +1,24 @@
+.titleContainer {
+  display: flex;
+  align-items: center;
+  gap: 2.2vw;
+}
+
+.shapeContainer {
+  position: relative;
+  width: 10vw;
+  max-width: 82px;
+  height: 7vw;
+}
+
 .container {
-  padding: 60px 0;
+  padding-block: 60px;
   background-color: var(--white);
 }
 
 .videoContainer {
   position: relative;
-  width: 100%;
-  height: 586px;
+  width: 90vw;
   max-width: 1044px;
   overflow: hidden;
   cursor: pointer;
