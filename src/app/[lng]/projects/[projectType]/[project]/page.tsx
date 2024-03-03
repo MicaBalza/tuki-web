@@ -5,7 +5,8 @@ import styles from "./page.module.css";
 
 import Breadcrumb from "@/components/Breadcrumb";
 import Button from "@/components/Button";
-import { shutterfly } from "@/constants/animationProjects";
+import { ANIMATION_PROJECTS } from "@/constants/animationProjects";
+
 import { PROJECTS } from "@/constants/projects";
 import { useTranslation } from "@/i18n/client";
 import { PageProps } from "@/types/i18n";
@@ -23,125 +24,189 @@ export default function DynamicPage({ params: { lng } }: PageProps) {
   const [showGallery, setShowGallery] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const projectData = PROJECTS[projectType as string].find(
-    (p) => p.folderName === project
-  );
+  const projectData = PROJECTS[projectType as string][project as string];
 
   return (
     <PageContainer className={`${styles.container} bg-light-purple`}>
-      <Breadcrumb
-        dark
-        crumbs={[
-          { text: "Projects", path: "/projects" },
-          {
-            text: t(`${projectType as string}.title`),
-            path: `/projects/${projectType as string}`,
-          },
-          { text: projectData?.name ?? "" },
-        ]}
-      />
       <div className={styles.contentContainer}>
-        {shutterfly.map((element: any, i: number) => {
-          switch (element.type) {
-            case "cover":
-              return (
-                <div className={styles.coverContainer} key={i}>
-                  <div className={styles.coverText}>
-                    <div className={`${styles.projectNameCountry} bg-white`}>
-                      <h3>{element.name}</h3>
-                      <p>{element.country}</p>
+        {ANIMATION_PROJECTS[project as string].map(
+          (element: any, elementIndex: number) => {
+            switch (element.type) {
+              case "cover":
+                return (
+                  <div className={styles.coverContainer} key={elementIndex}>
+                    <div className={styles.coverText}>
+                      <Breadcrumb
+                        dark
+                        crumbs={[
+                          { text: "Projects", path: "/projects" },
+                          {
+                            text: t(`${projectType as string}.title`),
+                            path: `/projects/${projectType as string}`,
+                          },
+                          { text: projectData[0].name ?? "" },
+                        ]}
+                        className={styles.breadcrumb}
+                      />
+                      <div className={`${styles.projectNameCountry} bg-white`}>
+                        <h3>{element.name}</h3>
+                        <p>{element.country}</p>
+                      </div>
+                      <p
+                        className={`${styles.projectDescription} bg-purple text-white`}
+                      >
+                        {element.description}
+                      </p>
+                      <div className={styles.projectInfo}>
+                        {element.goal && (
+                          <div>
+                            <p className={styles.projectInfoTitle}>Objetivo</p>
+                            <div
+                              dangerouslySetInnerHTML={{ __html: element.goal }}
+                            />
+                          </div>
+                        )}
+                        {element.creativity && (
+                          <div>
+                            <p className={styles.projectInfoTitle}>
+                              Creatividad
+                            </p>
+                            <div
+                              dangerouslySetInnerHTML={{
+                                __html: element.creativity,
+                              }}
+                            />
+                          </div>
+                        )}
+                        {element.production && (
+                          <div>
+                            <p className={styles.projectInfoTitle}>
+                              Producción
+                            </p>
+                            <div
+                              dangerouslySetInnerHTML={{
+                                __html: element.production,
+                              }}
+                            />
+                          </div>
+                        )}
+                        {element.projectManagement && (
+                          <div>
+                            <p className={styles.projectInfoTitle}>
+                              Project Management
+                            </p>
+                            <div
+                              dangerouslySetInnerHTML={{
+                                __html: element.projectManagement,
+                              }}
+                            />
+                          </div>
+                        )}
+                      </div>
                     </div>
-                    <p
-                      className={`${styles.projectDescription} bg-purple text-white`}
-                    >
-                      {element.description}
-                    </p>
-                    <div className={styles.projectInfo}>
-                      {element.goal && (
-                        <div>
-                          <p className={styles.projectInfoTitle}>Objetivo</p>
-                          <div
-                            dangerouslySetInnerHTML={{ __html: element.goal }}
-                          />
-                        </div>
-                      )}
-                      {element.creativity && (
-                        <div>
-                          <p className={styles.projectInfoTitle}>Creatividad</p>
-                          <div
-                            dangerouslySetInnerHTML={{
-                              __html: element.creativity,
-                            }}
-                          />
-                        </div>
-                      )}
-                      {element.production && (
-                        <div>
-                          <p className={styles.projectInfoTitle}>Producción</p>
-                          <div
-                            dangerouslySetInnerHTML={{
-                              __html: element.production,
-                            }}
-                          />
-                        </div>
-                      )}
-                      {element.projectManagement && (
-                        <div>
-                          <p className={styles.projectInfoTitle}>
-                            Project Management
-                          </p>
-                          <div
-                            dangerouslySetInnerHTML={{
-                              __html: element.projectManagement,
-                            }}
-                          />
-                        </div>
-                      )}
-                    </div>
-                  </div>
-                  <div className={styles.coverImg}>
-                    <Image
-                      src={`/static/images/${projectType}/${project}/cover.jpeg`}
-                      alt=""
-                      fill
-                      style={{ objectFit: "cover" }}
-                      unoptimized={true}
-                    />
-                  </div>
-                </div>
-              );
-              break;
-            case "flex":
-              return (
-                <div className={styles[element.flex]}>
-                  {Array.from(
-                    { length: element.quantity },
-                    (_, i) => i + 1
-                  ).map((value, index) => (
-                    <div className={styles.flexItem} key={index}>
+                    <div className={styles.coverImg}>
                       <Image
-                        src={`/static/images/${projectType}/${project}/${value}.jpeg`}
+                        src={`/static/images/${projectType}/${project}/cover.jpeg`}
                         alt=""
                         fill
                         style={{ objectFit: "cover" }}
                         unoptimized={true}
                       />
                     </div>
-                  ))}
-                </div>
-              );
-            case "info-video":
-              return (
-                <div className={styles.finalResult} key={i}>
-                  <div
-                    className={`${styles.flexItem} ${styles.finalResultText} column g-12 align-center text-white`}
-                  >
-                    <h2>{element.h2}</h2>
-                    <p>{element.p}</p>
                   </div>
+                );
+                break;
+              case "flex":
+                return (
+                  <div className={styles[element.flex]}>
+                    {Array.from(
+                      { length: element.quantity },
+                      (_, i) => i + 1
+                    ).map((value, index) => (
+                      <div className={styles.flexItem} key={index}>
+                        <Image
+                          src={`/static/images/${projectType}/${project}/${elementIndex}-${value}.jpeg`}
+                          alt=""
+                          fill
+                          style={{ objectFit: "cover" }}
+                          unoptimized={true}
+                        />
+                      </div>
+                    ))}
+                  </div>
+                );
+              case "flex-video":
+                return (
+                  <div className={styles[element.flex]}>
+                    {Array.from(
+                      { length: element.quantity },
+                      (_, i) => i + 1
+                    ).map((value, index) => (
+                      <div className={styles.flexItem} key={index}>
+                        <video
+                          src={`/static/images/${projectType}/${project}/${elementIndex}-${value}.mp4`}
+                          className={styles.video}
+                          controls
+                        ></video>
+                      </div>
+                    ))}
+                  </div>
+                );
+              case "info-video":
+                return (
+                  <div className={styles.finalResult} key={elementIndex}>
+                    <div
+                      className={`${styles.flexItem} ${styles.finalResultText} column g-12 align-center text-white`}
+                    >
+                      <h2>{element.h2}</h2>
+                      <p>{element.p}</p>
+                    </div>
+                    <div
+                      className={`${styles.flexItem} ${styles.finalResultVideo}`}
+                    >
+                      {element.videoUrl ? (
+                        <iframe
+                          src={element.videoUrl}
+                          title="YouTube video player"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                          className={styles.video}
+                        ></iframe>
+                      ) : (
+                        <video
+                          src={`/static/images/${projectType}/${project}/video.mp4`}
+                          className={styles.video}
+                          controls
+                        ></video>
+                      )}
+                    </div>
+                  </div>
+                );
+              case "info-img":
+                return (
                   <div
-                    className={`${styles.flexItem} ${styles.videoContainer}`}
+                    className={`${styles.finalResult} ${styles.reverse}`}
+                    key={elementIndex}
                   >
+                    <div
+                      className={`${styles.flexItem} ${styles.finalResultText} column g-12 align-center text-white`}
+                    >
+                      <h2>{element.h2}</h2>
+                      <p>{element.p}</p>
+                    </div>
+                    <div className={styles.flexItem}>
+                      <Image
+                        src={`/static/images/${projectType}/${project}/${elementIndex}.jpeg`}
+                        alt=""
+                        fill
+                        style={{ objectFit: "cover" }}
+                        unoptimized={true}
+                      />
+                    </div>
+                  </div>
+                );
+              case "video":
+                return (
+                  <div className={`${styles.videoContainer}`}>
                     <iframe
                       src={element.videoUrl}
                       title="YouTube video player"
@@ -149,12 +214,12 @@ export default function DynamicPage({ params: { lng } }: PageProps) {
                       className={styles.video}
                     ></iframe>
                   </div>
-                </div>
-              );
-            default:
-              break;
+                );
+              default:
+                break;
+            }
           }
-        })}
+        )}
         <Button
           text="Ver más trabajos :)"
           onClick={() => router.back()}

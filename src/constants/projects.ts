@@ -1,5 +1,5 @@
-import { ProjectData } from "@/types/projects";
 import { ServiceType } from "@/types/services";
+import { ANIMATION_PROJECTS } from "./animationProjects";
 
 export const ILLUSTRATION_PROJECTS = [
   {
@@ -77,124 +77,124 @@ export const ILLUSTRATION_PROJECTS = [
   },
 ];
 
-export const ANIMATION_PROJECTS = [
-  {
-    name: "Shutterfly",
-    description: "Storyboad, styleframes e ilustración para Shutterfly",
-    country: "USA",
-    folderName: "shutterfly",
-    gridType: "onetwoonefour",
-    imageQuantity: 4,
-    videoUrl: "https://www.youtube.com/embed/-CrREZtdzSg?si=LT_ZLkrNOaXP_jR1",
-  },
-  {
-    name: "Tatari TV",
-    description: "Ilustraciones para videos de Tatari TV",
-    country: "USA",
-    folderName: "tatari",
-    gridType: "onetwoonetwotwo-wide",
-    imageQuantity: 6,
-    videoUrl: "https://www.youtube.com/embed/9XAO7arAqDs?si=FZTp__f9yT5k9ZbF",
-  },
-  {
-    name: "Linmore Led",
-    description: "Storyboad, styleframes y dirección de arte para Linmore Led",
-    country: "USA",
-    folderName: "linmore-led",
-    gridType: "oneonefourtwo",
-    imageQuantity: 6,
-    videoUrl: "https://www.youtube.com/embed/QzvengrRdeE?si=kmL4kNP4Z3aSYads",
-  },
-  {
-    name: "Bridge Tech Medical",
-    description:
-      "Project Manager, Dirección de arte, storyboard, styleframe e Illustración",
-    country: "USA",
-    folderName: "bridge-tech-medical",
-    gridType: "two-wide",
-    imageQuantity: 7,
-    videoUrl: "https://www.youtube.com/embed/4YQ9MxZjfNc?si=LWHP4VJ_jKyVM23F",
-  },
-  {
-    name: "NEHA",
-    description: "Ilustraciones para NEHA",
-    country: "USA",
-    folderName: "neha",
-    gridType: "onetwoonetwotwo-wide",
-    imageQuantity: 11,
-    videoUrl: "https://www.youtube.com/embed/oZ95wQ6mv_Q?si=9heo3QMCpuw9dKvf",
-  },
-  {
-    name: "UK School",
-    description:
-      "Creación de personajes, storyboard, styleframe,animación y dirección creativa",
-    country: "UK",
-    folderName: "uk-school",
-    gridType: "one",
-    imageQuantity: 3,
-    hasVideo: true,
-  },
-  {
-    name: "Continental refining company",
-    description:
-      "Dirección de arte e Ilustración para Continental refining company - CRC",
-    country: "USA",
-    folderName: "crc",
-    gridType: "onetwoonefour",
-    imageQuantity: 13,
-    videoUrl: "https://www.youtube.com/embed/PVBrrZ4a9xM?si=Mf8nS-REGmdPaUGK",
-  },
-  {
-    name: "Hum Capital",
-    description:
-      "Project Manager, dirección de arte, storyboard ilustración para Hum Capital",
-    country: "USA",
-    folderName: "hum-capital",
-    gridType: "two-wide",
-    imageQuantity: 5,
-    videoUrl: "https://www.youtube.com/embed/N6zFFBg4J7U?si=BdOnC0J8-FjmJEow",
-  },
-  {
-    name: "Zion",
-    description:
-      "Dirección de arte, ilustraciones y animación para app de video game Zion",
-    country: "España",
-    folderName: "zion",
-    gridType: "onetwoonetwotwo-wide",
-    imageQuantity: 6,
-    hasGifs: true,
-    gridGifType: "three-wide",
-    gifQuantity: 3,
-  },
-  {
-    name: "ADEvantage",
-    description:
-      "Styleframes, ilustraciones y dirección de arte para ADEvantage",
-    country: "USA",
-    folderName: "adevantage",
-    gridType: "one",
-    imageQuantity: 2,
-    videoUrl: "https://www.youtube.com/embed/HsJshXSRYds?si=Q9naCzpgqtUFPsNX",
-  },
-  {
-    name: "OQSIE",
-    description: "Project Manager, Dirección de arte, storyboard",
-    country: "USA",
-    folderName: "oqsie",
-    gridType: "one-wide",
-    imageQuantity: 1,
-    hasVideo: true,
-    videoUrl: "https://www.youtube.com/embed/155itTgk1t0?si=-VwA6GCbHNPNi5kI",
-  },
-  {
-    name: "TDVerse",
-    description: "Styleframes e ilustración para TDVerse",
-    country: "USA",
-    folderName: "tdverse",
-    gridType: "onetwoonetwotwo-wide",
-    imageQuantity: 9,
-  },
-];
+// export const ANIMATION_PROJECTS = [
+//   {
+//     name: "Shutterfly",
+//     description: "Storyboad, styleframes e ilustración para Shutterfly",
+//     country: "USA",
+//     folderName: "shutterfly",
+//     gridType: "onetwoonefour",
+//     imageQuantity: 4,
+//     videoUrl: "https://www.youtube.com/embed/-CrREZtdzSg?si=LT_ZLkrNOaXP_jR1",
+//   },
+//   {
+//     name: "Tatari TV",
+//     description: "Ilustraciones para videos de Tatari TV",
+//     country: "USA",
+//     folderName: "tatari",
+//     gridType: "onetwoonetwotwo-wide",
+//     imageQuantity: 6,
+//     videoUrl: "https://www.youtube.com/embed/9XAO7arAqDs?si=FZTp__f9yT5k9ZbF",
+//   },
+//   {
+//     name: "Linmore Led",
+//     description: "Storyboad, styleframes y dirección de arte para Linmore Led",
+//     country: "USA",
+//     folderName: "linmore-led",
+//     gridType: "oneonefourtwo",
+//     imageQuantity: 6,
+//     videoUrl: "https://www.youtube.com/embed/QzvengrRdeE?si=kmL4kNP4Z3aSYads",
+//   },
+//   {
+//     name: "Bridge Tech Medical",
+//     description:
+//       "Project Manager, Dirección de arte, storyboard, styleframe e Illustración",
+//     country: "USA",
+//     folderName: "bridge-tech-medical",
+//     gridType: "two-wide",
+//     imageQuantity: 7,
+//     videoUrl: "https://www.youtube.com/embed/4YQ9MxZjfNc?si=LWHP4VJ_jKyVM23F",
+//   },
+//   {
+//     name: "NEHA",
+//     description: "Ilustraciones para NEHA",
+//     country: "USA",
+//     folderName: "neha",
+//     gridType: "onetwoonetwotwo-wide",
+//     imageQuantity: 11,
+//     videoUrl: "https://www.youtube.com/embed/oZ95wQ6mv_Q?si=9heo3QMCpuw9dKvf",
+//   },
+//   {
+//     name: "UK School",
+//     description:
+//       "Creación de personajes, storyboard, styleframe,animación y dirección creativa",
+//     country: "UK",
+//     folderName: "uk-school",
+//     gridType: "one",
+//     imageQuantity: 3,
+//     hasVideo: true,
+//   },
+//   {
+//     name: "Continental refining company",
+//     description:
+//       "Dirección de arte e Ilustración para Continental refining company - CRC",
+//     country: "USA",
+//     folderName: "crc",
+//     gridType: "onetwoonefour",
+//     imageQuantity: 13,
+//     videoUrl: "https://www.youtube.com/embed/PVBrrZ4a9xM?si=Mf8nS-REGmdPaUGK",
+//   },
+//   {
+//     name: "Hum Capital",
+//     description:
+//       "Project Manager, dirección de arte, storyboard ilustración para Hum Capital",
+//     country: "USA",
+//     folderName: "hum-capital",
+//     gridType: "two-wide",
+//     imageQuantity: 5,
+//     videoUrl: "https://www.youtube.com/embed/N6zFFBg4J7U?si=BdOnC0J8-FjmJEow",
+//   },
+//   {
+//     name: "Zion",
+//     description:
+//       "Dirección de arte, ilustraciones y animación para app de video game Zion",
+//     country: "España",
+//     folderName: "zion",
+//     gridType: "onetwoonetwotwo-wide",
+//     imageQuantity: 6,
+//     hasGifs: true,
+//     gridGifType: "three-wide",
+//     gifQuantity: 3,
+//   },
+//   {
+//     name: "ADEvantage",
+//     description:
+//       "Styleframes, ilustraciones y dirección de arte para ADEvantage",
+//     country: "USA",
+//     folderName: "adevantage",
+//     gridType: "one",
+//     imageQuantity: 2,
+//     videoUrl: "https://www.youtube.com/embed/HsJshXSRYds?si=Q9naCzpgqtUFPsNX",
+//   },
+//   {
+//     name: "OQSIE",
+//     description: "Project Manager, Dirección de arte, storyboard",
+//     country: "USA",
+//     folderName: "oqsie",
+//     gridType: "one-wide",
+//     imageQuantity: 1,
+//     hasVideo: true,
+//     videoUrl: "https://www.youtube.com/embed/155itTgk1t0?si=-VwA6GCbHNPNi5kI",
+//   },
+//   {
+//     name: "TDVerse",
+//     description: "Styleframes e ilustración para TDVerse",
+//     country: "USA",
+//     folderName: "tdverse",
+//     gridType: "onetwoonetwotwo-wide",
+//     imageQuantity: 9,
+//   },
+// ];
 
 const EDITORIAL_PROJECTS = [
   {
@@ -418,7 +418,7 @@ const MOTION_GRAPHICS_PROJECTS = [
   },
 ];
 
-export const PROJECTS: Record<string, ProjectData[]> = {
+export const PROJECTS: Record<string, any> = {
   [ServiceType.ILLUSTRATION]: ILLUSTRATION_PROJECTS,
   [ServiceType.ANIMATION]: ANIMATION_PROJECTS,
   [ServiceType.EDITORIAL]: EDITORIAL_PROJECTS,

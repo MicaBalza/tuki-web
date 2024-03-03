@@ -52,11 +52,13 @@ const Carrousel = ({ service }: Props) => {
         modules={[Autoplay]}
         className={styles.swiper}
       >
-        {PROJECTS[service].map((project) => (
-          <SwiperSlide key={project.name}>
+        {Object.keys(PROJECTS[service]).map((project) => (
+          <SwiperSlide
+            key={PROJECTS[service as string][project][0]?.name || ""}
+          >
             <Image
-              src={`/static/images/${service}/${project.folderName}/1.jpeg`}
-              alt={project.name}
+              src={`/static/images/${service}/${project}/cover.jpeg`}
+              alt={PROJECTS[service as string][project][0]?.name || ""}
               fill
               style={{ objectFit: "cover" }}
               unoptimized={true}

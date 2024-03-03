@@ -8,11 +8,12 @@ interface Props {
     path?: string;
   }[];
   dark?: boolean;
+  className?: string;
 }
 
-const Breadcrumb = ({ crumbs, dark }: Props) => {
+const Breadcrumb = ({ crumbs, dark, className }: Props) => {
   return (
-    <div className="row">
+    <div className={`row ${className ? className : ""}`}>
       {crumbs.map((crumb, index) => (
         <span key={crumb.text} className="row">
           {index > 0 && (
