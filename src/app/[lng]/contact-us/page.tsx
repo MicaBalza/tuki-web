@@ -13,9 +13,9 @@ export default function Page({ params: { lng } }: PageProps) {
   const { t } = useTranslation(lng, "contact-us");
 
   return (
-    <PageContainer>
-      <div className={`row bg-pink justify-between ${styles.container}`}>
-        <div className={`column g-48`}>
+    <PageContainer className="bg-pink">
+      <div className={`${styles.container}`}>
+        <div className={`column g-48 ${styles.formContainer}`}>
           <h2 className="text-purple">{t("page.title")}</h2>
           <p className="text-purple">{t("page.description")}</p>
           <ContactForm />
@@ -37,13 +37,14 @@ export default function Page({ params: { lng } }: PageProps) {
             </div>
           </div>
         </div>
-        <Image
-          src={`/static/images/hamburguer.gif`}
-          alt="Illustration"
-          width={745}
-          height={745}
-          unoptimized={true}
-        />
+        <div className={styles.imageContainer}>
+          <Image
+            src={`/static/images/hamburguer.gif`}
+            alt=""
+            fill
+            objectFit="contain"
+          />
+        </div>
       </div>
     </PageContainer>
   );

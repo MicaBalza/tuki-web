@@ -8,6 +8,10 @@
   text-align: center;
 }
 
+.title {
+  flex-shrink: 0;
+}
+
 .projects {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -17,6 +21,39 @@
     "editorial editorial motion-graphics motion-graphics motion-graphics motion-graphics "
     "social-media social-media social-media branding branding branding";
   gap: 24px;
-  padding: 48px;
+  width: min(90vw, 1380px);
+  margin: 0 auto;
+  padding: 48px 0;
   background-color: var(--white);
+}
+
+.imageContainer {
+  position: relative;
+  display: flex;
+  width: 50%;
+}
+
+.image {
+  height: 100%;
+}
+
+@media (max-width: 768px) {
+  .projects {
+    grid-template-rows: repeat(3, 240px);
+  }
+}
+
+@media (max-width: 576px) {
+  .projects {
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+    grid-auto-rows: 200px;
+    grid-template-areas:
+      "illustration"
+      "animation"
+      "editorial"
+      "motion-graphics"
+      "social-media"
+      "branding";
+  }
 }

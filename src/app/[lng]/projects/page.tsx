@@ -1,7 +1,5 @@
 "use client";
 
-import Image from "next/image";
-
 import Carrousel from "@/components/Carrousel";
 import PageContainer from "@/components/PageContainer";
 import { SERVICES } from "@/constants/services";
@@ -13,17 +11,16 @@ export default function Page({ params: { lng } }: PageProps) {
   const { t } = useTranslation(lng, "projects");
 
   return (
-    <PageContainer>
+    <PageContainer className="bg-white">
       <div className={styles.hero}>
-        <h2 className="text-purple">{t("title")}</h2>
-        <Image
-          src="/static/images/projects.gif"
-          alt="Workaholic"
-          width={600}
-          height={400}
-          style={{ objectFit: "cover" }}
-          unoptimized={true}
-        />
+        <h2 className={`text-purple ${styles.title}`}>{t("title")}</h2>
+        <div className={styles.imageContainer}>
+          <img
+            src="/static/images/projects.gif"
+            alt="Workaholic"
+            className={styles.image}
+          />
+        </div>
       </div>
       <div className={styles.projects}>
         {SERVICES.map((service) => (

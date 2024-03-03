@@ -20,11 +20,12 @@ a {
 }
 
 img {
+  max-width: 100%;
   pointer-events: none;
 }
 
 .container {
-  width: min(95%, 1380px);
+  width: min(90vw, 1380px);
   margin: 0 auto;
 }
 
