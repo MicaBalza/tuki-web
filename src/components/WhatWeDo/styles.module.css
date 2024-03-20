@@ -78,3 +78,9 @@
     transform: rotate(0deg);
   }
 }
+
+@media (max-width: 576px) {
+  .videoPlay {
+    transform: scale(0.5);
+  }
+}

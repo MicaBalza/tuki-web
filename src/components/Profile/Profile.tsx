@@ -18,8 +18,6 @@ const Profile = ({ person }: Props) => {
         loop
         src={`/static/video/${person}.mp4`}
         className={styles.video}
-        width={360}
-        height={360}
       ></video>
       <div className="column align-center">
         <h3 className={styles.name}>{t(`${person}.name`)}</h3>

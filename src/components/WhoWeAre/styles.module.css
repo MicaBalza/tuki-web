@@ -9,6 +9,7 @@
 .persons {
   display: flex;
   gap: 48px;
+  padding: 0 20px;
 }
 
 .mobileButton {
@@ -28,9 +29,6 @@
   .mobileButton {
     display: inline-block;
   }
-}
-
-@media (max-width: 768px) {
 }
 
 @media (max-width: 576px) {

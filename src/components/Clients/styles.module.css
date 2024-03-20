@@ -39,7 +39,7 @@
   justify-content: space-around;
   gap: var(--gap);
   min-width: 100%;
-  animation: scroll 10s linear infinite;
+  animation: scroll 20s linear infinite;
 }
 
 .marqueeContainer:hover .marquee {
@@ -71,5 +71,19 @@
   }
   100% {
     transform: rotate(0deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .imageContainer {
+    width: 202px;
+    height: 134px;
+  }
+}
+
+@media (max-width: 576px) {
+  .imageContainer {
+    width: 162px;
+    height: 107px;
   }
 }

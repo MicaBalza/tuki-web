@@ -12,12 +12,23 @@
   top: 80px;
 }
 
-.imageContainer img {
+.imageContainer {
+  position: relative;
+  width: 600px;
+  height: 600px;
+  flex-shrink: 0;
   margin-top: -20px;
 }
 
 .shape {
   animation: shake 2s linear infinite; /* Apply the animation */
+}
+
+@media (max-width: 768px) {
+  .imageContainer {
+    width: 300px;
+    height: 300px;
+  }
 }
 
 @keyframes shake {

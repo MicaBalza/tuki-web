@@ -5,3 +5,15 @@
 .title {
   color: var(--gray);
 }
+
+.video {
+  width: 360px;
+  height: 360px;
+}
+
+@media (max-width: 768px) {
+  .video {
+    width: 300px;
+    height: 300px;
+  }
+}

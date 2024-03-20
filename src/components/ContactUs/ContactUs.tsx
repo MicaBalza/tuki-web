@@ -28,8 +28,7 @@ const WhatWeDo = () => {
         <Image
           src={`/static/images/hamburguer.gif`}
           alt=""
-          width={600}
-          height={600}
+          fill
           unoptimized={true}
         />
       </div>

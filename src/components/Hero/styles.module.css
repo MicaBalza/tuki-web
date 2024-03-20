@@ -37,6 +37,7 @@
 
 .video {
   width: 100%;
+  height: 100%;
 }
 
 .videoSound {
@@ -59,5 +60,28 @@
 
   .text {
     width: 90vw;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 0;
+    padding: 0;
+  }
+
+  .videoContainer {
+    width: 100%;
+  }
+
+  .text {
+    width: 90vw;
+  }
+}
+
+@media (min-width: 1441px) {
+  .container {
+    padding-left: 10vw;
   }
 }
