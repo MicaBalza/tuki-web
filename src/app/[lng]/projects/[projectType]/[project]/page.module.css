@@ -62,9 +62,15 @@
   padding: 0 var(--padding-block);
 }
 
-.oneTall {
+.oneSquare {
   display: flex;
   height: 60vw;
+  padding: 0 var(--padding-block);
+}
+
+.oneTall {
+  display: flex;
+  height: 100vw;
   padding: 0 var(--padding-block);
 }
 
@@ -75,7 +81,7 @@
   padding: 0 var(--padding-block);
 }
 
-.twoTall {
+.twoSquare {
   display: flex;
   gap: 8px;
   height: 50vw;
@@ -89,7 +95,7 @@
   padding: 0 var(--padding-block);
 }
 
-.threeTall {
+.threeSquare {
   display: flex;
   gap: 8px;
   height: 33vw;
@@ -103,7 +109,7 @@
   padding: 0 var(--padding-block);
 }
 
-.fourTall {
+.fourSquare {
   display: flex;
   gap: 8px;
   height: 25vw;

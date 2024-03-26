@@ -169,7 +169,7 @@ const privateUKSchool = [
   {
     type: "flex",
     quantity: 1,
-    flex: "oneTall",
+    flex: "oneSquare",
   },
   {
     type: "flex",
@@ -203,7 +203,7 @@ const crc = [
   {
     type: "flex",
     quantity: 1,
-    flex: "oneTall",
+    flex: "oneSquare",
   },
   {
     type: "flex-video",
@@ -281,7 +281,7 @@ const zion = [
   {
     type: "flex",
     quantity: 3,
-    flex: "threeTall",
+    flex: "threeSquare",
     format: "gif",
   },
   {

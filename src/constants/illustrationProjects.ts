@@ -66,7 +66,7 @@ const primal = [
   {
     type: "flex",
     quantity: 2,
-    flex: "twoTall",
+    flex: "twoSquare",
   },
   {
     type: "info",
@@ -75,17 +75,17 @@ const primal = [
   {
     type: "flex",
     quantity: 2,
-    flex: "twoTall",
+    flex: "twoSquare",
   },
   {
     type: "flex",
     quantity: 4,
-    flex: "fourTall",
+    flex: "fourSquare",
   },
   {
     type: "flex",
     quantity: 2,
-    flex: "twoTall",
+    flex: "twoSquare",
   },
   {
     type: "flex",
@@ -192,7 +192,7 @@ const illuminated = [
   {
     type: "flex",
     quantity: 4,
-    flex: "fourTall",
+    flex: "fourSquare",
   },
   {
     type: "info",
@@ -201,17 +201,17 @@ const illuminated = [
   {
     type: "flex",
     quantity: 1,
-    flex: "oneTall",
+    flex: "oneSquare",
   },
   {
     type: "flex",
     quantity: 4,
-    flex: "fourTall",
+    flex: "fourSquare",
   },
   {
     type: "flex",
     quantity: 4,
-    flex: "fourTall",
+    flex: "fourSquare",
   },
   {
     type: "info",
@@ -225,22 +225,22 @@ const illuminated = [
   {
     type: "flex",
     quantity: 4,
-    flex: "fourTall",
+    flex: "fourSquare",
   },
   {
     type: "flex",
     quantity: 4,
-    flex: "fourTall",
+    flex: "fourSquare",
   },
   {
     type: "flex",
     quantity: 4,
-    flex: "fourTall",
+    flex: "fourSquare",
   },
   {
     type: "flex",
     quantity: 2,
-    flex: "twoTall",
+    flex: "twoSquare",
   },
 ];
 
@@ -257,12 +257,12 @@ const migrar = [
   {
     type: "flex",
     quantity: 3,
-    flex: "threeTall",
+    flex: "threeSquare",
   },
   {
     type: "flex",
     quantity: 2,
-    flex: "twoTall",
+    flex: "twoSquare",
   },
 ];
 
@@ -279,32 +279,32 @@ const alfabeto = [
   {
     type: "flex",
     quantity: 4,
-    flex: "fourTall",
+    flex: "fourSquare",
   },
   {
     type: "flex",
     quantity: 4,
-    flex: "fourTall",
+    flex: "fourSquare",
   },
   {
     type: "flex",
     quantity: 4,
-    flex: "fourTall",
+    flex: "fourSquare",
   },
   {
     type: "flex",
     quantity: 4,
-    flex: "fourTall",
+    flex: "fourSquare",
   },
   {
     type: "flex",
     quantity: 4,
-    flex: "fourTall",
+    flex: "fourSquare",
   },
   {
     type: "flex",
     quantity: 4,
-    flex: "fourTall",
+    flex: "fourSquare",
   },
 ];
 
@@ -321,12 +321,12 @@ const coleccionRosa = [
   {
     type: "flex",
     quantity: 3,
-    flex: "threeTall",
+    flex: "threeSquare",
   },
   {
     type: "flex",
     quantity: 3,
-    flex: "threeTall",
+    flex: "threeSquare",
   },
 ];
 
@@ -343,44 +343,32 @@ const coleccionIlustraciones = [
   {
     type: "flex",
     quantity: 2,
-    flex: "square",
-    imageUrl:
-      "https://drive.google.com/file/d/12fK8Gmq7-Rh7r_s16C5nGdCOgzpjVV5J/view?usp=drive_link",
+    flex: "twoSquare",
   },
   {
     type: "flex",
     quantity: 2,
-    flex: "square",
-    imageUrl:
-      "https://drive.google.com/drive/folders/1W3vOs_H4OcUDqw30Gv9ISdhNlAqolJFQ?usp=drive_link",
+    flex: "twoSquare",
   },
   {
     type: "flex",
     quantity: 3,
-    flex: "square",
-    imageUrl:
-      "https://drive.google.com/drive/folders/1Y0-1khETlSzyIphiQN_upNohWMjO3b5s?usp=drive_link",
+    flex: "threeSquare",
   },
   {
     type: "flex",
     quantity: 2,
-    flex: "square",
-    imageUrl:
-      "https://drive.google.com/drive/folders/1WlFqe3igatX_7NMkLzl01h0BIrF27lLZ?usp=drive_link",
+    flex: "twoSquare",
   },
   {
     type: "flex",
     quantity: 1,
-    flex: "tall",
-    imageUrl:
-      "https://drive.google.com/file/d/1hKr1NiHpyv6j5HpYr36i201GuXbgApCl/view?usp=drive_link",
+    flex: "oneTall",
   },
   {
     type: "flex",
     quantity: 1,
-    flex: "square",
-    imageUrl:
-      "https://drive.google.com/file/d/1Sssm_BieVhzl-2I2H7nTRBbLW_JGoqyJ/view?usp=drive_link",
+    flex: "oneSquare",
   },
 ];
 
