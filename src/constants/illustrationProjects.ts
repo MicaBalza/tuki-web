@@ -179,9 +179,219 @@ const fantasyCharacters = [
   },
 ];
 
+const illuminated = [
+  {
+    type: "cover",
+    name: "Illuminated",
+    country: "USA",
+    description: "PROJECT SCOPE",
+    goal: "Creación de un alfabeto basado en la estética de los libros iluminados.",
+    creativity: "Conceptualización Creativa.<br>Dirección de arte",
+    production: "Definición del estilo gráfico.<br>Ilustración",
+  },
+  {
+    type: "flex",
+    quantity: 4,
+    flex: "fourTall",
+  },
+  {
+    type: "info",
+    h2: "Investigamos acerca de los libros iluminados, las tematicas que aparecían allí y los personajes que se repetían.",
+  },
+  {
+    type: "flex",
+    quantity: 1,
+    flex: "oneTall",
+  },
+  {
+    type: "flex",
+    quantity: 4,
+    flex: "fourTall",
+  },
+  {
+    type: "flex",
+    quantity: 4,
+    flex: "fourTall",
+  },
+  {
+    type: "info",
+    h2: "Del blanco y negro al color",
+  },
+  {
+    type: "flex-video",
+    quantity: 1,
+    flex: "oneWide",
+  },
+  {
+    type: "flex",
+    quantity: 4,
+    flex: "fourTall",
+  },
+  {
+    type: "flex",
+    quantity: 4,
+    flex: "fourTall",
+  },
+  {
+    type: "flex",
+    quantity: 4,
+    flex: "fourTall",
+  },
+  {
+    type: "flex",
+    quantity: 2,
+    flex: "twoTall",
+  },
+];
+
+const migrar = [
+  {
+    type: "cover",
+    name: "Migrar",
+    country: "España",
+    description: "PROJECT SCOPE",
+    goal: "Creación de una serie de ilustraciones acerca de la migración a España.",
+    creativity: "Conceptualización Creativa.<br>Dirección de arte",
+    production: "Definición del estilo gráfico.<br>Ilustración",
+  },
+  {
+    type: "flex",
+    quantity: 3,
+    flex: "threeTall",
+  },
+  {
+    type: "flex",
+    quantity: 2,
+    flex: "twoTall",
+  },
+];
+
+const alfabeto = [
+  {
+    type: "cover",
+    name: "Alfabeto",
+    country: "Argentina",
+    description: "PROJECT SCOPE",
+    goal: "Creación de una serie de alfabeto ilustrado como parte de proyecto personal.",
+    creativity: "Conceptualización Creativa.<br>Dirección de arte",
+    production: "Definición del estilo gráfico.<br>Ilustración",
+  },
+  {
+    type: "flex",
+    quantity: 4,
+    flex: "fourTall",
+  },
+  {
+    type: "flex",
+    quantity: 4,
+    flex: "fourTall",
+  },
+  {
+    type: "flex",
+    quantity: 4,
+    flex: "fourTall",
+  },
+  {
+    type: "flex",
+    quantity: 4,
+    flex: "fourTall",
+  },
+  {
+    type: "flex",
+    quantity: 4,
+    flex: "fourTall",
+  },
+  {
+    type: "flex",
+    quantity: 4,
+    flex: "fourTall",
+  },
+];
+
+const coleccionRosa = [
+  {
+    type: "cover",
+    name: "Colección rosa",
+    country: "Argentina",
+    description: "PROJECT SCOPE",
+    goal: "Creación de una serie de ilustraciones en diversos estilos.",
+    creativity: "Conceptualización Creativa.<br>Dirección de arte",
+    production: "Definición del estilo gráfico.<br>Ilustración",
+  },
+  {
+    type: "flex",
+    quantity: 3,
+    flex: "threeTall",
+  },
+  {
+    type: "flex",
+    quantity: 3,
+    flex: "threeTall",
+  },
+];
+
+const coleccionIlustraciones = [
+  {
+    type: "cover",
+    name: "Colección de ilustraciones",
+    country: "Argentina",
+    description: "PROJECT SCOPE",
+    goal: "Creación de una serie de ilustraciones en diversos estilos.",
+    creativity: "Conceptualización Creativa.<br>Dirección de arte",
+    production: "Definición del estilo gráfico.<br>Ilustración",
+  },
+  {
+    type: "flex",
+    quantity: 2,
+    flex: "square",
+    imageUrl:
+      "https://drive.google.com/file/d/12fK8Gmq7-Rh7r_s16C5nGdCOgzpjVV5J/view?usp=drive_link",
+  },
+  {
+    type: "flex",
+    quantity: 2,
+    flex: "square",
+    imageUrl:
+      "https://drive.google.com/drive/folders/1W3vOs_H4OcUDqw30Gv9ISdhNlAqolJFQ?usp=drive_link",
+  },
+  {
+    type: "flex",
+    quantity: 3,
+    flex: "square",
+    imageUrl:
+      "https://drive.google.com/drive/folders/1Y0-1khETlSzyIphiQN_upNohWMjO3b5s?usp=drive_link",
+  },
+  {
+    type: "flex",
+    quantity: 2,
+    flex: "square",
+    imageUrl:
+      "https://drive.google.com/drive/folders/1WlFqe3igatX_7NMkLzl01h0BIrF27lLZ?usp=drive_link",
+  },
+  {
+    type: "flex",
+    quantity: 1,
+    flex: "tall",
+    imageUrl:
+      "https://drive.google.com/file/d/1hKr1NiHpyv6j5HpYr36i201GuXbgApCl/view?usp=drive_link",
+  },
+  {
+    type: "flex",
+    quantity: 1,
+    flex: "square",
+    imageUrl:
+      "https://drive.google.com/file/d/1Sssm_BieVhzl-2I2H7nTRBbLW_JGoqyJ/view?usp=drive_link",
+  },
+];
+
 export const ILLUSTRATION_PROJECTS: Record<string, any> = {
   privateMedicalPresentation,
   primal,
   rodentsAndDinosaurs,
   fantasyCharacters,
+  illuminated,
+  migrar,
+  alfabeto,
+  coleccionRosa,
+  coleccionIlustraciones,
 };
