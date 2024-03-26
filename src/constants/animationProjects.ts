@@ -41,10 +41,10 @@ export const tatari = [
     quantity: 2,
   },
   {
-    type: "info-img",
-    reverse: true,
+    type: "info-video",
     h2: "Este es el resultado final.",
     p: "Realizamos varios vídeos vía MyeVideo después de este proyecto inicial. Una vez elegida la estética y la narrativa, llevamos el resto como Project Manager.",
+    videoUrl: "https://www.youtube.com/embed/9XAO7arAqDs?si=Do0iC1hh7IPrHSMS",
   },
   {
     type: "flex",
@@ -52,8 +52,9 @@ export const tatari = [
     quantity: 2,
   },
   {
-    type: "video",
-    videoUrl: "https://www.youtube.com/embed/9XAO7arAqDs?si=Do0iC1hh7IPrHSMS",
+    type: "flex",
+    quantity: 1,
+    flex: "oneWide",
   },
 ];
 
@@ -216,6 +217,222 @@ const crc = [
   },
 ];
 
+const humCapital = [
+  {
+    type: "cover",
+    name: "Hum Capital",
+    country: "USA",
+    description: "PROJECT SCOPE vía MyeVideo",
+    goal: `Crear una serie de videos animados 2D que expliquen Hum Capital para sus posibles clientes: desde los beneficios de la empresa hasta cómo utilizar su porta.`,
+    creativity: `Conceptualización Creativa.<br>Storytelling.<br>Dirección de arte`,
+    production: `Definición del estilo gráfico.<br>Storyboards.<br>Creación de styleframes.<br>Ilustración`,
+    projectManagement:
+      "Llevar el proyecto desde sus inicios hasta su finalización.<br>Comunicación con el cliente y los artistas involucrados.",
+  },
+  {
+    type: "flex",
+    quantity: 3,
+    flex: "threeWide",
+  },
+  {
+    type: "flex",
+    quantity: 3,
+    flex: "threeWide",
+  },
+  {
+    type: "flex",
+    quantity: 1,
+    flex: "oneWide",
+  },
+  {
+    type: "info-video",
+    h2: "Este es el resultado final.",
+    videoUrl: "https://www.youtube.com/embed/N6zFFBg4J7U",
+  },
+  {
+    type: "flex-video",
+    quantity: 1,
+    flex: "oneWide",
+    videoUrl: "https://www.youtube.com/embed/zXDxLLJYUiA?si=7AFZqSpciM1_miFo",
+  },
+];
+
+const zion = [
+  {
+    type: "cover",
+    name: "Zion",
+    country: "España",
+    description: "PROJECT SCOPE",
+    goal: "Crear el concepto e ilustración de un videojuego.",
+    creativity:
+      "Conceptualización Creativa.<br>Storytelling.<br>Dirección de arte.<br>Creación de personajes",
+    production:
+      "Definición del estilo gráfico.<br>Illustración de Personajes.<br>Creación de Sprites.<br>Ilustración de Fondos.<br>Animación de muestra",
+  },
+  {
+    type: "flex",
+    quantity: 3,
+    flex: "threeWide",
+  },
+  {
+    type: "info-img",
+    h2: "Los sprites de los personajes son las siguientes.",
+  },
+  {
+    type: "flex",
+    quantity: 3,
+    flex: "threeTall",
+    format: "gif",
+  },
+  {
+    type: "info-video",
+    h2: "Este es un sample del videojuego.",
+  },
+  {
+    type: "flex",
+    quantity: 1,
+    flex: "oneWide",
+  },
+];
+
+const adevantage = [
+  {
+    type: "cover",
+    name: "ADEvantage",
+    country: "USA",
+    description: "PROJECT SCOPE vía MyeVideo",
+    goal: "Realizar un video explicativo 2D para la app de la compañía ADEvantage. Esta app busca facilitar los procesos y rutas domiciliarias de diferentes inspectores de campo.",
+    creativity:
+      "Conceptualización Creativa.<br>Storytelling.<br>Dirección de arte",
+    production: "Definición del estilo gráfico.<br>Creación de styleframes",
+    projectManagement:
+      "Llevar el proyecto desde sus inicios hasta su finalización.<br>Comunicación con el cliente y los artistas involucrados",
+  },
+  {
+    type: "flex",
+    quantity: 2,
+    flex: "twoWide",
+  },
+  {
+    type: "info-video",
+    h2: "Este es el resultado final.",
+    videoUrl:
+      "https://www.youtube.com/embed/HsJshXSRYds?t=24s&ab_channel=MyeVideoChannel",
+  },
+];
+
+const oqsie = [
+  {
+    type: "cover",
+    name: "OQSIE - Continuous QMS Health Monitoring",
+    country: "USA",
+    description: "PROJECT SCOPE vía MyeVideo",
+    goal: "Realizar un video explicativo 2D para la empresa OQSIE.",
+    creativity:
+      "Conceptualización Creativa.<br>Storytelling.<br>Dirección de arte",
+    production:
+      "Definición del estilo gráfico.<br>Creación de styleframes.<br>Storyboard",
+    projectManagement:
+      "Llevar el proyecto desde sus inicios hasta su finalización.<br>Comunicación con el cliente y los artistas involucrados.",
+    format: "png",
+  },
+  {
+    type: "flex",
+    quantity: 3,
+    flex: "threeWide",
+  },
+  {
+    type: "flex",
+    quantity: 3,
+    flex: "threeWide",
+  },
+  {
+    type: "flex",
+    quantity: 1,
+    flex: "oneWide",
+    format: "png",
+  },
+  {
+    type: "info-video",
+    h2: "Esta es la animatica realizada.",
+  },
+  {
+    type: "flex-video",
+    quantity: 1,
+    flex: "oneWide",
+    videoUrl: "https://www.youtube.com/embed/155itTgk1t0?si=amLrSi2BsAMfn35H",
+  },
+];
+
+const tdverse = [
+  {
+    type: "cover",
+    name: "TDVerse",
+    country: "USA",
+    description: "PROJECT SCOPE vía MyeVideo",
+    goal: "Esta empresa quería explicar las capacidades de la realidad virtual en la enseñanza del modelo STEAM. Para hacerlo, creamos personajes, un universo entero y un video explicativo que resumiera su misión. Por privacidad, no podemos compartir el resultado final pero sí el proceso detrás.",
+    creativity:
+      "Conceptualización Creativa.<br>Storytelling.<br>Dirección de arte",
+    production:
+      "Definición del estilo gráfico.<br>Creación de styleframes.<br>Storyboard.<br>Ilustración",
+    projectManagement:
+      "Llevar el proyecto desde sus inicios hasta su finalización.<br>Comunicación con el cliente y los artistas involucrados.",
+  },
+  {
+    type: "flex",
+    quantity: 1,
+    flex: "oneWide",
+  },
+  {
+    type: "info",
+    h2: "Esto es parte del desarrollo de personajes",
+  },
+  {
+    type: "flex",
+    quantity: 3,
+    flex: "threeWide",
+  },
+  {
+    type: "flex",
+    quantity: 1,
+    flex: "oneWide",
+  },
+  {
+    type: "flex",
+    quantity: 3,
+    flex: "threeWide",
+  },
+  {
+    type: "flex",
+    quantity: 4,
+    flex: "fourWide",
+  },
+];
+
+const dragonYear = [
+  {
+    type: "cover",
+    name: "Dragon Year",
+    country: "España",
+    description: "PROJECT SCOPE",
+    goal: "Creación de una animación corta en conmemoración al nuevo año del dragón.",
+    creativity:
+      "Conceptualización Creativa.<br>Storytelling.<br>Dirección de arte",
+    production:
+      "Definición del estilo gráfico.<br>Creación de styleframes.<br>Storyboard.<br>Ilustración.<br>Animación.<br>Efectos de Sonido y Música",
+    projectManagement:
+      "Llevar el proyecto desde sus inicios hasta su finalización.<br>Comunicación con el cliente y los artistas involucrados.",
+  },
+  {
+    type: "info-video",
+    h2: "El proceso de ilustración, una vez decidida la historia a contar, giró en torno a una fotografía de un templo japonés.",
+  },
+  {
+    type: "info-video",
+    h2: "Este es el resultado final.",
+  },
+];
+
 export const ANIMATION_PROJECTS: Record<string, any> = {
   shutterfly,
   tatari,
@@ -224,4 +441,10 @@ export const ANIMATION_PROJECTS: Record<string, any> = {
   neha,
   privateUKSchool,
   crc,
+  humCapital,
+  zion,
+  adevantage,
+  oqsie,
+  tdverse,
+  dragonYear,
 };

@@ -5,14 +5,13 @@ import styles from "./page.module.css";
 
 import Breadcrumb from "@/components/Breadcrumb";
 import Button from "@/components/Button";
-import { ANIMATION_PROJECTS } from "@/constants/animationProjects";
 
 import { PROJECTS } from "@/constants/projects";
 import { useTranslation } from "@/i18n/client";
 import { PageProps } from "@/types/i18n";
 import Image from "next/image";
 import { useParams, useRouter } from "next/navigation";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import "swiper/css";
 import "swiper/css/bundle";
 
@@ -23,13 +22,15 @@ export default function DynamicPage({ params: { lng } }: PageProps) {
 
   const [showGallery, setShowGallery] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const video = useRef<HTMLVideoElement>(null);
+  const [isPlaying, setIsPlaying] = useState(false);
 
   const projectData = PROJECTS[projectType as string][project as string];
 
   return (
     <PageContainer className={`${styles.container} bg-light-purple`}>
       <div className={styles.contentContainer}>
-        {ANIMATION_PROJECTS[project as string].map(
+        {PROJECTS[projectType as string][project as string].map(
           (element: any, elementIndex: number) => {
             switch (element.type) {
               case "cover":
@@ -106,7 +107,9 @@ export default function DynamicPage({ params: { lng } }: PageProps) {
                     </div>
                     <div className={styles.coverImg}>
                       <Image
-                        src={`/static/images/${projectType}/${project}/cover.jpeg`}
+                        src={`/static/images/${projectType}/${project}/cover.${
+                          element.format || "jpeg"
+                        }`}
                         alt=""
                         fill
                         style={{ objectFit: "cover" }}
@@ -125,7 +128,9 @@ export default function DynamicPage({ params: { lng } }: PageProps) {
                     ).map((value, index) => (
                       <div className={styles.flexItem} key={index}>
                         <Image
-                          src={`/static/images/${projectType}/${project}/${elementIndex}-${value}.jpeg`}
+                          src={`/static/images/${projectType}/${project}/${elementIndex}-${value}.${
+                            element.format || "jpeg"
+                          }`}
                           alt=""
                           fill
                           style={{ objectFit: "cover" }}
@@ -138,23 +143,49 @@ export default function DynamicPage({ params: { lng } }: PageProps) {
               case "flex-video":
                 return (
                   <div className={styles[element.flex]}>
-                    {Array.from(
-                      { length: element.quantity },
-                      (_, i) => i + 1
-                    ).map((value, index) => (
-                      <div className={styles.flexItem} key={index}>
-                        <video
-                          src={`/static/images/${projectType}/${project}/${elementIndex}-${value}.mp4`}
+                    {element.videoUrl ? (
+                      <div
+                        className={`${styles.videoContainer} ${styles.flexItem}`}
+                      >
+                        <iframe
+                          src={element.videoUrl}
+                          title="YouTube video player"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                           className={styles.video}
-                          controls
-                        ></video>
+                        ></iframe>
                       </div>
-                    ))}
+                    ) : (
+                      Array.from(
+                        { length: element.quantity },
+                        (_, i) => i + 1
+                      ).map((value, index) => (
+                        <div className={styles.flexItem} key={index}>
+                          <video
+                            src={`/static/images/${projectType}/${project}/${elementIndex}-${value}.mp4`}
+                            className={styles.video}
+                            autoPlay
+                            muted
+                            loop
+                          ></video>
+                        </div>
+                      ))
+                    )}
+                  </div>
+                );
+              case "info":
+                return (
+                  <div className={styles.infoContainer}>
+                    <h2 className="text-white">{element.h2}</h2>
                   </div>
                 );
               case "info-video":
                 return (
-                  <div className={styles.finalResult} key={elementIndex}>
+                  <div
+                    className={`${styles.finalResult} ${
+                      element.isReverse ? styles.reverse : ""
+                    }`}
+                    key={elementIndex}
+                  >
                     <div
                       className={`${styles.flexItem} ${styles.finalResultText} column g-12 align-center text-white`}
                     >
@@ -172,11 +203,31 @@ export default function DynamicPage({ params: { lng } }: PageProps) {
                           className={styles.video}
                         ></iframe>
                       ) : (
-                        <video
-                          src={`/static/images/${projectType}/${project}/video.mp4`}
-                          className={styles.video}
-                          controls
-                        ></video>
+                        <div className={styles.playContainer}>
+                          {!isPlaying && (
+                            <div
+                              onClick={() => {
+                                setIsPlaying(true);
+                                video.current?.play();
+                              }}
+                            >
+                              <div className={styles.black} />
+                              <Image
+                                src="/static/images/play.svg"
+                                alt=""
+                                width={146}
+                                height={155}
+                                className={styles.play}
+                              />
+                            </div>
+                          )}
+                          <video
+                            src={`/static/images/${projectType}/${project}/${elementIndex}.mp4`}
+                            className={styles.playVideo}
+                            controls={isPlaying}
+                            ref={video}
+                          ></video>
+                        </div>
                       )}
                     </div>
                   </div>
@@ -184,7 +235,9 @@ export default function DynamicPage({ params: { lng } }: PageProps) {
               case "info-img":
                 return (
                   <div
-                    className={`${styles.finalResult} ${styles.reverse}`}
+                    className={`${styles.finalResult} ${
+                      element.isSquare ? styles.square : ""
+                    }`}
                     key={elementIndex}
                   >
                     <div

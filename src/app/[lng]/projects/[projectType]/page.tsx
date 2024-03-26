@@ -47,7 +47,9 @@ export default function Page({ params: { lng } }: PageProps) {
                   </p>
                 </div>
                 <Image
-                  src={`/static/images/${projectType}/${project}/cover.jpeg`}
+                  src={`/static/images/${projectType}/${project}/cover.${
+                    PROJECTS[projectType as string][project][0].format || "jpeg"
+                  }`}
                   alt={PROJECTS[projectType as string][project][0].name}
                   fill
                   style={{ objectFit: "cover" }}
