@@ -88,6 +88,13 @@
   padding: 0 var(--padding-block);
 }
 
+.twoTall {
+  display: flex;
+  gap: 8px;
+  height: 70vw;
+  padding: 0 var(--padding-block);
+}
+
 .threeWide {
   display: flex;
   gap: 8px;
