@@ -109,6 +109,13 @@
   padding: 0 var(--padding-block);
 }
 
+.threeTall {
+  display: flex;
+  gap: 8px;
+  height: 50vw;
+  padding: 0 var(--padding-block);
+}
+
 .fourWide {
   display: flex;
   gap: 8px;

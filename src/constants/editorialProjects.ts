@@ -75,7 +75,75 @@ const ajuntamenteDeBarcelona = [
   },
 ];
 
+const birdwatchers = [
+  {
+    type: "cover",
+    name: "Birdwatchers",
+    country: "España",
+    description: "PROJECT SCOPE",
+    goal: "Creación de un libro para colorear para adultos.",
+    creativity: "Conceptualización Creativa<br>Dirección de arte",
+    production:
+      "Definición del estilo gráfico<br>Ilustración<br>Diseño Editorial",
+  },
+  {
+    type: "flex",
+    quantity: 3,
+    flex: "threeTall",
+  },
+  {
+    type: "flex",
+    quantity: 3,
+    flex: "threeTall",
+  },
+  {
+    type: "flex",
+    quantity: 4,
+    flex: "fourWide",
+  },
+];
+
+const tinta = [
+  {
+    type: "cover",
+    name: "Tinta",
+    country: "Argentina",
+    description: "PROJECT SCOPE",
+    goal: "Realización de diseño editorial de una revista enfocada al arte y la cultura, dirigida al público argentino.",
+    creativity: "Conceptualización Creativa<br>Dirección de arte",
+    production: "Definición del estilo gráfico<br>Diseño Editorial",
+    link: "https://drive.google.com/file/d/1yZzHMykf0SUP39S9RLc2G1IBWbVd3Fq7/view?usp=drive_link",
+  },
+  {
+    type: "flex",
+    quantity: 3,
+    flex: "threeWide",
+  },
+  {
+    type: "flex",
+    quantity: 3,
+    flex: "threeWide",
+  },
+  {
+    type: "flex",
+    quantity: 3,
+    flex: "threeWide",
+  },
+  {
+    type: "flex",
+    quantity: 3,
+    flex: "threeWide",
+  },
+  {
+    type: "flex",
+    quantity: 3,
+    flex: "threeWide",
+  },
+];
+
 export const EDITORIAL_PROJECTS: Record<string, any> = {
   primal,
   ajuntamenteDeBarcelona,
+  birdwatchers,
+  tinta,
 };
