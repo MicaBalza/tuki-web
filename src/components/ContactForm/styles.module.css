@@ -18,3 +18,17 @@
   background-size: 16px;
   background-color: var(--pink);
 }
+
+.modalContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 12px;
+}
+
+.gifContainer {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
