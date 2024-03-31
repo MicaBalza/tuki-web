@@ -25,6 +25,7 @@
 .coverImg {
   position: relative;
   width: 70%;
+  margin-top: 8px;
 }
 
 .projectNameCountry {

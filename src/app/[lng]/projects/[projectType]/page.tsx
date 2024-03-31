@@ -11,11 +11,26 @@ import { useTranslation } from "@/i18n/client";
 import { PageProps } from "@/types/i18n";
 import { useParams, useRouter } from "next/navigation";
 
+const HOVER_COLORS = [
+  "#6a68d4",
+  "#b2aee9",
+  "#04a357",
+  "#86e874",
+  "#f7c5e9",
+  "#f23730",
+  "#fdc800",
+];
+
 export default function Page({ params: { lng } }: PageProps) {
   const { t } = useTranslation(lng, "services");
   const { push } = useRouter();
   const { projectType } = useParams();
-  console.log(Object.keys(PROJECTS[projectType as string]));
+
+  const getRandomColor = () => {
+    const randomIndex = Math.floor(Math.random() * HOVER_COLORS.length);
+    return HOVER_COLORS[randomIndex];
+  };
+
   return (
     <PageContainer>
       <div className={`${styles.header}`}>
@@ -30,33 +45,39 @@ export default function Page({ params: { lng } }: PageProps) {
         />
         <div className={styles.projects}>
           {Object.keys(PROJECTS[projectType as string]).map(
-            (project, index) => (
-              <div
-                key={project}
-                className={`${styles.project} ${
-                  PROJECTS[projectType as string].length - 1 === index &&
-                  PROJECTS[projectType as string].length % 2 !== 0
-                    ? styles.lastItem
-                    : ""
-                } pointer`}
-                onClick={() => push(`/projects/${projectType}/${project}`)}
-              >
-                <div className={styles.projectHover}>
-                  <p className="text-white">
-                    {PROJECTS[projectType as string][project][0].name}
-                  </p>
+            (project, index) => {
+              return (
+                <div
+                  key={project}
+                  className={`${styles.project} ${
+                    PROJECTS[projectType as string].length - 1 === index &&
+                    PROJECTS[projectType as string].length % 2 !== 0
+                      ? styles.lastItem
+                      : ""
+                  } pointer`}
+                  onClick={() => push(`/projects/${projectType}/${project}`)}
+                >
+                  <div
+                    className={styles.projectHover}
+                    style={{ backgroundColor: getRandomColor() }}
+                  >
+                    <p className="text-white">
+                      {PROJECTS[projectType as string][project][0].name}
+                    </p>
+                  </div>
+                  <Image
+                    src={`/static/images/${projectType}/${project}/cover.${
+                      PROJECTS[projectType as string][project][0].format ||
+                      "jpeg"
+                    }`}
+                    alt={PROJECTS[projectType as string][project][0].name}
+                    fill
+                    style={{ objectFit: "cover" }}
+                    unoptimized={true}
+                  />
                 </div>
-                <Image
-                  src={`/static/images/${projectType}/${project}/cover.${
-                    PROJECTS[projectType as string][project][0].format || "jpeg"
-                  }`}
-                  alt={PROJECTS[projectType as string][project][0].name}
-                  fill
-                  style={{ objectFit: "cover" }}
-                  unoptimized={true}
-                />
-              </div>
-            )
+              );
+            }
           )}
         </div>
       </div>
