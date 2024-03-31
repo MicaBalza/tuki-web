@@ -15,6 +15,10 @@
   width: 50%;
 }
 
+.contactInfo p {
+  font-size: 14px;
+}
+
 @media (max-width: 576px) {
   .container {
     flex-direction: column-reverse;

@@ -184,6 +184,7 @@ select {
   padding: 12px 20px;
   border: 1px solid var(--gray);
   border-radius: 2px;
+  font-family: inherit;
 }
 
 textarea {

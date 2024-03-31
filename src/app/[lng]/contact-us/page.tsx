@@ -19,7 +19,9 @@ export default function Page({ params: { lng } }: PageProps) {
           <h2 className="text-purple">{t("page.title")}</h2>
           <p className="text-purple">{t("page.description")}</p>
           <ContactForm />
-          <div className="row justify-between align-start">
+          <div
+            className={`row justify-between align-start ${styles.contactInfo}`}
+          >
             <div className="row align-start g-12">
               <PhoneIcon />
               <div className="text-purple">
