@@ -109,6 +109,10 @@ p {
   font-weight: 600;
 }
 
+.uppercase {
+  text-transform: uppercase;
+}
+
 .fullWidth {
   width: 100%;
 }

@@ -112,7 +112,10 @@ export default function DynamicPage({ params: { lng } }: PageProps) {
                         }`}
                         alt=""
                         fill
-                        style={{ objectFit: "cover" }}
+                        style={{
+                          objectFit: "cover",
+                          objectPosition: element.position,
+                        }}
                         unoptimized={true}
                       />
                     </div>
@@ -133,7 +136,10 @@ export default function DynamicPage({ params: { lng } }: PageProps) {
                           }`}
                           alt=""
                           fill
-                          style={{ objectFit: "cover" }}
+                          style={{
+                            objectFit: "cover",
+                            objectPosition: element.position,
+                          }}
                           unoptimized={true}
                         />
                       </div>
@@ -237,7 +243,7 @@ export default function DynamicPage({ params: { lng } }: PageProps) {
                   <div
                     className={`${styles.finalResult} ${
                       element.isSquare ? styles.square : ""
-                    }`}
+                    } ${element.isReverse ? styles.reverse : ""}`}
                     key={elementIndex}
                   >
                     <div
@@ -251,7 +257,10 @@ export default function DynamicPage({ params: { lng } }: PageProps) {
                         src={`/static/images/${projectType}/${project}/${elementIndex}.jpeg`}
                         alt=""
                         fill
-                        style={{ objectFit: "cover" }}
+                        style={{
+                          objectFit: "cover",
+                          objectPosition: element.position,
+                        }}
                         unoptimized={true}
                       />
                     </div>

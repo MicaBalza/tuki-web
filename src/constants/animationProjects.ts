@@ -41,12 +41,6 @@ export const tatari = [
     quantity: 2,
   },
   {
-    type: "info-video",
-    h2: "Este es el resultado final.",
-    p: "Realizamos varios vídeos vía MyeVideo después de este proyecto inicial. Una vez elegida la estética y la narrativa, llevamos el resto como Project Manager.",
-    videoUrl: "https://www.youtube.com/embed/9XAO7arAqDs?si=Do0iC1hh7IPrHSMS",
-  },
-  {
     type: "flex",
     flex: "twoWide",
     quantity: 2,
@@ -55,6 +49,12 @@ export const tatari = [
     type: "flex",
     quantity: 1,
     flex: "oneWide",
+  },
+  {
+    type: "info-video",
+    h2: "Este es el resultado final.",
+    p: "Realizamos varios vídeos vía MyeVideo después de este proyecto inicial. Una vez elegida la estética y la narrativa, llevamos el resto como Project Manager.",
+    videoUrl: "https://www.youtube.com/embed/9XAO7arAqDs?si=Do0iC1hh7IPrHSMS",
   },
 ];
 
@@ -246,13 +246,12 @@ const humCapital = [
   },
   {
     type: "info-video",
-    h2: "Este es el resultado final.",
+    h2: "Este es el resultado final del primer video.",
     videoUrl: "https://www.youtube.com/embed/N6zFFBg4J7U",
   },
   {
-    type: "flex-video",
-    quantity: 1,
-    flex: "oneWide",
+    type: "info-video",
+    h2: "Este es el resultado final del segundo video",
     videoUrl: "https://www.youtube.com/embed/zXDxLLJYUiA?si=7AFZqSpciM1_miFo",
   },
 ];
@@ -433,6 +432,23 @@ const dragonYear = [
   },
 ];
 
+const proyectoPersonal = [
+  {
+    type: "cover",
+    name: "Proyecto Personal",
+    country: "Argentina",
+    description: "PROJECT SCOPE",
+    goal: "Creación de una serie de animaciones cortas como anécdota personal.",
+    creativity: "Conceptualización Creativa<br>Dirección de arte",
+    production: "Definición del estilo gráfico<br>Ilustración<br>Animación",
+    link: "https://drive.google.com/file/d/158hhUn5n93wcwSwoJRbppohq6d6lWo6A/view?usp=drive_link",
+  },
+  {
+    type: "info-video",
+    h2: "Este es el resultado final.",
+  },
+];
+
 export const ANIMATION_PROJECTS: Record<string, any> = {
   shutterfly,
   tatari,
@@ -447,4 +463,5 @@ export const ANIMATION_PROJECTS: Record<string, any> = {
   oqsie,
   tdverse,
   dragonYear,
+  proyectoPersonal,
 };

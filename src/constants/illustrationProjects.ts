@@ -1,7 +1,7 @@
 const privateMedicalPresentation = [
   {
     type: "cover",
-    name: "Presentación privada médica",
+    name: "Presentación médica",
     country: "USA",
     description: "PROJECT SCOPE vía MyeVideo",
     goal: "Medallia buscaba generar un video explicativo 2D para mostrar las capacidades de su empresa en el cuidado de la tercera edad. Por privacidad sólo podemos enseñar el proceso detrás del vídeo.",
@@ -56,7 +56,7 @@ const primal = [
   {
     type: "flex",
     quantity: 1,
-    flex: "oneWide",
+    flex: "oneSquare",
   },
   {
     type: "info-img",
@@ -151,7 +151,8 @@ const fantasyCharacters = [
   {
     type: "flex",
     quantity: 1,
-    flex: "oneWide",
+    flex: "oneSquare",
+    position: "top",
   },
   {
     type: "info-video",
@@ -161,6 +162,7 @@ const fantasyCharacters = [
     type: "flex",
     quantity: 3,
     flex: "threeWide",
+    position: "top",
   },
   {
     type: "flex",
@@ -170,12 +172,14 @@ const fantasyCharacters = [
   {
     type: "flex",
     quantity: 1,
-    flex: "oneWide",
+    flex: "oneSquare",
+    position: "top",
   },
   {
     type: "flex",
     quantity: 1,
-    flex: "oneWide",
+    flex: "oneSquare",
+    position: "top",
   },
 ];
 
@@ -188,6 +192,7 @@ const illuminated = [
     goal: "Creación de un alfabeto basado en la estética de los libros iluminados.",
     creativity: "Conceptualización Creativa.<br>Dirección de arte",
     production: "Definición del estilo gráfico.<br>Ilustración",
+    position: "left top",
   },
   {
     type: "flex",
@@ -253,6 +258,7 @@ const migrar = [
     goal: "Creación de una serie de ilustraciones acerca de la migración a España.",
     creativity: "Conceptualización Creativa.<br>Dirección de arte",
     production: "Definición del estilo gráfico.<br>Ilustración",
+    position: "top",
   },
   {
     type: "flex",
@@ -275,6 +281,7 @@ const alfabeto = [
     goal: "Creación de una serie de alfabeto ilustrado como parte de proyecto personal.",
     creativity: "Conceptualización Creativa.<br>Dirección de arte",
     production: "Definición del estilo gráfico.<br>Ilustración",
+    position: "top",
   },
   {
     type: "flex",
@@ -317,6 +324,7 @@ const coleccionRosa = [
     goal: "Creación de una serie de ilustraciones en diversos estilos.",
     creativity: "Conceptualización Creativa.<br>Dirección de arte",
     production: "Definición del estilo gráfico.<br>Ilustración",
+    position: "top",
   },
   {
     type: "flex",
@@ -339,6 +347,7 @@ const coleccionIlustraciones = [
     goal: "Creación de una serie de ilustraciones en diversos estilos.",
     creativity: "Conceptualización Creativa.<br>Dirección de arte",
     production: "Definición del estilo gráfico.<br>Ilustración",
+    position: "0 20%",
   },
   {
     type: "flex",

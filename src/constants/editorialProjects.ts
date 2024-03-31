@@ -18,12 +18,17 @@ const primal = [
     quantity: 2,
     flex: "twoTall",
   },
+  {
+    type: "flex",
+    quantity: 1,
+    flex: "oneTall",
+  },
 ];
 
 const ajuntamenteDeBarcelona = [
   {
     type: "cover",
-    name: "Ajuntamente de Barcelona",
+    name: "Ajuntament de Barcelona",
     country: "España",
     description: "PROJECT SCOPE",
     goal: "Propuesta de campaña publicitaria para el Ayuntamiento de Barcelona",
@@ -34,21 +39,18 @@ const ajuntamenteDeBarcelona = [
   {
     type: "flex",
     quantity: 1,
-    flex: "oneWide",
+    flex: "oneSquare",
   },
   {
     type: "info-img",
     h2: "Realizamos procesos de bocetos",
+    position: "top",
   },
   {
-    type: "image",
-    description:
-      "<h2>Pasamos los bocetos a color y los adaptamos a diferentes formatos</h2>",
-  },
-  {
-    type: "flex",
-    quantity: 2,
-    flex: "wide",
+    type: "info-img",
+    h2: "Pasamos los bocetos a color y los adaptamos a diferentes formatos",
+    isReverse: true,
+    position: "top",
   },
   {
     type: "flex",
@@ -64,6 +66,11 @@ const ajuntamenteDeBarcelona = [
     type: "flex",
     quantity: 3,
     flex: "threeWide",
+  },
+  {
+    type: "flex",
+    quantity: 2,
+    flex: "twoWide",
   },
 ];
 

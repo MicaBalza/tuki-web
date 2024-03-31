@@ -39,7 +39,7 @@ export default function Page({ params: { lng } }: PageProps) {
       <div className={styles.content}>
         <Breadcrumb
           crumbs={[
-            { text: "Projects", path: "/projects" },
+            { text: t("projects"), path: "/projects" },
             { text: t(`${projectType as string}.title`) },
           ]}
         />
@@ -50,8 +50,10 @@ export default function Page({ params: { lng } }: PageProps) {
                 <div
                   key={project}
                   className={`${styles.project} ${
-                    PROJECTS[projectType as string].length - 1 === index &&
-                    PROJECTS[projectType as string].length % 2 !== 0
+                    Object.keys(PROJECTS[projectType as string]).length - 1 ===
+                      index &&
+                    Object.keys(PROJECTS[projectType as string]).length % 2 !==
+                      0
                       ? styles.lastItem
                       : ""
                   } pointer`}
@@ -61,9 +63,9 @@ export default function Page({ params: { lng } }: PageProps) {
                     className={styles.projectHover}
                     style={{ backgroundColor: getRandomColor() }}
                   >
-                    <p className="text-white">
+                    <h4 className="text-white uppercase">
                       {PROJECTS[projectType as string][project][0].name}
-                    </p>
+                    </h4>
                   </div>
                   <Image
                     src={`/static/images/${projectType}/${project}/cover.${
@@ -72,7 +74,11 @@ export default function Page({ params: { lng } }: PageProps) {
                     }`}
                     alt={PROJECTS[projectType as string][project][0].name}
                     fill
-                    style={{ objectFit: "cover" }}
+                    style={{
+                      objectFit: "cover",
+                      objectPosition:
+                        PROJECTS[projectType as string][project][0].position,
+                    }}
                     unoptimized={true}
                   />
                 </div>

@@ -15,6 +15,7 @@
 .coverContainer {
   display: flex;
   gap: 12px;
+  min-height: 640px;
   padding-right: var(--padding-block);
 }
 
