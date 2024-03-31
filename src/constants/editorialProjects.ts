@@ -44,34 +44,26 @@ const ajuntamenteDeBarcelona = [
     type: "image",
     description:
       "<h2>Pasamos los bocetos a color y los adaptamos a diferentes formatos</h2>",
-    link: "https://drive.google.com/file/d/1x2CRTURVYulL2D6Ah_OVyOdFFCsWNbfO/view?usp=drive_link",
   },
   {
     type: "flex",
     quantity: 2,
     flex: "wide",
-    link: "https://drive.google.com/file/d/1wxz7F8imxiUiMj7Q3ge6ELAtcIXHAjdZ/view?usp=drive_link",
   },
   {
     type: "flex",
     quantity: 2,
     flex: "twoWide",
-    links: [
-      "https://drive.google.com/drive/folders/12SxMUTCqKNrs19YAMu9EUzQ1nDyW9GPs?usp=drive_link",
-      "https://drive.google.com/drive/folders/1EQtUwh4hWMAf3scmNBCU9Y_a08yqfOQS?usp=drive_link",
-    ],
   },
   {
     type: "flex",
     quantity: 4,
     flex: "fourWide",
-    link: "https://drive.google.com/drive/folders/1dtaDsQUY8xlQ3zEbSdF_qxwDZIsemc8w?usp=drive_link",
   },
   {
     type: "flex",
     quantity: 3,
     flex: "threeWide",
-    link: "https://drive.google.com/drive/folders/1Bntkr6MpMuAwmbdMUXTXA804a9tYDAFE?usp=drive_link",
   },
 ];
 
@@ -112,7 +104,6 @@ const tinta = [
     goal: "Realización de diseño editorial de una revista enfocada al arte y la cultura, dirigida al público argentino.",
     creativity: "Conceptualización Creativa<br>Dirección de arte",
     production: "Definición del estilo gráfico<br>Diseño Editorial",
-    link: "https://drive.google.com/file/d/1yZzHMykf0SUP39S9RLc2G1IBWbVd3Fq7/view?usp=drive_link",
   },
   {
     type: "flex",
@@ -141,9 +132,66 @@ const tinta = [
   },
 ];
 
+const timo = [
+  {
+    type: "cover",
+    name: "Timo",
+    country: "Alemania",
+    description: "PROJECT SCOPE",
+    goal: "Realización de ilustraciones para una publicación editorial para el público infantil que buscaba explicarle el COVID a los niños.",
+    creativity: "Conceptualización Creativa<br>Dirección de arte",
+    production:
+      "Definición del estilo gráfico<br>Ilustración<br>Diseño Editorial",
+  },
+  {
+    type: "flex",
+    quantity: 3,
+    flex: "threeWide",
+  },
+  {
+    type: "info-video",
+    h2: "El paso del blanco y negro al color",
+  },
+  {
+    type: "flex",
+    quantity: 3,
+    flex: "threeWide",
+  },
+  {
+    type: "flex",
+    quantity: 3,
+    flex: "threeWide",
+  },
+];
+
+const autismoAvila = [
+  {
+    type: "cover",
+    name: "Autismo Avila",
+    country: "España",
+    description: "PROJECT SCOPE",
+    goal: "Creación de una serie de ilustraciones en blanco y negro para una publicación de la compañía Autismo Ávila, basado en fotografías compartidas por el cliente.",
+    creativity: "Conceptualización Creativa<br>Dirección de arte",
+    production: "Definición del estilo gráfico<br>Ilustración",
+    link: "https://drive.google.com/file/d/1-kAK0pHJ0NPxccYzks_lBF9ysVX93hcv/view?usp=drive_link",
+  },
+  {
+    type: "flex",
+    quantity: 2,
+    flex: "twoWide",
+  },
+  {
+    type: "flex",
+    quantity: 1,
+    flex: "oneWide",
+  },
+];
+
 export const EDITORIAL_PROJECTS: Record<string, any> = {
   primal,
   ajuntamenteDeBarcelona,
   birdwatchers,
   tinta,
+  timo,
+  autismoAvila,
 };
