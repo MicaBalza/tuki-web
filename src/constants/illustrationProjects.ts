@@ -119,13 +119,9 @@ const rodentsAndDinosaurs = [
     flex: "twoWide",
   },
   {
-    type: "info-video",
-    h2: "Este es el proceso del primer personaje en blanco y negro",
-  },
-  {
-    type: "info-video",
-    h2: "Este es el proceso del segundo personaje en blanco y negro",
-    isReverse: true,
+    type: "flex-video",
+    quantity: 2,
+    flex: "twoWide",
   },
   {
     type: "info-video",

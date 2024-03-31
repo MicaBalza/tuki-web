@@ -63,7 +63,7 @@ export default function Page({ params: { lng } }: PageProps) {
                     className={styles.projectHover}
                     style={{ backgroundColor: getRandomColor() }}
                   >
-                    <h4 className="text-white uppercase">
+                    <h4 className="text-white uppercase bold">
                       {PROJECTS[projectType as string][project][0].name}
                     </h4>
                   </div>

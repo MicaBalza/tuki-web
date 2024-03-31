@@ -1,7 +1,7 @@
 const claireSalabelle = [
   {
     type: "cover",
-    name: "Claire Salabelle",
+    name: "Clases Particulares",
     country: "Argentina",
     description: "PROJECT SCOPE",
     goal: "Creación de piezas para redes sociales con el objetivo de promocionar diferentes formatos de clases particulares de francés en Buenos Aires, Argentina.",
@@ -35,21 +35,27 @@ const momentfulApp = [
     goal: "Creación de varias series de ilustraciones de E-Cards (Tarjetas electrónicas ilustradas) para una app. Realizamos diversas series que buscan una manera más simple de tratar temas complejos de salud mental como pedir espacio, comunicar la depresión, etc.",
     creativity: "Conceptualización Creativa<br>Dirección de arte",
     production: "Definición del estilo gráfico<br>Ilustración",
+    position: "left top",
   },
   {
     type: "flex",
     quantity: 1,
-    flex: "oneWide",
-  },
-  {
-    type: "flex",
-    quantity: 3,
-    flex: "threeWide",
+    flex: "oneSquare",
   },
   {
     type: "flex",
     quantity: 2,
     flex: "twoWide",
+  },
+  {
+    type: "flex",
+    quantity: 2,
+    flex: "twoWide",
+  },
+  {
+    type: "flex",
+    quantity: 1,
+    flex: "oneSquare",
   },
 ];
 
