@@ -27,6 +27,15 @@ export default function DynamicPage({ params: { lng } }: PageProps) {
 
   const projectData = PROJECTS[projectType as string][project as string];
 
+  const getImgFormat = (
+    format: string | Record<string, string>,
+    elementIndex: number
+  ) => {
+    if (typeof format === "string") return format;
+    if (typeof format === "object") return format[elementIndex];
+    return "jpeg";
+  };
+
   return (
     <PageContainer className={`${styles.container} bg-light-purple`}>
       <div className={styles.contentContainer}>
@@ -131,9 +140,10 @@ export default function DynamicPage({ params: { lng } }: PageProps) {
                     ).map((value, index) => (
                       <div className={styles.flexItem} key={index}>
                         <Image
-                          src={`/static/images/${projectType}/${project}/${elementIndex}-${value}.${
-                            element.format || "jpeg"
-                          }`}
+                          src={`/static/images/${projectType}/${project}/${elementIndex}-${value}.${getImgFormat(
+                            element.format,
+                            index
+                          )}`}
                           alt=""
                           fill
                           style={{
