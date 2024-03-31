@@ -1,5 +1,6 @@
 import { ServiceType } from "@/types/services";
 import { ANIMATION_PROJECTS } from "./animationProjects";
+import { BRANDING_PROJECTS } from "./brandingProjects";
 import { EDITORIAL_PROJECTS } from "./editorialProjects";
 import { ILLUSTRATION_PROJECTS } from "./illustrationProjects";
 import { MOTION_GRAPHICS_PROJECTS } from "./motionGraphicsProjects";
@@ -10,6 +11,6 @@ export const PROJECTS: Record<string, any> = {
   [ServiceType.ANIMATION]: ANIMATION_PROJECTS,
   [ServiceType.EDITORIAL]: EDITORIAL_PROJECTS,
   [ServiceType.SOCIAL_MEDIA]: SOCIAL_MEDIA_PROJECTS,
-  [ServiceType.BRANDING]: [],
+  [ServiceType.BRANDING]: BRANDING_PROJECTS,
   [ServiceType.MOTION_GRAPHICS]: MOTION_GRAPHICS_PROJECTS,
 };

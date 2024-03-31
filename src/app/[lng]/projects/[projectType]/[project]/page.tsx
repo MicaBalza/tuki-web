@@ -142,7 +142,7 @@ export default function DynamicPage({ params: { lng } }: PageProps) {
                         <Image
                           src={`/static/images/${projectType}/${project}/${elementIndex}-${value}.${getImgFormat(
                             element.format,
-                            index
+                            value
                           )}`}
                           alt=""
                           fill

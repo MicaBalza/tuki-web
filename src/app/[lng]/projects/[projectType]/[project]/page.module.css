@@ -76,6 +76,12 @@
   padding: 0 var(--padding-block);
 }
 
+.oneSuperWide {
+  display: flex;
+  height: 30vw;
+  padding: 0 var(--padding-block);
+}
+
 .twoWide {
   display: flex;
   gap: 8px;
@@ -129,6 +135,20 @@
   display: flex;
   gap: 8px;
   height: 25vw;
+  padding: 0 var(--padding-block);
+}
+
+.fiveSquare {
+  display: flex;
+  gap: 8px;
+  height: 19vw;
+  padding: 0 var(--padding-block);
+}
+
+.sixSquare {
+  display: flex;
+  gap: 8px;
+  height: 15vw;
   padding: 0 var(--padding-block);
 }
 
