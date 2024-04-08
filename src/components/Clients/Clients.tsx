@@ -21,13 +21,14 @@ const Footer = () => {
   return (
     <section className={styles.clients}>
       <div className={styles.titleContainer}>
-        <Image
-          src={`/static/images/shape3.svg`}
-          alt=""
-          width={82}
-          height={56}
-          className={styles.shape}
-        />
+        <div className={styles.shapeContainer}>
+          <Image
+            src={`/static/images/shape3.svg`}
+            alt=""
+            fill
+            className={styles.shape}
+          />
+        </div>
         <h2 className={styles.title}>{t("title")}</h2>
       </div>
       <div className={styles.marqueeContainer}>

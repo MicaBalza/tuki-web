@@ -14,14 +14,14 @@ const WhatWeDo = () => {
       onClick={() => push("/contact-us")}
     >
       <div className={styles.titleContainer}>
-        <Image
-          src={`/static/images/shape2.svg`}
-          alt=""
-          width={82}
-          height={56}
-          unoptimized={true}
-          className={styles.shape}
-        />
+        <div className={styles.shapeContainer}>
+          <Image
+            src={`/static/images/shape2.svg`}
+            alt=""
+            fill
+            className={styles.shape}
+          />
+        </div>
         <h2 className="text-purple">{t("title")}</h2>
       </div>
       <div className={styles.imageContainer}>

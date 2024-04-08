@@ -12,6 +12,14 @@
   top: 80px;
 }
 
+.shapeContainer {
+  position: relative;
+  width: 10vw;
+  max-width: 80px;
+  height: 6vw;
+  transform: translateY(-4px);
+}
+
 .imageContainer {
   position: relative;
   width: 600px;
@@ -21,10 +29,15 @@
 }
 
 .shape {
-  animation: shake 2s linear infinite; /* Apply the animation */
+  transform: translateY(10px);
+  animation: shake 1s linear infinite;
 }
 
 @media (max-width: 768px) {
+  .titleContainer {
+    gap: 8px;
+  }
+
   .imageContainer {
     width: 300px;
     height: 300px;
@@ -33,20 +46,12 @@
 
 @keyframes shake {
   0% {
-    transform: translate(0, 0);
-    transform: rotate(0deg);
-  }
-  25% {
-    transform: rotate(-20deg);
+    transform: rotate(-10deg);
   }
   50% {
-    transform: translate(10px, 10px);
     transform: rotate(10deg);
   }
-  75% {
-    transform: rotate(-30deg);
-  }
   100% {
-    transform: rotate(0deg);
+    transform: rotate(-10deg);
   }
 }
