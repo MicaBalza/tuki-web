@@ -7,6 +7,7 @@ const primal = [
     goal: "Creación de imágenes iniciales para una novela gráfica.",
     creativity: "Conceptualización Creativa.<br>Dirección de arte",
     production: "Definición del estilo gráfico.<br>Ilustración",
+    position: "70% center",
   },
   {
     type: "flex",
@@ -180,7 +181,6 @@ const autismoAvila = [
     goal: "Creación de una serie de ilustraciones en blanco y negro para una publicación de la compañía Autismo Ávila, basado en fotografías compartidas por el cliente.",
     creativity: "Conceptualización Creativa<br>Dirección de arte",
     production: "Definición del estilo gráfico<br>Ilustración",
-    link: "https://drive.google.com/file/d/1-kAK0pHJ0NPxccYzks_lBF9ysVX93hcv/view?usp=drive_link",
   },
   {
     type: "flex",

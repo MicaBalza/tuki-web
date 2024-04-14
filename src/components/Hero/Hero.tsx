@@ -32,7 +32,7 @@ const Hero = () => {
         >
           <div className={styles.videoSound}>
             <Image
-              src={`/static/images/sound-${isMuted ? "on" : "off"}.svg`}
+              src={`/static/images/sound-${isMuted ? "off" : "on"}.svg`}
               alt=""
               width={0}
               height={0}

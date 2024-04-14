@@ -197,6 +197,7 @@ const ContactForm = ({ ...props }: Props) => {
               return {
                 ...baseStyles,
                 color: "white",
+                fontSize: "13px",
                 backgroundColor: state.isSelected ? "#6a68d4" : "#b2aee9",
                 "&:hover": {
                   backgroundColor: "#c0bdea",

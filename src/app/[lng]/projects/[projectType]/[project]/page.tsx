@@ -36,11 +36,16 @@ export default function DynamicPage({ params: { lng } }: PageProps) {
     return "jpeg";
   };
 
+  const projectFolder =
+    PROJECTS[projectType as string][project as string][0].repeatedFolder ||
+    projectType;
+
   return (
     <PageContainer className={`${styles.container} bg-light-purple`}>
       <div className={styles.contentContainer}>
         {PROJECTS[projectType as string][project as string].map(
           (element: any, elementIndex: number) => {
+            console.log("🌸 ~ DynamicPage ~ projectFolder:", projectFolder);
             switch (element.type) {
               case "cover":
                 return (
@@ -116,7 +121,7 @@ export default function DynamicPage({ params: { lng } }: PageProps) {
                     </div>
                     <div className={styles.coverImg}>
                       <Image
-                        src={`/static/images/${projectType}/${project}/cover.${
+                        src={`/static/images/${projectFolder}/${project}/cover.${
                           element.format || "jpeg"
                         }`}
                         alt=""
@@ -140,7 +145,7 @@ export default function DynamicPage({ params: { lng } }: PageProps) {
                     ).map((value, index) => (
                       <div className={styles.flexItem} key={index}>
                         <Image
-                          src={`/static/images/${projectType}/${project}/${elementIndex}-${value}.${getImgFormat(
+                          src={`/static/images/${projectFolder}/${project}/${elementIndex}-${value}.${getImgFormat(
                             element.format,
                             value
                           )}`}
@@ -177,7 +182,7 @@ export default function DynamicPage({ params: { lng } }: PageProps) {
                       ).map((value, index) => (
                         <div className={styles.flexItem} key={index}>
                           <video
-                            src={`/static/images/${projectType}/${project}/${elementIndex}-${value}.mp4`}
+                            src={`/static/images/${projectFolder}/${project}/${elementIndex}-${value}.mp4`}
                             className={styles.video}
                             autoPlay
                             muted
@@ -238,7 +243,7 @@ export default function DynamicPage({ params: { lng } }: PageProps) {
                             </div>
                           )}
                           <video
-                            src={`/static/images/${projectType}/${project}/${elementIndex}.mp4`}
+                            src={`/static/images/${projectFolder}/${project}/${elementIndex}.mp4`}
                             className={styles.playVideo}
                             controls={isPlaying}
                             ref={video}
@@ -264,7 +269,7 @@ export default function DynamicPage({ params: { lng } }: PageProps) {
                     </div>
                     <div className={styles.flexItem}>
                       <Image
-                        src={`/static/images/${projectType}/${project}/${elementIndex}.jpeg`}
+                        src={`/static/images/${projectFolder}/${project}/${elementIndex}.jpeg`}
                         alt=""
                         fill
                         style={{

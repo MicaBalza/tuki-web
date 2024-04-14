@@ -40,7 +40,7 @@ const momentfulApp = [
   {
     type: "flex",
     quantity: 1,
-    flex: "oneSquare",
+    flex: "oneWide",
   },
   {
     type: "flex",
@@ -117,9 +117,65 @@ const bwAnimations = [
   },
 ];
 
+const iamskin = [
+  {
+    type: "cover",
+    name: "Iamskin",
+    country: "España",
+    description: "PROJECT SCOPE",
+    goal: "Iamskin es una marca de productos de belleza naturales en Barcelona. En este proyecto expandimos su identidad de marca hacia las redes sociales.",
+    creativity:
+      "Conceptualización Creativa<br>Dirección de arte<br>Identidad de Marca<br>Branding",
+    production:
+      "Fotografía<br>Edición de Fotografía<br>Diseño Gráfico<br>Diseño Web<br>Redes Sociales",
+    repeatedFolder: "branding",
+  },
+  {
+    type: "flex",
+    quantity: 3,
+    flex: "threeSquare",
+  },
+  {
+    type: "flex",
+    quantity: 3,
+    flex: "threeSquare",
+  },
+  {
+    type: "flex",
+    quantity: 3,
+    flex: "threeSquare",
+  },
+  {
+    type: "flex",
+    quantity: 5,
+    flex: "fiveSquare",
+  },
+  {
+    type: "flex",
+    quantity: 5,
+    flex: "fiveSquare",
+  },
+  {
+    type: "flex",
+    quantity: 5,
+    flex: "fiveSquare",
+  },
+  {
+    type: "flex",
+    quantity: 4,
+    flex: "fourSquare",
+  },
+  {
+    type: "flex",
+    quantity: 2,
+    flex: "twoSquare",
+  },
+];
+
 export const SOCIAL_MEDIA_PROJECTS: Record<string, any> = {
   claireSalabelle,
   momentfulApp,
   trippinStore,
   bwAnimations,
+  iamskin,
 };
