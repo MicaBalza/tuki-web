@@ -147,8 +147,12 @@ p {
   align-self: center;
 }
 
+.g-4 {
+  gap: 4px;
+}
+
 .g-8 {
-  gap: 12px;
+  gap: 8px;
 }
 
 .g-12 {

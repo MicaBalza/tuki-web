@@ -15,7 +15,7 @@
 .shapeContainer {
   position: relative;
   width: 10vw;
-  max-width: 80px;
+  max-width: 70px;
   height: 6vw;
   transform: translateY(-4px);
 }
@@ -29,8 +29,8 @@
 }
 
 .shape {
-  transform: translateY(10px);
-  animation: shake 1s linear infinite;
+  animation: shake 3s cubic-bezier(0.46, 0.03, 0.52, 0.96) 0s infinite normal
+    none running;
 }
 
 @media (max-width: 768px) {
@@ -46,12 +46,15 @@
 
 @keyframes shake {
   0% {
-    transform: rotate(-10deg);
+    transform: rotate(30deg);
   }
   50% {
-    transform: rotate(10deg);
+    transform: rotate(0deg) translateY(-5px);
+  }
+  70% {
+    transform: rotate(-20deg) translateY(-10px);
   }
   100% {
-    transform: rotate(-10deg);
+    transform: rotate(30deg);
   }
 }

@@ -2,10 +2,19 @@ import { useTranslation } from "@/i18n/client";
 import Image from "next/image";
 import { useParams } from "next/navigation";
 import { ButtonHTMLAttributes, useState } from "react";
+import { SubmitHandler, useForm } from "react-hook-form";
 import Select from "react-select";
 import Button from "../Button";
 import Modal from "../Modal";
 import styles from "./styles.module.css";
+
+type Inputs = {
+  name: string;
+  email: string;
+  tel: string;
+  source: string;
+  message: string;
+};
 
 interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
   text?: string;
@@ -26,22 +35,24 @@ const ContactForm = ({ ...props }: Props) => {
     { value: "conocidos", label: t("form.acquaintances") },
   ];
 
-  async function sendMail(formData: FormData) {
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm<Inputs>();
+
+  const onSubmit: SubmitHandler<Inputs> = (data) => sendMail(data);
+
+  async function sendMail(formData: Inputs) {
     setIsModalOpen(true);
     setIsSendingEmail(true);
 
     const apiEndpoint = "/api/email";
-    const rawFormData = {
-      name: formData.get("name"),
-      email: formData.get("email"),
-      tel: formData.get("phone") || "",
-      source: formData.get("source") || "",
-      message: formData.get("message") || "",
-    };
 
     fetch(apiEndpoint, {
       method: "POST",
-      body: JSON.stringify(rawFormData),
+      body: JSON.stringify(formData),
     })
       .then((res) => res.json())
       .then(() => {
@@ -74,9 +85,11 @@ const ContactForm = ({ ...props }: Props) => {
               unoptimized={true}
             />
           </div>
-          {!isSendingEmail && (
+          {isSendingEmail ? (
+            <p className="text-white">Espera un momento...</p>
+          ) : (
             <>
-              <p className="text-white">Mail enviado con éxito !</p>
+              <p className="text-white">¡Mail Enviado con éxito!</p>
               <Button
                 text="Volver"
                 onClick={() => {
@@ -88,23 +101,51 @@ const ContactForm = ({ ...props }: Props) => {
           )}
         </div>
       </Modal>
-      <form className="column g-16" action={sendMail}>
+      <form
+        className="column g-16"
+        onSubmit={handleSubmit(onSubmit)}
+        noValidate
+      >
+        <div className="column g-4">
+          <input
+            {...register("name", {
+              required: {
+                value: true,
+                message: "Este campo es requerido.",
+              },
+            })}
+            required
+            placeholder={t("form.name")}
+            className={styles.input}
+          />
+          {errors.name && (
+            <p className={styles.errorMessage}>{errors.name.message}</p>
+          )}
+        </div>
+        <div className="column g-4">
+          <input
+            {...register("email", {
+              required: {
+                value: true,
+                message: "Este campo es requerido.",
+              },
+              pattern: {
+                value:
+                  /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+                message: "Email inválido",
+              },
+            })}
+            type="email"
+            required
+            placeholder="Email"
+            className={styles.input}
+          />
+          {errors.email && (
+            <p className={styles.errorMessage}>{errors.email.message}</p>
+          )}
+        </div>
         <input
-          name="name"
-          type="text"
-          required
-          placeholder={t("form.name")}
-          className={styles.input}
-        />
-        <input
-          name="email"
-          type="email"
-          required
-          placeholder="Email"
-          className={styles.input}
-        />
-        <input
-          name="tel"
+          {...register("tel")}
           type="tel"
           placeholder={t("form.mobile")}
           className={styles.input}
@@ -165,7 +206,7 @@ const ContactForm = ({ ...props }: Props) => {
           }}
         />
         <textarea
-          name="message"
+          {...register("message")}
           placeholder={t("form.message")}
           className={styles.input}
         />

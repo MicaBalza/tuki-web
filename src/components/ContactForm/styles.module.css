@@ -32,3 +32,8 @@
   width: 200px;
   height: 200px;
 }
+
+.errorMessage {
+  font-size: 12px;
+  color: var(--red);
+}

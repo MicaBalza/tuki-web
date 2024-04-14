@@ -63,7 +63,7 @@
 }
 
 .shape {
-  animation: spin 8s linear infinite;
+  animation: spin 12s linear infinite;
 }
 
 @keyframes spin {
