@@ -225,7 +225,7 @@ export default function DynamicPage({ params: { lng } }: PageProps) {
                         ></iframe>
                       ) : (
                         <div className={styles.playContainer}>
-                          {!isPlaying && (
+                          {!isPlaying && !element.autoplay && (
                             <div
                               onClick={() => {
                                 setIsPlaying(true);
@@ -247,6 +247,8 @@ export default function DynamicPage({ params: { lng } }: PageProps) {
                             className={styles.playVideo}
                             controls={isPlaying}
                             ref={video}
+                            autoPlay={element.autoplay}
+                            muted
                           ></video>
                         </div>
                       )}

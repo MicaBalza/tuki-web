@@ -89,6 +89,13 @@
   padding: 0 var(--padding-block);
 }
 
+.twoWideSquare {
+  display: flex;
+  gap: 8px;
+  height: 47vw;
+  padding: 0 var(--padding-block);
+}
+
 .twoSquare {
   display: flex;
   gap: 8px;

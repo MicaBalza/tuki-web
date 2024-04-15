@@ -126,6 +126,7 @@ const rodentsAndDinosaurs = [
   {
     type: "info-video",
     h2: "Este es el proceso de color del primer personaje",
+    autoplay: true,
   },
   {
     type: "flex",
@@ -147,8 +148,7 @@ const fantasyCharacters = [
   {
     type: "flex",
     quantity: 1,
-    flex: "oneSquare",
-    position: "top",
+    flex: "oneWide",
   },
   {
     type: "info-video",
@@ -174,7 +174,7 @@ const fantasyCharacters = [
   {
     type: "flex",
     quantity: 1,
-    flex: "oneSquare",
+    flex: "oneWide",
     position: "top",
   },
 ];
@@ -348,12 +348,12 @@ const coleccionIlustraciones = [
   {
     type: "flex",
     quantity: 2,
-    flex: "twoSquare",
+    flex: "twoWideSquare",
   },
   {
     type: "flex",
     quantity: 2,
-    flex: "twoSquare",
+    flex: "twoWideSquare",
   },
   {
     type: "flex",
@@ -381,10 +381,10 @@ export const ILLUSTRATION_PROJECTS: Record<string, any> = {
   privateMedicalPresentation,
   primal,
   rodentsAndDinosaurs,
-  fantasyCharacters,
   illuminated,
+  coleccionRosa,
   migrar,
   alfabeto,
-  coleccionRosa,
+  fantasyCharacters,
   coleccionIlustraciones,
 };
