@@ -28,6 +28,7 @@
     "react-i18next": "^14.0.5",
     "react-responsive-masonry": "^2.1.7",
     "react-select": "^5.8.0",
+    "react-switch": "^7.0.0",
     "react-visual-grid": "^0.9.5",
     "swiper": "^11.0.5"
   },
