@@ -10,8 +10,8 @@ export async function POST(request: NextRequest) {
     host: "mail.privateemail.com",
     port: 587,
     auth: {
-      user: process.env.MY_EMAIL,
-      pass: process.env.MY_PASSWORD,
+      user: process.env.NEXT_MY_EMAIL,
+      pass: process.env.NEXT_MY_PASSWORD,
     },
   });
 
