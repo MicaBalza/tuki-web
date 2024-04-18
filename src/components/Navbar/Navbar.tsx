@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { useParams, usePathname, useRouter } from "next/navigation";
+import { slide as Menu } from "react-burger-menu";
 import LangSelector from "../LangSelector";
 import SocialLinks from "../SocialLinks";
 import { NAVBAR_COLORS, ROUTES } from "./constants";
@@ -53,6 +54,23 @@ const Navbar = () => {
           ))}
           <LangSelector />
           <SocialLinks className={color === "red" ? "fill-white" : ""} />
+        </div>
+        <div className={styles.slideMenu}>
+          <Menu right>
+            {ROUTES.map((route) => (
+              <Link
+                href={route.path}
+                key={route.text}
+                className={`${styles.navlinkSidebar} text-white pointer`}
+              >
+                {(pathname.replace(`/${lng}`, "") === route.path ||
+                  pathname.replace(`${lng}`, "") === route.path) && (
+                  <span className={styles.underline} />
+                )}
+                {t(route.text)}
+              </Link>
+            ))}
+          </Menu>
         </div>
       </div>
     </nav>

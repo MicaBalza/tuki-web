@@ -8,6 +8,13 @@
   color: var(--purple);
 }
 
+.input:-webkit-autofill,
+.input:-webkit-autofill:hover,
+.input:-webkit-autofill:focus,
+.input:-webkit-autofill:active {
+  background-color: var(--pink);
+}
+
 .select {
   border: 1px solid var(--purple);
   border-radius: 4px;

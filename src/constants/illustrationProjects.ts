@@ -119,14 +119,14 @@ const rodentsAndDinosaurs = [
     flex: "twoWide",
   },
   {
+    type: "info-video",
+    h2: "Este es el proceso de todos los personajes",
+    autoplay: true,
+  },
+  {
     type: "flex-video",
     quantity: 2,
     flex: "twoWide",
-  },
-  {
-    type: "info-video",
-    h2: "Este es el proceso de color del primer personaje",
-    autoplay: true,
   },
   {
     type: "flex",
