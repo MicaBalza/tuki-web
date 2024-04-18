@@ -3,7 +3,6 @@
 import PageContainer from "@/components/PageContainer";
 import styles from "./page.module.css";
 
-import Breadcrumb from "@/components/Breadcrumb";
 import Button from "@/components/Button";
 
 import { PROJECTS } from "@/constants/projects";
@@ -51,18 +50,6 @@ export default function DynamicPage({ params: { lng } }: PageProps) {
                 return (
                   <div className={styles.coverContainer} key={elementIndex}>
                     <div className={styles.coverText}>
-                      <Breadcrumb
-                        dark
-                        crumbs={[
-                          { text: "Projects", path: "/projects" },
-                          {
-                            text: t(`${projectType as string}.title`),
-                            path: `/projects/${projectType as string}`,
-                          },
-                          { text: projectData[0].name ?? "" },
-                        ]}
-                        className={styles.breadcrumb}
-                      />
                       <div className={`${styles.projectNameCountry} bg-white`}>
                         <h3>{element.name}</h3>
                         <p>{element.country}</p>

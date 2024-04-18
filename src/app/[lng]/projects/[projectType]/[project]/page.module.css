@@ -26,15 +26,10 @@
 .coverImg {
   position: relative;
   width: 70%;
-  margin-top: 8px;
 }
 
 .projectNameCountry {
   padding: 8px 0 8px var(--padding-block);
-}
-
-.breadcrumb {
-  padding: 0 0 16px 40px;
 }
 
 .projectDescription {
@@ -256,10 +251,6 @@
   .coverText {
     width: 100%;
     columns: 2;
-  }
-
-  .breadcrumb {
-    display: none;
   }
 
   .coverImg {

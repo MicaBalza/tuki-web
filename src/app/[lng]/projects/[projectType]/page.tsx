@@ -5,7 +5,6 @@ import Image from "next/image";
 
 import styles from "./page.module.css";
 
-import Breadcrumb from "@/components/Breadcrumb";
 import { PROJECTS } from "@/constants/projects";
 import { useTranslation } from "@/i18n/client";
 import { PageProps } from "@/types/i18n";
@@ -37,12 +36,6 @@ export default function Page({ params: { lng } }: PageProps) {
         <h2 className="text-white">{t(`${projectType as string}.title`)}</h2>
       </div>
       <div className={styles.content}>
-        <Breadcrumb
-          crumbs={[
-            { text: t("projects"), path: "/projects" },
-            { text: t(`${projectType as string}.title`) },
-          ]}
-        />
         <div className={styles.projects}>
           {Object.keys(PROJECTS[projectType as string]).map(
             (project, index) => {
