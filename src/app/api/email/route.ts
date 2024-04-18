@@ -4,7 +4,6 @@ import Mail from "nodemailer/lib/mailer";
 
 export async function POST(request: NextRequest) {
   const { email, name, tel, source, message } = await request.json();
-  console.log("🌸 ~ POST ~ email:", email);
 
   const transport = nodemailer.createTransport({
     host: "mail.privateemail.com",
@@ -16,7 +15,7 @@ export async function POST(request: NextRequest) {
   });
 
   const mailOptions: Mail.Options = {
-    from: process.env.MY_EMAIL,
+    from: process.env.NEXT_MY_EMAIL,
     to: "hello@tukistudio.tv",
     // cc: email, (uncomment this line if you want to send a copy to the sender)
     subject: `Message from ${name} (${email})`,
