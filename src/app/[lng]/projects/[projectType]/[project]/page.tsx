@@ -44,7 +44,6 @@ export default function DynamicPage({ params: { lng } }: PageProps) {
       <div className={styles.contentContainer}>
         {PROJECTS[projectType as string][project as string].map(
           (element: any, elementIndex: number) => {
-            console.log("🌸 ~ DynamicPage ~ projectFolder:", projectFolder);
             switch (element.type) {
               case "cover":
                 return (

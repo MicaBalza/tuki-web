@@ -39,6 +39,9 @@ export default function Page({ params: { lng } }: PageProps) {
         <div className={styles.projects}>
           {Object.keys(PROJECTS[projectType as string]).map(
             (project, index) => {
+              const projectFolder =
+                PROJECTS[projectType as string][project as string][0]
+                  .repeatedFolder || projectType;
               return (
                 <div
                   key={project}
@@ -61,7 +64,7 @@ export default function Page({ params: { lng } }: PageProps) {
                     </h4>
                   </div>
                   <Image
-                    src={`/static/images/${projectType}/${project}/cover.${
+                    src={`/static/images/${projectFolder}/${project}/cover.${
                       PROJECTS[projectType as string][project][0].format ||
                       "jpeg"
                     }`}

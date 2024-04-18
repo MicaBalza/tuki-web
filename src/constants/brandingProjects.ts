@@ -336,13 +336,13 @@ const desquiciado = [
   },
   {
     type: "flex",
-    quantity: 2,
-    flex: "twoTall",
+    quantity: 1,
+    flex: "oneWide",
   },
   {
     type: "flex",
-    quantity: 2,
-    flex: "twoTall",
+    quantity: 1,
+    flex: "oneWide",
   },
   {
     type: "flex",

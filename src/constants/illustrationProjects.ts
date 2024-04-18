@@ -128,11 +128,6 @@ const rodentsAndDinosaurs = [
     quantity: 2,
     flex: "twoWide",
   },
-  {
-    type: "flex",
-    quantity: 1,
-    flex: "oneWide",
-  },
 ];
 
 const fantasyCharacters = [
