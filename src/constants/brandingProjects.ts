@@ -92,7 +92,9 @@ const viuty = [
   {
     type: "flex",
     quantity: 1,
-    flex: "oneWide",
+    flex: "oneSquare",
+    format: "png",
+    position: "left top",
   },
 ];
 
