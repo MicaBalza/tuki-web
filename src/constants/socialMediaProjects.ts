@@ -74,16 +74,31 @@ const trippinStore = [
     type: "flex",
     quantity: 3,
     flex: "threeSquare",
+    format: {
+      1: "jpeg",
+      2: "gif",
+      3: "jpeg",
+    },
   },
   {
     type: "flex",
     quantity: 3,
     flex: "threeSquare",
+    format: {
+      1: "gif",
+      2: "jpeg",
+      3: "gif",
+    },
   },
   {
     type: "flex",
     quantity: 3,
     flex: "threeSquare",
+    format: {
+      1: "jpeg",
+      2: "gif",
+      3: "jpeg",
+    },
   },
   {
     type: "flex",

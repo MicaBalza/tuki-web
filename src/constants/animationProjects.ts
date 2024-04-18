@@ -207,8 +207,8 @@ const crc = [
   },
   {
     type: "flex-video",
-    quantity: 1,
-    flex: "oneWide",
+    quantity: 2,
+    flex: "twoWide",
   },
   {
     type: "info-video",
