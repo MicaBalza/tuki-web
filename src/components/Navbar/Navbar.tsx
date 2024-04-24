@@ -5,8 +5,8 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { useParams, usePathname, useRouter } from "next/navigation";
-import { slide as Menu } from "react-burger-menu";
-import LangSelector from "../LangSelector";
+import { useState } from "react";
+import SlideMenu from "../SlideMenu";
 import SocialLinks from "../SocialLinks";
 import { NAVBAR_COLORS, ROUTES } from "./constants";
 import styles from "./styles.module.css";
@@ -19,6 +19,8 @@ const Navbar = () => {
 
   const color = NAVBAR_COLORS[pathname.replace(`${lng}`, "")] || "red";
   const bgIsRed = color === "red";
+
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <nav className={`${styles.navbar} bg-${color}`}>
@@ -52,25 +54,11 @@ const Navbar = () => {
               {t(route.text)}
             </Link>
           ))}
-          <LangSelector />
+          {/* <LangSelector /> */}
           <SocialLinks className={color === "red" ? "fill-white" : ""} />
         </div>
         <div className={styles.slideMenu}>
-          <Menu right>
-            {ROUTES.map((route) => (
-              <Link
-                href={route.path}
-                key={route.text}
-                className={`${styles.navlinkSidebar} text-white pointer`}
-              >
-                {(pathname.replace(`/${lng}`, "") === route.path ||
-                  pathname.replace(`${lng}`, "") === route.path) && (
-                  <span className={styles.underline} />
-                )}
-                {t(route.text)}
-              </Link>
-            ))}
-          </Menu>
+          <SlideMenu />
         </div>
       </div>
     </nav>

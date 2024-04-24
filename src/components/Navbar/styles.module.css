@@ -38,8 +38,16 @@
   background-color: var(--purple);
 }
 
-.slideMenu {
-  display: none;
+.mobileMenuContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.mobileMenuLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 @media (max-width: 1024px) {
@@ -50,8 +58,8 @@
   .slideMenu {
     display: block;
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 20px;
+    right: 20px;
   }
 }
 

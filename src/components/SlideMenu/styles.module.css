@@ -1,0 +1,125 @@
+.menuIcon {
+  width: 60px;
+  height: 45px;
+  position: relative;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+  z-index: 3;
+  transform: scale(0.5);
+}
+
+.bar {
+  display: block;
+  position: absolute;
+  height: 5px;
+  width: 100%;
+  background: var(--purple);
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+
+.menuIcon span:nth-child(1) {
+  top: 0px;
+}
+
+.menuIcon span:nth-child(2),
+.menuIcon span:nth-child(3) {
+  top: 18px;
+}
+
+.menuIcon span:nth-child(4) {
+  top: 36px;
+}
+
+.menuIcon.menuOpen {
+  transform: scale(0.4);
+}
+
+.menuIcon.menuOpen .bar {
+  background: var(--white);
+}
+
+.menuIcon.menuOpen span:nth-child(1) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+
+.menuIcon.menuOpen span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.menuIcon.menuOpen span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.menuIcon.menuOpen span:nth-child(4) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+
+.container {
+  background: var(--purple);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 240px;
+  z-index: 2;
+  right: -240px;
+  transition: right 0.2s ease-in;
+}
+
+.container.open {
+  right: 0;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  overflow-y: auto;
+  width: 100%;
+  padding: 20px;
+}
+
+.mobileNavlinks {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
