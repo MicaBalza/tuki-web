@@ -242,7 +242,7 @@
   height: 100%;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1140px) {
   .coverContainer {
     flex-direction: column-reverse;
     padding-left: var(--padding-block);
@@ -250,13 +250,16 @@
 
   .coverText {
     width: 100%;
-    columns: 2;
   }
 
   .coverImg {
     position: relative;
     width: 100%;
     height: 40vw;
+  }
+
+  .projectInfo {
+    padding: 28px 12px 12px 0;
   }
 
   .finalResult {
@@ -271,5 +274,69 @@
 
   .playContainer {
     height: 40vw;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1140px) {
+  .projectInfo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .twoWide {
+    flex-direction: column;
+    height: 85vw;
+  }
+
+  .twoWideSquare {
+    flex-direction: column;
+    height: 90vw;
+  }
+
+  .twoSquare {
+    flex-direction: column;
+    height: 90vw;
+  }
+
+  .twoTall {
+    flex-direction: column;
+    height: 85vw;
+  }
+
+  .threeWide {
+    flex-direction: column;
+    height: 128vw;
+  }
+
+  .threeSquare {
+    flex-direction: column;
+    height: 128vw;
+  }
+
+  .threeTall {
+    flex-direction: column;
+    height: 128vw;
+  }
+
+  .fourWide {
+    flex-direction: column;
+    height: 128vw;
+  }
+
+  .fourSquare {
+    flex-direction: column;
+    height: 128vw;
+  }
+
+  .fiveSquare {
+    flex-direction: column;
+    height: 128vw;
+  }
+
+  .sixSquare {
+    flex-direction: column;
+    height: 128vw;
   }
 }

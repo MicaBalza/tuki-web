@@ -63,7 +63,9 @@ export default function DynamicPage({ params: { lng } }: PageProps) {
                           <div>
                             <p className={styles.projectInfoTitle}>Objetivo</p>
                             <div
-                              dangerouslySetInnerHTML={{ __html: element.goal }}
+                              dangerouslySetInnerHTML={{
+                                __html: element.goal,
+                              }}
                             />
                           </div>
                         )}
