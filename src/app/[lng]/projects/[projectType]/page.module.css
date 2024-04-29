@@ -53,6 +53,21 @@
   grid-column: span 6;
 }
 
+@media (max-width: 1024px) and (orientation: portrait) {
+  .project {
+    grid-column: span 3;
+  }
+
+  .project:nth-child(4n + 2),
+  .project:nth-child(4n + 3) {
+    grid-column: span 3;
+  }
+
+  .lastItem {
+    grid-column: span 6;
+  }
+}
+
 @media (max-width: 576px) {
   .projects {
     display: flex;

@@ -282,9 +282,17 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
+
+  .coverContainer {
+    min-height: auto;
+  }
 }
 
 @media (max-width: 560px) {
+  .coverContainer {
+    min-height: auto;
+  }
+
   .twoWide {
     flex-direction: column;
     height: 85vw;
