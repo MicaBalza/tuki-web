@@ -32,6 +32,12 @@
 }
 
 @media (max-width: 576px) {
+  .container {
+    padding: 54px 0;
+    background: url("../../../public/static/images/whoweare-background-vertical.png");
+    background-color: var(--white);
+  }
+
   .persons {
     flex-direction: column;
     gap: 24px;
