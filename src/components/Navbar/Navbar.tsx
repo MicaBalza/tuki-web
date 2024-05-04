@@ -6,6 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useParams, usePathname, useRouter } from "next/navigation";
 import { useState } from "react";
+import LangSelector from "../LangSelector";
 import SlideMenu from "../SlideMenu";
 import SocialLinks from "../SocialLinks";
 import { NAVBAR_COLORS, ROUTES } from "./constants";
@@ -54,7 +55,7 @@ const Navbar = () => {
               {t(route.text)}
             </Link>
           ))}
-          {/* <LangSelector /> */}
+          <LangSelector />
           <SocialLinks className={color === "red" ? "fill-white" : ""} />
         </div>
         <div className={styles.slideMenu}>

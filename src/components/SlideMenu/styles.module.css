@@ -105,13 +105,13 @@
   height: 100%;
   overflow-y: auto;
   width: 100%;
-  padding: 20px;
+  padding: 40px 20px 20px 40px;
 }
 
 .mobileNavlinks {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 16px;
 }
 
 .backdrop {
@@ -122,4 +122,9 @@
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.4);
   z-index: 1;
+}
+
+.footer {
+  display: flex;
+  gap: 20px;
 }

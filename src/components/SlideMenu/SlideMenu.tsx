@@ -3,6 +3,7 @@ import { MouseEvent, ReactNode, useRef, useState } from "react";
 import { useTranslation } from "@/i18n/client";
 import Link from "next/link";
 import { useParams, usePathname } from "next/navigation";
+import LangSelector from "../LangSelector";
 import { ROUTES } from "../Navbar/constants";
 import SocialLinks from "../SocialLinks";
 import styles from "./styles.module.css";
@@ -62,9 +63,9 @@ export default function SlideMenu() {
                 </Link>
               ))}
             </div>
-            <div>
-              {/* <LangSelector /> */}
+            <div className={styles.footer}>
               <SocialLinks className="fill-white" />
+              <LangSelector invert />
             </div>
           </div>
         )}

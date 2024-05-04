@@ -10,11 +10,14 @@ const BG_COLOR: Record<string, string> = {
   "/en/us": "#b2aee9",
 };
 
-const LangSelector = () => {
+interface Props {
+  invert?: boolean;
+}
+
+const LangSelector = ({ invert }: Props) => {
   const router = useRouter();
   const { lng } = useParams();
   const path = usePathname();
-  console.log("🌸 ~ LangSelector ~ path:", path);
 
   const [checked, setChecked] = useState(lng === "en");
 
@@ -26,19 +29,27 @@ const LangSelector = () => {
     }
   }, [checked, lng, path, router]);
 
+  const mainTextClass = invert ? "text-white" : "text-purple";
+  const secondaryTextClass = invert ? "text-purple" : "text-white";
+  const handleColor = invert ? "#fff" : "#6a68d4";
+
   return (
     <Switch
       onChange={() => setChecked(!checked)}
       checked={checked}
-      uncheckedIcon={<p className={`${styles.text} text-purple`}>ENG</p>}
-      checkedIcon={<p className={`${styles.text} text-purple`}>ESP</p>}
-      uncheckedHandleIcon={<p className={`${styles.text} text-white`}>ESP</p>}
-      checkedHandleIcon={<p className={`${styles.text} text-white`}>ENG</p>}
+      uncheckedIcon={<p className={`${styles.text} ${mainTextClass}`}>ENG</p>}
+      checkedIcon={<p className={`${styles.text} ${mainTextClass}`}>ESP</p>}
+      uncheckedHandleIcon={
+        <p className={`${styles.text} ${secondaryTextClass}`}>ESP</p>
+      }
+      checkedHandleIcon={
+        <p className={`${styles.text} ${secondaryTextClass}`}>ENG</p>
+      }
       className={`${styles.switch} ${
         checked ? styles.checked : styles.unchecked
-      }`}
-      onHandleColor="#6a68d4"
-      offHandleColor="#6a68d4"
+      } ${invert ? styles.invert : ""}`}
+      onHandleColor={handleColor}
+      offHandleColor={handleColor}
       // onColor={BG_COLOR[path]}
       // offColor={BG_COLOR[path]}
       width={80}
