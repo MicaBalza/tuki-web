@@ -78,8 +78,8 @@ const Navbar = () => {
               {t(route.text)}
             </Link>
           ))}
-          <LangSelector />
-          <SocialLinks className={color === "red" ? "fill-white" : ""} />
+          <LangSelector invert={bgIsDark} />
+          <SocialLinks className={bgIsDark ? "fill-white" : ""} />
         </div>
 
         <div className={styles.slideMenu}>
