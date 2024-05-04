@@ -57,6 +57,10 @@ img {
   background-color: var(--red);
 }
 
+.bg-yellow {
+  background-color: var(--yellow);
+}
+
 .text-white {
   color: var(--white);
 }

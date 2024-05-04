@@ -1,35 +1,58 @@
 "use client";
 
 import { useTranslation } from "@/i18n/client";
+import { ServiceType } from "@/types/services";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { useParams, usePathname, useRouter } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import LangSelector from "../LangSelector";
 import SlideMenu from "../SlideMenu";
 import SocialLinks from "../SocialLinks";
+import Header from "../projectType/Header";
 import { NAVBAR_COLORS, ROUTES } from "./constants";
 import styles from "./styles.module.css";
 
 const Navbar = () => {
   const { push } = useRouter();
   const pathname = usePathname();
-  const { lng } = useParams();
+  const { lng, projectType } = useParams();
   const { t } = useTranslation(lng as string, "navbar");
 
-  const color = NAVBAR_COLORS[pathname.replace(`${lng}`, "")] || "red";
-  const bgIsRed = color === "red";
+  const [scrolled, setScrolled] = useState(false);
 
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY || document.documentElement.scrollTop;
+      if (scrollTop > 105) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const color = NAVBAR_COLORS[pathname.replace(`${lng}`, "")] || "red";
+  const bgIsDark = color === "red" || color === "green";
 
   return (
     <nav className={`${styles.navbar} bg-${color}`}>
-      <div className={`container ${styles.container}`}>
+      <div
+        className={`${styles.container} ${
+          scrolled ? `${styles.scrolled} bg-${color}` : ""
+        }`}
+      >
         <div onClick={() => push("/")} className="pointer">
           <Image
             src={
-              bgIsRed ? "/static/tuki-logo-white.png" : "/static/tuki-logo.gif"
+              bgIsDark ? "/static/tuki-logo-white.png" : "/static/tuki-logo.gif"
             }
             alt="Tuki Logo"
             width="179"
@@ -42,7 +65,7 @@ const Navbar = () => {
               href={route.path}
               key={route.text}
               className={`${styles.navlink} ${
-                color === "red" ? "text-white" : "text-purple"
+                bgIsDark ? "text-white" : "text-purple"
               } pointer`}
             >
               {(pathname.replace(`/${lng}`, "") === route.path ||
@@ -58,10 +81,12 @@ const Navbar = () => {
           <LangSelector />
           <SocialLinks className={color === "red" ? "fill-white" : ""} />
         </div>
+
         <div className={styles.slideMenu}>
           <SlideMenu />
         </div>
       </div>
+      {projectType && <Header type={projectType as ServiceType} />}
     </nav>
   );
 };

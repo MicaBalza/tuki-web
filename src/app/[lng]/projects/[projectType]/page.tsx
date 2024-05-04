@@ -32,9 +32,6 @@ export default function Page({ params: { lng } }: PageProps) {
 
   return (
     <PageContainer>
-      <div className={`${styles.header}`}>
-        <h2 className="text-white">{t(`${projectType as string}.title`)}</h2>
-      </div>
       <div className={styles.content}>
         <div className={styles.projects}>
           {Object.keys(PROJECTS[projectType as string]).map(

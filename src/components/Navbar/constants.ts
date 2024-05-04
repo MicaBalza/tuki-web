@@ -26,4 +26,10 @@ export const NAVBAR_COLORS: Record<string, string> = {
   "//projects": "nude",
   "//us": "light-purple",
   "//contact-us": "pink",
+  "//projects/illustration": "green",
+  "//projects/animation": "yellow",
+  "//projects/social-media": "light-purple",
+  "//projects/editorial": "red",
+  "//projects/branding": "pink",
+  "//projects/motion-graphics": "light-purple",
 };
