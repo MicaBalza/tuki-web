@@ -8,9 +8,9 @@ import Link from "next/link";
 import { useParams, usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import LangSelector from "../LangSelector";
+import ProjectTypeHeader from "../ProjectTypeHeader";
 import SlideMenu from "../SlideMenu";
 import SocialLinks from "../SocialLinks";
-import Header from "../projectType/Header";
 import { NAVBAR_COLORS, ROUTES } from "./constants";
 import styles from "./styles.module.css";
 
@@ -86,7 +86,7 @@ const Navbar = () => {
           <SlideMenu />
         </div>
       </div>
-      {projectType && <Header type={projectType as ServiceType} />}
+      {projectType && <ProjectTypeHeader type={projectType as ServiceType} />}
     </nav>
   );
 };

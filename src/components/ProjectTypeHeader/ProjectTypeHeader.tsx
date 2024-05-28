@@ -9,7 +9,7 @@ interface Props {
   type: ServiceType;
 }
 
-const Header = ({ type }: Props) => {
+const ProjectTypeHeader = ({ type }: Props) => {
   const { lng } = useParams();
   const { t } = useTranslation(lng as string, "services");
 
@@ -20,7 +20,7 @@ const Header = ({ type }: Props) => {
       </div>
       <div className={styles.imgContainer}>
         <Image
-          src={`/static/images/${type}.gif`}
+          src={`/static/images/section-hero/${type}.png`}
           alt={type}
           fill
           unoptimized={true}
@@ -30,4 +30,4 @@ const Header = ({ type }: Props) => {
   );
 };
 
-export default Header;
+export default ProjectTypeHeader;
