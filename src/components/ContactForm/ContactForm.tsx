@@ -2,7 +2,7 @@ import { useTranslation } from "@/i18n/client";
 import Image from "next/image";
 import { useParams } from "next/navigation";
 import { ButtonHTMLAttributes, useState } from "react";
-import { SubmitHandler, useForm } from "react-hook-form";
+import { Controller, SubmitHandler, useForm } from "react-hook-form";
 import Select from "react-select";
 import Button from "../Button";
 import Modal from "../Modal";
@@ -38,7 +38,7 @@ const ContactForm = ({ ...props }: Props) => {
   const {
     register,
     handleSubmit,
-    watch,
+    control,
     formState: { errors },
   } = useForm<Inputs>();
 
@@ -150,62 +150,72 @@ const ContactForm = ({ ...props }: Props) => {
           placeholder={t("form.mobile")}
           className={styles.input}
         />
-        <Select
-          options={options}
-          placeholder={t("form.source")}
-          styles={{
-            control: (baseStyles, state) => ({
-              ...baseStyles,
-              borderColor: "#6a68d4",
-              backgroundColor: "transparent",
-              height: "40px",
-              boxShadow: "none",
-              "&:hover": {
-                borderColor: "#6a68d4",
-              },
-            }),
-            singleValue: (baseStyles) => ({
-              ...baseStyles,
-              color: "#6a68d4",
-              fontSize: "13px",
-            }),
-            valueContainer: (baseStyles) => ({
-              ...baseStyles,
-              padding: "2px 18px",
-            }),
-            placeholder: (baseStyles) => ({
-              ...baseStyles,
-              color: "#6a68d4",
-              fontSize: "13px",
-            }),
-            indicatorSeparator: (baseStyles) => ({
-              display: "none",
-            }),
-            dropdownIndicator: (baseStyles) => ({
-              ...baseStyles,
-              color: "#6a68d4",
-              svg: {
-                height: "16px",
-                width: "16px",
-              },
-            }),
-            menu: (baseStyles) => ({
-              ...baseStyles,
-              backgroundColor: "#b2aee9",
-            }),
-            option: (baseStyles, state) => {
-              return {
-                ...baseStyles,
-                color: "white",
-                fontSize: "13px",
-                backgroundColor: state.isSelected ? "#6a68d4" : "#b2aee9",
-                "&:hover": {
-                  backgroundColor: "#c0bdea",
+        <Controller
+          control={control}
+          name="source"
+          render={({ field: { onChange, value, ref } }) => (
+            <Select
+              ref={ref}
+              options={options}
+              placeholder={t("form.source")}
+              value={options.find((c) => c.value === value)}
+              onChange={(val) => onChange(val?.value)}
+              styles={{
+                control: (baseStyles, state) => ({
+                  ...baseStyles,
+                  borderColor: "#6a68d4",
+                  backgroundColor: "transparent",
+                  height: "40px",
+                  boxShadow: "none",
+                  "&:hover": {
+                    borderColor: "#6a68d4",
+                  },
+                }),
+                singleValue: (baseStyles) => ({
+                  ...baseStyles,
+                  color: "#6a68d4",
+                  fontSize: "13px",
+                }),
+                valueContainer: (baseStyles) => ({
+                  ...baseStyles,
+                  padding: "2px 18px",
+                }),
+                placeholder: (baseStyles) => ({
+                  ...baseStyles,
+                  color: "#6a68d4",
+                  fontSize: "13px",
+                }),
+                indicatorSeparator: (baseStyles) => ({
+                  display: "none",
+                }),
+                dropdownIndicator: (baseStyles) => ({
+                  ...baseStyles,
+                  color: "#6a68d4",
+                  svg: {
+                    height: "16px",
+                    width: "16px",
+                  },
+                }),
+                menu: (baseStyles) => ({
+                  ...baseStyles,
+                  backgroundColor: "#b2aee9",
+                }),
+                option: (baseStyles, state) => {
+                  return {
+                    ...baseStyles,
+                    color: "white",
+                    fontSize: "13px",
+                    backgroundColor: state.isSelected ? "#6a68d4" : "#b2aee9",
+                    "&:hover": {
+                      backgroundColor: "#c0bdea",
+                    },
+                  };
                 },
-              };
-            },
-          }}
+              }}
+            />
+          )}
         />
+
         <textarea
           {...register("message")}
           placeholder={t("form.message")}
