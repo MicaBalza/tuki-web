@@ -27,6 +27,7 @@
   right: 0;
   width: 100vw;
   height: 100%;
+  overflow: hidden;
 }
 
 .imgContainer img {
@@ -40,10 +41,13 @@
   }
 }
 
-@media (min-width: 1440px) {
-  .imgContainer {
+@media (min-width: 1024px) {
+  .imgContainer img {
+    transform: scale(1.2) translate(-15vw);
   }
+}
 
+@media (min-width: 1440px) {
   .header {
     min-height: 400px;
   }

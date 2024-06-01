@@ -7,7 +7,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { useParams, usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-import LangSelector from "../LangSelector";
 import ProjectTypeHeader from "../ProjectTypeHeader";
 import SlideMenu from "../SlideMenu";
 import SocialLinks from "../SocialLinks";
@@ -78,7 +77,7 @@ const Navbar = () => {
               {t(route.text)}
             </Link>
           ))}
-          <LangSelector invert={bgIsDark} />
+          {/* <LangSelector invert={bgIsDark} /> */}
           <SocialLinks className={bgIsDark ? "fill-white" : ""} />
         </div>
 

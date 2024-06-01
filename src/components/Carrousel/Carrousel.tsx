@@ -57,7 +57,9 @@ const Carrousel = ({ service }: Props) => {
             key={PROJECTS[service as string][project][0]?.name || ""}
           >
             <Image
-              src={`/static/images/${service}/${project}/cover.jpeg`}
+              src={`/static/images/${service}/${project}/cover.${
+                PROJECTS[service as string][project][0].format || "jpeg"
+              }`}
               alt={PROJECTS[service as string][project][0]?.name || ""}
               fill
               style={{
