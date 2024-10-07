@@ -51,7 +51,9 @@ const Navbar = () => {
         <div onClick={() => push("/")} className="pointer">
           <Image
             src={
-              bgIsDark ? "/static/tuki-logo-white.png" : "/static/tuki-logo.gif"
+              bgIsDark
+                ? "/static/tuki-logo-white.png"
+                : "/static/video/tuki-logo.gif"
             }
             alt="Tuki Logo"
             width="179"
