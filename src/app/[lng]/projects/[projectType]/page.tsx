@@ -1,4 +1,4 @@
-"use client";;
+"use client";
 import { use } from "react";
 
 import PageContainer from "@/components/PageContainer";
@@ -8,8 +8,7 @@ import styles from "./page.module.css";
 
 import { PROJECTS } from "@/constants/projects";
 import { useTranslation } from "@/i18n/client";
-import { PageProps } from "@/types/i18n";
-import { useParams, useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 
 const HOVER_COLORS = [
   "#6a68d4",
@@ -21,16 +20,18 @@ const HOVER_COLORS = [
   "#fdc800",
 ];
 
-export default function Page(props: PageProps) {
+type tParams = {
+  lng: string;
+  projectType: string;
+};
+
+export default function Page(props: { params: Promise<tParams> }) {
   const params = use(props.params);
 
-  const {
-    lng
-  } = params;
+  const { lng, projectType } = params;
 
   const { t } = useTranslation(lng, "services");
   const { push } = useRouter();
-  const { projectType } = useParams();
 
   const getRandomColor = () => {
     const randomIndex = Math.floor(Math.random() * HOVER_COLORS.length);

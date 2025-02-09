@@ -7,22 +7,24 @@ import Button from "@/components/Button";
 
 import { PROJECTS } from "@/constants/projects";
 import { useTranslation } from "@/i18n/client";
-import { PageProps } from "@/types/i18n";
 import Image from "next/image";
-import { useParams, useRouter } from "next/navigation";
-import { useRef, useState, use } from "react";
+import { useRouter } from "next/navigation";
+import { use, useRef, useState } from "react";
 import "swiper/css";
 import "swiper/css/bundle";
 
-export default function DynamicPage(props: PageProps) {
+type tParams = {
+  lng: string;
+  projectType: string;
+  project: string;
+};
+
+export default function DynamicPage(props: { params: Promise<tParams> }) {
   const params = use(props.params);
 
-  const {
-    lng
-  } = params;
+  const { lng, projectType, project } = params;
 
   const { t } = useTranslation(lng, "services");
-  const { projectType, project } = useParams();
   const router = useRouter();
 
   const [showGallery, setShowGallery] = useState(false);

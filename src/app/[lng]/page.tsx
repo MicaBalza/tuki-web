@@ -1,4 +1,4 @@
-"use client";;
+"use client";
 import { use } from "react";
 
 import Clients from "@/components/Clients";
@@ -9,15 +9,16 @@ import Service from "@/components/Service";
 import WhatWeDo from "@/components/WhatWeDo";
 import WhoWeAre from "@/components/WhoWeAre";
 import { SERVICES } from "@/constants/services";
-import { PageProps } from "@/types/i18n";
 import styles from "./page.module.css";
 
-export default function Home(props: PageProps) {
+type tParams = {
+  lng: string;
+};
+
+export default function Home(props: { params: Promise<tParams> }) {
   const params = use(props.params);
 
-  const {
-    lng
-  } = params;
+  const { lng } = params;
 
   return (
     <PageContainer className={styles.main}>

@@ -1,21 +1,22 @@
-"use client";;
+"use client";
 import { use } from "react";
 
 import Button from "@/components/Button";
 import PageContainer from "@/components/PageContainer";
 import Profile from "@/components/Profile";
 import { useTranslation } from "@/i18n/client";
-import { PageProps } from "@/types/i18n";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import styles from "./page.module.css";
 
-export default function Us(props: PageProps) {
+type tParams = {
+  lng: string;
+};
+
+export default function Us(props: { params: Promise<tParams> }) {
   const params = use(props.params);
 
-  const {
-    lng
-  } = params;
+  const { lng } = params;
 
   const { t } = useTranslation(lng, "us");
   const { push } = useRouter();

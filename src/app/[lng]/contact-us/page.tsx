@@ -1,21 +1,22 @@
-"use client";;
-import { use } from "react";
+"use client";
 import ContactForm from "@/components/ContactForm";
 import PageContainer from "@/components/PageContainer";
 import Image from "next/image";
+import { use } from "react";
 import styles from "./page.module.css";
 
 import EmailIcon from "@/assets/icons/Contact-Email";
 import PhoneIcon from "@/assets/icons/Contact-Phone";
 import { useTranslation } from "@/i18n/client";
-import { PageProps } from "@/types/i18n";
 
-export default function Page(props: PageProps) {
+type tParams = {
+  lng: string;
+};
+
+export default function Page(props: { params: Promise<tParams> }) {
   const params = use(props.params);
 
-  const {
-    lng
-  } = params;
+  const { lng } = params;
 
   const { t } = useTranslation(lng, "contact-us");
 
@@ -52,6 +53,7 @@ export default function Page(props: PageProps) {
             alt=""
             fill
             objectFit="contain"
+            unoptimized
           />
         </div>
       </div>
