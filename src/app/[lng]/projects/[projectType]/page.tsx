@@ -1,4 +1,5 @@
-"use client";
+"use client";;
+import { use } from "react";
 
 import PageContainer from "@/components/PageContainer";
 import Image from "next/image";
@@ -20,7 +21,13 @@ const HOVER_COLORS = [
   "#fdc800",
 ];
 
-export default function Page({ params: { lng } }: PageProps) {
+export default function Page(props: PageProps) {
+  const params = use(props.params);
+
+  const {
+    lng
+  } = params;
+
   const { t } = useTranslation(lng, "services");
   const { push } = useRouter();
   const { projectType } = useParams();

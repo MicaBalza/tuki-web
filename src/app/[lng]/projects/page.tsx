@@ -1,4 +1,5 @@
-"use client";
+"use client";;
+import { use } from "react";
 
 import Carrousel from "@/components/Carrousel";
 import PageContainer from "@/components/PageContainer";
@@ -7,7 +8,13 @@ import { useTranslation } from "@/i18n/client";
 import { PageProps } from "@/types/i18n";
 import styles from "./page.module.css";
 
-export default function Page({ params: { lng } }: PageProps) {
+export default function Page(props: PageProps) {
+  const params = use(props.params);
+
+  const {
+    lng
+  } = params;
+
   const { t } = useTranslation(lng, "projects");
 
   return (

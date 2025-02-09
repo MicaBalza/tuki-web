@@ -10,11 +10,17 @@ import { useTranslation } from "@/i18n/client";
 import { PageProps } from "@/types/i18n";
 import Image from "next/image";
 import { useParams, useRouter } from "next/navigation";
-import { useRef, useState } from "react";
+import { useRef, useState, use } from "react";
 import "swiper/css";
 import "swiper/css/bundle";
 
-export default function DynamicPage({ params: { lng } }: PageProps) {
+export default function DynamicPage(props: PageProps) {
+  const params = use(props.params);
+
+  const {
+    lng
+  } = params;
+
   const { t } = useTranslation(lng, "services");
   const { projectType, project } = useParams();
   const router = useRouter();

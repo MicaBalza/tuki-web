@@ -1,4 +1,5 @@
-"use client";
+"use client";;
+import { use } from "react";
 
 import Clients from "@/components/Clients";
 import ContactUs from "@/components/ContactUs";
@@ -11,7 +12,13 @@ import { SERVICES } from "@/constants/services";
 import { PageProps } from "@/types/i18n";
 import styles from "./page.module.css";
 
-export default function Home({ params: { lng } }: PageProps) {
+export default function Home(props: PageProps) {
+  const params = use(props.params);
+
+  const {
+    lng
+  } = params;
+
   return (
     <PageContainer className={styles.main}>
       <Hero />

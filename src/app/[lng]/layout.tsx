@@ -31,12 +31,21 @@ export async function generateStaticParams() {
   return languages.map((lng) => ({ lng }));
 }
 
-export default function RootLayout({
-  children,
-  params: { lng },
-}: {
-  children: React.ReactNode;
-} & PageProps) {
+export default async function RootLayout(
+  props: {
+    children: React.ReactNode;
+  } & PageProps
+) {
+  const params = await props.params;
+
+  const {
+    lng
+  } = params;
+
+  const {
+    children
+  } = props;
+
   return (
     <html lang={lng} dir={dir(lng)}>
       <body className={RethinkFont.className}>

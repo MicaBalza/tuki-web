@@ -58,6 +58,7 @@ const Navbar = () => {
             alt="Tuki Logo"
             width="179"
             height="100"
+            unoptimized
           />
         </div>
         <div className={styles.navlinks}>

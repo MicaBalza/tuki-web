@@ -1,4 +1,5 @@
-"use client";
+"use client";;
+import { use } from "react";
 
 import Button from "@/components/Button";
 import PageContainer from "@/components/PageContainer";
@@ -9,7 +10,13 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import styles from "./page.module.css";
 
-export default function Us({ params: { lng } }: PageProps) {
+export default function Us(props: PageProps) {
+  const params = use(props.params);
+
+  const {
+    lng
+  } = params;
+
   const { t } = useTranslation(lng, "us");
   const { push } = useRouter();
   return (

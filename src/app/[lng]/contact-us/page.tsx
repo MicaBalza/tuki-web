@@ -1,4 +1,5 @@
-"use client";
+"use client";;
+import { use } from "react";
 import ContactForm from "@/components/ContactForm";
 import PageContainer from "@/components/PageContainer";
 import Image from "next/image";
@@ -9,7 +10,13 @@ import PhoneIcon from "@/assets/icons/Contact-Phone";
 import { useTranslation } from "@/i18n/client";
 import { PageProps } from "@/types/i18n";
 
-export default function Page({ params: { lng } }: PageProps) {
+export default function Page(props: PageProps) {
+  const params = use(props.params);
+
+  const {
+    lng
+  } = params;
+
   const { t } = useTranslation(lng, "contact-us");
 
   return (
