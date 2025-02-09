@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import { languages } from "@/i18n/settings";
 import "@/styles/globals.css";
 import { PageProps } from "@/types/i18n";
+import { GoogleTagManager } from "@next/third-parties/google";
 import { dir } from "i18next";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
@@ -38,16 +39,13 @@ export default async function RootLayout(
 ) {
   const params = await props.params;
 
-  const {
-    lng
-  } = params;
+  const { lng } = params;
 
-  const {
-    children
-  } = props;
+  const { children } = props;
 
   return (
     <html lang={lng} dir={dir(lng)}>
+      <GoogleTagManager gtmId={process.env.NEXT_GOOGLE_TAG_MANAGER_ID || ""} />
       <body className={RethinkFont.className}>
         <header>
           <Navbar />
