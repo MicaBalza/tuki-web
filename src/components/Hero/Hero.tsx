@@ -46,6 +46,7 @@ const Hero = () => {
             src={`/static/video/main.mp4`}
             className={styles.video}
             ref={video}
+            poster={`/static/images/main-poster.jpg`}
           ></video>
         </div>
       </div>

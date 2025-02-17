@@ -9,7 +9,7 @@ import { PROJECTS } from "@/constants/projects";
 import { useTranslation } from "@/i18n/client";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { use, useRef, useState } from "react";
+import { use, useCallback, useRef, useState } from "react";
 import "swiper/css";
 import "swiper/css/bundle";
 
@@ -26,22 +26,19 @@ export default function DynamicPage(props: { params: Promise<tParams> }) {
 
   const { t } = useTranslation(lng, "services");
   const router = useRouter();
-
-  const [showGallery, setShowGallery] = useState(false);
-  const [currentIndex, setCurrentIndex] = useState(0);
   const video = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
 
   const projectData = PROJECTS[projectType as string][project as string];
 
-  const getImgFormat = (
-    format: string | Record<string, string>,
-    elementIndex: number
-  ) => {
-    if (typeof format === "string") return format;
-    if (typeof format === "object") return format[elementIndex];
-    return "jpeg";
-  };
+  const getImgFormat = useCallback(
+    (format: string | Record<string, string>, elementIndex: number) => {
+      if (typeof format === "string") return format;
+      if (typeof format === "object") return format[elementIndex];
+      return "jpeg";
+    },
+    []
+  );
 
   const projectFolder =
     PROJECTS[projectType as string][project as string][0].repeatedFolder ||
@@ -301,23 +298,6 @@ export default function DynamicPage(props: { params: Promise<tParams> }) {
           className="self-center"
         />
       </div>
-      {/* <OverlayGallery
-        show={showGallery}
-        setShow={setShowGallery}
-        currentIndex={currentIndex}
-        setCurrentIndex={setCurrentIndex}
-        project={{
-          type: projectType as string,
-          folderName: projectData?.folderName || "",
-        }}
-        images={Array.from(
-          { length: projectData?.imageQuantity || 0 },
-          (_, i) => i + 1
-        ).map((value) => ({
-          src: `/static/images/${projectType}/${projectData?.folderName}/${value}.jpeg`,
-          alt: "",
-        }))}
-      /> */}
     </PageContainer>
   );
 }
