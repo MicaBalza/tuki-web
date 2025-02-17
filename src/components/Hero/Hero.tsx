@@ -43,7 +43,7 @@ const Hero = () => {
             autoPlay
             muted={isMuted}
             loop
-            src={`/static/video/main.mp4`}
+            src={`/static/video/main-reduced.mp4`}
             className={styles.video}
             ref={video}
             poster={`/static/images/main-poster.jpg`}
