@@ -24,7 +24,7 @@ export default function Page(props: { params: Promise<tParams> }) {
     <PageContainer className="bg-pink">
       <div className={`${styles.container}`}>
         <div className={`column g-48 ${styles.formContainer}`}>
-          <h2 className="text-purple">{t("page.title")}</h2>
+          <h1 className="text-purple h2">{t("page.title")}</h1>
           <p className="text-purple">{t("page.description")}</p>
           <ContactForm />
           <div

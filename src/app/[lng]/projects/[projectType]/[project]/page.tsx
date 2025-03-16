@@ -55,7 +55,7 @@ export default function DynamicPage(props: { params: Promise<tParams> }) {
                   <div className={styles.coverContainer} key={elementIndex}>
                     <div className={styles.coverText}>
                       <div className={`${styles.projectNameCountry} bg-white`}>
-                        <h3>{element.name}</h3>
+                        <h2 className="h3">{element.name}</h2>
                         <p>{element.country}</p>
                       </div>
                       <p

@@ -25,7 +25,7 @@ export default function Us(props: { params: Promise<tParams> }) {
       <div className={styles.hero}>
         <div className={`container ${styles.container}`}>
           <div className={styles.text}>
-            <h3>{t("title")}</h3>
+            <h1 className="h3">{t("title")}</h1>
             <p>{t("description")}</p>
             <Button text={t("button")} onClick={() => push("/contact-us")} />
           </div>
