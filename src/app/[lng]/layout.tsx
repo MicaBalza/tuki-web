@@ -26,6 +26,9 @@ const RethinkFont = localFont({
 export const metadata: Metadata = {
   title: "Tuki Studio",
   description: "Le damos vida a tus ideas.",
+  verification: {
+    google: "google",
+  },
 };
 
 export async function generateStaticParams() {
