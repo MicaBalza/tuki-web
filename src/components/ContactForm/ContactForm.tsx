@@ -101,128 +101,141 @@ const ContactForm = ({ ...props }: Props) => {
           )}
         </div>
       </Modal>
-      <form
-        className="column g-16"
-        onSubmit={handleSubmit(onSubmit)}
-        noValidate
-      >
-        <div className="column g-4">
-          <input
-            {...register("name", {
-              required: {
-                value: true,
-                message: "Este campo es requerido.",
-              },
-            })}
-            required
-            placeholder={t("form.name")}
-            className={styles.input}
-          />
-          {errors.name && (
-            <p className={styles.errorMessage}>{errors.name.message}</p>
-          )}
-        </div>
-        <div className="column g-4">
-          <input
-            {...register("email", {
-              required: {
-                value: true,
-                message: "Este campo es requerido.",
-              },
-              pattern: {
-                value:
-                  /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-                message: "Email inválido",
-              },
-            })}
-            type="email"
-            required
-            placeholder="Email"
-            className={styles.input}
-          />
-          {errors.email && (
-            <p className={styles.errorMessage}>{errors.email.message}</p>
-          )}
-        </div>
-        <input
-          {...register("tel")}
-          type="tel"
-          placeholder={t("form.mobile")}
-          className={styles.input}
-        />
-        <Controller
-          control={control}
-          name="source"
-          render={({ field: { onChange, value, ref } }) => (
-            <Select
-              ref={ref}
-              options={options}
-              placeholder={t("form.source")}
-              value={options.find((c) => c.value === value)}
-              onChange={(val) => onChange(val?.value)}
-              styles={{
-                control: (baseStyles, state) => ({
-                  ...baseStyles,
-                  borderColor: "#6a68d4",
-                  backgroundColor: "transparent",
-                  height: "40px",
-                  boxShadow: "none",
-                  "&:hover": {
-                    borderColor: "#6a68d4",
-                  },
-                }),
-                singleValue: (baseStyles) => ({
-                  ...baseStyles,
-                  color: "#6a68d4",
-                  fontSize: "13px",
-                }),
-                valueContainer: (baseStyles) => ({
-                  ...baseStyles,
-                  padding: "2px 18px",
-                }),
-                placeholder: (baseStyles) => ({
-                  ...baseStyles,
-                  color: "#6a68d4",
-                  fontSize: "13px",
-                }),
-                indicatorSeparator: (baseStyles) => ({
-                  display: "none",
-                }),
-                dropdownIndicator: (baseStyles) => ({
-                  ...baseStyles,
-                  color: "#6a68d4",
-                  svg: {
-                    height: "16px",
-                    width: "16px",
-                  },
-                }),
-                menu: (baseStyles) => ({
-                  ...baseStyles,
-                  backgroundColor: "#b2aee9",
-                }),
-                option: (baseStyles, state) => {
-                  return {
-                    ...baseStyles,
-                    color: "white",
-                    fontSize: "13px",
-                    backgroundColor: state.isSelected ? "#6a68d4" : "#b2aee9",
-                    "&:hover": {
-                      backgroundColor: "#c0bdea",
-                    },
-                  };
+      <div className="column g-16">
+        <form
+          className="column g-16"
+          onSubmit={handleSubmit(onSubmit)}
+          noValidate
+        >
+          <div className="column g-4">
+            <input
+              {...register("name", {
+                required: {
+                  value: true,
+                  message: "Este campo es requerido.",
                 },
-              }}
+              })}
+              required
+              placeholder={t("form.name")}
+              className={styles.input}
             />
-          )}
-        />
+            {errors.name && (
+              <p className={styles.errorMessage}>{errors.name.message}</p>
+            )}
+          </div>
+          <div className="column g-4">
+            <input
+              {...register("email", {
+                required: {
+                  value: true,
+                  message: "Este campo es requerido.",
+                },
+                pattern: {
+                  value:
+                    /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+                  message: "Email inválido",
+                },
+              })}
+              type="email"
+              required
+              placeholder="Email"
+              className={styles.input}
+            />
+            {errors.email && (
+              <p className={styles.errorMessage}>{errors.email.message}</p>
+            )}
+          </div>
+          <input
+            {...register("tel")}
+            type="tel"
+            placeholder={t("form.mobile")}
+            className={styles.input}
+          />
+          <Controller
+            control={control}
+            name="source"
+            render={({ field: { onChange, value, ref } }) => (
+              <Select
+                ref={ref}
+                options={options}
+                placeholder={t("form.source")}
+                value={options.find((c) => c.value === value)}
+                onChange={(val) => onChange(val?.value)}
+                styles={{
+                  control: (baseStyles, state) => ({
+                    ...baseStyles,
+                    borderColor: "#6a68d4",
+                    backgroundColor: "transparent",
+                    height: "40px",
+                    boxShadow: "none",
+                    "&:hover": {
+                      borderColor: "#6a68d4",
+                    },
+                  }),
+                  singleValue: (baseStyles) => ({
+                    ...baseStyles,
+                    color: "#6a68d4",
+                    fontSize: "13px",
+                  }),
+                  valueContainer: (baseStyles) => ({
+                    ...baseStyles,
+                    padding: "2px 18px",
+                  }),
+                  placeholder: (baseStyles) => ({
+                    ...baseStyles,
+                    color: "#6a68d4",
+                    fontSize: "13px",
+                  }),
+                  indicatorSeparator: (baseStyles) => ({
+                    display: "none",
+                  }),
+                  dropdownIndicator: (baseStyles) => ({
+                    ...baseStyles,
+                    color: "#6a68d4",
+                    svg: {
+                      height: "16px",
+                      width: "16px",
+                    },
+                  }),
+                  menu: (baseStyles) => ({
+                    ...baseStyles,
+                    backgroundColor: "#b2aee9",
+                  }),
+                  option: (baseStyles, state) => {
+                    return {
+                      ...baseStyles,
+                      color: "white",
+                      fontSize: "13px",
+                      backgroundColor: state.isSelected ? "#6a68d4" : "#b2aee9",
+                      "&:hover": {
+                        backgroundColor: "#c0bdea",
+                      },
+                    };
+                  },
+                }}
+              />
+            )}
+          />
 
-        <textarea
-          {...register("message")}
-          placeholder={t("form.message")}
-          className={styles.input}
+          <textarea
+            {...register("message")}
+            placeholder={t("form.message")}
+            className={styles.input}
+          />
+          <Button text={t("form.button")} type="submit" className="fullWidth" />
+        </form>
+        <Button
+          text={t("schedule-button")}
+          className="fullWidth"
+          inverted
+          onClick={() => {
+            window.open(
+              "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1lzM-I0U1bAKaOZx-ToUdet2mUoli8n2RL5X2MDFzOsqGZxfxIeSfQs3isaQeJbbkMeOVfOLGU",
+              "_blank"
+            );
+          }}
         />
-        <Button text={t("form.button")} type="submit" className="fullWidth" />
-      </form>
+      </div>
     </>
   );
 };
