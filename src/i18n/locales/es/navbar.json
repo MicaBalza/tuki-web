@@ -1,6 +1,22 @@
 {
   "home": "Inicio",
-  "projects": "Proyectos",
+  "services": "Servicios",
+  "pharmaceutical-services": "Servicios Farmacéuticos",
+  "pharmaceutical": "Farmacéutica",
   "who-we-are": "¿Quiénes somos?",
-  "contact": "Contacto"
+  "blog": "Blog",
+  "contact": "Contacto",
+  "illustration": "Ilustración",
+  "animation": "Animación",
+  "social-media": "Redes Sociales",
+  "editorial": "Editorial",
+  "branding": "Branding",
+  "motion-graphics": "Motion Graphics",
+  "institutional-corporate-videos": "Videos Institucionales y Corporativos",
+  "product-launch": "Lanzamiento de Productos",
+  "tutorial-training": "Tutorial y Capacitación",
+  "promotional-videos": "Videos de Promoción",
+  "events-conferences": "Contenido para Eventos y Conferencias",
+  "podcast-videos": "Videos Podcast",
+  "projects": "Proyectos"
 }

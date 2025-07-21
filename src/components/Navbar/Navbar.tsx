@@ -62,19 +62,38 @@ const Navbar = () => {
         </div>
         <div className={styles.navlinks}>
           {ROUTES.map((route) => (
-            <Link
-              href={route.path}
+            <div
               key={route.text}
-              className={`${styles.navlink} ${
-                bgIsDark ? "text-white" : "text-purple"
-              } pointer`}
+              className={`${styles.navlinkContainer} ${
+                route.dropdown ? styles.hasDropdown : ""
+              }`}
             >
-              {(pathname.replace(`/${lng}`, "") === route.path ||
-                pathname.replace(`${lng}`, "") === route.path) && (
-                <span className={styles.underline} />
+              <Link
+                href={route.path}
+                className={`${styles.navlink} ${
+                  bgIsDark ? "text-white" : "text-purple"
+                } pointer`}
+              >
+                {(pathname.replace(`/${lng}`, "") === route.path ||
+                  pathname.replace(`${lng}`, "") === route.path) && (
+                  <span className={styles.underline} />
+                )}
+                {t(route.text)}
+              </Link>
+              {route.dropdown && (
+                <div className={`${styles.dropdown} bg-${color}`}>
+                  {route.dropdown.map((dropdownItem) => (
+                    <Link
+                      key={dropdownItem.text}
+                      href={dropdownItem.path}
+                      className={`${styles.dropdownItem} text-purple pointer`}
+                    >
+                      {t(dropdownItem.text)}
+                    </Link>
+                  ))}
+                </div>
               )}
-              {t(route.text)}
-            </Link>
+            </div>
           ))}
           {/* <LangSelector invert={bgIsDark} /> */}
           <SocialLinks className={bgIsDark ? "fill-white" : ""} />
