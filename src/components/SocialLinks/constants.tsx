@@ -1,7 +1,6 @@
 import InstagramIcon from "@/assets/icons/Instagram";
 import LinkedinIcon from "@/assets/icons/Linkedin";
 import MailIcon from "@/assets/icons/Mail";
-import VimeoIcon from "@/assets/icons/Vimeo";
 
 export const LINKS = [
   {
@@ -12,10 +11,10 @@ export const LINKS = [
     icon: <InstagramIcon />,
     link: "https://www.instagram.com/tukistudio/",
   },
-  // {
-  //   icon: <LinkedinIcon />,
-  //   link: "b",
-  // },
+  {
+    icon: <LinkedinIcon />,
+    link: "https://www.linkedin.com/company/tuki-studio/",
+  },
   // {
   //   icon: <VimeoIcon />,
   //   link: "c",
