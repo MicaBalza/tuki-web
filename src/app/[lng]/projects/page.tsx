@@ -1,8 +1,9 @@
 "use client";
 import { use } from "react";
 
-import Carrousel from "@/components/Carrousel";
 import PageContainer from "@/components/PageContainer";
+import Service from "@/components/Service";
+import WorkTogetherBanner from "@/components/WorkTogetherBanner";
 import { SERVICES } from "@/constants/services";
 import { useTranslation } from "@/i18n/client";
 import styles from "./page.module.css";
@@ -30,11 +31,17 @@ export default function Page(props: { params: Promise<tParams> }) {
           />
         </div>
       </div>
-      <div className={styles.projects}>
+      {/* <div className={styles.projects}>
         {SERVICES.map((service) => (
           <Carrousel key={service} service={service} />
         ))}
-      </div>
+      </div> */}
+      <section className={styles.resources}>
+        {SERVICES.map((service) => (
+          <Service key={service} service={service} />
+        ))}
+      </section>
+      <WorkTogetherBanner params={props.params} />
     </PageContainer>
   );
 }

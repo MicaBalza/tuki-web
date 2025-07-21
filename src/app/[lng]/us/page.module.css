@@ -45,12 +45,6 @@
   gap: 160px;
 }
 
-.ready {
-  padding: 40px 0;
-  background-color: var(--green);
-  color: var(--white);
-}
-
 @media (max-width: 576px) {
   .container {
     flex-direction: column-reverse;
