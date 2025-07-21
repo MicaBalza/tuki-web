@@ -1,9 +1,23 @@
+.container {
+  gap: 160px;
+}
+
+.inverted {
+  flex-direction: row-reverse;
+}
+
 .name {
   color: var(--purple);
+  text-align: center;
 }
 
 .title {
   color: var(--gray);
+  text-align: center;
+}
+
+.description {
+  text-align: center;
 }
 
 .video {

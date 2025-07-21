@@ -1,10 +1,12 @@
 {
   "flor": {
     "name": "Flor Castarataro",
-    "title": "Estrategia & Dirección de Arte"
+    "title": "Estrategia & Dirección Creativa",
+    "description": "Diseñadora especializada en estrategia creativa para empresas del sector farmacéutico. Lidera el concepto general de cada video, asegurando que cada pieza sea clara, relevante y alineada con los objetivos del negocio."
   },
   "nat": {
     "name": "Natalia Balza",
-    "title": "Directora Creativa"
+    "title": "Dirección de Arte",
+    "description": "Ilustradora, animadora y diseñadora gráfica con más de 6 años en animación y 4 en industria farmacéutica. Define la dirección visual de los proyectos, creando soluciones gráficas que transmiten mensajes de manera precisa y atractiva."
   }
 }

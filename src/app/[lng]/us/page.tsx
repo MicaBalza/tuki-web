@@ -43,7 +43,7 @@ export default function Us(props: { params: Promise<tParams> }) {
         <h2 className={styles.usTitle}>{t("made-by")}</h2>
         <div className={styles.usContainer}>
           <Profile person="flor" />
-          <Profile person="nat" />
+          <Profile person="nat" inverted />
         </div>
       </div>
       <div className={`column align-center g-24 ${styles.ready}`}>

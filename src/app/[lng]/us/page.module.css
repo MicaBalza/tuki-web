@@ -38,9 +38,11 @@
 
 .usContainer {
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
   width: 100%;
   max-width: 768px;
+  gap: 160px;
 }
 
 .ready {
