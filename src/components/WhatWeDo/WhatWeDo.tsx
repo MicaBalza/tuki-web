@@ -1,5 +1,6 @@
 import { useTranslation } from "@/i18n/client";
 import Image from "next/image";
+import Link from "next/link";
 import { useParams } from "next/navigation";
 import { useRef, useState } from "react";
 import styles from "./styles.module.css";
@@ -22,7 +23,9 @@ const WhatWeDo = () => {
           />
         </div>
 
-        <h2 className="text-purple">{t("title")}</h2>
+        <Link href={`/${lng}/projects`}>
+          <h2 className="text-purple">{t("title")}</h2>
+        </Link>
       </div>
       <div className={styles.videoContainer}>
         {!isPlaying && (
