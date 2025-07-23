@@ -6,18 +6,24 @@
   flex-direction: row-reverse;
 }
 
+.content {
+}
+
 .name {
   color: var(--purple);
   text-align: center;
+  background-color: white;
 }
 
 .title {
   color: var(--gray);
   text-align: center;
+  background-color: white;
 }
 
 .description {
   text-align: center;
+  background-color: white;
 }
 
 .video {
