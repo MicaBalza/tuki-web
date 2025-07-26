@@ -5,6 +5,7 @@ import Clients from "@/components/Clients";
 import ContactUs from "@/components/ContactUs";
 import Hero from "@/components/Hero";
 import PageContainer from "@/components/PageContainer";
+import PharmaceuticalServices from "@/components/PharmaceuticalServices";
 import WhatWeDo from "@/components/WhatWeDo";
 import WhoWeAre from "@/components/WhoWeAre";
 import styles from "./page.module.css";
@@ -22,11 +23,7 @@ export default function Home(props: { params: Promise<tParams> }) {
     <PageContainer className={styles.main}>
       <Hero />
       <WhatWeDo />
-      {/* <section className={styles.resources}>
-        {SERVICES.map((service) => (
-          <Service key={service} service={service} />
-        ))}
-      </section> */}
+      <PharmaceuticalServices />
       <WhoWeAre />
       <Clients />
       <ContactUs />
