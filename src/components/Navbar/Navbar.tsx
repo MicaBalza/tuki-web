@@ -71,6 +71,9 @@ const Navbar = () => {
               <Link
                 href={route.path}
                 className={`${styles.navlink} ${
+                  (pathname.replace(`/${lng}`, "") === route.path ||
+                  pathname.replace(`${lng}`, "") === route.path) ? styles.active : ""
+                } ${
                   bgIsDark ? "text-white" : "text-purple"
                 } pointer`}
               >

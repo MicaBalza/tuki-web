@@ -37,6 +37,11 @@
   font-size: 0.75rem;
   text-transform: uppercase;
   text-align: center;
+  transition: font-weight 0.2s ease;
+}
+
+.navlink.active {
+  font-weight: 700;
 }
 
 .navlinkSidebar {
@@ -47,7 +52,7 @@
 
 .underline {
   position: absolute;
-  bottom: 0;
+  bottom: -4px;
   left: 0;
   width: 100%;
   height: 2px;
