@@ -1,16 +1,18 @@
 import Image from "next/image";
 import { useParams, useRouter } from "next/navigation";
+import { useTranslation } from "@/i18n/client";
 import Button from "../Button";
 import styles from "./styles.module.css";
 
 const PharmaceuticalServices = () => {
   const { lng } = useParams();
   const { push } = useRouter();
+  const { t } = useTranslation(lng as string, "pharmaceutical-services");
 
   const listItems = [
-    "Videos de Promoción",
-    "Lanzamiento de productos",
-    "Contenido para eventos & conferencias",
+    t("list.item1"),
+    t("list.item2"),
+    t("list.item3"),
   ];
 
   return (
@@ -26,10 +28,10 @@ const PharmaceuticalServices = () => {
       </div>
       <div className={styles.textSection}>
         <h2 className={`${styles.title} text-purple`}>
-          Hacemos animación y videos para la industria Farmacéutica
+          {t("title")}
         </h2>
         <p className="text-purple">
-          Te ayudamos a crear contenido visual de manera clara y efectiva
+          {t("subtitle")}
         </p>
         <ul className={styles.list}>
           {listItems.map((item, index) => (
@@ -44,7 +46,7 @@ const PharmaceuticalServices = () => {
           ))}
         </ul>
         <Button
-          text="Conoce todos nuestros servicios :)"
+          text={t("button")}
           onClick={() => push(`/${lng}/pharmaceutical-services`)}
           className={styles.button}
         />
