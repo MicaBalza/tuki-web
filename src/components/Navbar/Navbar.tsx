@@ -71,11 +71,11 @@ const Navbar = () => {
               <Link
                 href={route.path}
                 className={`${styles.navlink} ${
-                  (pathname.replace(`/${lng}`, "") === route.path ||
-                  pathname.replace(`${lng}`, "") === route.path) ? styles.active : ""
-                } ${
-                  bgIsDark ? "text-white" : "text-purple"
-                } pointer`}
+                  pathname.replace(`/${lng}`, "") === route.path ||
+                  pathname.replace(`${lng}`, "") === route.path
+                    ? styles.active
+                    : ""
+                } ${bgIsDark ? "text-white" : "text-purple"} pointer`}
               >
                 {(pathname.replace(`/${lng}`, "") === route.path ||
                   pathname.replace(`${lng}`, "") === route.path) && (
@@ -89,7 +89,9 @@ const Navbar = () => {
                     <Link
                       key={dropdownItem.text}
                       href={dropdownItem.path}
-                      className={`${styles.dropdownItem} text-purple pointer`}
+                      className={`${styles.dropdownItem} ${
+                        bgIsDark ? "text-white" : "text-purple"
+                      } pointer`}
                     >
                       {t(dropdownItem.text)}
                     </Link>
