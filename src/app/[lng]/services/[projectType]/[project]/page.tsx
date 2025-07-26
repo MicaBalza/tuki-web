@@ -4,7 +4,7 @@ import styles from "./page.module.css";
 import BackButton from "@/components/BackButton";
 
 import VideoPlayer from "@/components/VideoPlayer";
-import { PROJECTS } from "@/constants/projects";
+import { SERVICES_DATA } from "@/constants/services";
 import { capitalizeFirstLetter } from "@/utils/string";
 import Image from "next/image";
 import "swiper/css";
@@ -31,10 +31,10 @@ export default async function DynamicPage(props: { params: Promise<tParams> }) {
   };
 
   const projectFolder =
-    PROJECTS[projectType as string][project as string][0].repeatedFolder ||
+    SERVICES_DATA[projectType as string][project as string][0].repeatedFolder ||
     projectType;
 
-  const projectData = PROJECTS[projectType as string][project as string];
+  const projectData = SERVICES_DATA[projectType as string][project as string];
 
   return (
     <PageContainer className={`${styles.container} bg-light-purple`}>
@@ -45,19 +45,19 @@ export default async function DynamicPage(props: { params: Promise<tParams> }) {
               return (
                 <div className={styles.coverContainer} key={elementIndex}>
                   <div className={styles.coverText}>
-                    <div className={`${styles.projectNameCountry} bg-white`}>
+                    <div className={`${styles.serviceNameCountry} bg-white`}>
                       <h2 className="h3">{element.name}</h2>
                       <p>{element.country}</p>
                     </div>
                     <p
-                      className={`${styles.projectDescription} bg-purple text-white`}
+                      className={`${styles.serviceDescription} bg-purple text-white`}
                     >
                       {element.description}
                     </p>
-                    <div className={styles.projectInfo}>
+                    <div className={styles.serviceInfo}>
                       {element.goal && (
                         <div>
-                          <p className={styles.projectInfoTitle}>Objetivo</p>
+                          <p className={styles.serviceInfoTitle}>Objetivo</p>
                           <div
                             dangerouslySetInnerHTML={{
                               __html: element.goal,
@@ -67,7 +67,7 @@ export default async function DynamicPage(props: { params: Promise<tParams> }) {
                       )}
                       {element.creativity && (
                         <div>
-                          <p className={styles.projectInfoTitle}>Creatividad</p>
+                          <p className={styles.serviceInfoTitle}>Creatividad</p>
                           <div
                             dangerouslySetInnerHTML={{
                               __html: element.creativity,
@@ -77,7 +77,7 @@ export default async function DynamicPage(props: { params: Promise<tParams> }) {
                       )}
                       {element.production && (
                         <div>
-                          <p className={styles.projectInfoTitle}>Producción</p>
+                          <p className={styles.serviceInfoTitle}>Producción</p>
                           <div
                             dangerouslySetInnerHTML={{
                               __html: element.production,
@@ -85,14 +85,14 @@ export default async function DynamicPage(props: { params: Promise<tParams> }) {
                           />
                         </div>
                       )}
-                      {element.projectManagement && (
+                      {element.serviceManagement && (
                         <div>
-                          <p className={styles.projectInfoTitle}>
+                          <p className={styles.serviceInfoTitle}>
                             Project Management
                           </p>
                           <div
                             dangerouslySetInnerHTML={{
-                              __html: element.projectManagement,
+                              __html: element.serviceManagement,
                             }}
                           />
                         </div>
@@ -269,10 +269,10 @@ export async function generateMetadata({
   const { lng, projectType, project } = await params;
 
   const { t } = await import(`@/i18n`).then((mod) =>
-    mod.useTranslation(lng, "projects")
+    mod.useTranslation(lng, "services")
   );
 
-  const projectData = PROJECTS[projectType as string][project as string];
+  const projectData = SERVICES_DATA[projectType as string][project as string];
 
   return {
     title: `${capitalizeFirstLetter(t(projectType))} - ${projectData[0].name}`,

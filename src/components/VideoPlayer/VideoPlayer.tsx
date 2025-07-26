@@ -1,6 +1,6 @@
 "use client";
 
-import styles from "@/app/[lng]/projects/[projectType]/[project]/page.module.css";
+import styles from "@/app/[lng]/services/[projectType]/[project]/page.module.css";
 import Image from "next/image";
 import { useRef, useState } from "react";
 

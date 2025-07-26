@@ -6,7 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useParams, usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-import ProjectTypeHeader from "../ProjectTypeHeader";
+import ServiceTypeHeader from "../ServiceTypeHeader";
 import SlideMenu from "../SlideMenu";
 import SocialLinks from "../SocialLinks";
 import { NAVBAR_COLORS, ROUTES } from "./constants";
@@ -103,7 +103,7 @@ const Navbar = () => {
           <SlideMenu />
         </div>
       </div>
-      {projectType && <ProjectTypeHeader type={projectType as ServiceType} />}
+      {projectType && <ServiceTypeHeader type={projectType as ServiceType} />}
     </nav>
   );
 };

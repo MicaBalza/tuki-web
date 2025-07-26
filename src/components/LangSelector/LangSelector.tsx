@@ -6,7 +6,7 @@ import styles from "./styles.module.css";
 
 const BG_COLOR: Record<string, string> = {
   "/en": "#f8e1c1",
-  "/en/projects": "#f8e1c1",
+  "/en/services": "#f8e1c1",
   "/en/us": "#b2aee9",
 };
 

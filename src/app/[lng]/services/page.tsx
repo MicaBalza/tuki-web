@@ -17,7 +17,7 @@ export default function Page(props: { params: Promise<tParams> }) {
 
   const { lng } = params;
 
-  const { t } = useTranslation(lng, "projects");
+  const { t } = useTranslation(lng, "services");
 
   return (
     <PageContainer className="bg-white">
@@ -25,13 +25,13 @@ export default function Page(props: { params: Promise<tParams> }) {
         <h1 className={`text-purple h2 ${styles.title}`}>{t("title")}</h1>
         <div className={styles.imageContainer}>
           <img
-            src="/static/images/projects.gif"
+            src="/static/images/services.gif"
             alt="Workaholic"
             className={styles.image}
           />
         </div>
       </div>
-      {/* <div className={styles.projects}>
+      {/* <div className={styles.services}>
         {SERVICES.map((service) => (
           <Carrousel key={service} service={service} />
         ))}

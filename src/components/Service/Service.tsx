@@ -21,7 +21,7 @@ const Service = ({ service }: Props) => {
         <p className={styles.description}>{t(`${service}.description`)}</p>
         <Button
           text={t("button")}
-          onClick={() => push(`/projects/${service}`)}
+          onClick={() => push(`/services/${service}`)}
         />
       </div>
       <div className={styles.imgContainer}>

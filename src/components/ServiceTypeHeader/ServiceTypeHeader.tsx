@@ -9,7 +9,7 @@ interface Props {
   type: ServiceType;
 }
 
-const ProjectTypeHeader = ({ type }: Props) => {
+const ServiceTypeHeader = ({ type }: Props) => {
   const { lng } = useParams();
   const { t } = useTranslation(lng as string, "services");
 
@@ -30,4 +30,4 @@ const ProjectTypeHeader = ({ type }: Props) => {
   );
 };
 
-export default ProjectTypeHeader;
+export default ServiceTypeHeader;

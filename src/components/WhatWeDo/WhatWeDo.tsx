@@ -23,8 +23,8 @@ const WhatWeDo = () => {
           />
         </div>
 
-        <Link href={`/${lng}/projects`}>
-          <h2 className="text-purple">{t("title")}</h2>
+        <Link href={`/${lng}/services`}>
+          <h2 className={`text-purple ${styles.title}`}>{t("title")}</h2>
         </Link>
       </div>
       <div className={styles.videoContainer}>

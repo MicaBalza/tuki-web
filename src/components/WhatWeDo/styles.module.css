@@ -11,6 +11,10 @@
   height: 7vw;
 }
 
+.title:hover {
+  color: var(--light-purple);
+}
+
 .container {
   padding-block: 60px;
   background-color: var(--white);

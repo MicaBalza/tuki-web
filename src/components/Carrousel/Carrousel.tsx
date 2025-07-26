@@ -1,4 +1,4 @@
-import { PROJECTS } from "@/constants/projects";
+import { SERVICES_DATA } from "@/constants/services";
 import { ServiceType } from "@/types/services";
 import Image from "next/image";
 import { useParams, useRouter } from "next/navigation";
@@ -41,7 +41,7 @@ const Carrousel = ({ service }: Props) => {
       key={service}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      onClick={() => push(`/projects/${service}`)}
+      onClick={() => push(`/services/${service}`)}
     >
       <Swiper
         ref={swiperRef}
@@ -52,20 +52,20 @@ const Carrousel = ({ service }: Props) => {
         modules={[Autoplay]}
         className={styles.swiper}
       >
-        {Object.keys(PROJECTS[service]).map((project) => (
+        {Object.keys(SERVICES_DATA[service]).map((project) => (
           <SwiperSlide
-            key={PROJECTS[service as string][project][0]?.name || ""}
+            key={SERVICES_DATA[service as string][project][0]?.name || ""}
           >
             <Image
               src={`/static/images/${service}/${project}/cover.${
-                PROJECTS[service as string][project][0].format || "jpeg"
+                SERVICES_DATA[service as string][project][0].format || "jpeg"
               }`}
-              alt={PROJECTS[service as string][project][0]?.name || ""}
+              alt={SERVICES_DATA[service as string][project][0]?.name || ""}
               fill
               style={{
                 objectFit: "cover",
                 objectPosition:
-                  PROJECTS[service as string][project][0]?.position,
+                  SERVICES_DATA[service as string][project][0]?.position,
               }}
               unoptimized={true}
             />
@@ -75,7 +75,7 @@ const Carrousel = ({ service }: Props) => {
       <Button
         text={t(`${service}.title`)}
         inverted
-        onClick={() => push(`/projects/${service}`)}
+        onClick={() => push(`/services/${service}`)}
       />
     </div>
   );

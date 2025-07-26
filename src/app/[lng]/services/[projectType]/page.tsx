@@ -6,7 +6,7 @@ import Image from "next/image";
 
 import styles from "./page.module.css";
 
-import { PROJECTS } from "@/constants/projects";
+import { SERVICES_DATA } from "@/constants/services";
 import { useTranslation } from "@/i18n/client";
 import { useRouter } from "next/navigation";
 
@@ -41,44 +41,44 @@ export default function Page(props: { params: Promise<tParams> }) {
   return (
     <PageContainer>
       <div className={styles.content}>
-        <div className={styles.projects}>
-          {Object.keys(PROJECTS[projectType as string]).map(
+        <div className={styles.services}>
+          {Object.keys(SERVICES_DATA[projectType as string]).map(
             (project, index) => {
               const projectFolder =
-                PROJECTS[projectType as string][project as string][0]
+                SERVICES_DATA[projectType as string][project as string][0]
                   .repeatedFolder || projectType;
               return (
                 <div
                   key={project}
-                  className={`${styles.project} ${
-                    Object.keys(PROJECTS[projectType as string]).length - 1 ===
+                  className={`${styles.service} ${
+                    Object.keys(SERVICES_DATA[projectType as string]).length - 1 ===
                       index &&
-                    Object.keys(PROJECTS[projectType as string]).length % 2 !==
+                    Object.keys(SERVICES_DATA[projectType as string]).length % 2 !==
                       0
                       ? styles.lastItem
                       : ""
                   } pointer`}
-                  onClick={() => push(`/projects/${projectType}/${project}`)}
+                  onClick={() => push(`/services/${projectType}/${project}`)}
                 >
                   <div
                     className={styles.projectHover}
                     style={{ backgroundColor: getRandomColor() }}
                   >
                     <h4 className="text-white uppercase bold">
-                      {PROJECTS[projectType as string][project][0].name}
+                      {SERVICES_DATA[projectType as string][project][0].name}
                     </h4>
                   </div>
                   <Image
                     src={`/static/images/${projectFolder}/${project}/cover.${
-                      PROJECTS[projectType as string][project][0].format ||
+                      SERVICES_DATA[projectType as string][project][0].format ||
                       "jpeg"
                     }`}
-                    alt={PROJECTS[projectType as string][project][0].name}
+                    alt={SERVICES_DATA[projectType as string][project][0].name}
                     fill
                     style={{
                       objectFit: "cover",
                       objectPosition:
-                        PROJECTS[projectType as string][project][0].position,
+                        SERVICES_DATA[projectType as string][project][0].position,
                     }}
                     unoptimized={true}
                   />

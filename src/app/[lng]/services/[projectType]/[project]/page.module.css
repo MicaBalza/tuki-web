@@ -28,22 +28,22 @@
   width: 70%;
 }
 
-.projectNameCountry {
+.serviceNameCountry {
   padding: 8px 0 8px var(--padding-block);
 }
 
-.projectDescription {
+.serviceDescription {
   padding: 8px 0 8px var(--padding-block);
 }
 
-.projectInfo {
+.serviceInfo {
   display: flex;
   flex-direction: column;
   gap: 12px;
   padding: 28px 12px 12px var(--padding-block);
 }
 
-.projectInfoTitle {
+.serviceInfoTitle {
   color: var(--white);
   text-transform: uppercase;
 }
@@ -258,7 +258,7 @@
     height: 40vw;
   }
 
-  .projectInfo {
+  .serviceInfo {
     padding: 28px 12px 12px 0;
   }
 
@@ -278,7 +278,7 @@
 }
 
 @media (min-width: 768px) and (max-width: 1140px) {
-  .projectInfo {
+  .serviceInfo {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }

@@ -5,7 +5,7 @@ export const COLOR_BY_PATH = [
     color: "purple",
   },
   {
-    path: "/projects",
+    path: "/services",
     bgColor: "light-purple",
     color: "white",
   },

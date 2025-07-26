@@ -30,11 +30,11 @@ This is a Next.js 15 TypeScript application for Tuki Studio, a creative agency p
 - Translation files in `src/i18n/locales/[lang]/` organized by component
 - Middleware handles language detection and routing
 
-**Project Management System**
-- Projects are categorized by service types (ServiceType enum)
+**Services Management System**
+- Services are categorized by service types (ServiceType enum)
 - Each service type has its own constants file (e.g., `animationProjects.ts`)
 - Media assets organized in `public/static/images/` by project type and name
-- Dynamic routing: `/projects/[projectType]/[project]`
+- Dynamic routing: `/services/[projectType]/[project]`
 
 **Component Organization**
 - Each component has its own directory with index.ts barrel export

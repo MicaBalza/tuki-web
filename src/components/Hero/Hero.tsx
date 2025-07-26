@@ -22,7 +22,7 @@ const Hero = () => {
         <div className={styles.text}>
           <p className={styles.subtitle}>{t("subtitle")}</p>
           <h1 className={styles.title}>{t("title")}</h1>
-          <Button text={t("button")} onClick={() => push("/projects")} />
+          <Button text={t("button")} onClick={() => push("/services")} />
         </div>
         <div
           className={styles.videoContainer}
