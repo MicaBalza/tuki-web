@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.image {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .container {
+    min-height: 100vh;
+  }
+}
