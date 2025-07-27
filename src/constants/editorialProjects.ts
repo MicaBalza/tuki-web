@@ -38,6 +38,7 @@ const ajuntamenteDeBarcelona: ProjectData = [
     creativity: "Conceptualización Creativa.<br>Dirección de arte",
     production:
       "Definición del estilo gráfico.<br>Ilustración.<br>Diseño Editorial",
+    position: "top",
   },
   {
     type: "flex",
@@ -230,10 +231,10 @@ const universidadFederalDeGoias: ProjectData = [
 
 export const EDITORIAL_PROJECTS: Record<string, ProjectData> = {
   primal,
-  ajuntamenteDeBarcelona,
+  universidadFederalDeGoias,
   birdwatchers,
   tinta,
   timo,
   autismoAvila,
-  universidadFederalDeGoias,
+  ajuntamenteDeBarcelona,
 };

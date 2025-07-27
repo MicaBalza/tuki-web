@@ -43,7 +43,7 @@
 }
 
 .lastItem {
-  grid-column: span 6;
+  grid-column: span 6 !important;
 }
 
 @media (max-width: 1024px) and (orientation: portrait) {
@@ -57,7 +57,7 @@
   }
 
   .lastItem {
-    grid-column: span 6;
+    grid-column: span 6 !important;
   }
 }
 
