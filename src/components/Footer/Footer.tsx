@@ -10,9 +10,10 @@ const Footer = () => {
   const { lng } = useParams();
   const { t } = useTranslation(lng as string, "footer");
   const pathname = usePathname();
+  console.log("🌸 ~ Footer ~ pathname:", pathname);
 
   const { bgColor, color } = COLOR_BY_PATH.find(
-    (route) => route.path === pathname
+    (route) => route.path === pathname.replace(`/${lng}`, "")
   ) || { bgColor: "light-purple", color: "white" };
 
   return (

@@ -2,6 +2,7 @@
 import { use } from "react";
 
 import PageContainer from "@/components/PageContainer";
+import PharmaceuticalService from "@/components/PharmaceuticalService";
 import Service from "@/components/Service";
 import WorkTogetherBanner from "@/components/WorkTogetherBanner";
 import { SERVICES } from "@/constants/services";
@@ -41,6 +42,7 @@ export default function Page(props: { params: Promise<tParams> }) {
           <Service key={service} service={service} />
         ))}
       </section>
+      <PharmaceuticalService />
       <WorkTogetherBanner params={props.params} />
     </PageContainer>
   );

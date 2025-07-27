@@ -8,7 +8,7 @@ type tParams = {
   lng: string;
 };
 
-const WhatWeDo = (props: { params: Promise<tParams> }) => {
+const WorkTogetherBanner = (props: { params: Promise<tParams> }) => {
   const params = use(props.params);
 
   const { lng } = params;
@@ -26,4 +26,4 @@ const WhatWeDo = (props: { params: Promise<tParams> }) => {
   );
 };
 
-export default WhatWeDo;
+export default WorkTogetherBanner;

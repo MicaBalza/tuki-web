@@ -6,12 +6,12 @@ export const COLOR_BY_PATH = [
   },
   {
     path: "/services",
-    bgColor: "light-purple",
+    bgColor: "purple",
     color: "white",
   },
   {
     path: "/us",
-    bgColor: "green",
+    bgColor: "purple",
     color: "white",
   },
   {

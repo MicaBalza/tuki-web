@@ -19,7 +19,7 @@
 }
 
 .button:hover {
-  background-color: var(--purple);
+  background-color: var(--magenta);
   color: var(--white);
 }
 
