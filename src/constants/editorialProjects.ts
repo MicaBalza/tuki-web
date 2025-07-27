@@ -1,4 +1,6 @@
-const primal = [
+import { ProjectData } from "@/types/projects";
+
+const primal: ProjectData = [
   {
     type: "cover",
     name: "Primal",
@@ -26,7 +28,7 @@ const primal = [
   },
 ];
 
-const ajuntamenteDeBarcelona = [
+const ajuntamenteDeBarcelona: ProjectData = [
   {
     type: "cover",
     name: "Ajuntament de Barcelona",
@@ -75,7 +77,7 @@ const ajuntamenteDeBarcelona = [
   },
 ];
 
-const birdwatchers = [
+const birdwatchers: ProjectData = [
   {
     type: "cover",
     name: "Birdwatchers",
@@ -103,7 +105,7 @@ const birdwatchers = [
   },
 ];
 
-const tinta = [
+const tinta: ProjectData = [
   {
     type: "cover",
     name: "Tinta",
@@ -140,7 +142,7 @@ const tinta = [
   },
 ];
 
-const timo = [
+const timo: ProjectData = [
   {
     type: "cover",
     name: "Timo",
@@ -172,7 +174,7 @@ const timo = [
   },
 ];
 
-const autismoAvila = [
+const autismoAvila: ProjectData = [
   {
     type: "cover",
     name: "Autismo Avila",
@@ -194,11 +196,44 @@ const autismoAvila = [
   },
 ];
 
-export const EDITORIAL_PROJECTS: Record<string, any> = {
+const universidadFederalDeGoias: ProjectData = [
+  {
+    type: "cover",
+    name: "Universidad Federal de Goiás",
+    country: "Brasil",
+    description: "PROJECT SCOPE - Fake News",
+    goal: "Diseño editorial de un libro educativo de Filosofía dirigido a adolescentes.",
+    creativity: "Conceptualización Creativa<br>Dirección de arte",
+    production: "Definición del estilo gráfico<br>Diseño Editorial",
+  },
+  {
+    type: "flex-video",
+    quantity: 1,
+    flex: "oneWide",
+  },
+  {
+    type: "flex",
+    quantity: 3,
+    flex: "threeWide",
+  },
+  {
+    type: "flex",
+    quantity: 3,
+    flex: "threeWide",
+  },
+  {
+    type: "flex",
+    quantity: 1,
+    flex: "oneTall",
+  },
+];
+
+export const EDITORIAL_PROJECTS: Record<string, ProjectData> = {
   primal,
   ajuntamenteDeBarcelona,
   birdwatchers,
   tinta,
   timo,
   autismoAvila,
+  universidadFederalDeGoias,
 };

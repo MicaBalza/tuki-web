@@ -17,7 +17,7 @@
   font-size: clamp(1rem, 3vw, 2rem);
 }
 
-.projects {
+.services {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(3, 440px);
@@ -44,13 +44,13 @@
 }
 
 @media (max-width: 768px) {
-  .projects {
+  .services {
     grid-template-rows: repeat(3, 240px);
   }
 }
 
 @media (max-width: 576px) {
-  .projects {
+  .services {
     grid-template-columns: 1fr;
     grid-template-rows: none;
     grid-auto-rows: 200px;

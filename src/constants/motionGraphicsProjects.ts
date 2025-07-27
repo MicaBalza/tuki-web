@@ -1,4 +1,6 @@
-const caixaBank = [
+import { ProjectData } from "@/types/projects";
+
+const caixaBank: ProjectData = [
   {
     type: "cover",
     name: "CaixaBank",
@@ -12,7 +14,7 @@ const caixaBank = [
   },
 ];
 
-const imagin = [
+const imagin: ProjectData = [
   {
     type: "cover",
     name: "Imagin",
@@ -26,7 +28,7 @@ const imagin = [
   },
 ];
 
-const olistic = [
+const olistic: ProjectData = [
   {
     type: "cover",
     name: "Olistic",
@@ -40,7 +42,7 @@ const olistic = [
   },
 ];
 
-const tajMahal = [
+const tajMahal: ProjectData = [
   {
     type: "cover",
     name: "Taj-Mahal",
@@ -54,7 +56,7 @@ const tajMahal = [
   },
 ];
 
-export const MOTION_GRAPHICS_PROJECTS: Record<string, any> = {
+export const MOTION_GRAPHICS_PROJECTS: Record<string, ProjectData> = {
   tajMahal,
   imagin,
   olistic,

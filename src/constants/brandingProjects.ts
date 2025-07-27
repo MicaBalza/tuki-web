@@ -1,4 +1,6 @@
-const bardo = [
+import { ProjectData } from "@/types/projects";
+
+const bardo: ProjectData = [
   {
     type: "cover",
     name: "Bardo",
@@ -27,7 +29,7 @@ const bardo = [
   },
 ];
 
-const viuty = [
+const viuty: ProjectData = [
   {
     type: "cover",
     name: "Viuty",
@@ -98,7 +100,7 @@ const viuty = [
   },
 ];
 
-const malcriada = [
+const malcriada: ProjectData = [
   {
     type: "cover",
     name: "Malcriada",
@@ -151,7 +153,7 @@ const malcriada = [
   },
 ];
 
-const babaStudio = [
+const babaStudio: ProjectData = [
   {
     type: "cover",
     name: "Baba Studio",
@@ -193,7 +195,7 @@ const babaStudio = [
   },
 ];
 
-const harmony = [
+const harmony: ProjectData = [
   {
     type: "cover",
     name: "Harmony",
@@ -246,7 +248,7 @@ const harmony = [
   },
 ];
 
-const logofolio = [
+const logofolio: ProjectData = [
   {
     type: "cover",
     name: "Logofolio",
@@ -272,7 +274,7 @@ const logofolio = [
   },
 ];
 
-const iamskin = [
+const iamskin: ProjectData = [
   {
     type: "cover",
     name: "Iamskin",
@@ -326,7 +328,7 @@ const iamskin = [
   },
 ];
 
-const desquiciado = [
+const desquiciado: ProjectData = [
   {
     type: "cover",
     name: "Desquiciado",
@@ -372,7 +374,7 @@ const desquiciado = [
   },
 ];
 
-const figCreme = [
+const figCreme: ProjectData = [
   {
     type: "cover",
     name: "Fig creme",
@@ -398,7 +400,7 @@ const figCreme = [
   },
 ];
 
-export const BRANDING_PROJECTS: Record<string, any> = {
+export const BRANDING_PROJECTS: Record<string, ProjectData> = {
   bardo,
   viuty,
   malcriada,

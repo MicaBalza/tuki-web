@@ -15,7 +15,7 @@ import styles from "./styles.module.css";
 const Navbar = () => {
   const { push } = useRouter();
   const pathname = usePathname();
-  const { lng, projectType } = useParams();
+  const { lng, serviceType } = useParams();
   const { t } = useTranslation(lng as string, "navbar");
 
   const [scrolled, setScrolled] = useState(false);
@@ -108,7 +108,7 @@ const Navbar = () => {
           <SlideMenu />
         </div>
       </div>
-      {projectType && <ServiceTypeHeader type={projectType as ServiceType} />}
+      {serviceType && <ServiceTypeHeader type={serviceType as ServiceType} />}
     </nav>
   );
 };

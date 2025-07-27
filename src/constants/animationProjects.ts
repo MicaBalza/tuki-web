@@ -1,4 +1,6 @@
-export const shutterfly = [
+import { ProjectData } from "@/types/projects";
+
+export const shutterfly: ProjectData = [
   {
     type: "cover",
     name: "Shutterfly",
@@ -23,7 +25,7 @@ export const shutterfly = [
   },
 ];
 
-export const tatari = [
+export const tatari: ProjectData = [
   {
     type: "cover",
     name: "Tatari TV",
@@ -58,7 +60,7 @@ export const tatari = [
   },
 ];
 
-const linmoreLed = [
+const linmoreLed: ProjectData = [
   {
     type: "cover",
     name: "Linmore Led",
@@ -87,7 +89,7 @@ const linmoreLed = [
   },
 ];
 
-const bridgeTechMedical = [
+const bridgeTechMedical: ProjectData = [
   {
     type: "cover",
     name: "Bridge Tech Medical",
@@ -116,7 +118,7 @@ const bridgeTechMedical = [
   },
 ];
 
-const neha = [
+const neha: ProjectData = [
   {
     type: "cover",
     name: "National Environmental Health Association",
@@ -154,7 +156,7 @@ const neha = [
   },
 ];
 
-const privateUKSchool = [
+const privateUKSchool: ProjectData = [
   {
     type: "cover",
     name: "Private UK School",
@@ -183,7 +185,7 @@ const privateUKSchool = [
   },
 ];
 
-const crc = [
+const crc: ProjectData = [
   {
     type: "cover",
     name: "Continental Refining Company",
@@ -217,7 +219,7 @@ const crc = [
   },
 ];
 
-const humCapital = [
+const humCapital: ProjectData = [
   {
     type: "cover",
     name: "Hum Capital",
@@ -256,7 +258,7 @@ const humCapital = [
   },
 ];
 
-const zion = [
+const zion: ProjectData = [
   {
     type: "cover",
     name: "Zion",
@@ -294,7 +296,7 @@ const zion = [
   },
 ];
 
-const adevantage = [
+const adevantage: ProjectData = [
   {
     type: "cover",
     name: "ADEvantage",
@@ -320,7 +322,7 @@ const adevantage = [
   },
 ];
 
-const oqsie = [
+const oqsie: ProjectData = [
   {
     type: "cover",
     name: "OQSIE - Continuous QMS Health Monitoring",
@@ -363,7 +365,7 @@ const oqsie = [
   },
 ];
 
-const tdverse = [
+const tdverse: ProjectData = [
   {
     type: "cover",
     name: "TDVerse",
@@ -408,7 +410,7 @@ const tdverse = [
   },
 ];
 
-const dragonYear = [
+const dragonYear: ProjectData = [
   {
     type: "cover",
     name: "Dragon Year",
@@ -432,7 +434,7 @@ const dragonYear = [
   },
 ];
 
-const proyectoPersonal = [
+const proyectoPersonal: ProjectData = [
   {
     type: "cover",
     name: "Proyecto Personal",
@@ -449,7 +451,7 @@ const proyectoPersonal = [
   },
 ];
 
-export const ANIMATION_PROJECTS: Record<string, any> = {
+export const ANIMATION_PROJECTS: Record<string, ProjectData> = {
   shutterfly,
   oqsie,
   crc,

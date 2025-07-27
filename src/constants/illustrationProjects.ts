@@ -1,4 +1,6 @@
-const privateMedicalPresentation = [
+import { ProjectData } from "@/types/projects";
+
+const privateMedicalPresentation: ProjectData = [
   {
     type: "cover",
     name: "Presentación médica",
@@ -39,7 +41,7 @@ const privateMedicalPresentation = [
   },
 ];
 
-const primal = [
+const primal: ProjectData = [
   {
     type: "cover",
     name: "Primal",
@@ -94,7 +96,7 @@ const primal = [
   },
 ];
 
-const rodentsAndDinosaurs = [
+const rodentsAndDinosaurs: ProjectData = [
   {
     type: "cover",
     name: "Roedores y dinosaurios",
@@ -130,7 +132,7 @@ const rodentsAndDinosaurs = [
   },
 ];
 
-const fantasyCharacters = [
+const fantasyCharacters: ProjectData = [
   {
     type: "cover",
     name: "Personajes de fantasía",
@@ -174,7 +176,7 @@ const fantasyCharacters = [
   },
 ];
 
-const illuminated = [
+const illuminated: ProjectData = [
   {
     type: "cover",
     name: "Illuminated",
@@ -240,7 +242,7 @@ const illuminated = [
   },
 ];
 
-const migrar = [
+const migrar: ProjectData = [
   {
     type: "cover",
     name: "Migrar",
@@ -263,7 +265,7 @@ const migrar = [
   },
 ];
 
-const alfabeto = [
+const alfabeto: ProjectData = [
   {
     type: "cover",
     name: "Alfabeto",
@@ -306,7 +308,7 @@ const alfabeto = [
   },
 ];
 
-const coleccionRosa = [
+const coleccionRosa: ProjectData = [
   {
     type: "cover",
     name: "Colección rosa",
@@ -329,7 +331,7 @@ const coleccionRosa = [
   },
 ];
 
-const coleccionIlustraciones = [
+const coleccionIlustraciones: ProjectData = [
   {
     type: "cover",
     name: "Colección de ilustraciones",
@@ -372,7 +374,7 @@ const coleccionIlustraciones = [
   },
 ];
 
-export const ILLUSTRATION_PROJECTS: Record<string, any> = {
+export const ILLUSTRATION_PROJECTS: Record<string, ProjectData> = {
   privateMedicalPresentation,
   primal,
   rodentsAndDinosaurs,

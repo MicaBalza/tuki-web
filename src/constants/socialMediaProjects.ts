@@ -1,4 +1,6 @@
-const claireSalabelle = [
+import { ProjectData } from "@/types/projects";
+
+const claireSalabelle: ProjectData = [
   {
     type: "cover",
     name: "Clases Particulares",
@@ -26,7 +28,7 @@ const claireSalabelle = [
   },
 ];
 
-const momentfulApp = [
+const momentfulApp: ProjectData = [
   {
     type: "cover",
     name: "Momentful App",
@@ -59,7 +61,7 @@ const momentfulApp = [
   },
 ];
 
-const trippinStore = [
+const trippinStore: ProjectData = [
   {
     type: "cover",
     name: "Trippin' Store",
@@ -107,7 +109,7 @@ const trippinStore = [
   },
 ];
 
-const bwAnimations = [
+const bwAnimations: ProjectData = [
   {
     type: "cover",
     name: "BW Animations",
@@ -132,7 +134,7 @@ const bwAnimations = [
   },
 ];
 
-const iamskin = [
+const iamskin: ProjectData = [
   {
     type: "cover",
     name: "Iamskin",
@@ -187,7 +189,7 @@ const iamskin = [
   },
 ];
 
-export const SOCIAL_MEDIA_PROJECTS: Record<string, any> = {
+export const SOCIAL_MEDIA_PROJECTS: Record<string, ProjectData> = {
   claireSalabelle,
   momentfulApp,
   trippinStore,
