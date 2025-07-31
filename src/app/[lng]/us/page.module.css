@@ -41,7 +41,7 @@
   flex-direction: column;
   justify-content: space-around;
   width: 100%;
-  max-width: 768px;
+  max-width: 900px;
   gap: 160px;
 }
 

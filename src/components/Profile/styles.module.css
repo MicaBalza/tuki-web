@@ -6,9 +6,6 @@
   flex-direction: row-reverse;
 }
 
-.content {
-}
-
 .name {
   color: var(--purple);
   text-align: center;
@@ -22,6 +19,7 @@
 }
 
 .description {
+  padding: 0 60px;
   text-align: center;
   background-color: white;
 }
