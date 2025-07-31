@@ -2,6 +2,7 @@
 
 import { useTranslation } from "@/i18n/client";
 import { ServiceType } from "@/types/services";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { useParams, usePathname, useRouter } from "next/navigation";
@@ -79,7 +80,10 @@ const Navbar = () => {
               >
                 {(pathname.replace(`/${lng}`, "") === route.path ||
                   pathname.replace(`${lng}`, "") === route.path) && (
-                  <span className={styles.underline} />
+                  <motion.span
+                    layoutId="underline"
+                    className={styles.underline}
+                  />
                 )}
                 {t(route.text)}
               </Link>
