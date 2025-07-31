@@ -18,7 +18,7 @@
 
 .navlinks {
   display: none;
-  gap: 4vw;
+  gap: 3vw;
 }
 
 .navlinkContainer {
@@ -29,6 +29,7 @@
   opacity: 1;
   visibility: visible;
   animation: dropdownBounce 0.4s ease-out forwards;
+  transition-delay: 0s;
 }
 
 .navlink {
@@ -38,6 +39,7 @@
   text-transform: uppercase;
   text-align: center;
   transition: font-weight 0.2s ease;
+  padding: 12px 16px;
 }
 
 .navlink.active {
@@ -105,8 +107,9 @@
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease, visibility 0.3s ease;
+  transition-delay: 0.5s;
   z-index: 20;
-  margin-top: 20px;
+  margin-top: 4px;
 }
 
 .dropdownItem {
