@@ -16,8 +16,8 @@ export default function NotFound() {
           <Image
             src="/static/images/404.png"
             alt="Under Construction"
-            width={400}
-            height={300}
+            width={600}
+            height={450}
             className={styles.image}
           />
         </div>
