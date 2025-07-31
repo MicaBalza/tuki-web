@@ -1,6 +1,6 @@
+import { useTranslation } from "@/i18n/client";
 import Image from "next/image";
 import { useParams, useRouter } from "next/navigation";
-import { useTranslation } from "@/i18n/client";
 import Button from "../Button";
 import styles from "./styles.module.css";
 
@@ -30,23 +30,35 @@ const PharmaceuticalServices = () => {
         />
       </div>
       <div className={styles.textSection}>
-        <h2 className={`${styles.title} text-purple`}>
-          {t("title")}
-        </h2>
-        <p className="text-purple">
-          {t("subtitle")}
-        </p>
+        <h2 className={`${styles.title} text-purple`}>{t("title")}</h2>
+        <p className="text-purple">{t("subtitle")}</p>
         <ul className={styles.list}>
-          {listItems.map((item, index) => (
-            <li key={index} className={`${styles.listItem} text-white`}>
-              <img
-                src="/static/icons/chevron_right.svg"
-                alt="Bullet"
-                className={styles.bullet}
-              />
-              <span>{item}</span>
-            </li>
-          ))}
+          {listItems.map((item, index) => {
+            const serviceSlug = [
+              "institutional-corporate-videos",
+              "medical-education-videos",
+              "patient-education-materials",
+              "regulatory-compliance-videos",
+              "product-launch-campaigns",
+              "clinical-trial-materials",
+            ][index];
+
+            return (
+              <li key={index} className={`${styles.listItem} text-purple`}>
+                <img
+                  src="/static/icons/chevron_right.svg"
+                  alt="Bullet"
+                  className={styles.bullet}
+                />
+                <a
+                  href={`/${lng}/pharmaceutical-services/${serviceSlug}`}
+                  className={styles.serviceLink}
+                >
+                  {item}
+                </a>
+              </li>
+            );
+          })}
         </ul>
         <Button
           text={t("button")}

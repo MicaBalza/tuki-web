@@ -43,8 +43,14 @@
   font-size: clamp(0.75rem, 2vw, 1.125rem);
 }
 
-.listItem > span:hover {
-  color: var(--purple);
+.serviceLink {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.serviceLink:hover {
+  color: var(--magenta);
 }
 
 .bullet {
