@@ -35,6 +35,10 @@
   background-color: var(--purple);
 }
 
+.social-media button:hover {
+  background-color: var(--magenta);
+}
+
 .editorial {
   background-color: var(--red);
   flex-direction: row-reverse;

@@ -21,6 +21,7 @@ const WorkTogetherBanner = (props: { params: Promise<tParams> }) => {
       <Button
         text={t("work-together-button")}
         onClick={() => push("/contact-us")}
+        darkBg
       />
     </div>
   );

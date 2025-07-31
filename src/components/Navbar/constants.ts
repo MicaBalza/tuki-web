@@ -49,7 +49,7 @@ export const ROUTES = [
       },
       {
         path: "/pharmaceutical-services/services",
-        text: "services",
+        text: "projects",
       },
     ],
   },

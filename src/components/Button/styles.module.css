@@ -19,8 +19,12 @@
 }
 
 .button:hover {
-  background-color: var(--magenta);
+  background-color: var(--purple);
   color: var(--white);
+}
+
+.darkBg:hover {
+  background-color: var(--magenta);
 }
 
 .inverted:hover {

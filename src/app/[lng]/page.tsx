@@ -17,8 +17,6 @@ type tParams = {
 export default function Home(props: { params: Promise<tParams> }) {
   const params = use(props.params);
 
-  const { lng } = params;
-
   return (
     <PageContainer className={styles.main}>
       <Hero />

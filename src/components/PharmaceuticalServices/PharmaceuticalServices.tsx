@@ -13,6 +13,9 @@ const PharmaceuticalServices = () => {
     t("list.item1"),
     t("list.item2"),
     t("list.item3"),
+    t("list.item4"),
+    t("list.item5"),
+    t("list.item6"),
   ];
 
   return (
