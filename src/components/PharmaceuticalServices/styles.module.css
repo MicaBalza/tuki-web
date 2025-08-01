@@ -1,6 +1,6 @@
 .container {
   display: flex;
-  min-height: 600px;
+  min-height: 640px;
   background-color: var(--pink);
   width: 100%;
 }

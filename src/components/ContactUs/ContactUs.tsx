@@ -1,6 +1,8 @@
 import { useTranslation } from "@/i18n/client";
+import Lottie from "lottie-react";
 import Image from "next/image";
 import { useParams, useRouter } from "next/navigation";
+import hamburguerAnimation from "../../../public/static/lottie/hamburguer.json";
 import styles from "./styles.module.css";
 
 const WhatWeDo = () => {
@@ -25,12 +27,7 @@ const WhatWeDo = () => {
         <h2 className="text-purple">{t("title")}</h2>
       </div>
       <div className={styles.imageContainer}>
-        <Image
-          src={`/static/images/hamburguer.gif`}
-          alt=""
-          fill
-          unoptimized={true}
-        />
+        <Lottie animationData={hamburguerAnimation} />
       </div>
     </section>
   );

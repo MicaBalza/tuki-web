@@ -4,8 +4,10 @@ import { useTranslation } from "@/i18n/client";
 import Button from "../Button";
 import styles from "./styles.module.css";
 
+import Lottie from "lottie-react";
 import Image from "next/image";
 import { useRef, useState } from "react";
+import mainAnimation from "../../../public/static/lottie/main.json";
 
 const Hero = () => {
   const { lng } = useParams();
@@ -39,15 +41,7 @@ const Hero = () => {
               style={{ width: "100%", height: "auto" }}
             />
           </div>
-          <video
-            autoPlay
-            muted={isMuted}
-            loop
-            src={`/static/video/main-reduced.mp4`}
-            className={styles.video}
-            ref={video}
-            poster={`/static/images/main-poster.jpg`}
-          ></video>
+          <Lottie animationData={mainAnimation} loop={true} />
         </div>
       </div>
     </section>

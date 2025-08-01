@@ -9,14 +9,7 @@ const PharmaceuticalServices = () => {
   const { push } = useRouter();
   const { t } = useTranslation(lng as string, "pharmaceutical-services");
 
-  const listItems = [
-    t("list.item1"),
-    t("list.item2"),
-    t("list.item3"),
-    t("list.item4"),
-    t("list.item5"),
-    t("list.item6"),
-  ];
+  const listItems = [t("list.item1"), t("list.item2"), t("list.item3")];
 
   return (
     <section className={styles.container}>
@@ -35,16 +28,13 @@ const PharmaceuticalServices = () => {
         <ul className={styles.list}>
           {listItems.map((item, index) => {
             const serviceSlug = [
-              "institutional-corporate-videos",
-              "medical-education-videos",
-              "patient-education-materials",
-              "regulatory-compliance-videos",
-              "product-launch-campaigns",
-              "clinical-trial-materials",
+              "presentation-videos",
+              "product-launches",
+              "events-conferences-content",
             ][index];
 
             return (
-              <li key={index} className={`${styles.listItem} text-purple`}>
+              <li key={index} className={`${styles.listItem} text-white`}>
                 <img
                   src="/static/icons/chevron_right.svg"
                   alt="Bullet"
