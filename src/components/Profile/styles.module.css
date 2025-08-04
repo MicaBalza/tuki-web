@@ -10,12 +10,14 @@
   color: var(--purple);
   text-align: center;
   background-color: white;
+  padding: 0 20px;
 }
 
 .title {
   color: var(--gray);
   text-align: center;
   background-color: white;
+  padding: 0 20px;
 }
 
 .description {
