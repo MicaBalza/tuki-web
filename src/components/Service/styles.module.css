@@ -1,5 +1,5 @@
 .wrapper {
-  --padding: 40px;
+  --padding: 5vw;
   display: flex;
   justify-content: space-between;
   gap: 24px;
