@@ -1,5 +1,5 @@
 .wrapper {
-  --padding: 5vw;
+  --padding: 6vw;
   display: flex;
   justify-content: space-between;
   gap: 24px;
@@ -76,6 +76,12 @@
 .description {
   font-size: clamp(0.625rem, 1.5vw, 1rem);
   text-align: center;
+}
+
+@media (min-width: 2400px) {
+  .wrapper {
+    --padding: 5vw;
+  }
 }
 
 @media (max-width: 1024px) {
