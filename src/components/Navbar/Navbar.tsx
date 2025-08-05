@@ -20,6 +20,7 @@ const Navbar = () => {
   const { t } = useTranslation(lng as string, "navbar");
 
   const [scrolled, setScrolled] = useState(false);
+  const [hoveredRoute, setHoveredRoute] = useState<string | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -62,50 +63,60 @@ const Navbar = () => {
           />
         </div>
         <div className={styles.navlinks}>
-          {ROUTES.map((route) => (
-            <div
-              key={route.text}
-              className={`${styles.navlinkContainer} ${
-                route.dropdown ? styles.hasDropdown : ""
-              }`}
-            >
-              <Link
-                href={route.path}
-                className={`${styles.navlink} ${
-                  pathname.replace(`/${lng}`, "") === route.path ||
-                  pathname.replace(`${lng}`, "") === route.path
-                    ? styles.active
-                    : ""
-                } ${bgIsDark ? "text-white" : "text-purple"} pointer`}
+          {ROUTES.map((route) => {
+            const isActive = pathname.replace(`/${lng}`, "") === route.path ||
+                           pathname.replace(`${lng}`, "") === route.path;
+            const isHovered = hoveredRoute === route.path;
+            const showUnderline = isActive || isHovered;
+
+            return (
+              <div
+                key={route.text}
+                className={`${styles.navlinkContainer} ${
+                  route.dropdown ? styles.hasDropdown : ""
+                }`}
+                onMouseEnter={() => setHoveredRoute(route.path)}
+                onMouseLeave={() => setHoveredRoute(null)}
               >
-                {(pathname.replace(`/${lng}`, "") === route.path ||
-                  pathname.replace(`${lng}`, "") === route.path) && (
-                  <motion.span
-                    layoutId="underline"
-                    className={`${styles.underline} ${
-                      bgIsDark ? "bg-white" : "bg-purple"
-                    }`}
-                  />
+                <Link
+                  href={route.path}
+                  className={`${styles.navlink} ${
+                    isActive ? styles.active : ""
+                  } ${bgIsDark ? "text-white" : "text-purple"} pointer`}
+                >
+                  {showUnderline && (
+                    <motion.span
+                      layoutId="navbar-underline"
+                      className={`${styles.underline} ${
+                        bgIsDark ? "bg-white" : "bg-purple"
+                      }`}
+                      transition={{
+                        type: "spring",
+                        stiffness: 500,
+                        damping: 30
+                      }}
+                    />
+                  )}
+                  {t(route.text)}
+                </Link>
+                {route.dropdown && (
+                  <div className={`${styles.dropdown} bg-${color}`}>
+                    {route.dropdown.map((dropdownItem) => (
+                      <Link
+                        key={dropdownItem.text}
+                        href={dropdownItem.path}
+                        className={`${styles.dropdownItem} ${
+                          bgIsDark ? "text-white" : "text-purple"
+                        } pointer`}
+                      >
+                        {t(dropdownItem.text)}
+                      </Link>
+                    ))}
+                  </div>
                 )}
-                {t(route.text)}
-              </Link>
-              {route.dropdown && (
-                <div className={`${styles.dropdown} bg-${color}`}>
-                  {route.dropdown.map((dropdownItem) => (
-                    <Link
-                      key={dropdownItem.text}
-                      href={dropdownItem.path}
-                      className={`${styles.dropdownItem} ${
-                        bgIsDark ? "text-white" : "text-purple"
-                      } pointer`}
-                    >
-                      {t(dropdownItem.text)}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
-          ))}
+              </div>
+            );
+          })}
           {/* <LangSelector invert={bgIsDark} /> */}
           <SocialLinks className={bgIsDark ? "fill-white" : ""} />
         </div>
