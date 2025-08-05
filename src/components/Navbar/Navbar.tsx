@@ -82,7 +82,9 @@ const Navbar = () => {
                   pathname.replace(`${lng}`, "") === route.path) && (
                   <motion.span
                     layoutId="underline"
-                    className={styles.underline}
+                    className={`${styles.underline} ${
+                      bgIsDark ? "bg-white" : "bg-purple"
+                    }`}
                   />
                 )}
                 {t(route.text)}
