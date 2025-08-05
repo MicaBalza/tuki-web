@@ -7,6 +7,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useParams, usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
+import Lottie from "lottie-react";
+import tukiLogoAnimation from "../../../public/static/lottie/tuki_logo.json";
 import ServiceTypeHeader from "../ServiceTypeHeader";
 import SlideMenu from "../SlideMenu";
 import SocialLinks from "../SocialLinks";
@@ -49,18 +51,22 @@ const Navbar = () => {
           scrolled ? `${styles.scrolled} bg-${color}` : ""
         }`}
       >
-        <div onClick={() => push("/")} className="pointer">
-          <Image
-            src={
-              bgIsDark
-                ? "/static/tuki-logo-white.png"
-                : "/static/video/tuki-logo.gif"
-            }
-            alt="Tuki Logo"
-            width="179"
-            height="100"
-            unoptimized
-          />
+        <div onClick={() => push("/")} className="pointer" style={{ width: "179px", height: "100px" }}>
+          {bgIsDark ? (
+            <Image
+              src="/static/tuki-logo-white.png"
+              alt="Tuki Logo"
+              width="179"
+              height="100"
+              unoptimized
+            />
+          ) : (
+            <Lottie
+              animationData={tukiLogoAnimation}
+              loop={true}
+              style={{ width: "179px", height: "100px" }}
+            />
+          )}
         </div>
         <div className={styles.navlinks}>
           {ROUTES.map((route) => {
