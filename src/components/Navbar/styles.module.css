@@ -108,7 +108,7 @@
   transition: opacity 0.3s ease, visibility 0.3s ease;
   transition-delay: 0.5s;
   z-index: 20;
-  margin-top: 4px;
+  margin-top: 8px;
 }
 
 .dropdownItem {

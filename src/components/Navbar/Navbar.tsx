@@ -64,8 +64,10 @@ const Navbar = () => {
         </div>
         <div className={styles.navlinks}>
           {ROUTES.map((route) => {
-            const isActive = pathname.replace(`/${lng}`, "") === route.path ||
-                           pathname.replace(`${lng}`, "") === route.path;
+            const cleanPath = pathname.replace(`/${lng}`, "") || "/";
+            const isExactMatch = cleanPath === route.path;
+            const isNestedMatch = route.path !== "/" && cleanPath.startsWith(route.path + "/");
+            const isActive = isExactMatch || isNestedMatch;
             const isHovered = hoveredRoute === route.path;
             const showUnderline = isActive || isHovered;
 
