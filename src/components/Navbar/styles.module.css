@@ -122,10 +122,6 @@
   transition: background-color 0.2s ease;
 }
 
-.dropdownItem:not(:last-child) {
-  border-bottom: 1px solid var(--white);
-}
-
 .dropdownItem:hover {
   font-weight: 700;
 }
