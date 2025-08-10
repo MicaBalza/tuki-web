@@ -1,7 +1,98 @@
 .footer {
   display: flex;
+  flex-direction: column;
+  gap: 48px;
+  width: 100%;
+  padding: 60px 108px 36px;
+}
+
+.logo {
+  height: auto;
+}
+
+/* Second Row - Navigation */
+.navigationRow {
+  display: flex;
+  gap: 60px;
+  width: 100%;
+  justify-content: center;
+}
+
+.navigationColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.sectionTitle {
+  font-weight: 700;
+  font-size: 16px;
+  text-decoration: none;
+  color: inherit;
+  text-transform: uppercase;
+}
+
+.sectionItems {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sectionItem {
+  color: inherit;
+  text-decoration: none;
+  font-size: 14px;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+  text-align: center;
+}
+
+.sectionItem:hover {
+  opacity: 1;
+}
+
+/* Third Row - Copyright and Social */
+.bottomRow {
+  display: flex;
+  align-items: center;
   justify-content: center;
   gap: 24px;
-  width: 100%;
-  padding: 36px 24px;
+  padding-top: 24px;
+}
+
+.copyright {
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer {
+    padding: 40px 20px 24px;
+    gap: 32px;
+  }
+
+  .topRow {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .ctaText {
+    font-size: 24px;
+    min-width: auto;
+  }
+
+  .navigationRow {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .bottomRow {
+    flex-direction: column;
+    gap: 16px;
+  }
 }
