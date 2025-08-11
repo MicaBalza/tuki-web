@@ -19,7 +19,7 @@ const Footer = () => {
 
   const { bgColor, color } = COLOR_BY_PATH.find(
     (route) => route.path === pathname.replace(`/${lng}`, "")
-  ) || { bgColor: "light-purple", color: "white" };
+  ) || { bgColor: "purple", color: "white" };
 
   return (
     <div className={`bg-${bgColor} text-${color} ${styles.footer}`}>
@@ -33,7 +33,10 @@ const Footer = () => {
           className={styles.logo}
         />
         <p className="h2">{t("cta-text")}</p>
-        <Button text={t("cta-button")} onClick={() => push(`/${lng}/contact-us`)} />
+        <Button
+          text={t("cta-button")}
+          onClick={() => push(`/${lng}/contact-us`)}
+        />
       </div>
 
       {/* Second Row - Navigation Sections */}

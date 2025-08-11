@@ -4,7 +4,6 @@ import { use } from "react";
 import Button from "@/components/Button";
 import PageContainer from "@/components/PageContainer";
 import Profile from "@/components/Profile";
-import WorkTogetherBanner from "@/components/WorkTogetherBanner";
 import { useTranslation } from "@/i18n/client";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
@@ -47,7 +46,6 @@ export default function Us(props: { params: Promise<tParams> }) {
           <Profile person="nat" inverted />
         </div>
       </div>
-      <WorkTogetherBanner params={props.params} />
     </PageContainer>
   );
 }
