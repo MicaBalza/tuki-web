@@ -24,10 +24,16 @@ const Footer = () => {
   const isContactPage = pathname.replace(`/${lng}`, "") === "/contact-us";
 
   return (
-    <div className={`bg-${bgColor} text-${color} ${styles.footer} ${isContactPage ? styles.contactPage : ''}`}>
+    <div
+      className={`bg-${bgColor} text-${color} ${styles.footer} ${
+        isContactPage ? styles.contactPage : ""
+      }`}
+    >
       {/* CTA Row - Hidden on contact page */}
       {!isContactPage && (
-        <div className="row fullWidth justify-center align-center g-96">
+        <div
+          className={`row fullWidth justify-center align-center ${styles.topRow}`}
+        >
           <Image
             src="/static/tuki-logo-full-white.png"
             alt="Tuki Studio"

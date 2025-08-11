@@ -10,6 +10,10 @@
   height: auto;
 }
 
+.topRow {
+  gap: 96px;
+}
+
 /* Second Row - Navigation */
 .navigationRow {
   display: flex;
@@ -77,6 +81,12 @@
   white-space: nowrap;
 }
 
+@media (max-width: 1024px) {
+  .navigationRow {
+    flex-wrap: wrap;
+  }
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .footer {
@@ -87,17 +97,13 @@
   .topRow {
     flex-direction: column;
     text-align: center;
-    gap: 20px;
-  }
-
-  .ctaText {
-    font-size: 24px;
-    min-width: auto;
+    gap: 12px;
   }
 
   .navigationRow {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
   }
 
   .contactPage .navigationRow {
@@ -108,6 +114,13 @@
 
   .logoColumn {
     min-width: auto;
+    margin-bottom: 16px;
+  }
+
+  .navigationColumn {
+    text-align: center;
+    width: 100%;
+    max-width: 300px;
   }
 
   .bottomRow {
