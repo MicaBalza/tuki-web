@@ -12,7 +12,7 @@ import styles from "./styles.module.css";
 const Footer = () => {
   const { lng } = useParams();
   const { t } = useTranslation(lng as string, "footer");
-  const { t: tNav } = useTranslation(lng as string, "navigation");
+  const { t: tNav } = useTranslation(lng as string, "navbar");
   const pathname = usePathname();
   const { push } = useRouter();
   console.log("🌸 ~ Footer ~ pathname:", pathname);
@@ -32,8 +32,8 @@ const Footer = () => {
           height={100}
           className={styles.logo}
         />
-        <p className="h2">¿Listx para trabajar juntxs?</p>
-        <Button text="Escríbenos" onClick={() => push(`/${lng}/contact-us`)} />
+        <p className="h2">{t("cta-text")}</p>
+        <Button text={t("cta-button")} onClick={() => push(`/${lng}/contact-us`)} />
       </div>
 
       {/* Second Row - Navigation Sections */}

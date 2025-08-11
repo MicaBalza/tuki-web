@@ -13,7 +13,7 @@
 /* Second Row - Navigation */
 .navigationRow {
   display: flex;
-  gap: 60px;
+  gap: 100px;
   width: 100%;
   justify-content: center;
 }
@@ -30,6 +30,7 @@
   text-decoration: none;
   color: inherit;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .sectionItems {
@@ -39,6 +40,7 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
+  text-align: center;
 }
 
 .sectionItem {
@@ -48,6 +50,7 @@
   opacity: 0.8;
   transition: opacity 0.3s ease;
   text-align: center;
+  text-transform: uppercase;
 }
 
 .sectionItem:hover {
