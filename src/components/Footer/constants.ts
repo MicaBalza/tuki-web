@@ -16,8 +16,8 @@ export const COLOR_BY_PATH = [
   },
   {
     path: "/contact-us",
-    bgColor: "pink",
-    color: "purple",
+    bgColor: "purple",
+    color: "white",
   },
 ];
 
@@ -25,7 +25,7 @@ export const FOOTER_SECTIONS = [
   {
     title: "home",
     path: "/",
-    items: []
+    items: [],
   },
   {
     title: "services",
@@ -38,34 +38,52 @@ export const FOOTER_SECTIONS = [
       { text: "branding", path: "/services/branding" },
       { text: "motion-graphics", path: "/services/motion-graphics" },
       { text: "pharmaceutical", path: "/services/pharmaceutical" },
-    ]
+    ],
   },
   {
     title: "pharmaceutical-services",
     path: "/pharmaceutical-services",
     items: [
-      { text: "institutional-corporate-videos", path: "/pharmaceutical-services/institutional-corporate-videos" },
-      { text: "product-launch", path: "/pharmaceutical-services/product-launch" },
-      { text: "tutorial-training", path: "/pharmaceutical-services/tutorial-training" },
-      { text: "promotional-videos", path: "/pharmaceutical-services/promotional-videos" },
-      { text: "events-conferences", path: "/pharmaceutical-services/events-conferences" },
-      { text: "podcast-videos", path: "/pharmaceutical-services/podcast-videos" },
+      {
+        text: "institutional-corporate-videos",
+        path: "/pharmaceutical-services/institutional-corporate-videos",
+      },
+      {
+        text: "product-launch",
+        path: "/pharmaceutical-services/product-launch",
+      },
+      {
+        text: "tutorial-training",
+        path: "/pharmaceutical-services/tutorial-training",
+      },
+      {
+        text: "promotional-videos",
+        path: "/pharmaceutical-services/promotional-videos",
+      },
+      {
+        text: "events-conferences",
+        path: "/pharmaceutical-services/events-conferences",
+      },
+      {
+        text: "podcast-videos",
+        path: "/pharmaceutical-services/podcast-videos",
+      },
       { text: "projects", path: "/pharmaceutical-services/services" },
-    ]
+    ],
   },
   {
     title: "who-we-are",
     path: "/us",
-    items: []
+    items: [],
   },
   {
     title: "blog",
     path: "/blog",
-    items: []
+    items: [],
   },
   {
     title: "contact",
     path: "/contact-us",
-    items: []
-  }
+    items: [],
+  },
 ];

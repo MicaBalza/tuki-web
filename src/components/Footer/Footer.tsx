@@ -21,26 +21,41 @@ const Footer = () => {
     (route) => route.path === pathname.replace(`/${lng}`, "")
   ) || { bgColor: "purple", color: "white" };
 
-  return (
-    <div className={`bg-${bgColor} text-${color} ${styles.footer}`}>
-      {/* First Row - Logo, CTA Text, and Button */}
-      <div className="row fullWidth justify-center align-center g-96">
-        <Image
-          src="/static/tuki-logo-full-white.png"
-          alt="Tuki Studio"
-          width={200}
-          height={100}
-          className={styles.logo}
-        />
-        <p className="h2">{t("cta-text")}</p>
-        <Button
-          text={t("cta-button")}
-          onClick={() => push(`/${lng}/contact-us`)}
-        />
-      </div>
+  const isContactPage = pathname.replace(`/${lng}`, "") === "/contact-us";
 
-      {/* Second Row - Navigation Sections */}
+  return (
+    <div className={`bg-${bgColor} text-${color} ${styles.footer} ${isContactPage ? styles.contactPage : ''}`}>
+      {/* CTA Row - Hidden on contact page */}
+      {!isContactPage && (
+        <div className="row fullWidth justify-center align-center g-96">
+          <Image
+            src="/static/tuki-logo-full-white.png"
+            alt="Tuki Studio"
+            width={200}
+            height={100}
+            className={styles.logo}
+          />
+          <p className="h2">{t("cta-text")}</p>
+          <Button
+            text={t("cta-button")}
+            onClick={() => push(`/${lng}/contact-us`)}
+          />
+        </div>
+      )}
+
+      {/* Navigation Row - Logo included on contact page */}
       <div className={styles.navigationRow}>
+        {isContactPage && (
+          <div className={styles.logoColumn}>
+            <Image
+              src="/static/tuki-logo-full-white.png"
+              alt="Tuki Studio"
+              width={200}
+              height={100}
+              className={styles.logo}
+            />
+          </div>
+        )}
         {FOOTER_SECTIONS.map((section) => (
           <div key={section.title} className={styles.navigationColumn}>
             <Link
@@ -67,7 +82,7 @@ const Footer = () => {
         ))}
       </div>
 
-      {/* Third Row - Copyright and Social Links */}
+      {/* Copyright and Social Links */}
       <div className={styles.bottomRow}>
         <span className={styles.copyright}>{t("text")}</span>
         <SocialLinks className={`fill-${color}`} />

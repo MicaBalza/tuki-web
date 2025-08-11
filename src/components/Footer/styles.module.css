@@ -13,8 +13,14 @@
 /* Second Row - Navigation */
 .navigationRow {
   display: flex;
-  gap: 100px;
+  gap: 120px;
   width: 100%;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.logoColumn {
+  display: flex;
   justify-content: center;
 }
 
@@ -92,6 +98,16 @@
   .navigationRow {
     grid-template-columns: repeat(2, 1fr);
     gap: 24px;
+  }
+
+  .contactPage .navigationRow {
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+  }
+
+  .logoColumn {
+    min-width: auto;
   }
 
   .bottomRow {
