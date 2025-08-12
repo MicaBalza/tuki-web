@@ -4,6 +4,15 @@
     "subtitle": "We help you create visual content in a clear and effective way.",
     "button": "Scroll and see our projects"
   },
+  "services": {
+    "title": "Services",
+    "item1": "Institutional & Corporate Videos",
+    "item2": "Product Launch & Presentation",
+    "item3": "Tutorials & Training",
+    "item4": "Promotional Videos",
+    "item5": "Content for Events & Conferences",
+    "item6": "Podcast Video Production"
+  },
   "title": "We create animation and videos for the Pharmaceutical industry",
   "subtitle": "We help you create visual content in a clear and effective way",
   "list": {

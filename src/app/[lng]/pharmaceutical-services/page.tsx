@@ -3,6 +3,7 @@
 import Button from "@/components/Button";
 import PageContainer from "@/components/PageContainer";
 import { useTranslation } from "@/i18n/client";
+import Image from "next/image";
 import { useParams } from "next/navigation";
 import { useRef } from "react";
 import styles from "./page.module.css";
@@ -42,11 +43,60 @@ export default function PharmaceuticalServicesPage() {
         </div>
       </section>
 
-      {/* Section 2 */}
+      {/* Section 2 - Services Board */}
       <section className={styles.section2}>
-        <div className={styles.sectionContent}>
-          <h2>Section 2</h2>
-          <p>Content for section 2 goes here</p>
+        <div className={styles.servicesContent}>
+          <div className={styles.boardContainer}>
+            <div className={styles.boardWrapper}>
+              <Image
+                src="/static/images/pharmaceutical-services/board.png"
+                alt="Services Board"
+                width={1000}
+                height={700}
+                className={styles.boardImage}
+              />
+              <div className={styles.boardContent}>
+                <h2 className={styles.boardTitle}>{t("services.title")}</h2>
+                <ul className={styles.servicesList}>
+                  <li className={styles.serviceItem}>
+                    <span className={styles.checkmark}>✓</span>
+                    <span>{t("services.item1")}</span>
+                  </li>
+                  <li className={styles.serviceItem}>
+                    <span className={styles.checkmark}>✓</span>
+                    <span>{t("services.item2")}</span>
+                  </li>
+                  <li className={styles.serviceItem}>
+                    <span className={styles.checkmark}>✓</span>
+                    <span>{t("services.item3")}</span>
+                  </li>
+                  <li className={styles.serviceItem}>
+                    <span className={styles.checkmark}>✓</span>
+                    <span>{t("services.item4")}</span>
+                  </li>
+                  <li className={styles.serviceItem}>
+                    <span className={styles.checkmark}>✓</span>
+                    <span>{t("services.item5")}</span>
+                  </li>
+                  <li className={styles.serviceItem}>
+                    <span className={styles.checkmark}>✓</span>
+                    <span>{t("services.item6")}</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div className={styles.characterContainer}>
+            <div className={styles.character}>
+              <Image
+                src="/static/images/pharmaceutical-services/girl.png"
+                alt="Pharmaceutical Services Character"
+                width={670}
+                height={745}
+                className={styles.characterImage}
+              />
+            </div>
+          </div>
         </div>
       </section>
 

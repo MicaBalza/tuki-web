@@ -1,7 +1,6 @@
 .section1,
 .section2,
 .section3 {
-  padding: 60px 0;
   width: 100%;
 }
 
@@ -57,7 +56,101 @@
 }
 
 .section2 {
-  background-color: var(--color-white);
+  background: var(--pink);
+  display: flex;
+  align-items: center;
+  overflow: visible;
+}
+
+/* Services Section Styles */
+.servicesContent {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.boardContainer {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  overflow: visible;
+}
+
+.boardWrapper {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  height: 490px; /* 70% of 700px original height */
+}
+
+.boardImage {
+  width: auto;
+  height: 700px;
+  max-width: none;
+  transform: scale(1.2);
+  position: relative;
+  top: 0;
+}
+
+.boardContent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  text-align: center;
+}
+
+.boardTitle {
+  color: #e84393;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.servicesList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.serviceItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  color: #6c5ce7;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.checkmark {
+  color: #00b894;
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.characterContainer {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  overflow: visible;
+}
+
+.character {
+  position: relative;
+  overflow: visible;
+}
+
+.characterImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .section3 {
@@ -124,6 +217,46 @@
     align-self: center;
     font-size: 1rem;
     padding: 14px 28px;
+  }
+
+  .servicesContent {
+    flex-direction: column;
+    gap: 40px;
+    padding: 0 20px;
+  }
+
+  .characterContainer {
+    justify-content: center;
+    padding-left: 0;
+  }
+
+  .boardWrapper {
+    width: 100%;
+    max-width: 400px;
+    height: 280px; /* 70% of proportional mobile height */
+  }
+
+  .boardImage {
+    width: 100%;
+    height: 400px;
+    transform: scale(1);
+  }
+
+  .boardTitle {
+    font-size: 1.5rem;
+  }
+
+  .serviceItem {
+    font-size: 1rem;
+  }
+
+  .character {
+    width: 600px;
+    height: 600px;
+  }
+
+  .characterImage {
+    transform: scale(1.2);
   }
 
   .sectionContent {
