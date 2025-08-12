@@ -3,7 +3,6 @@
 import Button from "@/components/Button";
 import PageContainer from "@/components/PageContainer";
 import { useTranslation } from "@/i18n/client";
-import Image from "next/image";
 import { useParams } from "next/navigation";
 import { useRef } from "react";
 import styles from "./page.module.css";
@@ -44,7 +43,7 @@ export default function PharmaceuticalServicesPage() {
       </section>
 
       {/* Section 2 - Services Board */}
-      <section className={styles.section2}>
+      {/* <section className={styles.section2}>
         <div className={styles.servicesContent}>
           <div className={styles.boardContainer}>
             <div className={styles.boardWrapper}>
@@ -98,15 +97,15 @@ export default function PharmaceuticalServicesPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Section 3 */}
-      <section ref={section3Ref} className={styles.section3}>
+      {/* <section ref={section3Ref} className={styles.section3}>
         <div className={styles.sectionContent}>
           <h2>Section 3</h2>
           <p>Content for section 3 goes here</p>
         </div>
-      </section>
+      </section> */}
     </PageContainer>
   );
 }
