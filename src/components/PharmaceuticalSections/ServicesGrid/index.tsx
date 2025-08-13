@@ -94,7 +94,21 @@ export default function ServicesGrid({ lng }: ServicesGridProps) {
             <button className={styles.closeButton} onClick={closeModal}>
               ×
             </button>
-            <h2 className={styles.modalTitle}>{selectedService.title}</h2>
+            <div className={styles.modalBody}>
+              <div className={styles.videoContainer}>
+                <iframe
+                  src={selectedService.videoUrl}
+                  title={selectedService.title}
+                  className={styles.videoIframe}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                />
+              </div>
+              <div className={styles.contentContainer}>
+                <h2 className={styles.modalTitle}>{selectedService.title}</h2>
+                <p className={styles.modalDescription}>{selectedService.description}</p>
+              </div>
+            </div>
           </div>
         </div>
       )}
