@@ -181,13 +181,61 @@
   background-color: var(--color-purple);
   color: var(--color-white);
   z-index: 1;
+  padding: 80px 0;
 }
 
 .sectionContent {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 24px;
-  text-align: center;
+}
+
+.servicesGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.gridRow {
+  display: flex;
+  gap: 24px;
+  width: 100%;
+}
+
+.gridItem {
+  display: block;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  text-decoration: none;
+}
+
+.gridItem:hover {
+  transform: scale(1.02);
+}
+
+.gridImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Row 1 and 3: First image wider */
+.wideFirst {
+  flex: 6;
+}
+
+.narrowSecond {
+  flex: 4;
+}
+
+/* Row 2: First image smaller */
+.narrowFirst {
+  flex: 4;
+}
+
+.wideSecond {
+  flex: 6;
 }
 
 .sectionContent h1,
@@ -296,5 +344,22 @@
 
   .sectionContent p {
     font-size: 1rem;
+  }
+
+  .section3 {
+    padding: 60px 0;
+  }
+
+  .servicesGrid {
+    gap: 16px;
+  }
+
+  .gridRow {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .gridItem {
+    flex: 1 !important;
   }
 }
