@@ -1,4 +1,6 @@
-import Link from "next/link";
+import Button from "@/components/Button";
+import { useState } from "react";
+import { ServiceImage, serviceImages } from "./constants";
 import styles from "./styles.module.css";
 
 interface ServicesGridProps {
@@ -6,74 +8,96 @@ interface ServicesGridProps {
 }
 
 export default function ServicesGrid({ lng }: ServicesGridProps) {
-  const serviceImages = [
-    { 
-      src: "/static/images/pharmaceutical-services/institutional-corporate-videos.png",
-      alt: "Institutional & Corporate Videos",
-      url: "institutional-videos"
-    },
-    { 
-      src: "/static/images/pharmaceutical-services/product-launch.png",
-      alt: "Product Launch",
-      url: "product-launch"
-    },
-    { 
-      src: "/static/images/pharmaceutical-services/tutorial-training.png",
-      alt: "Tutorials & Training",
-      url: "tutorials-training"
-    },
-    { 
-      src: "/static/images/pharmaceutical-services/promotional-videos.png",
-      alt: "Promotional Videos",
-      url: "promotional-videos"
-    },
-    { 
-      src: "/static/images/pharmaceutical-services/events-conferences.png",
-      alt: "Events & Congress",
-      url: "events-congress"
-    },
-    { 
-      src: "/static/images/pharmaceutical-services/podcast-videos.png",
-      alt: "Video Podcast",
-      url: "video-podcast"
-    }
-  ];
+  const [selectedService, setSelectedService] = useState<ServiceImage | null>(
+    null
+  );
+
+  const openModal = (service: ServiceImage) => {
+    setSelectedService(service);
+  };
+
+  const closeModal = () => {
+    setSelectedService(null);
+  };
 
   return (
-    <section className={styles.section}>
-      <div className={styles.sectionContent}>
-        <div className={styles.servicesGrid}>
-          {/* Row 1: First image wider than second */}
-          <div className={styles.gridRow}>
-            <Link href={`/${lng}/pharmaceutical-services/${serviceImages[0].url}`} className={`${styles.gridItem} ${styles.wideFirst}`}>
-              <img src={serviceImages[0].src} alt={serviceImages[0].alt} className={styles.gridImage} />
-            </Link>
-            <Link href={`/${lng}/pharmaceutical-services/${serviceImages[1].url}`} className={`${styles.gridItem} ${styles.narrowSecond}`}>
-              <img src={serviceImages[1].src} alt={serviceImages[1].alt} className={styles.gridImage} />
-            </Link>
-          </div>
-          
-          {/* Row 2: First image smaller than second */}
-          <div className={styles.gridRow}>
-            <Link href={`/${lng}/pharmaceutical-services/${serviceImages[2].url}`} className={`${styles.gridItem} ${styles.narrowFirst}`}>
-              <img src={serviceImages[2].src} alt={serviceImages[2].alt} className={styles.gridImage} />
-            </Link>
-            <Link href={`/${lng}/pharmaceutical-services/${serviceImages[3].url}`} className={`${styles.gridItem} ${styles.wideSecond}`}>
-              <img src={serviceImages[3].src} alt={serviceImages[3].alt} className={styles.gridImage} />
-            </Link>
-          </div>
-          
-          {/* Row 3: First image wider than second */}
-          <div className={styles.gridRow}>
-            <Link href={`/${lng}/pharmaceutical-services/${serviceImages[4].url}`} className={`${styles.gridItem} ${styles.wideFirst}`}>
-              <img src={serviceImages[4].src} alt={serviceImages[4].alt} className={styles.gridImage} />
-            </Link>
-            <Link href={`/${lng}/pharmaceutical-services/${serviceImages[5].url}`} className={`${styles.gridItem} ${styles.narrowSecond}`}>
-              <img src={serviceImages[5].src} alt={serviceImages[5].alt} className={styles.gridImage} />
-            </Link>
+    <>
+      <section className={styles.section}>
+        <div className={styles.sectionContent}>
+          <div className={styles.servicesGrid}>
+            {serviceImages.reduce((rows, service, index) => {
+              const rowIndex = Math.floor(index / 2);
+              const isFirstInRow = index % 2 === 0;
+              const isSecondRow = rowIndex === 1;
+              
+              // Determine size classes based on row and position
+              const sizeClass = isSecondRow 
+                ? (isFirstInRow ? styles.narrowFirst : styles.wideSecond)
+                : (isFirstInRow ? styles.wideFirst : styles.narrowSecond);
+
+              if (isFirstInRow) {
+                // Start a new row
+                rows.push(
+                  <div key={`row-${rowIndex}`} className={styles.gridRow}>
+                    <div
+                      className={`${styles.gridItem} ${sizeClass}`}
+                      onClick={() => openModal(service)}
+                    >
+                      <img
+                        src={service.src}
+                        alt={service.alt}
+                        className={styles.gridImage}
+                      />
+                      <div className={styles.imageButton}>
+                        <Button text={service.title} inverted />
+                      </div>
+                    </div>
+                  </div>
+                );
+              } else {
+                // Add to existing row
+                const lastRow = rows[rows.length - 1];
+                const updatedRow = (
+                  <div key={`row-${rowIndex}`} className={styles.gridRow}>
+                    {lastRow.props.children}
+                    <div
+                      className={`${styles.gridItem} ${sizeClass}`}
+                      onClick={() => openModal(service)}
+                    >
+                      <img
+                        src={service.src}
+                        alt={service.alt}
+                        className={styles.gridImage}
+                      />
+                      <div className={styles.imageButton}>
+                        <Button text={service.title} inverted />
+                      </div>
+                    </div>
+                  </div>
+                );
+                rows[rows.length - 1] = updatedRow;
+              }
+              
+              return rows;
+            }, [] as JSX.Element[])}
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      {/* Modal */}
+      {selectedService && (
+        <div className={styles.modalOverlay} onClick={closeModal}>
+          <div
+            className={styles.modalContent}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button className={styles.closeButton} onClick={closeModal}>
+              ×
+            </button>
+            <h2 className={styles.modalTitle}>{selectedService.title}</h2>
+          </div>
+        </div>
+      )}
+    </>
   );
 }

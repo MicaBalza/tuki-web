@@ -7,7 +7,7 @@
 }
 
 .sectionContent {
-  max-width: 1200px;
+  max-width: 1300px;
   margin: 0 auto;
   padding: 0 24px;
 }
@@ -25,14 +25,20 @@
 }
 
 .gridItem {
+  position: relative;
   display: block;
   overflow: hidden;
   transition: transform 0.3s ease;
-  text-decoration: none;
+  cursor: pointer;
 }
 
-.gridItem:hover {
-  transform: scale(1.02);
+.gridItem:hover .gridImage {
+  transform: scale(1.05);
+}
+
+.gridItem:hover .imageButton button {
+  background-color: var(--light-green);
+  color: var(--purple);
 }
 
 .gridImage {
@@ -40,6 +46,7 @@
   height: 100%;
   object-fit: cover;
   display: block;
+  transition: transform 0.3s ease;
 }
 
 /* Row 1 and 3: First image wider */
@@ -58,6 +65,63 @@
 
 .wideSecond {
   flex: 6;
+}
+
+/* Image Button */
+.imageButton {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  pointer-events: none;
+}
+
+/* Modal Styles */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+.closeButton {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: #999;
+  line-height: 1;
+}
+
+.closeButton:hover {
+  color: #333;
+}
+
+.modalTitle {
+  color: var(--color-purple);
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+  text-align: center;
 }
 
 /* Responsive Design */
