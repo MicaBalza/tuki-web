@@ -24,7 +24,7 @@ const PharmaceuticalService = () => {
         <p className={styles.description}>{t(`pharmaceutical.description`)}</p>
         <Button
           text={t("button")}
-          onClick={() => push(`/services/pharmaceutical`)}
+          onClick={() => push(`/pharmaceutical-services`)}
         />
       </div>
     </div>
