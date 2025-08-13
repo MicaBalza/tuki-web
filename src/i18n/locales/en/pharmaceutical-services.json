@@ -13,12 +13,33 @@
     "item5": "Content for Events & Conferences",
     "item6": "Podcast Video Production"
   },
-  "title": "We create animation and videos for the Pharmaceutical industry",
-  "subtitle": "We help you create visual content in a clear and effective way",
-  "list": {
-    "item1": "Presentation videos",
-    "item2": "Product launches",
-    "item3": "Content for events and conferences"
+  "grid": {
+    "title": "This is what we do"
   },
-  "button": "Discover all our services :)"
+  "modal": {
+    "institutional": {
+      "title": "Institutional & Corporate Videos",
+      "description": "Selection of institutional videos created at MyeVideo / Medevice Digital. From concept to final delivery, at Tuki Studio we handle creative direction, script development and production team coordination."
+    },
+    "productLaunch": {
+      "title": "Product Launch & Presentation",
+      "description": "Launch clips designed to highlight the best of each product. At Tuki Studio we lead the creative approach, visual narrative and comprehensive production, as part of the MyeVideo / Medevice Digital team."
+    },
+    "tutorials": {
+      "title": "Tutorials & Training",
+      "description": "Educational video clips designed to make the complex simple. Script development, visual proposal and supervision of the entire creative process, produced by Tuki Studio during our time at MyeVideo / Medevice Digital."
+    },
+    "promotional": {
+      "title": "Promotional Videos",
+      "description": "Promotional pieces created for campaigns, social media and presentations. From Tuki Studio we handle creative direction and general coordination, working as part of the MyeVideo / Medevice Digital team."
+    },
+    "events": {
+      "title": "Content for Events & Conferences",
+      "description": "Content designed for big screens and key moments. Concept, visual script and production supervision by Tuki Studio, within our work at MyeVideo / Medevice Digital."
+    },
+    "podcast": {
+      "title": "Podcast Video Production",
+      "description": "Visual design, editing and narrative for video podcasts. Project developed by Tuki Studio as part of the MyeVideo / Medevice Digital team."
+    }
+  }
 }

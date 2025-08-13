@@ -13,12 +13,33 @@
     "item5": "Contenido para Eventos & Congresos",
     "item6": "Producción de Video Podcast"
   },
-  "title": "Hacemos animación y videos para la industria Farmacéutica",
-  "subtitle": "Te ayudamos a crear contenido visual de manera clara y efectiva",
-  "list": {
-    "item1": "Videos de presentación",
-    "item2": "Lanzamiento de productos",
-    "item3": "Contenido para eventos y conferencias"
+  "grid": {
+    "title": "Esto es lo que hacemos"
   },
-  "button": "Conoce todos nuestros servicios :)"
+  "modal": {
+    "institutional": {
+      "title": "Videos Institucionales & Corporativos",
+      "description": "Selección de videos institucionales realizados en MyeVideo / Medevice Digital. Desde el concepto hasta la entrega final, en Tuki Studio nos encargamos de la dirección creativa, el desarrollo del guión y la coordinación del equipo de producción."
+    },
+    "productLaunch": {
+      "title": "Lanzamiento y Presentación de Producto",
+      "description": "Clips de lanzamientos pensados para destacar lo mejor de cada producto. En Tuki Studio lideramos el enfoque creativo, la narrativa visual y la producción integral, como parte del equipo de MyeVideo / Medevice Digital."
+    },
+    "tutorials": {
+      "title": "Tutoriales & Capacitación",
+      "description": "Fragmentos de videos explicativos diseñados para hacer más fácil lo complejo. Desarrollo de guión, propuesta visual y supervisión de todo el proceso creativo, realizados por Tuki Studio durante nuestra etapa en MyeVideo / Medevice Digital."
+    },
+    "promotional": {
+      "title": "Videos de Promoción",
+      "description": "Piezas promocionales creadas para campañas, redes y presentaciones. Desde Tuki Studio nos encargamos de la dirección creativa y la coordinación general, trabajando como parte del equipo de MyeVideo / Medevice Digital."
+    },
+    "events": {
+      "title": "Contenido para Eventos & Congresos",
+      "description": "Contenido pensado para pantallas grandes y momentos clave. Concepto, guión visual y supervisión de producción a cargo de Tuki Studio, dentro de nuestro trabajo en MyeVideo / Medevice Digital."
+    },
+    "podcast": {
+      "title": "Producción de Video Podcast",
+      "description": "Diseño visual, edición y narrativa para podcasts en vídeo. Proyecto desarrollado por Tuki Studio como parte del equipo de MyeVideo / Medevice Digital."
+    }
+  }
 }
