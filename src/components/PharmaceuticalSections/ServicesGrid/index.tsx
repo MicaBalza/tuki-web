@@ -34,7 +34,9 @@ export default function ServicesGrid({ lng }: ServicesGridProps) {
     <>
       <section className={styles.section}>
         <div className={styles.sectionContent}>
-          <h2 className={styles.sectionTitle}>{t("grid.title")}</h2>
+          <h2 className={`${styles.sectionTitle} text-white bold`}>
+            {t("grid.title")}
+          </h2>
           <div className={styles.servicesGrid}>
             {serviceImages.reduce((rows, service, index) => {
               const rowIndex = Math.floor(index / 2);
