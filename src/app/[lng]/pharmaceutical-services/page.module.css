@@ -127,7 +127,20 @@
 .serviceItem {
   display: flex;
   align-items: flex-start;
+}
+
+.serviceLink {
+  display: flex;
+  align-items: flex-start;
   gap: 12px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  padding: 4px 0;
+}
+
+.serviceLink:hover {
+  transform: translateX(8px);
+  opacity: 0.8;
 }
 
 .checkmark {

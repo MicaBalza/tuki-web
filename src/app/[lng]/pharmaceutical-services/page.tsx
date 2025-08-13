@@ -3,6 +3,7 @@
 import Button from "@/components/Button";
 import PageContainer from "@/components/PageContainer";
 import { useTranslation } from "@/i18n/client";
+import Link from "next/link";
 import { useParams } from "next/navigation";
 import { useRef } from "react";
 import styles from "./page.module.css";
@@ -19,6 +20,15 @@ export default function PharmaceuticalServicesPage() {
   const scrollToSection3 = () => {
     section3Ref.current?.scrollIntoView({ behavior: "smooth" });
   };
+
+  const serviceLinks = [
+    { key: "item1", url: "institutional-videos" },
+    { key: "item2", url: "product-launch" },
+    { key: "item3", url: "tutorials-training" },
+    { key: "item4", url: "promotional-videos" },
+    { key: "item5", url: "events-congress" },
+    { key: "item6", url: "video-podcast" }
+  ];
 
   return (
     <PageContainer>
@@ -55,30 +65,14 @@ export default function PharmaceuticalServicesPage() {
               <div className={styles.boardContent}>
                 <h2 className="text-magenta bold">{t("services.title")}</h2>
                 <ul className={styles.servicesList}>
-                  <li className={`${styles.serviceItem} text-purple h4`}>
-                    <span className={styles.checkmark}>✓</span>
-                    <span>{t("services.item1")}</span>
-                  </li>
-                  <li className={`${styles.serviceItem} text-purple h4`}>
-                    <span className={styles.checkmark}>✓</span>
-                    <span>{t("services.item2")}</span>
-                  </li>
-                  <li className={`${styles.serviceItem} text-purple h4`}>
-                    <span className={styles.checkmark}>✓</span>
-                    <span>{t("services.item3")}</span>
-                  </li>
-                  <li className={`${styles.serviceItem} text-purple h4`}>
-                    <span className={styles.checkmark}>✓</span>
-                    <span>{t("services.item4")}</span>
-                  </li>
-                  <li className={`${styles.serviceItem} text-purple h4`}>
-                    <span className={styles.checkmark}>✓</span>
-                    <span>{t("services.item5")}</span>
-                  </li>
-                  <li className={`${styles.serviceItem} text-purple h4`}>
-                    <span className={styles.checkmark}>✓</span>
-                    <span>{t("services.item6")}</span>
-                  </li>
+                  {serviceLinks.map((service) => (
+                    <li key={service.key} className={styles.serviceItem}>
+                      <Link href={`/${lng}/pharmaceutical-services/${service.url}`} className={`${styles.serviceLink} text-purple h4`}>
+                        <span className={styles.checkmark}>✓</span>
+                        <span>{t(`services.${service.key}`)}</span>
+                      </Link>
+                    </li>
+                  ))}
                 </ul>
               </div>
             </div>
@@ -96,12 +90,12 @@ export default function PharmaceuticalServicesPage() {
       </section>
 
       {/* Section 3 */}
-      {/* <section ref={section3Ref} className={styles.section3}>
+      <section ref={section3Ref} className={styles.section3}>
         <div className={styles.sectionContent}>
           <h2>Section 3</h2>
           <p>Content for section 3 goes here</p>
         </div>
-      </section> */}
+      </section>
     </PageContainer>
   );
 }
