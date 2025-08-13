@@ -3,7 +3,6 @@
 import Button from "@/components/Button";
 import PageContainer from "@/components/PageContainer";
 import { useTranslation } from "@/i18n/client";
-import Image from "next/image";
 import { useParams } from "next/navigation";
 import { useRef } from "react";
 import styles from "./page.module.css";
@@ -48,37 +47,35 @@ export default function PharmaceuticalServicesPage() {
         <div className={styles.servicesContent}>
           <div className={styles.boardContainer}>
             <div className={styles.boardWrapper}>
-              <Image
+              <img
                 src="/static/images/pharmaceutical-services/board.png"
                 alt="Services Board"
-                width={1000}
-                height={700}
                 className={styles.boardImage}
               />
               <div className={styles.boardContent}>
-                <h2 className={styles.boardTitle}>{t("services.title")}</h2>
+                <h2 className="text-magenta bold">{t("services.title")}</h2>
                 <ul className={styles.servicesList}>
-                  <li className={styles.serviceItem}>
+                  <li className={`${styles.serviceItem} text-purple h4`}>
                     <span className={styles.checkmark}>✓</span>
                     <span>{t("services.item1")}</span>
                   </li>
-                  <li className={styles.serviceItem}>
+                  <li className={`${styles.serviceItem} text-purple h4`}>
                     <span className={styles.checkmark}>✓</span>
                     <span>{t("services.item2")}</span>
                   </li>
-                  <li className={styles.serviceItem}>
+                  <li className={`${styles.serviceItem} text-purple h4`}>
                     <span className={styles.checkmark}>✓</span>
                     <span>{t("services.item3")}</span>
                   </li>
-                  <li className={styles.serviceItem}>
+                  <li className={`${styles.serviceItem} text-purple h4`}>
                     <span className={styles.checkmark}>✓</span>
                     <span>{t("services.item4")}</span>
                   </li>
-                  <li className={styles.serviceItem}>
+                  <li className={`${styles.serviceItem} text-purple h4`}>
                     <span className={styles.checkmark}>✓</span>
                     <span>{t("services.item5")}</span>
                   </li>
-                  <li className={styles.serviceItem}>
+                  <li className={`${styles.serviceItem} text-purple h4`}>
                     <span className={styles.checkmark}>✓</span>
                     <span>{t("services.item6")}</span>
                   </li>

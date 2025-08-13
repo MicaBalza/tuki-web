@@ -77,6 +77,10 @@ img {
   color: var(--gray);
 }
 
+.text-magenta {
+  color: var(--magenta);
+}
+
 .fill-purple * {
   fill: var(--purple);
 }
