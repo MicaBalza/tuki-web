@@ -11,15 +11,31 @@
 }
 
 .topRow {
-  gap: 96px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.topRowItem {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.topRowItem:first-child {
+  justify-content: flex-start;
+}
+
+.topRowItem:last-child {
+  justify-content: flex-end;
 }
 
 /* Second Row - Navigation */
 .navigationRow {
   display: flex;
-  gap: 120px;
   width: 100%;
-  justify-content: center;
+  max-width: 1300px;
+  margin: 0 auto;
+  justify-content: space-between;
   align-items: flex-start;
 }
 

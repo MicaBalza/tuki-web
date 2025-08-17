@@ -37,7 +37,7 @@ export const FOOTER_SECTIONS = [
       { text: "editorial", path: "/services/editorial" },
       { text: "branding", path: "/services/branding" },
       { text: "motion-graphics", path: "/services/motion-graphics" },
-      { text: "pharmaceutical", path: "/services/pharmaceutical" },
+      { text: "pharmaceutical", path: "/pharmaceutical-services" },
     ],
   },
   {

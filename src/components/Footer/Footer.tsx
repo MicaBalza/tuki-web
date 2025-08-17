@@ -34,18 +34,24 @@ const Footer = () => {
         <div
           className={`row fullWidth justify-center align-center ${styles.topRow}`}
         >
-          <Image
-            src="/static/tuki-logo-full-white.png"
-            alt="Tuki Studio"
-            width={200}
-            height={100}
-            className={styles.logo}
-          />
-          <p className="h2">{t("cta-text")}</p>
-          <Button
-            text={t("cta-button")}
-            onClick={() => push(`/${lng}/contact-us`)}
-          />
+          <div className={styles.topRowItem}>
+            <Image
+              src="/static/tuki-logo-full-white.png"
+              alt="Tuki Studio"
+              width={179}
+              height={89}
+              className={styles.logo}
+            />
+          </div>
+          <div className={styles.topRowItem}>
+            <p className="h2">{t("cta-text")}</p>
+          </div>
+          <div className={styles.topRowItem}>
+            <Button
+              text={t("cta-button")}
+              onClick={() => push(`/${lng}/contact-us`)}
+            />
+          </div>
         </div>
       )}
 
