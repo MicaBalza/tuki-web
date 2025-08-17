@@ -28,7 +28,7 @@ const PharmaceuticalServices = () => {
         <ul className={styles.list}>
           {listItems.map((item, index) => {
             const serviceSlug = [
-              "presentation-videos",
+              "promotional-videos",
               "product-launches",
               "events-conferences-content",
             ][index];
