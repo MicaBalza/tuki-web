@@ -15,7 +15,7 @@ export default function ServicesBoard({ lng }: ServicesBoardProps) {
     { key: "item3", url: "tutorials-training" },
     { key: "item4", url: "promotional-videos" },
     { key: "item5", url: "events-congress" },
-    { key: "item6", url: "video-podcast" }
+    { key: "item6", url: "video-podcast" },
   ];
 
   return (
@@ -33,8 +33,15 @@ export default function ServicesBoard({ lng }: ServicesBoardProps) {
               <ul className={styles.servicesList}>
                 {serviceLinks.map((service) => (
                   <li key={service.key} className={styles.serviceItem}>
-                    <Link href={`/${lng}/pharmaceutical-services/${service.url}`} className={`${styles.serviceLink} text-purple h4`}>
-                      <span className={styles.checkmark}>✓</span>
+                    <Link
+                      href={`/${lng}/pharmaceutical-services/${service.url}`}
+                      className={`${styles.serviceLink} text-purple h4`}
+                    >
+                      <img
+                        src="/static/icons/chevron_down.svg"
+                        alt="Bullet"
+                        className={styles.chevron}
+                      />
                       <span>{t(`services.${service.key}`)}</span>
                     </Link>
                   </li>
