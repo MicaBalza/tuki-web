@@ -48,7 +48,7 @@ export const ROUTES = [
         text: "podcast-videos",
       },
       {
-        path: "/pharmaceutical-services/services",
+        path: "/pharmaceutical-services",
         text: "projects",
       },
     ],

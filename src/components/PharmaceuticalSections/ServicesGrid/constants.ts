@@ -46,7 +46,7 @@ export const serviceImages: ServiceImage[] = [
     url: "events-congress",
     titleKey: "events",
     descriptionKey: "events",
-    videoUrl: "https://www.youtube.com/embed/npB7v7ZFQ2g?si=UkP4ZylrlVxbVJcG",
+    videoUrl: "https://www.youtube.com/embed/1DS_mkqlSbQ?si=h4XcTjBQWqvH8wok",
   },
   {
     src: "/static/images/pharmaceutical-services/podcast-videos.png",

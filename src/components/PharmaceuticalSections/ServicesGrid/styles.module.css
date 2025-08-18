@@ -95,7 +95,7 @@
 }
 
 .modalContent {
-  background: var(--light-purple);
+  background: var(--purple);
   padding: 40px;
   border-radius: 12px;
   max-width: 1200px;
@@ -114,7 +114,7 @@
   border: none;
   font-size: 30px;
   cursor: pointer;
-  color: var(--purple);
+  color: var(--white);
   line-height: 1;
 }
 
@@ -190,7 +190,7 @@
 }
 
 .modalTitle {
-  color: var(--purple);
+  color: var(--light-green);
   font-size: 2rem;
   font-weight: 700;
   margin: 0;
@@ -198,7 +198,7 @@
 }
 
 .modalDescription {
-  color: var(--purple);
+  color: var(--white);
   font-size: 1.2rem;
   line-height: 1.6;
   margin: 0;
