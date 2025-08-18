@@ -38,8 +38,8 @@ const Footer = () => {
             <Image
               src="/static/tuki-logo-full-white.png"
               alt="Tuki Studio"
-              width={179}
-              height={89}
+              width={150}
+              height={75}
               className={styles.logo}
             />
           </div>
@@ -62,8 +62,8 @@ const Footer = () => {
             <Image
               src="/static/tuki-logo-full-white.png"
               alt="Tuki Studio"
-              width={200}
-              height={100}
+              width={150}
+              height={75}
               className={styles.logo}
             />
           </div>

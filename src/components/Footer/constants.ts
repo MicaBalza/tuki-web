@@ -68,7 +68,7 @@ export const FOOTER_SECTIONS = [
         text: "podcast-videos",
         path: "/pharmaceutical-services/podcast-videos",
       },
-      { text: "projects", path: "/pharmaceutical-services/services" },
+      { text: "projects", path: "/pharmaceutical-services" },
     ],
   },
   {
