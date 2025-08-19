@@ -14,7 +14,7 @@ export const serviceImages: ServiceImage[] = [
     url: "institutional-videos",
     titleKey: "institutional",
     descriptionKey: "institutional",
-    videoUrl: "https://www.youtube.com/embed/1pMA0rCGkBg?si=2Upc8mIJUzCvdka1",
+    videoUrl: "https://www.youtube.com/embed/EUH6stzUVv8?si=SVeuM00QiJQCKoRf",
   },
   {
     src: "/static/images/pharmaceutical-services/product-launch.png",
@@ -22,7 +22,7 @@ export const serviceImages: ServiceImage[] = [
     url: "product-launch",
     titleKey: "productLaunch",
     descriptionKey: "productLaunch",
-    videoUrl: "https://www.youtube.com/embed/bQavAa2pVSg?si=9ljRmBFhVPlCRPVR",
+    videoUrl: "https://www.youtube.com/embed/hRX06tvkXJk?si=AsP0uX5J0PfpGoIa",
   },
   {
     src: "/static/images/pharmaceutical-services/tutorial-training.png",
@@ -46,7 +46,7 @@ export const serviceImages: ServiceImage[] = [
     url: "events-congress",
     titleKey: "events",
     descriptionKey: "events",
-    videoUrl: "https://www.youtube.com/embed/1DS_mkqlSbQ?si=h4XcTjBQWqvH8wok",
+    videoUrl: "https://www.youtube.com/embed/cLsYr8_LtGQ?si=nV61LAQHGwsUCNv7",
   },
   {
     src: "/static/images/pharmaceutical-services/podcast-videos.png",
