@@ -400,8 +400,42 @@ const figCreme: ProjectData = [
   },
 ];
 
+const elLadoBuenoDeLasMarcas: ProjectData = [
+  {
+    type: "cover",
+    name: "El Lado Bueno de las Marcas",
+    country: "España",
+    description: "PROJECT SCOPE",
+    goal: "Re-diseñoi de logo, identidad de marca, branding y aplicación en redes sociales para espacio digital que ofrece servicios de Marketing y formación para el crecimiento de marcas en Barcelona.",
+    creativity: "Conceptualización Creativa<br>Dirección de arte<br>Branding",
+    production:
+      "Definición del estilo gráfico<br>Identidad de Marca<br>Diseño Gráfico<br>Ilustración de personajes<br>Animación de logo",
+  },
+  {
+    type: "flex-video",
+    quantity: 1,
+    flex: "oneWide",
+  },
+  {
+    type: "flex",
+    quantity: 3,
+    flex: "threeWide",
+  },
+  {
+    type: "flex",
+    quantity: 3,
+    flex: "threeWide",
+  },
+  {
+    type: "flex-video",
+    quantity: 1,
+    flex: "oneWide",
+  },
+];
+
 export const BRANDING_PROJECTS: Record<string, ProjectData> = {
   bardo,
+  elLadoBuenoDeLasMarcas,
   viuty,
   malcriada,
   babaStudio,
