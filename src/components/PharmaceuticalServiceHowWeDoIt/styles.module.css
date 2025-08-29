@@ -1,0 +1,107 @@
+/* Second Section */
+.secondSection {
+  padding-top: 3rem;
+}
+
+.secondSectionContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.secondSectionTitle {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: var(--purple);
+}
+
+.secondSectionDescription {
+  font-size: 1.2rem;
+  color: var(--purple);
+  max-width: 1000px;
+}
+
+/* Process Container */
+.processContainer {
+  position: relative;
+}
+
+.processImages {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.processImageCard {
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.processImageCard:hover {
+  transform: translateY(-5px);
+}
+
+.processContainer:hover .expandableSection {
+  opacity: 1;
+  max-height: 300px;
+  padding: 2rem 0;
+}
+
+.processImage {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.processImageTitle {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--purple);
+  margin-bottom: 1rem;
+}
+
+/* Expandable Section */
+.expandableSection {
+  background: white;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  opacity: 0;
+  max-height: 0;
+}
+
+.expandableGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.expandableItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.expandableItem p {
+  color: var(--purple);
+  max-width: 300px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .processImages {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .expandableGrid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
