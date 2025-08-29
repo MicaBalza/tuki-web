@@ -25,6 +25,10 @@ export interface PharmaceuticalService {
     step5: string;
     step6: string;
   };
+  faq: {
+    question: string;
+    answer: string;
+  }[];
 }
 
 export const PHARMACEUTICAL_SERVICES: Record<string, PharmaceuticalService> = {
@@ -62,6 +66,16 @@ export const PHARMACEUTICAL_SERVICES: Record<string, PharmaceuticalService> = {
       step5: "Integración de música corporativa, locución profesional y efectos de sonido que refuercen el mensaje.",
       step6: "Entrega del video en formatos optimizados y asesoría para su difusión en distintos canales."
     },
+    faq: [
+      {
+        question: "¿Cuánto tiempo toma producir un video institucional?",
+        answer: "El tiempo de producción varía según la complejidad, pero generalmente oscila entre 3-5 semanas desde el briefing hasta la entrega final."
+      },
+      {
+        question: "¿Qué incluye el servicio de video institucional?",
+        answer: "Incluye concepto creativo, guión, storyboard, animación, locución profesional, música y entrega en múltiples formatos."
+      }
+    ],
   },
   "product-launch": {
     id: "product-launch",
@@ -97,6 +111,16 @@ export const PHARMACEUTICAL_SERVICES: Record<string, PharmaceuticalService> = {
       step5: "El sonido también comunica: integramos música corporativa, voz y efectos que eleven el contenido.",
       step6: "Entregamos el video listo para usar, adaptado a cada plataforma, y te asesoramos en su distribución."
     },
+    faq: [
+      {
+        question: "¿Qué diferencia hay entre video de lanzamiento y promocional?",
+        answer: "Los videos de lanzamiento se enfocan en explicar cómo funciona el producto, mientras que los promocionales destacan sus beneficios y ventajas competitivas."
+      },
+      {
+        question: "¿Pueden adaptar el video para diferentes audiencias?",
+        answer: "Sí, adaptamos el contenido para profesionales médicos, pacientes o inversores según tus necesidades específicas."
+      }
+    ],
   },
   "tutorial-training": {
     id: "tutorial-training",
@@ -132,6 +156,16 @@ export const PHARMACEUTICAL_SERVICES: Record<string, PharmaceuticalService> = {
       step5: "Diseñamos el paisaje sonoro del video con locución profesional, música y efectos que acompañen tu mensaje.",
       step6: "Exportamos en los formatos adecuados y te guiamos para que el contenido llegue a donde tiene que estar."
     },
+    faq: [
+      {
+        question: "¿Qué tipos de tutoriales pueden crear?",
+        answer: "Creamos desde tutoriales de uso de dispositivos médicos hasta capacitaciones sobre procedimientos y uso de aplicaciones de salud."
+      },
+      {
+        question: "¿El contenido se adapta a diferentes niveles de conocimiento?",
+        answer: "Absolutamente. Adaptamos el lenguaje y nivel de detalle según la audiencia: profesionales, estudiantes o pacientes."
+      }
+    ],
   },
   "promotional-videos": {
     id: "promotional-videos",
@@ -167,6 +201,16 @@ export const PHARMACEUTICAL_SERVICES: Record<string, PharmaceuticalService> = {
       step5: "Cuidamos el sonido del video con una selección de música, voz y efectos que aporten coherencia y emoción.",
       step6: "Video final optimizado para web, redes o presentaciones, junto con consejos para su difusión efectiva."
     },
+    faq: [
+      {
+        question: "¿En qué formatos entregan los videos promocionales?",
+        answer: "Entregamos en formatos optimizados para redes sociales, web y presentaciones, incluyendo versiones cortas y largas según necesites."
+      },
+      {
+        question: "¿Cumplen con las regulaciones farmacéuticas?",
+        answer: "Sí, todos nuestros videos promocionales respetan las normativas del sector farmacéutico y pueden incluir disclaimers requeridos."
+      }
+    ],
   },
   "events-conferences": {
     id: "events-conferences",
@@ -202,6 +246,16 @@ export const PHARMACEUTICAL_SERVICES: Record<string, PharmaceuticalService> = {
       step5: "Sumamos audio profesional: música, locución y efectos que acompañen y refuercen la narrativa.",
       step6: "Recibís el material listo para publicar, en los formatos que necesites, con apoyo en su estrategia de difusión."
     },
+    faq: [
+      {
+        question: "¿Qué tipo de contenido crean para eventos?",
+        answer: "Desarrollamos presentaciones animadas, videos explicativos para stands y material audiovisual para conferencias médicas."
+      },
+      {
+        question: "¿Pueden adaptar el contenido durante el evento?",
+        answer: "Sí, ofrecemos soporte y adaptaciones de último momento para ajustar el contenido a las necesidades del evento."
+      }
+    ],
   },
   "podcast-videos": {
     id: "podcast-videos",
@@ -237,6 +291,16 @@ export const PHARMACEUTICAL_SERVICES: Record<string, PharmaceuticalService> = {
       step5: "Incorporamos música, voz en off y efectos sonoros alineados con tu marca para potenciar el mensaje.",
       step6: "Entrega final adaptada a distintos canales, más recomendaciones para sacarle el máximo provecho al contenido."
     },
+    faq: [
+      {
+        question: "¿Qué necesitan para empezar con un video podcast?",
+        answer: "Solo necesitamos tu audio original y una breve descripción del contenido. Nosotros nos encargamos del resto."
+      },
+      {
+        question: "¿Pueden trabajar con episodios ya grabados?",
+        answer: "Sí, trabajamos tanto con episodios existentes como con producciones nuevas desde cero."
+      }
+    ],
   },
 };
 
