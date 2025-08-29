@@ -13,6 +13,10 @@ export interface PharmaceuticalService {
     animation3d: string;
     motionGraphics: string;
   };
+  video: {
+    description: string;
+    videoUrl: string;
+  };
 }
 
 export const PHARMACEUTICAL_SERVICES: Record<string, PharmaceuticalService> = {
@@ -30,9 +34,17 @@ export const PHARMACEUTICAL_SERVICES: Record<string, PharmaceuticalService> = {
       description:
         "Elige la opción que mejor se adapte a tu mensaje y presupuesto. Desde ilustraciones simples y educativas en 2D, hasta animaciones complejas en 3D, pasando por gráficos en movimiento.",
       bgColor: "pink",
-      animation2d: "Transmitimos la misión, visión y valores de tu empresa a través de animaciones accesibles y atractivas. Perfecto para contar la historia de tu marca de manera clara y emotiva.",
-      animation3d: "Creamos representaciones visuales realistas que destacan tu infraestructura, procesos y estándares de calidad con un alto nivel de detalle y profesionalismo",
-      motionGraphics: "Presentamos información clave de tu empresa con gráficos dinámicos, datos en movimiento y efectos visuales que refuerzan tu identidad corporativa"
+      animation2d:
+        "Transmitimos la misión, visión y valores de tu empresa a través de animaciones accesibles y atractivas. Perfecto para contar la historia de tu marca de manera clara y emotiva.",
+      animation3d:
+        "Creamos representaciones visuales realistas que destacan tu infraestructura, procesos y estándares de calidad con un alto nivel de detalle y profesionalismo",
+      motionGraphics:
+        "Presentamos información clave de tu empresa con gráficos dinámicos, datos en movimiento y efectos visuales que refuerzan tu identidad corporativa",
+    },
+    video: {
+      description:
+        "Selección de videos institucionales realizados en MyeVideo / Medevice Digital. Desde el concepto hasta la entrega final, en Tuki Studio nos encargamos de la dirección creativa, el desarrollo del guión y la coordinación del equipo de producción.",
+      videoUrl: "https://www.youtube.com/embed/EUH6stzUVv8?si=SVeuM00QiJQCKoRf",
     },
   },
   "product-launch": {
@@ -49,9 +61,17 @@ export const PHARMACEUTICAL_SERVICES: Record<string, PharmaceuticalService> = {
       description:
         "Selecciona el formato que mejor encaje con tu mensaje y presupuesto: desde ilustraciones didácticas en 2D hasta animaciones complejas en 3D, sin olvidar los motion graphics.",
       bgColor: "pink",
-      animation2d: "Comunicar quién sos y qué te mueve: animaciones claras, accesibles y con alma, pensadas para reflejar la esencia de tu marca.",
-      animation3d: "Mostramos lo mejor de tu empresa con animaciones realistas que destacan instalaciones, procesos y calidad con todo detalle.",
-      motionGraphics: "Información clave, bien presentada: gráficos en movimiento y efectos visuales que hacen que tu mensaje se entienda y se recuerde."
+      animation2d:
+        "Comunicar quién sos y qué te mueve: animaciones claras, accesibles y con alma, pensadas para reflejar la esencia de tu marca.",
+      animation3d:
+        "Mostramos lo mejor de tu empresa con animaciones realistas que destacan instalaciones, procesos y calidad con todo detalle.",
+      motionGraphics:
+        "Información clave, bien presentada: gráficos en movimiento y efectos visuales que hacen que tu mensaje se entienda y se recuerde.",
+    },
+    video: {
+      description:
+        "Clips de lanzamientos pensados para destacar lo mejor de cada producto. En Tuki Studio lideramos el enfoque creativo, la narrativa visual y la producción integral, como parte del equipo de MyeVideo / Medevice Digital.",
+      videoUrl: "https://www.youtube.com/embed/hRX06tvkXJk?si=AsP0uX5J0PfpGoIa",
     },
   },
   "tutorial-training": {
@@ -68,9 +88,17 @@ export const PHARMACEUTICAL_SERVICES: Record<string, PharmaceuticalService> = {
       description:
         "Adaptamos la producción a tu idea y presupuesto: ilustraciones simples en 2D, gráficos en movimiento o animaciones más complejas en 3D.",
       bgColor: "nude",
-      animation2d: "Damos vida a la historia de tu empresa con animaciones visuales que conectan emocionalmente y comunican tu propósito con claridad.",
-      animation3d: "Reproducimos visualmente tu infraestructura y procesos con precisión y profesionalismo, cuidando cada aspecto técnico.",
-      motionGraphics: "Animaciones dinámicas para presentar tus datos de forma clara, estética y en sintonía con tu imagen de marca."
+      animation2d:
+        "Damos vida a la historia de tu empresa con animaciones visuales que conectan emocionalmente y comunican tu propósito con claridad.",
+      animation3d:
+        "Reproducimos visualmente tu infraestructura y procesos con precisión y profesionalismo, cuidando cada aspecto técnico.",
+      motionGraphics:
+        "Animaciones dinámicas para presentar tus datos de forma clara, estética y en sintonía con tu imagen de marca.",
+    },
+    video: {
+      description:
+        "Fragmentos de videos explicativos diseñados para hacer más fácil lo complejo. Desarrollo de guión, propuesta visual y supervisión de todo el proceso creativo, realizados por Tuki Studio durante nuestra etapa en MyeVideo / Medevice Digital.",
+      videoUrl: "https://www.youtube.com/embed/pUtpN6ak1rE?si=9MR24_qGD6ZxB8LW",
     },
   },
   "promotional-videos": {
@@ -87,9 +115,17 @@ export const PHARMACEUTICAL_SERVICES: Record<string, PharmaceuticalService> = {
       description:
         "Desde animaciones sencillas en 2D hasta piezas elaboradas en 3D, incluyendo motion graphics: elige lo que mejor se ajuste a tu mensaje y tus recursos.",
       bgColor: "pink",
-      animation2d: "Animaciones pensadas para contar tu misión, visión y valores de forma cercana, comprensible y visualmente atractiva.",
-      animation3d: "Damos forma a representaciones realistas que reflejan tu nivel de calidad, tecnología e instalaciones con fidelidad visual.",
-      motionGraphics: "Datos que se mueven, gráficos que comunican: creamos piezas visuales alineadas con tu identidad corporativa."
+      animation2d:
+        "Animaciones pensadas para contar tu misión, visión y valores de forma cercana, comprensible y visualmente atractiva.",
+      animation3d:
+        "Damos forma a representaciones realistas que reflejan tu nivel de calidad, tecnología e instalaciones con fidelidad visual.",
+      motionGraphics:
+        "Datos que se mueven, gráficos que comunican: creamos piezas visuales alineadas con tu identidad corporativa.",
+    },
+    video: {
+      description:
+        "Piezas promocionales creadas para campañas, redes y presentaciones. Desde Tuki Studio nos encargamos de la dirección creativa y la coordinación general, trabajando como parte del equipo de MyeVideo / Medevice Digital.",
+      videoUrl: "https://www.youtube.com/embed/LmlLAJe8Edo?si=jv07OTGNn6-qIA5_",
     },
   },
   "events-conferences": {
@@ -106,9 +142,17 @@ export const PHARMACEUTICAL_SERVICES: Record<string, PharmaceuticalService> = {
       description:
         "Tienes opciones para cada tipo de mensaje y presupuesto: 2D educativo, motion graphics dinámico o animación 3D con más detalle.",
       bgColor: "nude",
-      animation2d: "Hacemos que tu marca hable: animaciones simples y emotivas para transmitir lo que te define como empresa.",
-      animation3d: "Visualizamos tus procesos e instalaciones con detalle y realismo, resaltando tu estándar profesional.",
-      motionGraphics: "Visualizamos tus cifras y mensajes clave con motion graphics que combinan ritmo, diseño y coherencia de marca."
+      animation2d:
+        "Hacemos que tu marca hable: animaciones simples y emotivas para transmitir lo que te define como empresa.",
+      animation3d:
+        "Visualizamos tus procesos e instalaciones con detalle y realismo, resaltando tu estándar profesional.",
+      motionGraphics:
+        "Visualizamos tus cifras y mensajes clave con motion graphics que combinan ritmo, diseño y coherencia de marca.",
+    },
+    video: {
+      description:
+        "Contenido pensado para pantallas grandes y momentos clave. Concepto, guión visual y supervisión de producción a cargo de Tuki Studio, dentro de nuestro trabajo en MyeVideo / Medevice Digital.",
+      videoUrl: "https://www.youtube.com/embed/cLsYr8_LtGQ?si=nV61LAQHGwsUCNv7",
     },
   },
   "podcast-videos": {
@@ -125,9 +169,17 @@ export const PHARMACEUTICAL_SERVICES: Record<string, PharmaceuticalService> = {
       description:
         "¿Tu mensaje es simple o complejo? Tenemos el estilo adecuado para cada necesidad y presupuesto: 2D, motion graphics o animación 3D.",
       bgColor: "pink",
-      animation2d: "Una forma clara y visual de compartir tu propósito: animaciones que cuentan la historia de tu marca desde lo emocional y lo accesible.",
-      animation3d: "Animaciones que muestran tu infraestructura con claridad técnica y estética, transmitiendo confianza y calidad.",
-      motionGraphics: "Transformamos tus datos en gráficos animados que informan, impactan y refuerzan tu identidad visual."
+      animation2d:
+        "Una forma clara y visual de compartir tu propósito: animaciones que cuentan la historia de tu marca desde lo emocional y lo accesible.",
+      animation3d:
+        "Animaciones que muestran tu infraestructura con claridad técnica y estética, transmitiendo confianza y calidad.",
+      motionGraphics:
+        "Transformamos tus datos en gráficos animados que informan, impactan y refuerzan tu identidad visual.",
+    },
+    video: {
+      description:
+        "Diseño visual, edición y narrativa para podcasts en vídeo. Proyecto desarrollado por Tuki Studio como parte del equipo de MyeVideo / Medevice Digital.",
+      videoUrl: "https://www.youtube.com/embed/OZ4RoZyxcqM?si=gOGj2jxZFVuxDVUM",
     },
   },
 };

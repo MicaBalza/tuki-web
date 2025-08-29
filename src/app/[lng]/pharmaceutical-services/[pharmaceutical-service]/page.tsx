@@ -1,10 +1,14 @@
+"use client";
+
+import Button from "@/components/Button";
 import PageContainer from "@/components/PageContainer";
 import {
   PHARMACEUTICAL_PROCESS_IMAGES,
   PHARMACEUTICAL_SERVICES,
 } from "@/constants/pharmaceuticalServices";
 import Image from "next/image";
-import { notFound } from "next/navigation";
+import { notFound, useRouter } from "next/navigation";
+import { use } from "react";
 import styles from "./page.module.css";
 
 type Params = {
@@ -12,11 +16,12 @@ type Params = {
   "pharmaceutical-service": string;
 };
 
-export default async function PharmaceuticalServicePage(props: {
+export default function PharmaceuticalServicePage(props: {
   params: Promise<Params>;
 }) {
-  const params = await props.params;
-  const serviceId = params["pharmaceutical-service"];
+  const params = use(props.params);
+  const { "pharmaceutical-service": serviceId } = params;
+  const { push } = useRouter();
 
   const service = PHARMACEUTICAL_SERVICES[serviceId];
 
@@ -29,9 +34,7 @@ export default async function PharmaceuticalServicePage(props: {
     : "white";
 
   return (
-    <PageContainer
-      className={`${styles.container} bg-${service.cover.bgColor}`}
-    >
+    <PageContainer className={`bg-${service.cover.bgColor}`}>
       {/* Header Section */}
       <div className={styles.headerSection}>
         <div className={styles.headerImage}>
@@ -109,20 +112,43 @@ export default async function PharmaceuticalServicePage(props: {
           </div>
 
           <div className={styles.expandableSection}>
-            <div className={styles.expandableContent}>
-              <div className={styles.expandableGrid}>
-                <div className={styles.expandableItem}>
-                  <p>{service.howWeDoIt.animation2d}</p>
-                </div>
-                <div className={styles.expandableItem}>
-                  <p>{service.howWeDoIt.animation3d}</p>
-                </div>
-                <div className={styles.expandableItem}>
-                  <p>{service.howWeDoIt.motionGraphics}</p>
-                </div>
+            <div className={styles.expandableGrid}>
+              <div className={styles.expandableItem}>
+                <p>{service.howWeDoIt.animation2d}</p>
+              </div>
+              <div className={styles.expandableItem}>
+                <p>{service.howWeDoIt.animation3d}</p>
+              </div>
+              <div className={styles.expandableItem}>
+                <p>{service.howWeDoIt.motionGraphics}</p>
               </div>
             </div>
           </div>
+        </div>
+      </div>
+
+      {/* Third Section - Video and Content */}
+      <div className={styles.thirdSection}>
+        <div className={styles.thirdSectionVideo}>
+          <iframe
+            src={service.video.videoUrl}
+            title="Pharmaceutical service video"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            className={styles.video}
+          />
+        </div>
+
+        <div className={styles.thirdSectionContentContainer}>
+          <div className={styles.thirdSectionContent}>
+            <h3 className="text-purple text-center">{service.cover.title}</h3>
+            <p className={styles.thirdSectionDescription}>
+              {service.video.description}
+            </p>
+          </div>
+          <Button
+            text="Ver más Videos Farma aquí :)"
+            onClick={() => push("/pharmaceutical-services")}
+          />
         </div>
       </div>
     </PageContainer>
