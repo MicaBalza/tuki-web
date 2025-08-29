@@ -17,6 +17,14 @@ export interface PharmaceuticalService {
     description: string;
     videoUrl: string;
   };
+  processSteps: {
+    step1: string;
+    step2: string;
+    step3: string;
+    step4: string;
+    step5: string;
+    step6: string;
+  };
 }
 
 export const PHARMACEUTICAL_SERVICES: Record<string, PharmaceuticalService> = {
@@ -46,6 +54,14 @@ export const PHARMACEUTICAL_SERVICES: Record<string, PharmaceuticalService> = {
         "Selección de videos institucionales realizados en MyeVideo / Medevice Digital. Desde el concepto hasta la entrega final, en Tuki Studio nos encargamos de la dirección creativa, el desarrollo del guión y la coordinación del equipo de producción.",
       videoUrl: "https://www.youtube.com/embed/EUH6stzUVv8?si=SVeuM00QiJQCKoRf",
     },
+    processSteps: {
+      step1: "Reunión para comprender la esencia de tu empresa, su historia, valores y mensaje clave.",
+      step2: "Desarrollo de una narrativa visual atractiva que cuente la historia de tu marca o destaque su impacto en la industria.",
+      step3: "Definición del estilo gráfico, elección de colores y tipografías alineadas con la identidad de la empresa.",
+      step4: "Creación del video utilizando animación 2D, 3D o Motion Graphics, según el enfoque más adecuado",
+      step5: "Integración de música corporativa, locución profesional y efectos de sonido que refuercen el mensaje.",
+      step6: "Entrega del video en formatos optimizados y asesoría para su difusión en distintos canales."
+    },
   },
   "product-launch": {
     id: "product-launch",
@@ -72,6 +88,14 @@ export const PHARMACEUTICAL_SERVICES: Record<string, PharmaceuticalService> = {
       description:
         "Clips de lanzamientos pensados para destacar lo mejor de cada producto. En Tuki Studio lideramos el enfoque creativo, la narrativa visual y la producción integral, como parte del equipo de MyeVideo / Medevice Digital.",
       videoUrl: "https://www.youtube.com/embed/hRX06tvkXJk?si=AsP0uX5J0PfpGoIa",
+    },
+    processSteps: {
+      step1: "Primera reunión para conocer a fondo tu marca: quiénes son, qué hacen y qué los diferencia.",
+      step2: "Diseñamos una narrativa visual que resuma tu esencia y resalte tu valor en el sector.",
+      step3: "Seleccionamos el estilo visual, paleta de colores y tipografía que mejor representen tu marca.",
+      step4: "Producimos el video con la técnica más adecuada: 2D, 3D o motion graphics, según el mensaje.",
+      step5: "El sonido también comunica: integramos música corporativa, voz y efectos que eleven el contenido.",
+      step6: "Entregamos el video listo para usar, adaptado a cada plataforma, y te asesoramos en su distribución."
     },
   },
   "tutorial-training": {
@@ -100,6 +124,14 @@ export const PHARMACEUTICAL_SERVICES: Record<string, PharmaceuticalService> = {
         "Fragmentos de videos explicativos diseñados para hacer más fácil lo complejo. Desarrollo de guión, propuesta visual y supervisión de todo el proceso creativo, realizados por Tuki Studio durante nuestra etapa en MyeVideo / Medevice Digital.",
       videoUrl: "https://www.youtube.com/embed/pUtpN6ak1rE?si=9MR24_qGD6ZxB8LW",
     },
+    processSteps: {
+      step1: "Espacio inicial para entender la identidad, el recorrido y los valores fundamentales de tu empresa.",
+      step2: "Creamos un relato visual que muestre quién sos y cómo generas impacto.",
+      step3: "Definimos el universo gráfico del video: estilo, colores y letras que hablen tu mismo idioma.",
+      step4: "Elegimos el tipo de animación que mejor se ajusta a tu proyecto y llevamos la idea a pantalla.",
+      step5: "Diseñamos el paisaje sonoro del video con locución profesional, música y efectos que acompañen tu mensaje.",
+      step6: "Exportamos en los formatos adecuados y te guiamos para que el contenido llegue a donde tiene que estar."
+    },
   },
   "promotional-videos": {
     id: "promotional-videos",
@@ -126,6 +158,14 @@ export const PHARMACEUTICAL_SERVICES: Record<string, PharmaceuticalService> = {
       description:
         "Piezas promocionales creadas para campañas, redes y presentaciones. Desde Tuki Studio nos encargamos de la dirección creativa y la coordinación general, trabajando como parte del equipo de MyeVideo / Medevice Digital.",
       videoUrl: "https://www.youtube.com/embed/LmlLAJe8Edo?si=jv07OTGNn6-qIA5_",
+    },
+    processSteps: {
+      step1: "Comenzamos escuchando: una reunión para captar el corazón de tu marca y su mensaje principal.",
+      step2: "Construimos una historia visual que conecte con tu audiencia y destaque lo que te hace único.",
+      step3: "Construimos una estética visual coherente con tu identidad y mensaje.",
+      step4: "Animamos tu historia con el estilo que más te convenga: desde lo simple a lo más complejo.",
+      step5: "Cuidamos el sonido del video con una selección de música, voz y efectos que aporten coherencia y emoción.",
+      step6: "Video final optimizado para web, redes o presentaciones, junto con consejos para su difusión efectiva."
     },
   },
   "events-conferences": {
@@ -154,6 +194,14 @@ export const PHARMACEUTICAL_SERVICES: Record<string, PharmaceuticalService> = {
         "Contenido pensado para pantallas grandes y momentos clave. Concepto, guión visual y supervisión de producción a cargo de Tuki Studio, dentro de nuestro trabajo en MyeVideo / Medevice Digital.",
       videoUrl: "https://www.youtube.com/embed/cLsYr8_LtGQ?si=nV61LAQHGwsUCNv7",
     },
+    processSteps: {
+      step1: "Nos reunimos para conectar con la historia, propósito y visión de tu empresa.",
+      step2: "Elaboramos un guión visual pensado para contar tu historia o resaltar tu lugar en la industria.",
+      step3: "Elegimos un lenguaje visual único: desde el estilo gráfico hasta los colores y tipografías.",
+      step4: "Aplicamos la técnica más efectiva para potenciar tu mensaje: animación 2D, 3D o motion.",
+      step5: "Sumamos audio profesional: música, locución y efectos que acompañen y refuercen la narrativa.",
+      step6: "Recibís el material listo para publicar, en los formatos que necesites, con apoyo en su estrategia de difusión."
+    },
   },
   "podcast-videos": {
     id: "podcast-videos",
@@ -180,6 +228,14 @@ export const PHARMACEUTICAL_SERVICES: Record<string, PharmaceuticalService> = {
       description:
         "Diseño visual, edición y narrativa para podcasts en vídeo. Proyecto desarrollado por Tuki Studio como parte del equipo de MyeVideo / Medevice Digital.",
       videoUrl: "https://www.youtube.com/embed/OZ4RoZyxcqM?si=gOGj2jxZFVuxDVUM",
+    },
+    processSteps: {
+      step1: "Punto de partida: entendemos tu historia y valores para construir un mensaje auténtico.",
+      step2: "Desarrollamos una narrativa visual clara y potente, alineada con la identidad de tu marca.",
+      step3: "Ajustamos el diseño a tu identidad, cuidando cada detalle visual del proyecto.",
+      step4: "El video cobra vida con el formato visual que mejor comunique tu propuesta.",
+      step5: "Incorporamos música, voz en off y efectos sonoros alineados con tu marca para potenciar el mensaje.",
+      step6: "Entrega final adaptada a distintos canales, más recomendaciones para sacarle el máximo provecho al contenido."
     },
   },
 };

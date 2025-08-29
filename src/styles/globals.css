@@ -81,6 +81,14 @@ img {
   color: var(--magenta);
 }
 
+.text-green {
+  color: var(--green);
+}
+
+.text-light-green {
+  color: var(--light-green);
+}
+
 .fill-purple * {
   fill: var(--purple);
 }
@@ -89,7 +97,8 @@ img {
   fill: var(--white);
 }
 
-h1 {
+h1,
+.h1 {
   font-size: clamp(1.5rem, 4vw, 2.25rem);
   font-weight: 400;
 }
