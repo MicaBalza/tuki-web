@@ -90,17 +90,12 @@ export default async function PharmaceuticalServicePage(props: {
                 <h3 className={styles.processImageTitle}>
                   {processImage.title}
                 </h3>
-                <div className={styles.chevronDown}>
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path
-                      d="M6 9L12 15L18 9"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </div>
+                <Image
+                  src="/static/icons/chevron_down_white.svg"
+                  alt="Chevron down"
+                  width={40}
+                  height={40}
+                />
               </div>
             ))}
           </div>
