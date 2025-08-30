@@ -50,16 +50,33 @@ export default function SlideMenu() {
           <div className={styles.content}>
             <div className={styles.mobileNavlinks}>
               {ROUTES.map((route) => (
-                <Link
-                  href={route.path}
-                  key={route.text}
-                  className={`${styles.navlink} text-white pointer`}
-                  onClick={() => setIsOpen(false)}
-                >
-                  {pathname.replace(`/${lng}`, "") === route.path ||
-                    pathname.replace(`${lng}`, "") === route.path}
-                  {t(route.text)}
-                </Link>
+                <div key={route.text} className={styles.mobileNavSection}>
+                  <Link
+                    href={route.path}
+                    className={`${styles.navlink} text-white pointer`}
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {pathname.replace(`/${lng}`, "") === route.path ||
+                      pathname.replace(`${lng}`, "") === route.path}
+                    {t(route.text)}
+                  </Link>
+                  {route.dropdown && (
+                    <div className={styles.mobileSublinks}>
+                      {route.dropdown
+                        .filter(item => item.text !== "pharmaceutical" && item.text !== "projects")
+                        .map((dropdownItem) => (
+                        <Link
+                          key={dropdownItem.text}
+                          href={dropdownItem.path}
+                          className={`${styles.sublink} text-white pointer`}
+                          onClick={() => setIsOpen(false)}
+                        >
+                          {t(dropdownItem.text)}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
               ))}
             </div>
             <div className={styles.footer}>

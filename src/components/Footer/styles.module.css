@@ -147,4 +147,8 @@
     flex-direction: column;
     gap: 16px;
   }
+
+  .topRowItem:last-child > button {
+    margin-left: 0;
+  }
 }
