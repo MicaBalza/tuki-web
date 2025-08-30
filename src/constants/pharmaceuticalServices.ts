@@ -59,22 +59,72 @@ export const PHARMACEUTICAL_SERVICES: Record<string, PharmaceuticalService> = {
       videoUrl: "https://www.youtube.com/embed/EUH6stzUVv8?si=SVeuM00QiJQCKoRf",
     },
     processSteps: {
-      step1: "Reunión para comprender la esencia de tu empresa, su historia, valores y mensaje clave.",
-      step2: "Desarrollo de una narrativa visual atractiva que cuente la historia de tu marca o destaque su impacto en la industria.",
-      step3: "Definición del estilo gráfico, elección de colores y tipografías alineadas con la identidad de la empresa.",
-      step4: "Creación del video utilizando animación 2D, 3D o Motion Graphics, según el enfoque más adecuado",
-      step5: "Integración de música corporativa, locución profesional y efectos de sonido que refuercen el mensaje.",
-      step6: "Entrega del video en formatos optimizados y asesoría para su difusión en distintos canales."
+      step1:
+        "Reunión para comprender la esencia de tu empresa, su historia, valores y mensaje clave.",
+      step2:
+        "Desarrollo de una narrativa visual atractiva que cuente la historia de tu marca o destaque su impacto en la industria.",
+      step3:
+        "Definición del estilo gráfico, elección de colores y tipografías alineadas con la identidad de la empresa.",
+      step4:
+        "Creación del video utilizando animación 2D, 3D o Motion Graphics, según el enfoque más adecuado",
+      step5:
+        "Integración de música corporativa, locución profesional y efectos de sonido que refuercen el mensaje.",
+      step6:
+        "Entrega del video en formatos optimizados y asesoría para su difusión en distintos canales.",
     },
     faq: [
       {
-        question: "¿Cuánto tiempo toma producir un video institucional?",
-        answer: "El tiempo de producción varía según la complejidad, pero generalmente oscila entre 3-5 semanas desde el briefing hasta la entrega final."
+        question:
+          "¿Qué es un vídeo institucional o corporativo y para qué sirve?",
+        answer:
+          "El tiempo de producción varía según la complejidad, pero generalmente oscila entre 3-5 semanas desde el briefing hasta la entrega final.",
       },
       {
-        question: "¿Qué incluye el servicio de video institucional?",
-        answer: "Incluye concepto creativo, guión, storyboard, animación, locución profesional, música y entrega en múltiples formatos."
-      }
+        question:
+          "¿Qué diferencia hay entre un vídeo institucional y uno corporativo?",
+        answer:
+          "Incluye concepto creativo, guión, storyboard, animación, locución profesional, música y entrega en múltiples formatos.",
+      },
+      {
+        question: "¿Cuánto dura normalmente un vídeo corporativo efectivo?",
+        answer:
+          "Creamos desde videos institucionales hasta videos corporativos, pasando por videos de lanzamiento de producto y tutoriales.",
+      },
+      {
+        question:
+          " ¿Qué elementos debe tener un buen vídeo institucional para empresas?",
+        answer:
+          "El tiempo de producción varía según la complejidad, pero generalmente oscila entre 3-5 semanas desde el briefing hasta la entrega final.",
+      },
+      {
+        question:
+          "¿Qué incluye el proceso de producción de un vídeo institucional en Tuki Studio?",
+        answer:
+          "El tiempo de producción varía según la complejidad, pero generalmente oscila entre 3-5 semanas desde el briefing hasta la entrega final.",
+      },
+      {
+        question:
+          "¿Qué tono o estilo audiovisual es más recomendable para representar mi empresa?",
+        answer:
+          "Creamos desde videos institucionales hasta videos corporativos, pasando por videos de lanzamiento de producto y tutoriales.",
+      },
+      {
+        question: " ¿Cuánto cuesta hacer un video institucional profesional?",
+        answer:
+          "El tiempo de producción varía según la complejidad, pero generalmente oscila entre 3-5 semanas desde el briefing hasta la entrega final.",
+      },
+      {
+        question:
+          "¿Puedo usar el video en mi sitio web, redes sociales y presentaciones?",
+        answer:
+          "Creamos desde videos institucionales hasta videos corporativos, pasando por videos de lanzamiento de producto y tutoriales.",
+      },
+      {
+        question:
+          "¿Qué beneficios aporta un video corporativo a la imagen de marca?",
+        answer:
+          "Creamos desde videos institucionales hasta videos corporativos, pasando por videos de lanzamiento de producto y tutoriales.",
+      },
     ],
   },
   "product-launch": {
@@ -104,22 +154,31 @@ export const PHARMACEUTICAL_SERVICES: Record<string, PharmaceuticalService> = {
       videoUrl: "https://www.youtube.com/embed/hRX06tvkXJk?si=AsP0uX5J0PfpGoIa",
     },
     processSteps: {
-      step1: "Primera reunión para conocer a fondo tu marca: quiénes son, qué hacen y qué los diferencia.",
-      step2: "Diseñamos una narrativa visual que resuma tu esencia y resalte tu valor en el sector.",
-      step3: "Seleccionamos el estilo visual, paleta de colores y tipografía que mejor representen tu marca.",
-      step4: "Producimos el video con la técnica más adecuada: 2D, 3D o motion graphics, según el mensaje.",
-      step5: "El sonido también comunica: integramos música corporativa, voz y efectos que eleven el contenido.",
-      step6: "Entregamos el video listo para usar, adaptado a cada plataforma, y te asesoramos en su distribución."
+      step1:
+        "Primera reunión para conocer a fondo tu marca: quiénes son, qué hacen y qué los diferencia.",
+      step2:
+        "Diseñamos una narrativa visual que resuma tu esencia y resalte tu valor en el sector.",
+      step3:
+        "Seleccionamos el estilo visual, paleta de colores y tipografía que mejor representen tu marca.",
+      step4:
+        "Producimos el video con la técnica más adecuada: 2D, 3D o motion graphics, según el mensaje.",
+      step5:
+        "El sonido también comunica: integramos música corporativa, voz y efectos que eleven el contenido.",
+      step6:
+        "Entregamos el video listo para usar, adaptado a cada plataforma, y te asesoramos en su distribución.",
     },
     faq: [
       {
-        question: "¿Qué diferencia hay entre video de lanzamiento y promocional?",
-        answer: "Los videos de lanzamiento se enfocan en explicar cómo funciona el producto, mientras que los promocionales destacan sus beneficios y ventajas competitivas."
+        question:
+          "¿Qué diferencia hay entre video de lanzamiento y promocional?",
+        answer:
+          "Los videos de lanzamiento se enfocan en explicar cómo funciona el producto, mientras que los promocionales destacan sus beneficios y ventajas competitivas.",
       },
       {
         question: "¿Pueden adaptar el video para diferentes audiencias?",
-        answer: "Sí, adaptamos el contenido para profesionales médicos, pacientes o inversores según tus necesidades específicas."
-      }
+        answer:
+          "Sí, adaptamos el contenido para profesionales médicos, pacientes o inversores según tus necesidades específicas.",
+      },
     ],
   },
   "tutorial-training": {
@@ -149,22 +208,31 @@ export const PHARMACEUTICAL_SERVICES: Record<string, PharmaceuticalService> = {
       videoUrl: "https://www.youtube.com/embed/pUtpN6ak1rE?si=9MR24_qGD6ZxB8LW",
     },
     processSteps: {
-      step1: "Espacio inicial para entender la identidad, el recorrido y los valores fundamentales de tu empresa.",
-      step2: "Creamos un relato visual que muestre quién sos y cómo generas impacto.",
-      step3: "Definimos el universo gráfico del video: estilo, colores y letras que hablen tu mismo idioma.",
-      step4: "Elegimos el tipo de animación que mejor se ajusta a tu proyecto y llevamos la idea a pantalla.",
-      step5: "Diseñamos el paisaje sonoro del video con locución profesional, música y efectos que acompañen tu mensaje.",
-      step6: "Exportamos en los formatos adecuados y te guiamos para que el contenido llegue a donde tiene que estar."
+      step1:
+        "Espacio inicial para entender la identidad, el recorrido y los valores fundamentales de tu empresa.",
+      step2:
+        "Creamos un relato visual que muestre quién sos y cómo generas impacto.",
+      step3:
+        "Definimos el universo gráfico del video: estilo, colores y letras que hablen tu mismo idioma.",
+      step4:
+        "Elegimos el tipo de animación que mejor se ajusta a tu proyecto y llevamos la idea a pantalla.",
+      step5:
+        "Diseñamos el paisaje sonoro del video con locución profesional, música y efectos que acompañen tu mensaje.",
+      step6:
+        "Exportamos en los formatos adecuados y te guiamos para que el contenido llegue a donde tiene que estar.",
     },
     faq: [
       {
         question: "¿Qué tipos de tutoriales pueden crear?",
-        answer: "Creamos desde tutoriales de uso de dispositivos médicos hasta capacitaciones sobre procedimientos y uso de aplicaciones de salud."
+        answer:
+          "Creamos desde tutoriales de uso de dispositivos médicos hasta capacitaciones sobre procedimientos y uso de aplicaciones de salud.",
       },
       {
-        question: "¿El contenido se adapta a diferentes niveles de conocimiento?",
-        answer: "Absolutamente. Adaptamos el lenguaje y nivel de detalle según la audiencia: profesionales, estudiantes o pacientes."
-      }
+        question:
+          "¿El contenido se adapta a diferentes niveles de conocimiento?",
+        answer:
+          "Absolutamente. Adaptamos el lenguaje y nivel de detalle según la audiencia: profesionales, estudiantes o pacientes.",
+      },
     ],
   },
   "promotional-videos": {
@@ -194,22 +262,30 @@ export const PHARMACEUTICAL_SERVICES: Record<string, PharmaceuticalService> = {
       videoUrl: "https://www.youtube.com/embed/LmlLAJe8Edo?si=jv07OTGNn6-qIA5_",
     },
     processSteps: {
-      step1: "Comenzamos escuchando: una reunión para captar el corazón de tu marca y su mensaje principal.",
-      step2: "Construimos una historia visual que conecte con tu audiencia y destaque lo que te hace único.",
-      step3: "Construimos una estética visual coherente con tu identidad y mensaje.",
-      step4: "Animamos tu historia con el estilo que más te convenga: desde lo simple a lo más complejo.",
-      step5: "Cuidamos el sonido del video con una selección de música, voz y efectos que aporten coherencia y emoción.",
-      step6: "Video final optimizado para web, redes o presentaciones, junto con consejos para su difusión efectiva."
+      step1:
+        "Comenzamos escuchando: una reunión para captar el corazón de tu marca y su mensaje principal.",
+      step2:
+        "Construimos una historia visual que conecte con tu audiencia y destaque lo que te hace único.",
+      step3:
+        "Construimos una estética visual coherente con tu identidad y mensaje.",
+      step4:
+        "Animamos tu historia con el estilo que más te convenga: desde lo simple a lo más complejo.",
+      step5:
+        "Cuidamos el sonido del video con una selección de música, voz y efectos que aporten coherencia y emoción.",
+      step6:
+        "Video final optimizado para web, redes o presentaciones, junto con consejos para su difusión efectiva.",
     },
     faq: [
       {
         question: "¿En qué formatos entregan los videos promocionales?",
-        answer: "Entregamos en formatos optimizados para redes sociales, web y presentaciones, incluyendo versiones cortas y largas según necesites."
+        answer:
+          "Entregamos en formatos optimizados para redes sociales, web y presentaciones, incluyendo versiones cortas y largas según necesites.",
       },
       {
         question: "¿Cumplen con las regulaciones farmacéuticas?",
-        answer: "Sí, todos nuestros videos promocionales respetan las normativas del sector farmacéutico y pueden incluir disclaimers requeridos."
-      }
+        answer:
+          "Sí, todos nuestros videos promocionales respetan las normativas del sector farmacéutico y pueden incluir disclaimers requeridos.",
+      },
     ],
   },
   "events-conferences": {
@@ -239,22 +315,30 @@ export const PHARMACEUTICAL_SERVICES: Record<string, PharmaceuticalService> = {
       videoUrl: "https://www.youtube.com/embed/cLsYr8_LtGQ?si=nV61LAQHGwsUCNv7",
     },
     processSteps: {
-      step1: "Nos reunimos para conectar con la historia, propósito y visión de tu empresa.",
-      step2: "Elaboramos un guión visual pensado para contar tu historia o resaltar tu lugar en la industria.",
-      step3: "Elegimos un lenguaje visual único: desde el estilo gráfico hasta los colores y tipografías.",
-      step4: "Aplicamos la técnica más efectiva para potenciar tu mensaje: animación 2D, 3D o motion.",
-      step5: "Sumamos audio profesional: música, locución y efectos que acompañen y refuercen la narrativa.",
-      step6: "Recibís el material listo para publicar, en los formatos que necesites, con apoyo en su estrategia de difusión."
+      step1:
+        "Nos reunimos para conectar con la historia, propósito y visión de tu empresa.",
+      step2:
+        "Elaboramos un guión visual pensado para contar tu historia o resaltar tu lugar en la industria.",
+      step3:
+        "Elegimos un lenguaje visual único: desde el estilo gráfico hasta los colores y tipografías.",
+      step4:
+        "Aplicamos la técnica más efectiva para potenciar tu mensaje: animación 2D, 3D o motion.",
+      step5:
+        "Sumamos audio profesional: música, locución y efectos que acompañen y refuercen la narrativa.",
+      step6:
+        "Recibís el material listo para publicar, en los formatos que necesites, con apoyo en su estrategia de difusión.",
     },
     faq: [
       {
         question: "¿Qué tipo de contenido crean para eventos?",
-        answer: "Desarrollamos presentaciones animadas, videos explicativos para stands y material audiovisual para conferencias médicas."
+        answer:
+          "Desarrollamos presentaciones animadas, videos explicativos para stands y material audiovisual para conferencias médicas.",
       },
       {
         question: "¿Pueden adaptar el contenido durante el evento?",
-        answer: "Sí, ofrecemos soporte y adaptaciones de último momento para ajustar el contenido a las necesidades del evento."
-      }
+        answer:
+          "Sí, ofrecemos soporte y adaptaciones de último momento para ajustar el contenido a las necesidades del evento.",
+      },
     ],
   },
   "podcast-videos": {
@@ -284,22 +368,30 @@ export const PHARMACEUTICAL_SERVICES: Record<string, PharmaceuticalService> = {
       videoUrl: "https://www.youtube.com/embed/OZ4RoZyxcqM?si=gOGj2jxZFVuxDVUM",
     },
     processSteps: {
-      step1: "Punto de partida: entendemos tu historia y valores para construir un mensaje auténtico.",
-      step2: "Desarrollamos una narrativa visual clara y potente, alineada con la identidad de tu marca.",
-      step3: "Ajustamos el diseño a tu identidad, cuidando cada detalle visual del proyecto.",
-      step4: "El video cobra vida con el formato visual que mejor comunique tu propuesta.",
-      step5: "Incorporamos música, voz en off y efectos sonoros alineados con tu marca para potenciar el mensaje.",
-      step6: "Entrega final adaptada a distintos canales, más recomendaciones para sacarle el máximo provecho al contenido."
+      step1:
+        "Punto de partida: entendemos tu historia y valores para construir un mensaje auténtico.",
+      step2:
+        "Desarrollamos una narrativa visual clara y potente, alineada con la identidad de tu marca.",
+      step3:
+        "Ajustamos el diseño a tu identidad, cuidando cada detalle visual del proyecto.",
+      step4:
+        "El video cobra vida con el formato visual que mejor comunique tu propuesta.",
+      step5:
+        "Incorporamos música, voz en off y efectos sonoros alineados con tu marca para potenciar el mensaje.",
+      step6:
+        "Entrega final adaptada a distintos canales, más recomendaciones para sacarle el máximo provecho al contenido.",
     },
     faq: [
       {
         question: "¿Qué necesitan para empezar con un video podcast?",
-        answer: "Solo necesitamos tu audio original y una breve descripción del contenido. Nosotros nos encargamos del resto."
+        answer:
+          "Solo necesitamos tu audio original y una breve descripción del contenido. Nosotros nos encargamos del resto.",
       },
       {
         question: "¿Pueden trabajar con episodios ya grabados?",
-        answer: "Sí, trabajamos tanto con episodios existentes como con producciones nuevas desde cero."
-      }
+        answer:
+          "Sí, trabajamos tanto con episodios existentes como con producciones nuevas desde cero.",
+      },
     ],
   },
 };
