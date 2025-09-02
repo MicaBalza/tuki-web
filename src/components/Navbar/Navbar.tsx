@@ -42,6 +42,10 @@ const Navbar = () => {
     };
   }, []);
 
+  useEffect(() => {
+    setHoveredRoute(null);
+  }, [pathname]);
+
   const color = NAVBAR_COLORS[pathname.replace(`${lng}`, "")] || "red";
   const bgIsDark = color === "red" || color === "green";
 
@@ -114,7 +118,7 @@ const Navbar = () => {
                   {t(route.text)}
                 </Link>
                 {route.dropdown && (
-                  <div className={`${styles.dropdown} bg-${color}`}>
+                  <div className={`${styles.dropdown} ${isHovered ? styles.show : ''} bg-${color}`}>
                     {route.dropdown.map((dropdownItem) => (
                       <Link
                         key={dropdownItem.text}

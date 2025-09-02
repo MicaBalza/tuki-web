@@ -25,7 +25,7 @@
   position: relative;
 }
 
-.hasDropdown:hover .dropdown {
+.dropdown.show {
   opacity: 1;
   visibility: visible;
   animation: dropdownBounce 0.4s ease-out forwards;
