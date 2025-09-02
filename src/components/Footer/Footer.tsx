@@ -15,7 +15,6 @@ const Footer = () => {
   const { t: tNav } = useTranslation(lng as string, "navbar");
   const pathname = usePathname();
   const { push } = useRouter();
-  console.log("🌸 ~ Footer ~ pathname:", pathname);
 
   const { bgColor, color } = COLOR_BY_PATH.find(
     (route) => route.path === pathname.replace(`/${lng}`, "")
@@ -50,6 +49,7 @@ const Footer = () => {
             <Button
               text={t("cta-button")}
               onClick={() => push(`/${lng}/contact-us`)}
+              darkBg
             />
           </div>
         </div>
