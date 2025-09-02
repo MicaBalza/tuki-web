@@ -1,9 +1,9 @@
 import PageContainer from "@/components/PageContainer";
+import PharmaceuticalServiceFAQ from "@/components/PharmaceuticalServiceFAQ";
 import PharmaceuticalServiceHeader from "@/components/PharmaceuticalServiceHeader";
 import PharmaceuticalServiceHowWeDoIt from "@/components/PharmaceuticalServiceHowWeDoIt";
 import PharmaceuticalServiceProcess from "@/components/PharmaceuticalServiceProcess";
 import PharmaceuticalServiceVideo from "@/components/PharmaceuticalServiceVideo";
-import PharmaceuticalServiceFAQ from "@/components/PharmaceuticalServiceFAQ";
 import { PHARMACEUTICAL_SERVICES } from "@/constants/pharmaceuticalServices";
 import { notFound } from "next/navigation";
 
@@ -30,7 +30,7 @@ export default async function PharmaceuticalServicePage(props: {
       <PharmaceuticalServiceHowWeDoIt service={service} />
       <PharmaceuticalServiceVideo service={service} />
       <PharmaceuticalServiceProcess service={service} />
-      <PharmaceuticalServiceFAQ service={service} />
+      <PharmaceuticalServiceFAQ content={service.faq} />
     </PageContainer>
   );
 }

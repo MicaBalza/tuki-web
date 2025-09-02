@@ -1,16 +1,16 @@
 "use client";
 
-import { PharmaceuticalService } from "@/constants/pharmaceuticalServices";
+import { FAQ } from "@/constants/pharmaceuticalServices";
 import { useState } from "react";
 import Button from "../Button";
 import styles from "./styles.module.css";
 
 interface PharmaceuticalServiceFAQProps {
-  service: PharmaceuticalService;
+  content: FAQ[];
 }
 
 export default function PharmaceuticalServiceFAQ({
-  service,
+  content,
 }: PharmaceuticalServiceFAQProps) {
   const [isExpanded, setIsExpanded] = useState(false);
   const [expandedQuestion, setExpandedQuestion] = useState<number | null>(null);
@@ -68,7 +68,7 @@ export default function PharmaceuticalServiceFAQ({
           <div className={styles.expandedRight}>
             <div className={styles.faqList}>
               <div className={styles.faqColumn}>
-                {service.faq.slice(0, 5).map((faqItem, index) => (
+                {content.slice(0, 5).map((faqItem, index) => (
                   <div key={index} className={styles.faqItem}>
                     <h2
                       className={`${styles.faqQuestion} p`}
@@ -88,7 +88,7 @@ export default function PharmaceuticalServiceFAQ({
                 ))}
               </div>
               <div className={styles.faqColumn}>
-                {service.faq.slice(5).map((faqItem, index) => (
+                {content.slice(5).map((faqItem, index) => (
                   <div key={index + 5} className={styles.faqItem}>
                     <p
                       className={styles.faqQuestion}

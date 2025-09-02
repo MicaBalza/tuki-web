@@ -1,3 +1,8 @@
+export interface FAQ {
+  question: string;
+  answer: string;
+}
+
 export interface PharmaceuticalService {
   id: string;
   cover: {
@@ -25,10 +30,7 @@ export interface PharmaceuticalService {
     step5: string;
     step6: string;
   };
-  faq: {
-    question: string;
-    answer: string;
-  }[];
+  faq: FAQ[];
 }
 
 export const PHARMACEUTICAL_SERVICES: Record<string, PharmaceuticalService> = {
@@ -563,5 +565,42 @@ export const PHARMACEUTICAL_PROCESS_IMAGES = [
   {
     title: "Motion Graphics",
     alt: "Motion Graphics",
+  },
+];
+
+export const MAIN_PAGE_FAQ = [
+  {
+    question:
+      "¿Puedo hacer un video que no encaje en ninguna de las categorías anteriores?",
+    answer:
+      "Sí, en Tuki Estudio Creativo estamos abiertos a desarrollar cualquier tipo de video personalizado que se adapte a las necesidades específicas de tu proyecto, incluso si no encaja en categorías tradicionales. La creatividad y la innovación son nuestro motor.",
+  },
+  {
+    question: "¿Cómo trabajan los proyectos a medida en Tuki Studio?",
+    answer:
+      "Los proyectos a medida en Tuki Studio comienzan con una reunión para entender tus objetivos y necesidades. Luego, desarrollamos un plan creativo y técnico personalizado, con etapas claras de producción, revisión y entrega, asegurando que el resultado final refleje la identidad y metas de tu empresa.",
+  },
+  {
+    question: "¿Pueden combinar animación, grabación real y motion graphics?",
+    answer:
+      "Sí, combinamos técnicas de animación, grabación con cámara y motion graphics para crear videos únicos y atractivos que comunicaran tu mensaje de manera clara y memorable.",
+  },
+  {
+    question:
+      "¿Qué tipo de procesos siguen para desarrollar una idea desde cero?",
+    answer:
+      "Desarrollamos ideas desde cero siguiendo un proceso que incluye:\n\n• Investigación y briefing\n• Creación de guión y storyboard\n• Producción y grabación\n• Postproducción con edición y efectos\n• Finalmente revisión y ajustes con el cliente",
+  },
+  {
+    question:
+      "¿Puedo contratar solo la edición si ya tengo el material grabado?",
+    answer:
+      "Sí, ofrecemos servicios de edición profesional para material ya grabado, optimizando la calidad del contenido y adaptándolo a los objetivos de comunicación de tu empresa.",
+  },
+  {
+    question:
+      "¿Cómo se gestiona la revisión y los cambios en un proyecto personalizado?",
+    answer:
+      "La revisión y los cambios se gestionan mediante entregas parciales donde el cliente puede dar feedback. En Tuki Studio garantizamos una comunicación fluida y tiempos claros para realizar ajustes, asegurando satisfacción y calidad en el resultado final.",
   },
 ];
