@@ -1,5 +1,6 @@
 import Button from "@/components/Button";
 import { useTranslation } from "@/i18n/client";
+import { HERO_SECTION_VIDEO_URLS } from "./constants";
 import styles from "./styles.module.css";
 
 interface HeroSectionProps {
@@ -16,7 +17,11 @@ export default function HeroSection({ lng, onButtonClick }: HeroSectionProps) {
         <div className={styles.videoContainer}>
           <iframe
             className={styles.video}
-            src="https://www.youtube.com/embed/DwwGHAhw7yc?si=dXIPJ9eGEq1NeReI&autoplay=1&mute=1&loop=1&playlist=DwwGHAhw7yc"
+            src={
+              HERO_SECTION_VIDEO_URLS[
+                lng as keyof typeof HERO_SECTION_VIDEO_URLS
+              ] || HERO_SECTION_VIDEO_URLS.en
+            }
             title="Pharmaceutical Services Video"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
