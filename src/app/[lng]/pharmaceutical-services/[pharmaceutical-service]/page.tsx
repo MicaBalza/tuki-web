@@ -30,7 +30,7 @@ export default async function PharmaceuticalServicePage(props: {
       <PharmaceuticalServiceHowWeDoIt service={service} />
       <PharmaceuticalServiceVideo service={service} />
       <PharmaceuticalServiceProcess service={service} />
-      <PharmaceuticalServiceFAQ content={service.faq} />
+      <PharmaceuticalServiceFAQ lng={params.lng} serviceType={serviceId} />
     </PageContainer>
   );
 }

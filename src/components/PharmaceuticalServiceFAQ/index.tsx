@@ -1,23 +1,44 @@
 "use client";
 
-import { FAQ } from "@/constants/pharmaceuticalServices";
+import { useTranslation } from "@/i18n/client";
 import { useState } from "react";
 import Button from "../Button";
 import styles from "./styles.module.css";
 
 interface PharmaceuticalServiceFAQProps {
-  content: FAQ[];
+  lng: string;
+  serviceType?: string; // Maps to FAQ section key (institutional, productLaunch, etc.) or 'mainPage'
 }
 
+const SERVICE_TYPE_MAPPING: Record<string, string> = {
+  "institutional-corporate-videos": "institutional",
+  "product-launch": "productLaunch",
+  "tutorial-training": "tutorials",
+  "promotional-videos": "promotional",
+  "events-conferences": "events",
+  "podcast-videos": "podcast",
+};
+
 export default function PharmaceuticalServiceFAQ({
-  content,
+  lng,
+  serviceType = "mainPage",
 }: PharmaceuticalServiceFAQProps) {
+  const { t } = useTranslation(lng, "pharmaceutical-services");
   const [isExpanded, setIsExpanded] = useState(false);
   const [expandedQuestion, setExpandedQuestion] = useState<number | null>(null);
 
   const toggleQuestion = (index: number) => {
     setExpandedQuestion((prev) => (prev === index ? null : index));
   };
+
+  // Get the correct FAQ section key
+  const faqSectionKey = SERVICE_TYPE_MAPPING[serviceType] || serviceType;
+  
+  // Get FAQ content from translations
+  const faqContent = t(`faq.${faqSectionKey}`, { returnObjects: true }) as Array<{
+    question: string;
+    answer: string;
+  }>;
 
   return (
     <div
@@ -40,11 +61,11 @@ export default function PharmaceuticalServiceFAQ({
 
           <div className={styles.faqTitleContainer}>
             <div className={styles.faqTitle}>
-              <h3 className="text-purple h1 bold">Preguntas Frecuentes</h3>
-              <p className="text-purple h4">(FAQ)</p>
+              <h3 className="text-purple h1 bold">{t("faq.title")}</h3>
+              <p className="text-purple h4">{t("faq.subtitle")}</p>
             </div>
             <Button
-              text="Ver Preguntas Frecuentes :)"
+              text={t("faq.showButton")}
               className={styles.faqButton}
               onClick={() => setIsExpanded(!isExpanded)}
             />
@@ -61,14 +82,14 @@ export default function PharmaceuticalServiceFAQ({
               className={styles.expandedQuestionImage}
             />
             <div className={styles.expandedTitle}>
-              <h3 className="text-purple h1 bold">Preguntas Frecuentes</h3>
-              <p className="text-purple h4">(FAQ)</p>
+              <h3 className="text-purple h1 bold">{t("faq.title")}</h3>
+              <p className="text-purple h4">{t("faq.subtitle")}</p>
             </div>
           </div>
           <div className={styles.expandedRight}>
             <div className={styles.faqList}>
               <div className={styles.faqColumn}>
-                {content.slice(0, 5).map((faqItem, index) => (
+                {faqContent.slice(0, 5).map((faqItem, index) => (
                   <div key={index} className={styles.faqItem}>
                     <h2
                       className={`${styles.faqQuestion} p`}
@@ -88,7 +109,7 @@ export default function PharmaceuticalServiceFAQ({
                 ))}
               </div>
               <div className={styles.faqColumn}>
-                {content.slice(5).map((faqItem, index) => (
+                {faqContent.slice(5).map((faqItem, index) => (
                   <div key={index + 5} className={styles.faqItem}>
                     <p
                       className={styles.faqQuestion}
@@ -107,7 +128,7 @@ export default function PharmaceuticalServiceFAQ({
                   </div>
                 ))}
                 <Button
-                  text="Ocultar Preguntas Frecuentes :)"
+                  text={t("faq.hideButton")}
                   className={styles.closeButton}
                   onClick={() => setIsExpanded(!isExpanded)}
                 />

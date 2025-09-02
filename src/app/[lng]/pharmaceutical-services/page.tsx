@@ -5,7 +5,6 @@ import HeroSection from "@/components/PharmaceuticalSections/HeroSection";
 import ServicesBoard from "@/components/PharmaceuticalSections/ServicesBoard";
 import ServicesGrid from "@/components/PharmaceuticalSections/ServicesGrid";
 import PharmaceuticalServiceFAQ from "@/components/PharmaceuticalServiceFAQ";
-import { MAIN_PAGE_FAQ } from "@/constants/pharmaceuticalServices";
 import { useParams } from "next/navigation";
 import { useRef } from "react";
 
@@ -28,7 +27,7 @@ export default function PharmaceuticalServicesPage() {
       <div ref={section3Ref}>
         <ServicesGrid lng={lng} />
       </div>
-      <PharmaceuticalServiceFAQ content={MAIN_PAGE_FAQ} />
+      <PharmaceuticalServiceFAQ lng={lng} serviceType="mainPage" />
     </PageContainer>
   );
 }

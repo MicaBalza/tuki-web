@@ -49,5 +49,233 @@
       "title": "Podcast Video Production",
       "description": "Visual design, editing and narrative for video podcasts. Project developed by Tuki Studio as part of the MyeVideo / Medevice Digital team."
     }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "(FAQ)",
+    "showButton": "View Frequently Asked Questions :)",
+    "hideButton": "Hide Frequently Asked Questions :)",
+    "institutional": [
+      {
+        "question": "What is an institutional or corporate video and what is it used for?",
+        "answer": "An institutional or corporate video is an audiovisual production designed to present the essence, values and mission of a company or organization. Its main objective is to strengthen the company image, generate trust among clients and partners, and clearly and attractively communicate the brand's purpose. This type of audiovisual content for companies serves to improve branding and position the company in its market."
+      },
+      {
+        "question": "What's the difference between an institutional video and a corporate video?",
+        "answer": "Although the terms \"institutional video\" and \"corporate video\" are often used interchangeably, institutional videos usually focus on communicating the company's identity, history and values, while corporate videos can have a broader approach, including product promotions, annual reports or testimonials. In both cases, audiovisual production seeks to strengthen the company image and support branding."
+      },
+      {
+        "question": "How long should an effective corporate video typically be?",
+        "answer": "An effective corporate video generally lasts between 1 and 3 minutes. This duration is ideal for capturing the audience's attention, conveying the key message without losing interest, and facilitating its distribution on digital platforms such as social networks and websites."
+      },
+      {
+        "question": "What elements should a good institutional video for companies have?",
+        "answer": "A good institutional video should include:\n\n• A clear script aligned with the company's values.\n• High-quality images that reflect corporate identity.\n• Testimonials or voices that provide credibility.\n• Music and editing that generate positive emotions.\n• A call to action that invites people to learn more or get in touch.\n\nThese elements contribute to creating audiovisual content for companies that impacts and enhances branding."
+      },
+      {
+        "question": "What does the institutional video production process include at Tuki Studio?",
+        "answer": "At Tuki Studio, the audiovisual production process for institutional videos includes:\n\n• Initial meeting to understand the company's identity and objectives.\n• Script and storyboard development.\n• Professional filming with specialized technical equipment.\n• Editing and post-production taking care of every detail.\n• Delivery of the video optimized for different formats and platforms.\n\nThis way we ensure that each institutional video faithfully reflects the company image and contributes to effective branding."
+      },
+      {
+        "question": "What tone or audiovisual style is most recommended to represent my company?",
+        "answer": "The audiovisual tone and style should adapt to your company's personality and values. It can be formal and serious to convey professionalism, or fresh and dynamic for a young and innovative brand. At Tuki Studio we advise you to find the audiovisual style that best represents your company image and enhances your branding."
+      },
+      {
+        "question": "How much does it cost to make a professional institutional video?",
+        "answer": "The cost of a professional institutional video varies according to duration, production complexity and necessary resources. At Tuki Studio we offer personalized budgets so that each company obtains high-quality audiovisual content, adjusted to their budget and objectives."
+      },
+      {
+        "question": "Can I use the video on my website, social media and presentations?",
+        "answer": "Yes, an institutional or corporate video is a versatile resource that can be integrated into your website, social networks, corporate presentations and events. At Tuki Studio we deliver videos in formats optimized for each platform, facilitating their distribution and strengthening the company image across all digital channels."
+      },
+      {
+        "question": "What benefits does a corporate video bring to brand image?",
+        "answer": "A corporate video provides numerous benefits, including:\n\n• Improves the professional and trustworthy perception of the company.\n• Facilitates the communication of values and mission in an emotional and clear way.\n• Increases engagement with potential customers.\n• Enhances branding and market differentiation.\n\nTherefore, investing in quality audiovisual production is key to strengthening company image and reaching new audiences."
+      }
+    ],
+    "productLaunch": [
+      {
+        "question": "What type of video is ideal for launching a new product?",
+        "answer": "The ideal video for a launch should be clear, attractive and generate impact in seconds. It can combine storytelling, practical product demonstrations and eye-catching visual resources like animation or motion graphics. Its objective is to convey the product's differential value and awaken immediate interest in the audience."
+      },
+      {
+        "question": "What is the recommended duration for a launch video?",
+        "answer": "The recommended duration for a launch video is 30 seconds to 2 minutes, depending on the channel where it will be distributed. On social networks, shorter formats work better, while on presentations or websites you can use a slightly longer and more explanatory video."
+      },
+      {
+        "question": "How do animated or explainer videos help in product presentations?",
+        "answer": "Animated or explainer videos facilitate the understanding of complex concepts, visually showing how the product works and what benefits it offers. Additionally, they allow for a dynamic, modern style adaptable to different audiences, reinforcing the brand's branding and innovation."
+      },
+      {
+        "question": "What's the difference between a promotional video and one for launch?",
+        "answer": "A promotional video has a broader focus: it can talk about the brand, various services or specific campaigns. In contrast, a launch video is designed exclusively to present a new product, highlighting its features, benefits and value proposition."
+      },
+      {
+        "question": "Can I include customer testimonials or use cases in the video?",
+        "answer": "Yes, including testimonials or use cases in a launch video adds credibility and trust, showing the real experience of customers and reinforcing the product's usefulness in concrete situations."
+      },
+      {
+        "question": "Can launch videos be adapted for social media?",
+        "answer": "Yes, launch videos can be adapted to different social media formats like Instagram, TikTok, LinkedIn, Facebook or YouTube. At Tuki Studio we deliver content optimized for each platform, ensuring that the message reaches your audience with impact."
+      },
+      {
+        "question": "What information should I have ready before starting video production?",
+        "answer": "Before producing a launch video it's important to have defined:\n\n• The launch objective.\n• The target audience.\n• The product's key attributes and benefits.\n• The brand's communication tone.\n• Planned distribution channels.\n\nThis allows for developing a script and audiovisual production aligned with the marketing strategy."
+      },
+      {
+        "question": "How long does it take to produce a launch video?",
+        "answer": "Production time varies according to project complexity, but on average it takes between 3 and 6 weeks to complete all stages: script, filming, editing and final delivery."
+      },
+      {
+        "question": "Do you work exclusively with content for the pharmaceutical industry?",
+        "answer": "No. At Tuki Studio we work with companies from various sectors, creating personalized videos that adapt to each client's needs. Although we have specialization and outstanding experience in the pharmaceutical industry, we also develop projects in other fields, always with the same objective: to enhance company image and strengthen branding with high-quality audiovisual productions."
+      }
+    ],
+    "tutorials": [
+      {
+        "question": "What is a corporate tutorial video and why is it useful?",
+        "answer": "A corporate tutorial video is audiovisual content designed to clearly and practically explain processes, tools or skills within a company. It's useful because it facilitates learning, improves internal training and reduces training time and costs, making knowledge accessible in a visual and dynamic way."
+      },
+      {
+        "question": "Why should I make a video for a tutorial or training?",
+        "answer": "Making a video for tutorial or training allows employees to learn at their own pace, with greater information retention thanks to audiovisual support. It also facilitates continuous content updates and improves internal company communication, enhancing efficiency and productivity."
+      },
+      {
+        "question": "Can they be animated or should they be recorded with real people?",
+        "answer": "Tutorial videos can be both animated and recorded with real people. The choice depends on the objective, budget and type of content. Animated ones are ideal for explaining complex concepts or abstract processes, while videos with people provide closeness and clarity in practical demonstrations."
+      },
+      {
+        "question": "What duration should internal training videos have?",
+        "answer": "The recommended duration for internal training videos is between 5 and 15 minutes per thematic unit. This helps maintain attention and makes content digestible and effective for corporate learning."
+      },
+      {
+        "question": "Can they be adapted to e-learning platforms or intranet?",
+        "answer": "Yes, tutorial and training videos can be easily adapted to e-learning platforms or corporate intranets, optimizing their accessibility and allowing employee progress tracking within a digital environment."
+      },
+      {
+        "question": "What's the difference between a tutorial video and a PDF manual?",
+        "answer": "The main difference is that a tutorial video offers more dynamic and visual learning, facilitating understanding through moving images and audio, while a PDF manual is a static and textual format, which can be less attractive and less effective for capturing attention and explaining practical processes."
+      },
+      {
+        "question": "Is it possible to make a series of training videos?",
+        "answer": "Yes, it's possible and recommended to create a series of training videos, dividing content into modules or levels. This facilitates structured learning, allows partial updates and improves the training experience within the company."
+      },
+      {
+        "question": "How is a good script for training video structured?",
+        "answer": "A good script for training video should include:\n\n• Clear introduction of the topic and objectives.\n• Step-by-step development of content with practical examples.\n• Visual resources that support the explanation.\n• Final summary with key points.\n• Call to action or exercises to reinforce learning.\n\nThis structure ensures that content is understandable, attractive and effective for corporate training."
+      }
+    ],
+    "promotional": [
+      {
+        "question": "What's the difference between a promotional video and an advertising spot?",
+        "answer": "A promotional video is broader audiovisual content that seeks to present products, services or events with greater detail and duration, while an advertising spot is a brief and direct advertisement, designed to quickly capture attention in mass media. Both are essential for branding and digital marketing strategy."
+      },
+      {
+        "question": "What video styles are used for social media promotion campaigns?",
+        "answer": "On social media, dynamic styles are used such as short videos with storytelling, animations, testimonials, quick tutorials and user-generated content. These formats seek to maximize engagement and adapt to the speed and preferences of users on each platform."
+      },
+      {
+        "question": "Can I use music, voiceover or animation in my video?",
+        "answer": "Yes, professional audiovisual production includes incorporating music, voiceover and animations to enhance the message and generate emotions, making content more attractive and memorable for the audience."
+      },
+      {
+        "question": "Where can I use my promotional video?",
+        "answer": "Promotional videos can be used on websites, social networks, email marketing campaigns, commercial presentations and corporate events, being a versatile resource to enhance company image and branding."
+      },
+      {
+        "question": "What duration is recommended to capture attention on social media?",
+        "answer": "The ideal duration for social media videos is between 15 and 60 seconds, allowing a clear and effective message to be transmitted before the user loses interest."
+      },
+      {
+        "question": "Can I reuse the video in other campaigns?",
+        "answer": "Yes, promotional videos can be adapted and reused in different campaigns, adjusting formats and messages to maximize their reach and efficiency."
+      },
+      {
+        "question": "Do you work exclusively with content for the pharmaceutical industry?",
+        "answer": "No, at Tuki Studio we work with companies from various sectors, creating personalized audiovisual content that adapts to each client's needs and objectives. While our deepest specialization and experience is in the pharmaceutical industry, we also develop successful projects in other fields, always with the objective of enhancing company image and strengthening branding through high-quality and creative audiovisual productions."
+      }
+    ],
+    "events": [
+      {
+        "question": "What type of videos can I use at a corporate event?",
+        "answer": "At a corporate event you can use various types of videos, such as opening videos that present the company or main topic, summary videos that capture key moments, customer or employee testimonials, product promotional videos, and dynamic content for screens or stands. These videos help capture attention and reinforce company image."
+      },
+      {
+        "question": "What's the difference between an opening video and a summary video?",
+        "answer": "An opening video is used to start an event, presenting the identity, values or purpose of the gathering, generating expectation and connection with the audience. In contrast, a summary video is projected at the end to recap the most important moments and close with an impactful message."
+      },
+      {
+        "question": "Can you make videos with testimonials or interviews to project at the event?",
+        "answer": "Yes, at Tuki Studio we produce videos with professional testimonials and interviews that provide credibility and closeness, ideal for projecting at corporate events and strengthening the message you want to convey."
+      },
+      {
+        "question": "What delivery time is needed to have a video ready for a conference?",
+        "answer": "Delivery time depends on project complexity, but we recommend planning with at least 2 to 4 weeks to guarantee professional audiovisual production, including script, filming, editing and final adjustments."
+      },
+      {
+        "question": "Can you cover the event and generate post-event content?",
+        "answer": "Yes, we offer complete audiovisual coverage of the event, including live recording and post-event content editing such as summary videos, interviews and materials for distribution on social networks or internal communications."
+      },
+      {
+        "question": "What video style is best for capturing attention at fairs or stands?",
+        "answer": "For fairs or stands, dynamic videos with clear messages, agile rhythm and impactful visual elements, such as animations or motion graphics, are ideal for attracting and maintaining public attention in crowded spaces."
+      }
+    ],
+    "podcast": [
+      {
+        "question": "What is a video podcast and what advantages does it have?",
+        "answer": "A video podcast is an audiovisual production that combines the traditional podcast format with visual content, showing participants or graphic elements while the conversation develops. Advantages include greater connection with the audience, better message retention and greater reach on platforms like YouTube and social networks."
+      },
+      {
+        "question": "Can you help me with the visual design and editing of my podcast?",
+        "answer": "Yes, at Tuki Studio we offer complete visual design and editing services for podcasts, ensuring professional production that reflects your brand identity and maintains audience attention."
+      },
+      {
+        "question": "What do I need to record a podcast in video format?",
+        "answer": "To record a podcast in video format you need a space with good lighting, cameras or smartphones with good image quality, microphones to capture audio clearly and, preferably, recording or streaming software that allows you to combine audio and video professionally."
+      },
+      {
+        "question": "Can you integrate subtitles or animated graphics in the episode?",
+        "answer": "Yes, we can integrate subtitles and animated graphics to make your video podcasts more accessible, attractive and professional, improving the audience experience and facilitating content understanding."
+      },
+      {
+        "question": "What's the best format for uploading a podcast to YouTube or social media?",
+        "answer": "MP4 format is the most recommended for uploading video podcasts to YouTube and social networks, as it combines good image and audio quality with a file size optimized for the web."
+      },
+      {
+        "question": "Can I record multiple episodes in a single session?",
+        "answer": "Yes, recording multiple episodes in a single session is a common practice that allows optimizing time and resources, facilitating publication planning and maintaining content continuity."
+      },
+      {
+        "question": "What's the ideal duration for a video podcast?",
+        "answer": "The ideal duration for a video podcast is usually between 15 and 45 minutes, enough time to develop topics in depth without losing audience attention, although it can vary according to format and target audience."
+      }
+    ],
+    "mainPage": [
+      {
+        "question": "Can I make a video that doesn't fit into any of the previous categories?",
+        "answer": "Yes, at Tuki Studio we are open to developing any type of personalized video that adapts to your project's specific needs, even if it doesn't fit into traditional categories. Creativity and innovation are our driving force."
+      },
+      {
+        "question": "How do custom projects work at Tuki Studio?",
+        "answer": "Custom projects at Tuki Studio begin with a meeting to understand your objectives and needs. Then, we develop a personalized creative and technical plan, with clear production, review and delivery stages, ensuring that the final result reflects your company's identity and goals."
+      },
+      {
+        "question": "Can you combine animation, real filming and motion graphics?",
+        "answer": "Yes, we combine animation techniques, camera filming and motion graphics to create unique and attractive videos that communicate your message clearly and memorably."
+      },
+      {
+        "question": "What kind of processes do you follow to develop an idea from scratch?",
+        "answer": "We develop ideas from scratch following a process that includes:\n\n• Research and briefing\n• Script and storyboard creation\n• Production and filming\n• Post-production with editing and effects\n• Finally review and adjustments with the client"
+      },
+      {
+        "question": "Can I hire only editing if I already have the recorded material?",
+        "answer": "Yes, we offer professional editing services for already recorded material, optimizing content quality and adapting it to your company's communication objectives."
+      },
+      {
+        "question": "How are review and changes managed in a custom project?",
+        "answer": "Review and changes are managed through partial deliveries where the client can provide feedback. At Tuki Studio we guarantee fluid communication and clear timelines for making adjustments, ensuring satisfaction and quality in the final result."
+      }
+    ]
   }
 }

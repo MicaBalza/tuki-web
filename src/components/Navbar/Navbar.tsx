@@ -3,12 +3,13 @@
 import { useTranslation } from "@/i18n/client";
 import { ServiceType } from "@/types/services";
 import { motion } from "framer-motion";
+import Lottie from "lottie-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useParams, usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-import Lottie from "lottie-react";
 import tukiLogoAnimation from "../../../public/static/lottie/tuki_logo.json";
+import LangSelector from "../LangSelector";
 import ServiceTypeHeader from "../ServiceTypeHeader";
 import SlideMenu from "../SlideMenu";
 import SocialLinks from "../SocialLinks";
@@ -51,7 +52,11 @@ const Navbar = () => {
           scrolled ? `${styles.scrolled} bg-${color}` : ""
         }`}
       >
-        <div onClick={() => push("/")} className="pointer" style={{ width: "179px", height: "100px" }}>
+        <div
+          onClick={() => push("/")}
+          className="pointer"
+          style={{ width: "179px", height: "100px" }}
+        >
           {bgIsDark ? (
             <Image
               src="/static/tuki-logo-white.png"
@@ -72,7 +77,8 @@ const Navbar = () => {
           {ROUTES.map((route) => {
             const cleanPath = pathname.replace(`/${lng}`, "") || "/";
             const isExactMatch = cleanPath === route.path;
-            const isNestedMatch = route.path !== "/" && cleanPath.startsWith(route.path + "/");
+            const isNestedMatch =
+              route.path !== "/" && cleanPath.startsWith(route.path + "/");
             const isActive = isExactMatch || isNestedMatch;
             const isHovered = hoveredRoute === route.path;
             const showUnderline = isActive || isHovered;
@@ -101,7 +107,7 @@ const Navbar = () => {
                       transition={{
                         type: "spring",
                         stiffness: 500,
-                        damping: 30
+                        damping: 30,
                       }}
                     />
                   )}
@@ -125,7 +131,7 @@ const Navbar = () => {
               </div>
             );
           })}
-          {/* <LangSelector invert={bgIsDark} /> */}
+          <LangSelector invert={bgIsDark} />
           <SocialLinks className={bgIsDark ? "fill-white" : ""} />
         </div>
 
