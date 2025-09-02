@@ -29,8 +29,8 @@ const PharmaceuticalServices = () => {
           {listItems.map((item, index) => {
             const serviceSlug = [
               "promotional-videos",
-              "product-launches",
-              "events-conferences-content",
+              "product-launch",
+              "events-conferences",
             ][index];
 
             return (
