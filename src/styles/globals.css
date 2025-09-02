@@ -122,7 +122,8 @@ h4,
   font-weight: 400;
 }
 
-p {
+p,
+.p {
   font-size: clamp(0.75rem, 2vw, 1.125rem);
 }
 

@@ -77,53 +77,53 @@ export const PHARMACEUTICAL_SERVICES: Record<string, PharmaceuticalService> = {
         question:
           "¿Qué es un vídeo institucional o corporativo y para qué sirve?",
         answer:
-          "El tiempo de producción varía según la complejidad, pero generalmente oscila entre 3-5 semanas desde el briefing hasta la entrega final.",
+          "Un vídeo institucional o corporativo es una producción audiovisual diseñada para presentar la esencia, valores y misión de una empresa u organización. Su objetivo principal es fortalecer la imagen de empresa, generar confianza en clientes y socios, y comunicar de forma clara y atractiva el propósito de la marca. Este tipo de contenido audiovisual para empresas sirve para mejorar el branding y posicionar la empresa en su mercado.",
       },
       {
         question:
           "¿Qué diferencia hay entre un vídeo institucional y uno corporativo?",
         answer:
-          "Incluye concepto creativo, guión, storyboard, animación, locución profesional, música y entrega en múltiples formatos.",
+          'Aunque los términos "vídeo institucional" y "vídeo corporativo" a menudo se usan indistintamente, el vídeo institucional suele enfocarse en comunicar la identidad, historia y valores de la empresa, mientras que el vídeo corporativo puede tener un enfoque más amplio, incluyendo promociones de productos, reportes anuales o testimonios. En ambos casos, la producción audiovisual busca fortalecer la imagen de empresa y apoyar el branding.',
       },
       {
         question: "¿Cuánto dura normalmente un vídeo corporativo efectivo?",
         answer:
-          "Creamos desde videos institucionales hasta videos corporativos, pasando por videos de lanzamiento de producto y tutoriales.",
+          "Un vídeo corporativo efectivo generalmente tiene una duración de entre 1 y 3 minutos. Este tiempo es ideal para captar la atención del público, transmitir el mensaje clave sin perder interés y facilitar su difusión en plataformas digitales como redes sociales y sitios web.",
       },
       {
         question:
-          " ¿Qué elementos debe tener un buen vídeo institucional para empresas?",
+          "¿Qué elementos debe tener un buen vídeo institucional para empresas?",
         answer:
-          "El tiempo de producción varía según la complejidad, pero generalmente oscila entre 3-5 semanas desde el briefing hasta la entrega final.",
+          "Un buen vídeo institucional debe incluir:\n\n• Un guión claro y alineado con los valores de la empresa.\n• Imágenes de alta calidad que reflejen la identidad corporativa.\n• Testimonios o voces que aporten credibilidad.\n• Música y edición que generen emociones positivas.\n• Un llamado a la acción que invite a conocer más o contactarse.\n\nEstos elementos contribuyen a crear un contenido audiovisual para empresas que impacte y potencie el branding.",
       },
       {
         question:
           "¿Qué incluye el proceso de producción de un vídeo institucional en Tuki Studio?",
         answer:
-          "El tiempo de producción varía según la complejidad, pero generalmente oscila entre 3-5 semanas desde el briefing hasta la entrega final.",
+          "En Tuki Studio, el proceso de producción audiovisual para vídeos institucionales incluye:\n\n1. Reunión inicial para entender la identidad y objetivos de la empresa.\n2. Desarrollo de guion y storyboard.\n3. Filmación profesional con equipo técnico especializado.\n4. Edición y postproducción cuidando cada detalle.\n5. Entrega del vídeo optimizado para distintos formatos y plataformas.\n\nAsí garantizamos que cada video institucional refleje fielmente la imagen de empresa y contribuya al branding efectivo.",
       },
       {
         question:
           "¿Qué tono o estilo audiovisual es más recomendable para representar mi empresa?",
         answer:
-          "Creamos desde videos institucionales hasta videos corporativos, pasando por videos de lanzamiento de producto y tutoriales.",
+          "El tono y estilo audiovisual debe adaptarse a la personalidad y valores de tu empresa. Puede ser formal y serio para transmitir profesionalismo, o fresco y dinámico para una marca joven e innovadora. En Tuki Studio te asesoramos para encontrar el estilo audiovisual que mejor represente tu imagen de empresa y potencie tu branding.",
       },
       {
-        question: " ¿Cuánto cuesta hacer un video institucional profesional?",
+        question: "¿Cuánto cuesta hacer un video institucional profesional?",
         answer:
-          "El tiempo de producción varía según la complejidad, pero generalmente oscila entre 3-5 semanas desde el briefing hasta la entrega final.",
+          "El costo de un vídeo institucional profesional varía según la duración, complejidad de la producción y recursos necesarios. En Tuki Studio ofrecemos presupuestos personalizados para que cada empresa obtenga un contenido audiovisual para de alta calidad, ajustado a su presupuesto y objetivos.",
       },
       {
         question:
           "¿Puedo usar el video en mi sitio web, redes sociales y presentaciones?",
         answer:
-          "Creamos desde videos institucionales hasta videos corporativos, pasando por videos de lanzamiento de producto y tutoriales.",
+          "Sí, un vídeo institucional o corporativo es un recurso versátil que puede integrarse en tu sitio web, redes sociales, presentaciones corporativas y eventos. En Tuki Studio entregamos los videos en formatos optimizados para cada plataforma, facilitando su difusión y fortaleciendo la imagen de empresa en todos los canales digitales.",
       },
       {
         question:
           "¿Qué beneficios aporta un video corporativo a la imagen de marca?",
         answer:
-          "Creamos desde videos institucionales hasta videos corporativos, pasando por videos de lanzamiento de producto y tutoriales.",
+          "Un vídeo corporativo aporta numerosos beneficios, entre ellos:\n\n• Mejora la percepción profesional y confiable de la empresa.\n• Facilita la comunicación de valores y misión de forma emocional y clara.\n• Incrementa el engagement con clientes potenciales.\n• Potencia el branding y la diferenciación en el mercado.\n\nPor eso, invertir en producción audiovisual de calidad es clave para fortalecer la imagen de empresa y alcanzar nuevos públicos.",
       },
     ],
   },
@@ -170,14 +170,56 @@ export const PHARMACEUTICAL_SERVICES: Record<string, PharmaceuticalService> = {
     faq: [
       {
         question:
-          "¿Qué diferencia hay entre video de lanzamiento y promocional?",
+          "¿Qué tipo de video es ideal para el lanzamiento de un nuevo producto?",
         answer:
-          "Los videos de lanzamiento se enfocan en explicar cómo funciona el producto, mientras que los promocionales destacan sus beneficios y ventajas competitivas.",
+          "El video ideal para un lanzamiento debe ser claro, atractivo y generar impacto en pocos segundos. Puede combinar storytelling, demostraciones prácticas del producto y recursos visuales llamativos como animación o motion graphics. Su objetivo es transmitir el valor diferencial del producto y despertar interés inmediato en la audiencia.",
       },
       {
-        question: "¿Pueden adaptar el video para diferentes audiencias?",
+        question:
+          "¿Cuál es la duración recomendada para un video de lanzamiento?",
         answer:
-          "Sí, adaptamos el contenido para profesionales médicos, pacientes o inversores según tus necesidades específicas.",
+          "La duración recomendada para un video de lanzamiento es de 30 segundos a 2 minutos, dependiendo del canal en el que se difunda. En redes sociales, los formatos breves funcionan mejor, mientras que en presentaciones o páginas web se puede usar un video un poco más extenso y explicativo.",
+      },
+      {
+        question:
+          "¿Cómo ayudan los videos animados o explicativos en la presentación de productos?",
+        answer:
+          "Los videos animados o explicativos facilitan la comprensión de conceptos complejos, mostrando de manera visual cómo funciona el producto y qué beneficios ofrece. Además, permiten un estilo dinámico, moderno y adaptable a distintos públicos, reforzando el branding y la innovación de la marca.",
+      },
+      {
+        question:
+          "¿Qué diferencia hay entre un video promocional y uno para lanzamiento?",
+        answer:
+          "Un video promocional tiene un enfoque más amplio: puede hablar de la marca, de varios servicios o de campañas específicas. En cambio, un video de lanzamiento está diseñado exclusivamente para presentar un nuevo producto, destacando sus características, beneficios y propuesta de valor.",
+      },
+      {
+        question:
+          "¿Puedo incluir testimonios de clientes o casos de uso en el video?",
+        answer:
+          "Sí, incluir testimonios o casos de uso en un video de lanzamiento aporta credibilidad y confianza, mostrando la experiencia real de clientes y reforzando la utilidad del producto en situaciones concretas.",
+      },
+      {
+        question:
+          "¿Se pueden adaptar los videos de lanzamiento para redes sociales?",
+        answer:
+          "Sí, los videos de lanzamiento pueden adaptarse a diferentes formatos de redes sociales como Instagram, TikTok, LinkedIn, Facebook o YouTube. En Tuki Estudio Creativo entregamos el contenido optimizado para cada plataforma, garantizando que el mensaje llegue con fuerza a tu audiencia.",
+      },
+      {
+        question:
+          "¿Qué información debo tener lista antes de comenzar la producción del video?",
+        answer:
+          "Antes de producir un video de lanzamiento es importante tener definidos:\n\n• El objetivo del lanzamiento.\n• El público objetivo.\n• Los atributos y beneficios clave del producto.\n• El tono de comunicación de la marca.\n• Canales de difusión previstos.\n\nEsto permite desarrollar un guion y una producción audiovisual alineada con la estrategia de marketing.",
+      },
+      {
+        question: "¿Cuánto tiempo toma producir un video de lanzamiento?",
+        answer:
+          "El tiempo de producción varía según la complejidad del proyecto, pero en promedio se necesitan entre 3 y 6 semanas para completar todas las etapas: guion, rodaje, edición y entrega final.",
+      },
+      {
+        question:
+          "¿Se dedican únicamente a desarrollar contenido para la industria farmaceutica?",
+        answer:
+          "No. En Tuki Estudio trabajamos con empresas de diversos sectores, creando videos personalizados que se adaptan a las necesidades de cada cliente. Aunque tenemos una especialización y experiencia destacada en la industria farmacéutica, también desarrollamos proyectos en otros ámbitos, siempre con el mismo objetivo: potenciar la imagen de empresa y fortalecer el branding con producciones audiovisuales de alta calidad.",
       },
     ],
   },
@@ -223,15 +265,46 @@ export const PHARMACEUTICAL_SERVICES: Record<string, PharmaceuticalService> = {
     },
     faq: [
       {
-        question: "¿Qué tipos de tutoriales pueden crear?",
+        question: "¿Qué es un video tutorial corporativo y por qué es útil?",
         answer:
-          "Creamos desde tutoriales de uso de dispositivos médicos hasta capacitaciones sobre procedimientos y uso de aplicaciones de salud.",
+          "Un video tutorial corporativo es un contenido audiovisual diseñado para explicar de manera clara y práctica procesos, herramientas o habilidades dentro de una empresa. Es útil porque facilita el aprendizaje, mejora la capacitación interna y reduce tiempos y costos de formación, al hacer accesible el conocimiento de forma visual y dinámica.",
       },
       {
         question:
-          "¿El contenido se adapta a diferentes niveles de conocimiento?",
+          "¿Por qué debería hacer un vídeo para un tutorial o capacitación?",
         answer:
-          "Absolutamente. Adaptamos el lenguaje y nivel de detalle según la audiencia: profesionales, estudiantes o pacientes.",
+          "Hacer un vídeo para tutorial o capacitación permite que los empleados aprendan a su propio ritmo, con mayor retención de información gracias al soporte audiovisual. Además, facilita la actualización continua de contenidos y mejora la comunicación interna en la empresa, potenciando la eficiencia y productividad.",
+      },
+      {
+        question: "¿Pueden ser animados o deben grabarse con personas reales?",
+        answer:
+          "Los videos tutoriales pueden ser tanto animados como grabados con personas reales. La elección depende del objetivo, presupuesto y tipo de contenido. Los animados son ideales para explicar conceptos complejos o procesos abstractos, mientras que los videos con personas aportan cercanía y claridad en demostraciones prácticas.",
+      },
+      {
+        question: "¿Qué duración deben tener los videos de formación interna?",
+        answer:
+          "La duración recomendada para videos de formación interna es de entre 5 y 15 minutos por unidad temática. Esto ayuda a mantener la atención y facilita que el contenido sea digerible y efectivo para el aprendizaje corporativo.",
+      },
+      {
+        question: "¿Pueden adaptarse a plataformas e-learning o intranet?",
+        answer:
+          "Sí, los videos tutoriales y de capacitación pueden adaptarse fácilmente a plataformas e-learning o intranet corporativas, optimizando su accesibilidad y permitiendo un seguimiento del progreso de los empleados dentro de un entorno digital.",
+      },
+      {
+        question:
+          "¿Qué diferencia hay entre un video tutorial y un manual en PDF?",
+        answer:
+          "La principal diferencia es que un video tutorial ofrece un aprendizaje más dinámico y visual, facilitando la comprensión mediante imágenes en movimiento y audio, mientras que un manual en PDF es un formato estático y textual, que puede ser menos atractivo y menos efectivo para captar la atención y explicar procesos prácticos.",
+      },
+      {
+        question: "¿Es posible hacer una serie de videos de capacitación?",
+        answer:
+          "Sí, es posible y recomendable realizar una serie de videos de capacitación, dividiendo los contenidos en módulos o niveles. Esto facilita un aprendizaje estructurado, permite actualizaciones parciales y mejora la experiencia formativa dentro de la empresa.",
+      },
+      {
+        question: "¿Cómo se estructura un buen guion para video formativo?",
+        answer:
+          "Un buen guion para video formativo debe incluir:\n\n• Introducción clara del tema y objetivos.\n• Desarrollo paso a paso del contenido con ejemplos prácticos.\n• Recursos visuales que apoyen la explicación.\n• Resumen final con puntos clave.\n• Llamado a la acción o ejercicios para reforzar el aprendizaje.\n\nEsta estructura asegura que el contenido sea comprensible, atractivo y efectivo para la capacitación corporativa.",
       },
     ],
   },
@@ -277,14 +350,43 @@ export const PHARMACEUTICAL_SERVICES: Record<string, PharmaceuticalService> = {
     },
     faq: [
       {
-        question: "¿En qué formatos entregan los videos promocionales?",
+        question:
+          "¿Cuál es la diferencia entre un video promocional y un spot publicitario?",
         answer:
-          "Entregamos en formatos optimizados para redes sociales, web y presentaciones, incluyendo versiones cortas y largas según necesites.",
+          "Un video promocional es un contenido audiovisual más amplio que busca presentar productos, servicios o eventos con mayor detalle y duración, mientras que un spot publicitario es un anuncio breve y directo, pensado para captar rápidamente la atención en medios masivos. Ambos son esenciales para la estrategia de branding y marketing digital.",
       },
       {
-        question: "¿Cumplen con las regulaciones farmacéuticas?",
+        question:
+          "¿Qué estilos de video se usan para campañas de promoción en redes sociales?",
         answer:
-          "Sí, todos nuestros videos promocionales respetan las normativas del sector farmacéutico y pueden incluir disclaimers requeridos.",
+          "En redes sociales se utilizan estilos dinámicos como videos cortos con storytelling, animaciones, testimonios, tutoriales rápidos y contenido generado por usuarios. Estos formatos buscan maximizar el engagement y adaptarse a la velocidad y preferencias de los usuarios en cada plataforma.",
+      },
+      {
+        question: "¿Puedo usar música, voz en off o animación en mi video?",
+        answer:
+          "Sí, la producción audiovisual profesional incluye la incorporación de música, voz en off y animaciones para potenciar el mensaje y generar emociones, haciendo que el contenido sea más atractivo y memorable para la audiencia.",
+      },
+      {
+        question: "¿Dónde puedo usar mi video de promoción?",
+        answer:
+          "Los videos de promoción se pueden usar en sitios web, redes sociales, campañas de email marketing, presentaciones comerciales y eventos corporativos, siendo un recurso versátil para potenciar la imagen de empresa y el branding.",
+      },
+      {
+        question:
+          "¿Qué duración se recomienda para captar la atención en redes?",
+        answer:
+          "La duración ideal para videos en redes sociales es entre 15 y 60 segundos, permitiendo transmitir un mensaje claro y efectivo antes de que el usuario pierda interés.",
+      },
+      {
+        question: "¿Puedo reutilizar el video en otras campañas?",
+        answer:
+          "Sí, los videos promocionales se pueden adaptar y reutilizar en diferentes campañas, ajustando formatos y mensajes para maximizar su alcance y eficiencia.",
+      },
+      {
+        question:
+          "¿Se dedican únicamente a desarrollar contenido para la industria farmacéutica?",
+        answer:
+          "No, en Tuki Estudio Creativo trabajamos con empresas de diversos sectores, creando contenido audiovisual personalizado que se adapta a las necesidades y objetivos de cada cliente. Si bien nuestra especialización y experiencia más profunda está en la industria farmacéutica, también desarrollamos proyectos exitosos en otros ámbitos, siempre con el objetivo de potenciar la imagen de empresa y fortalecer el branding a través de producciones audiovisuales de alta calidad y creatividad.",
       },
     ],
   },
@@ -330,14 +432,38 @@ export const PHARMACEUTICAL_SERVICES: Record<string, PharmaceuticalService> = {
     },
     faq: [
       {
-        question: "¿Qué tipo de contenido crean para eventos?",
+        question: "¿Qué tipo de videos puedo usar en un evento corporativo?",
         answer:
-          "Desarrollamos presentaciones animadas, videos explicativos para stands y material audiovisual para conferencias médicas.",
+          "En un evento corporativo puedes usar diversos tipos de videos, como videos de apertura que presentan la empresa o el tema principal, videos resumen que recogen los momentos clave, testimonios de clientes o empleados, videos promocionales de productos, y contenido dinámico para pantallas o stands. Estos videos ayudan a captar la atención y reforzar la imagen de empresa.",
       },
       {
-        question: "¿Pueden adaptar el contenido durante el evento?",
+        question:
+          "¿Qué diferencia hay entre un video de apertura y un video resumen?",
         answer:
-          "Sí, ofrecemos soporte y adaptaciones de último momento para ajustar el contenido a las necesidades del evento.",
+          "El video de apertura se utiliza para iniciar un evento, presentando la identidad, valores o propósito del encuentro, generando expectativa y conexión con la audiencia. En cambio, el video resumen se proyecta al final para recapitular los momentos más importantes y cerrar con un mensaje impactante.",
+      },
+      {
+        question:
+          "¿Pueden hacer videos con testimonios o entrevistas para proyectar en el evento?",
+        answer:
+          "Sí, en Tuki Estudio Creativo producimos videos con testimonios y entrevistas profesionales que aportan credibilidad y cercanía, ideales para proyectar en eventos corporativos y fortalecer el mensaje que se quiere transmitir.",
+      },
+      {
+        question:
+          "¿Cuál es el tiempo de entrega necesario para tener listo un video para conferencia?",
+        answer:
+          "El tiempo de entrega depende de la complejidad del proyecto, pero recomendamos planificar con al menos 2 a 4 semanas para garantizar una producción audiovisual profesional, que incluya guion, filmación, edición y ajustes finales.",
+      },
+      {
+        question: "¿Pueden cubrir el evento y generar contenido post-evento?",
+        answer:
+          "Sí, ofrecemos cobertura audiovisual completa del evento, incluyendo grabación en vivo y edición de contenido post-evento como videos resumen, entrevistas y materiales para difusión en redes sociales o comunicaciones internas.",
+      },
+      {
+        question:
+          "¿Qué estilo de video es mejor para captar la atención en ferias o stands?",
+        answer:
+          "Para ferias o stands, los videos dinámicos con mensajes claros, ritmo ágil y elementos visuales impactantes, como animaciones o gráficos en movimiento, son ideales para atraer y mantener la atención del público en espacios concurridos.",
       },
     ],
   },
@@ -383,14 +509,42 @@ export const PHARMACEUTICAL_SERVICES: Record<string, PharmaceuticalService> = {
     },
     faq: [
       {
-        question: "¿Qué necesitan para empezar con un video podcast?",
+        question: "¿Qué es un video podcast y qué ventajas tiene?",
         answer:
-          "Solo necesitamos tu audio original y una breve descripción del contenido. Nosotros nos encargamos del resto.",
+          "Un video podcast es una producción audiovisual que combina el formato tradicional de podcast con contenido visual, mostrando a los participantes o elementos gráficos mientras se desarrolla la conversación. Las ventajas incluyen mayor conexión con la audiencia, mejor retención del mensaje y mayor alcance en plataformas como YouTube y redes sociales.",
       },
       {
-        question: "¿Pueden trabajar con episodios ya grabados?",
+        question:
+          "¿Pueden ayudarme con el diseño visual y la edición de mi podcast?",
         answer:
-          "Sí, trabajamos tanto con episodios existentes como con producciones nuevas desde cero.",
+          "Sí, en Tuki Estudio Creativo ofrecemos servicios completos de diseño visual y edición para podcasts, asegurando una producción profesional que refleje la identidad de tu marca y mantenga la atención del público.",
+      },
+      {
+        question: "¿Qué necesito para grabar un podcast en formato video?",
+        answer:
+          "Para grabar un podcast en formato video necesitas un espacio con buena iluminación, cámaras o smartphones con buena calidad de imagen, micrófonos para capturar el audio con claridad y, preferiblemente, un software de grabación o streaming que permita combinar audio y video de manera profesional.",
+      },
+      {
+        question:
+          "¿Pueden integrar subtítulos o gráficos animados en el episodio?",
+        answer:
+          "Sí, podemos integrar subtítulos y gráficos animados para hacer tus videos podcasts más accesibles, atractivos y profesionales, mejorando la experiencia de la audiencia y facilitando la comprensión del contenido.",
+      },
+      {
+        question:
+          "¿Cuál es el mejor formato para subir un podcast a YouTube o redes sociales?",
+        answer:
+          "El formato MP4 es el más recomendado para subir videos podcasts a YouTube y redes sociales, ya que combina buena calidad de imagen y audio con un tamaño de archivo optimizado para la web.",
+      },
+      {
+        question: "¿Puedo grabar varios episodios en una sola sesión?",
+        answer:
+          "Sí, grabar varios episodios en una sola sesión es una práctica común que permite optimizar tiempo y recursos, facilitando la planificación de la publicación y manteniendo la continuidad del contenido.",
+      },
+      {
+        question: "¿Cuál es la duración ideal de un video podcast?",
+        answer:
+          "La duración ideal de un video podcast suele estar entre 15 y 45 minutos, tiempo suficiente para desarrollar temas en profundidad sin perder la atención de la audiencia, aunque puede variar según el formato y el público objetivo.",
       },
     ],
   },

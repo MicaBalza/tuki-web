@@ -70,14 +70,19 @@ export default function PharmaceuticalServiceFAQ({
               <div className={styles.faqColumn}>
                 {service.faq.slice(0, 5).map((faqItem, index) => (
                   <div key={index} className={styles.faqItem}>
-                    <p
-                      className={styles.faqQuestion}
+                    <h2
+                      className={`${styles.faqQuestion} p`}
                       onClick={() => toggleQuestion(index)}
                     >
                       {faqItem.question}
-                    </p>
+                    </h2>
                     {expandedQuestion === index && (
-                      <p className={styles.faqAnswer}>{faqItem.answer}</p>
+                      <p
+                        className={styles.faqAnswer}
+                        dangerouslySetInnerHTML={{
+                          __html: faqItem.answer.replace(/\n/g, "<br>"),
+                        }}
+                      />
                     )}
                   </div>
                 ))}
@@ -92,7 +97,12 @@ export default function PharmaceuticalServiceFAQ({
                       {faqItem.question}
                     </p>
                     {expandedQuestion === index + 5 && (
-                      <p className={styles.faqAnswer}>{faqItem.answer}</p>
+                      <p
+                        className={styles.faqAnswer}
+                        dangerouslySetInnerHTML={{
+                          __html: faqItem.answer.replace(/\n/g, "<br>"),
+                        }}
+                      />
                     )}
                   </div>
                 ))}
