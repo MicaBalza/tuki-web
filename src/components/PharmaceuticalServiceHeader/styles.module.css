@@ -40,8 +40,8 @@
   text-align: center;
 }
 
-.headerDescription h3 {
-  font-weight: 400;
+.headerDescription h2 {
+  font-size: clamp(1rem, 2.5vw, 1.75rem);
 }
 
 /* Responsive Design */
