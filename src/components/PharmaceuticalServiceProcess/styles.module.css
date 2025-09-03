@@ -24,6 +24,7 @@
   gap: 2rem;
   max-width: 1600px;
   margin: 0 auto;
+  padding: 0 5vw;
   width: 100%;
   position: relative;
 }
@@ -67,9 +68,10 @@
 }
 
 .stepDescription {
-  width: 280px;
+  max-width: 240px;
   margin-left: -40px;
   margin-right: -40px;
+  font-size: clamp(0.625rem, 1.5vw, 1rem);
 }
 
 /* Responsive Design */

@@ -49,7 +49,7 @@ const Footer = () => {
             <Button
               text={t("cta-button")}
               onClick={() => push(`/${lng}/contact-us`)}
-              darkBg
+              darkBg={bgColor === "purple"}
             />
           </div>
         </div>

@@ -40,6 +40,10 @@
   text-align: center;
 }
 
+.headerDescription h3 {
+  font-weight: 400;
+}
+
 /* Responsive Design */
 @media (max-width: 1024px) {
   .headerSection {

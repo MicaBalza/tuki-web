@@ -19,6 +19,26 @@ export const COLOR_BY_PATH = [
     bgColor: "purple",
     color: "white",
   },
+  {
+    path: "/pharmaceutical-services/institutional-corporate-videos",
+    bgColor: "light-purple",
+    color: "white",
+  },
+  {
+    path: "/pharmaceutical-services/product-launch",
+    bgColor: "light-purple",
+    color: "white",
+  },
+  {
+    path: "/pharmaceutical-services/promotional-videos",
+    bgColor: "light-purple",
+    color: "white",
+  },
+  {
+    path: "/pharmaceutical-services/podcast-videos",
+    bgColor: "light-purple",
+    color: "white",
+  },
 ];
 
 export const FOOTER_SECTIONS = [

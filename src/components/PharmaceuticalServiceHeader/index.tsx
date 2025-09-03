@@ -1,5 +1,5 @@
-import Image from "next/image";
 import { PharmaceuticalService } from "@/constants/pharmaceuticalServices";
+import Image from "next/image";
 import styles from "./styles.module.css";
 
 interface PharmaceuticalServiceHeaderProps {
@@ -32,7 +32,7 @@ export default function PharmaceuticalServiceHeader({
       </div>
 
       <div className={styles.headerDescription}>
-        <h2
+        <h3
           className={`text-${coverTextColor}`}
           dangerouslySetInnerHTML={{ __html: service.cover.bigDescription }}
         />

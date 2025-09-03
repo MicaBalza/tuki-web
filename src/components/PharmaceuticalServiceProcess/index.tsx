@@ -34,7 +34,7 @@ export default function PharmaceuticalServiceProcess({
               <div className={`${styles.stepNumber} h1 text-light-green`}>
                 {index + 1}
               </div>
-              <h4 className={`${styles.stepTitle} text-light-green`}>
+              <h4 className={`${styles.stepTitle} bold text-light-green`}>
                 {title}
               </h4>
               <p className={`${styles.stepDescription} text-white`}>
