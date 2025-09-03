@@ -34,7 +34,7 @@ export default function ServicesGrid({ lng }: ServicesGridProps) {
     <>
       <section className={styles.section}>
         <div className={styles.sectionContent}>
-          <h2 className={`${styles.sectionTitle} text-white`}>
+          <h2 className={`${styles.sectionTitle} text-white h1`}>
             {t("grid.title")}
           </h2>
           <div className={styles.servicesGrid}>

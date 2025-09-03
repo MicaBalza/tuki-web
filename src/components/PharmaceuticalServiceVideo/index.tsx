@@ -6,15 +6,17 @@ import styles from "./styles.module.css";
 
 interface PharmaceuticalServiceVideoProps {
   service: any; // Translation object with same structure
+  colors: { video: string };
 }
 
 export default function PharmaceuticalServiceVideo({
   service,
+  colors,
 }: PharmaceuticalServiceVideoProps) {
   const { push } = useRouter();
 
   return (
-    <div className={styles.thirdSection}>
+    <div className={`${styles.thirdSection} bg-${colors.video}`}>
       <div className={styles.thirdSectionVideo}>
         <iframe
           src={service.video.videoUrl}

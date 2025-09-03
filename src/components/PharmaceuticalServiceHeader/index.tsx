@@ -1,3 +1,4 @@
+import { PHARMACEUTICAL_SERVICE_COLORS } from "@/constants/pharmaceuticalServices";
 import Image from "next/image";
 import styles from "./styles.module.css";
 
@@ -10,7 +11,11 @@ export default function PharmaceuticalServiceHeader({
   service,
   serviceId,
 }: PharmaceuticalServiceHeaderProps) {
-  const coverTextColor = ["nude", "pink"].includes(service.cover.bgColor)
+  const coverTextColor = ["nude", "pink"].includes(
+    PHARMACEUTICAL_SERVICE_COLORS[
+      serviceId as keyof typeof PHARMACEUTICAL_SERVICE_COLORS
+    ].cover
+  )
     ? "purple"
     : "white";
 
