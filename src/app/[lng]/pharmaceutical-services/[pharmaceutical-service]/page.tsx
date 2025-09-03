@@ -1,33 +1,39 @@
+"use client";
+
 import PageContainer from "@/components/PageContainer";
 import PharmaceuticalServiceFAQ from "@/components/PharmaceuticalServiceFAQ";
 import PharmaceuticalServiceHeader from "@/components/PharmaceuticalServiceHeader";
 import PharmaceuticalServiceHowWeDoIt from "@/components/PharmaceuticalServiceHowWeDoIt";
 import PharmaceuticalServiceProcess from "@/components/PharmaceuticalServiceProcess";
 import PharmaceuticalServiceVideo from "@/components/PharmaceuticalServiceVideo";
-import { PHARMACEUTICAL_SERVICES } from "@/constants/pharmaceuticalServices";
-import { notFound } from "next/navigation";
+import { PHARMACEUTICAL_SERVICE_COLORS } from "@/constants/pharmaceuticalServices";
+import { useTranslation } from "@/i18n/client";
+import { notFound, useParams } from "next/navigation";
 
 type Params = {
   lng: string;
   "pharmaceutical-service": string;
 };
 
-export default async function PharmaceuticalServicePage(props: {
-  params: Promise<Params>;
-}) {
-  const params = await props.params;
+export default function PharmaceuticalServicePage() {
+  const params = useParams() as Params;
   const serviceId = params["pharmaceutical-service"];
+  const { t } = useTranslation(params.lng, "pharmaceutical-services");
 
-  const service = PHARMACEUTICAL_SERVICES[serviceId];
+  const service = t(`serviceDetails.${serviceId}`, { returnObjects: true });
+  const colors =
+    PHARMACEUTICAL_SERVICE_COLORS[
+      serviceId as keyof typeof PHARMACEUTICAL_SERVICE_COLORS
+    ];
 
-  if (!service) {
+  if (!service || typeof service === "string" || !colors) {
     return notFound();
   }
 
   return (
-    <PageContainer className={`bg-${service.cover.bgColor}`}>
-      <PharmaceuticalServiceHeader service={service} />
-      <PharmaceuticalServiceHowWeDoIt service={service} />
+    <PageContainer className={`bg-${colors.cover}`}>
+      <PharmaceuticalServiceHeader service={service} serviceId={serviceId} />
+      <PharmaceuticalServiceHowWeDoIt service={service} colors={colors} />
       <PharmaceuticalServiceVideo service={service} />
       <PharmaceuticalServiceProcess service={service} />
       <PharmaceuticalServiceFAQ lng={params.lng} serviceType={serviceId} />

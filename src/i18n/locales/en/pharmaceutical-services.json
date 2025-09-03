@@ -277,5 +277,186 @@
         "answer": "Review and changes are managed through partial deliveries where the client can provide feedback. At Tuki Studio we guarantee fluid communication and clear timelines for making adjustments, ensuring satisfaction and quality in the final result."
       }
     ]
+  },
+  "serviceDetails": {
+    "institutional-corporate-videos": {
+      "cover": {
+        "title": "Institutional & Corporate Videos",
+        "bigDescription": "We tell in a simple and visual way <b>who your company is, what drives it and how it works.</b>",
+        "description": "We create videos that can convey your culture, present key projects or tour your laboratory."
+      },
+      "howWeDoIt": {
+        "description": "Choose the option that best suits your message and budget. From simple and educational 2D illustrations, to complex 3D animations, including motion graphics.",
+        "animation2d": "We transmit your company's mission, vision and values through accessible and attractive animations. Perfect for telling your brand's story in a clear and emotional way.",
+        "animation3d": "We create realistic visual representations that highlight your infrastructure, processes and quality standards with a high level of detail and professionalism",
+        "motionGraphics": "We present key information about your company with dynamic graphics, moving data and visual effects that reinforce your corporate identity"
+      },
+      "video": {
+        "description": "Selection of institutional videos created at MyeVideo / Medevice Digital. From concept to final delivery, at Tuki Studio we handle creative direction, script development and production team coordination.",
+        "videoUrl": "https://www.youtube.com/embed/EUH6stzUVv8?si=SVeuM00QiJQCKoRf"
+      },
+      "processSteps": {
+        "step1": "Meeting to understand the essence of your company, its history, values and key message.",
+        "step2": "Development of an attractive visual narrative that tells your brand's story or highlights its impact on the industry.",
+        "step3": "Definition of graphic style, choice of colors and typography aligned with the company's identity.",
+        "step4": "Video creation using 2D, 3D or Motion Graphics animation, according to the most appropriate approach",
+        "step5": "Integration of corporate music, professional voice-over and sound effects that reinforce the message.",
+        "step6": "Delivery of the video in optimized formats and advice for its distribution in different channels."
+      }
+    },
+    "product-launch": {
+      "cover": {
+        "title": "Product Launch & Presentation",
+        "bigDescription": "We develop videos that show the <b>benefits</b> of your products, <b>how they work</b> and why they <b>make a difference</b>.",
+        "description": "For example, a video that explains a new medication, how to use a medical device or the presentation of a mechanism of action."
+      },
+      "howWeDoIt": {
+        "description": "Select the format that best fits your message and budget: from didactic 2D illustrations to complex 3D animations, not forgetting motion graphics.",
+        "animation2d": "Communicate who you are and what drives you: clear, accessible animations with soul, designed to reflect the essence of your brand.",
+        "animation3d": "We show the best of your company with realistic animations that highlight facilities, processes and quality with full detail.",
+        "motionGraphics": "Key information, well presented: moving graphics and visual effects that make your message understood and remembered."
+      },
+      "video": {
+        "description": "Launch clips designed to highlight the best of each product. At Tuki Studio we lead the creative approach, visual narrative and comprehensive production, as part of the MyeVideo / Medevice Digital team.",
+        "videoUrl": "https://www.youtube.com/embed/hRX06tvkXJk?si=AsP0uX5J0PfpGoIa"
+      },
+      "processSteps": {
+        "step1": "First meeting to get to know your brand in depth: who they are, what they do and what differentiates them.",
+        "step2": "We design a visual narrative that summarizes your essence and highlights your value in the sector.",
+        "step3": "We select the visual style, color palette and typography that best represent your brand.",
+        "step4": "We produce the video with the most appropriate technique: 2D, 3D or motion graphics, according to the message.",
+        "step5": "Sound also communicates: we integrate corporate music, voice and effects that elevate the content.",
+        "step6": "We deliver the video ready to use, adapted to each platform, and advise you on its distribution."
+      }
+    },
+    "tutorial-training": {
+      "cover": {
+        "title": "Tutorials & Training",
+        "bigDescription": "We create videos to <b>teach</b> professionals or patients <b>how to use</b> a medication, device or platform <b>step by step</b>.",
+        "description": "This type of video can show how to apply a treatment or explain the use of a health app."
+      },
+      "howWeDoIt": {
+        "description": "We adapt production to your idea and budget: simple 2D illustrations, motion graphics or more complex 3D animations.",
+        "animation2d": "We bring your company's story to life with visual animations that connect emotionally and communicate your purpose with clarity.",
+        "animation3d": "We visually reproduce your infrastructure and processes with precision and professionalism, taking care of every technical aspect.",
+        "motionGraphics": "Dynamic animations to present your data clearly, aesthetically and in tune with your brand image."
+      },
+      "video": {
+        "description": "Educational video clips designed to make the complex simple. Script development, visual proposal and supervision of the entire creative process, produced by Tuki Studio during our time at MyeVideo / Medevice Digital.",
+        "videoUrl": "https://www.youtube.com/embed/pUtpN6ak1rE?si=9MR24_qGD6ZxB8LW"
+      },
+      "processSteps": {
+        "step1": "Initial space to understand the identity, journey and fundamental values of your company.",
+        "step2": "We create a visual story that shows who you are and how you generate impact.",
+        "step3": "We define the graphic universe of the video: style, colors and letters that speak your same language.",
+        "step4": "We choose the type of animation that best fits your project and bring the idea to screen.",
+        "step5": "We design the sound landscape of the video with professional voice-over, music and effects that accompany your message.",
+        "step6": "We export in the appropriate formats and guide you so that the content reaches where it needs to be."
+      }
+    },
+    "promotional-videos": {
+      "cover": {
+        "title": "Promotional Videos",
+        "bigDescription": "We create visual content that <b>highlights the advantages</b> of your product or company focused on your ideal audience.",
+        "description": "A clear example is short videos for social media or a quick presentation for investors."
+      },
+      "howWeDoIt": {
+        "description": "From simple 2D animations to elaborate 3D pieces, including motion graphics: choose what best fits your message and resources.",
+        "animation2d": "Animations designed to tell your mission, vision and values in a close, understandable and visually attractive way.",
+        "animation3d": "We shape realistic representations that reflect your level of quality, technology and facilities with visual fidelity.",
+        "motionGraphics": "Data that moves, graphics that communicate: we create visual pieces aligned with your corporate identity."
+      },
+      "video": {
+        "description": "Promotional pieces created for campaigns, social media and presentations. From Tuki Studio we handle creative direction and general coordination, working as part of the MyeVideo / Medevice Digital team.",
+        "videoUrl": "https://www.youtube.com/embed/LmlLAJe8Edo?si=jv07OTGNn6-qIA5_"
+      },
+      "processSteps": {
+        "step1": "We start by listening: a meeting to capture the heart of your brand and its main message.",
+        "step2": "We build a visual story that connects with your audience and highlights what makes you unique.",
+        "step3": "We build a visual aesthetic consistent with your identity and message.",
+        "step4": "We animate your story with the style that suits you best: from simple to the most complex.",
+        "step5": "We take care of the video's sound with a selection of music, voice and effects that provide coherence and emotion.",
+        "step6": "Final video optimized for web, networks or presentations, along with advice for its effective distribution."
+      }
+    },
+    "events-conferences": {
+      "cover": {
+        "title": "Content for Events & Conferences",
+        "bigDescription": "We design <b>audiovisual material</b> to accompany your <b>talks, stands or presentations at conferences</b>.",
+        "description": "It serves to visualize a specific process, present a new product, etc."
+      },
+      "howWeDoIt": {
+        "description": "You have options for each type of message and budget: educational 2D, dynamic motion graphics or 3D animation with more detail.",
+        "animation2d": "We make your brand speak: simple and emotional animations to transmit what defines you as a company.",
+        "animation3d": "We visualize your processes and facilities with detail and realism, highlighting your professional standard.",
+        "motionGraphics": "We visualize your figures and key messages with motion graphics that combine rhythm, design and brand consistency."
+      },
+      "video": {
+        "description": "Content designed for big screens and key moments. Concept, visual script and production supervision by Tuki Studio, within our work at MyeVideo / Medevice Digital.",
+        "videoUrl": "https://www.youtube.com/embed/cLsYr8_LtGQ?si=nV61LAQHGwsUCNv7"
+      },
+      "processSteps": {
+        "step1": "We meet to connect with the history, purpose and vision of your company.",
+        "step2": "We develop a visual script designed to tell your story or highlight your place in the industry.",
+        "step3": "We choose a unique visual language: from graphic style to colors and typography.",
+        "step4": "We apply the most effective technique to enhance your message: 2D, 3D or motion animation.",
+        "step5": "We add professional audio: music, voice-over and effects that accompany and reinforce the narrative.",
+        "step6": "You receive the material ready to publish, in the formats you need, with support in its distribution strategy."
+      }
+    },
+    "podcast-videos": {
+      "cover": {
+        "title": "Podcast Video Production",
+        "bigDescription": "We take your podcast episodes and <b>combine them with images, graphics and/or video clips</b>.",
+        "description": "Transforming your podcast this way makes it easier to share episodes on social media."
+      },
+      "howWeDoIt": {
+        "description": "Is your message simple or complex? We have the right style for every need and budget: 2D, motion graphics or 3D animation.",
+        "animation2d": "A clear and visual way to share your purpose: animations that tell your brand's story from the emotional and accessible.",
+        "animation3d": "Animations that show your infrastructure with technical and aesthetic clarity, transmitting confidence and quality.",
+        "motionGraphics": "We transform your data into animated graphics that inform, impact and reinforce your visual identity."
+      },
+      "video": {
+        "description": "Visual design, editing and narrative for video podcasts. Project developed by Tuki Studio as part of the MyeVideo / Medevice Digital team.",
+        "videoUrl": "https://www.youtube.com/embed/OZ4RoZyxcqM?si=gOGj2jxZFVuxDVUM"
+      },
+      "processSteps": {
+        "step1": "Starting point: we understand your history and values to build an authentic message.",
+        "step2": "We develop a clear and powerful visual narrative, aligned with your brand's identity.",
+        "step3": "We adjust the design to your identity, taking care of every visual detail of the project.",
+        "step4": "The video comes to life with the visual format that best communicates your proposal.",
+        "step5": "We incorporate music, voice-over and sound effects aligned with your brand to enhance the message.",
+        "step6": "Final delivery adapted to different channels, plus recommendations to get the most out of the content."
+      }
+    }
+  },
+  "processImages": {
+    "animation2d": {
+      "title": "2D Animation",
+      "alt": "2D Animation"
+    },
+    "animation3d": {
+      "title": "3D Animation",
+      "alt": "3D Animation"
+    },
+    "motionGraphics": {
+      "title": "Motion Graphics",
+      "alt": "Motion Graphics"
+    }
+  },
+  "processStepTitles": {
+    "step1": "Initial Briefing",
+    "step2": "Script and Storyboard",
+    "step3": "Visual Design",
+    "step4": "Animation Production",
+    "step5": "Sound and Post-production",
+    "step6": "Final Delivery and Support"
+  },
+  "processSection": {
+    "title": "Process Stages",
+    "subtitle": "This is our production process."
+  },
+  "howWeDoItSection": {
+    "title": "How do we do it?"
   }
 }

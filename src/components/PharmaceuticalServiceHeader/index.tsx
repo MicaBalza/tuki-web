@@ -1,13 +1,14 @@
-import { PharmaceuticalService } from "@/constants/pharmaceuticalServices";
 import Image from "next/image";
 import styles from "./styles.module.css";
 
 interface PharmaceuticalServiceHeaderProps {
-  service: PharmaceuticalService;
+  service: any; // Translation object with same structure
+  serviceId: string;
 }
 
 export default function PharmaceuticalServiceHeader({
   service,
+  serviceId,
 }: PharmaceuticalServiceHeaderProps) {
   const coverTextColor = ["nude", "pink"].includes(service.cover.bgColor)
     ? "purple"
@@ -17,7 +18,7 @@ export default function PharmaceuticalServiceHeader({
     <div className={styles.headerSection}>
       <div className={styles.headerImage}>
         <Image
-          src={`/static/images/pharmaceutical-services/cover/${service.id}.png`}
+          src={`/static/images/pharmaceutical-services/cover/${serviceId}.png`}
           alt={service.cover.title}
           fill
           style={{ objectFit: "cover" }}

@@ -1,41 +1,37 @@
-import { PharmaceuticalService } from "@/constants/pharmaceuticalServices";
+import { useTranslation } from "@/i18n/client";
+import { useParams } from "next/navigation";
 import styles from "./styles.module.css";
 
 interface PharmaceuticalServiceProcessProps {
-  service: PharmaceuticalService;
+  service: any; // Translation object with same structure
 }
-
-const PROCESS_STEP_TITLES = [
-  "Briefing Inicial",
-  "Guión y Storyboard",
-  "Diseño Visual",
-  "Producción de animación",
-  "Sonido y Postproducción",
-  "Entrega final y Soporte",
-];
 
 export default function PharmaceuticalServiceProcess({
   service,
 }: PharmaceuticalServiceProcessProps) {
+  const params = useParams();
+  const lng = params?.lng as string;
+  const { t } = useTranslation(lng, "pharmaceutical-services");
+
   return (
     <div className={styles.processSection}>
       <div className={styles.processHeader}>
-        <h3 className="text-light-green h1 bold">Etapas del Proceso</h3>
-        <p className="text-white h4">Este es nuestro proceso de producción.</p>
+        <h3 className="text-light-green h1 bold">
+          {t("processSection.title")}
+        </h3>
+        <p className="text-white h4">{t("processSection.subtitle")}</p>
       </div>
 
       <div className={styles.processSteps}>
-        {PROCESS_STEP_TITLES.map((title, index) => {
-          const stepKey = `step${
-            index + 1
-          }` as keyof typeof service.processSteps;
+        {[1, 2, 3, 4, 5, 6].map((stepNumber) => {
+          const stepKey = `step${stepNumber}`;
           return (
-            <div key={index} className={styles.processStep}>
+            <div key={stepNumber} className={styles.processStep}>
               <div className={`${styles.stepNumber} h1 text-light-green`}>
-                {index + 1}
+                {stepNumber}
               </div>
               <h4 className={`${styles.stepTitle} bold text-light-green`}>
-                {title}
+                {t(`processStepTitles.${stepKey}`)}
               </h4>
               <p className={`${styles.stepDescription} text-white`}>
                 {service.processSteps[stepKey]}

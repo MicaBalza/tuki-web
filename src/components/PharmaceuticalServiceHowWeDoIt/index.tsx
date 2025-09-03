@@ -1,18 +1,32 @@
+import { useTranslation } from "@/i18n/client";
 import Image from "next/image";
-import { PharmaceuticalService, PHARMACEUTICAL_PROCESS_IMAGES } from "@/constants/pharmaceuticalServices";
+import { useParams } from "next/navigation";
 import styles from "./styles.module.css";
 
 interface PharmaceuticalServiceProcessProps {
-  service: PharmaceuticalService;
+  service: any; // Translation object with same structure
+  colors: { cover: string; howWeDoIt: string };
 }
 
 export default function PharmaceuticalServiceProcess({
   service,
+  colors,
 }: PharmaceuticalServiceProcessProps) {
+  const params = useParams();
+  const lng = params?.lng as string;
+  const { t } = useTranslation(lng, "pharmaceutical-services");
+
+  const processImages = [
+    { key: "animation2d", index: 1 },
+    { key: "animation3d", index: 2 },
+    { key: "motionGraphics", index: 3 },
+  ];
   return (
-    <div className={`${styles.secondSection} bg-${service.howWeDoIt.bgColor}`}>
+    <div className={`${styles.secondSection} bg-${colors.howWeDoIt}`}>
       <div className={styles.secondSectionContent}>
-        <h3 className={styles.secondSectionTitle}>¿Cómo lo hacemos?</h3>
+        <h3 className={styles.secondSectionTitle}>
+          {t("howWeDoItSection.title")}
+        </h3>
         <p className={styles.secondSectionDescription}>
           {service.howWeDoIt.description}
         </p>
@@ -20,21 +34,19 @@ export default function PharmaceuticalServiceProcess({
 
       <div className={styles.processContainer}>
         <div className={styles.processImages}>
-          {PHARMACEUTICAL_PROCESS_IMAGES.map((processImage, index) => (
-            <div key={index} className={styles.processImageCard}>
+          {processImages.map((processImage) => (
+            <div key={processImage.key} className={styles.processImageCard}>
               <div className={styles.processImage}>
                 <Image
-                  src={`/static/images/pharmaceutical-services/how-we-do-it/${
-                    index + 1
-                  }.png`}
-                  alt={processImage.alt}
+                  src={`/static/images/pharmaceutical-services/how-we-do-it/${processImage.index}.png`}
+                  alt={t(`processImages.${processImage.key}.alt`)}
                   fill
                   style={{ objectFit: "contain" }}
                   unoptimized={true}
                 />
               </div>
               <h3 className={styles.processImageTitle}>
-                {processImage.title}
+                {t(`processImages.${processImage.key}.title`)}
               </h3>
               <Image
                 src="/static/icons/chevron_down_white.svg"

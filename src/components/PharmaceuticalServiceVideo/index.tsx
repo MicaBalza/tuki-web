@@ -1,12 +1,11 @@
 "use client";
 
 import Button from "@/components/Button";
-import { PharmaceuticalService } from "@/constants/pharmaceuticalServices";
 import { useRouter } from "next/navigation";
 import styles from "./styles.module.css";
 
 interface PharmaceuticalServiceVideoProps {
-  service: PharmaceuticalService;
+  service: any; // Translation object with same structure
 }
 
 export default function PharmaceuticalServiceVideo({
