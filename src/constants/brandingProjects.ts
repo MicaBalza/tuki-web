@@ -419,12 +419,12 @@ const elLadoBuenoDeLasMarcas: ProjectData = [
   {
     type: "flex",
     quantity: 3,
-    flex: "threeWide",
+    flex: "threeWider",
   },
   {
     type: "flex",
     quantity: 3,
-    flex: "threeWide",
+    flex: "threeWider",
   },
   {
     type: "flex-video",

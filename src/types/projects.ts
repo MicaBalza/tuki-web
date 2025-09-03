@@ -30,6 +30,7 @@ type FlexType =
   | "twoTall"
   | "twoWideSquare"
   | "threeWide"
+  | "threeWider"
   | "threeSquare"
   | "threeTall"
   | "fourWide"
