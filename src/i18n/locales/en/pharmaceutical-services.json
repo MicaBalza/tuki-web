@@ -332,8 +332,8 @@
     "tutorial-training": {
       "cover": {
         "title": "Tutorials & Training",
-        "bigDescription": "We create videos to <b>teach</b> professionals or patients <b>how to use</b> a medication, device or platform <b>step by step</b>.",
-        "description": "This type of video can show how to apply a treatment or explain the use of a health app."
+        "bigDescription": "We create videos to <b>teach</b> professionals or patients <b>how to use</b> a medication, device or platform.",
+        "description": "This type of video can show how to apply a treatment or explain the use of an app."
       },
       "howWeDoIt": {
         "description": "We adapt production to your idea and budget: simple 2D illustrations, motion graphics or more complex 3D animations.",

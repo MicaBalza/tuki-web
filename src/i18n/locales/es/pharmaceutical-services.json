@@ -332,8 +332,8 @@
     "tutorial-training": {
       "cover": {
         "title": "Tutoriales & Capacitación",
-        "bigDescription": "Creamos vídeos para <b>enseñar</b> a profesionales o pacientes <b>cómo usar</b> un medicamento, dispositivo o plataforma <b>paso a paso</b>.",
-        "description": "Este tipo de vídeos puede mostrar cómo aplicar un tratamiento ó explicar el uso de una app de salud."
+        "bigDescription": "Creamos vídeos para <b>enseñar</b> a profesionales o pacientes <b>cómo usar</b> un medicamento, dispositivo o plataforma.",
+        "description": "Este tipo de vídeos puede mostrar cómo aplicar un tratamiento ó explicar el uso de una app."
       },
       "howWeDoIt": {
         "description": "Adaptamos la producción a tu idea y presupuesto: ilustraciones simples en 2D, gráficos en movimiento o animaciones más complejas en 3D.",
@@ -446,7 +446,7 @@
   },
   "processStepTitles": {
     "step1": "Briefing Inicial",
-    "step2": "Guión y Storyboard", 
+    "step2": "Guión y Storyboard",
     "step3": "Diseño Visual",
     "step4": "Producción de animación",
     "step5": "Sonido y Postproducción",
