@@ -58,11 +58,11 @@ export const ROUTES = [
     text: "who-we-are",
     color: "light-purple",
   },
-  {
-    path: "/blog",
-    text: "blog",
-    color: "yellow",
-  },
+  // {
+  //   path: "/blog",
+  //   text: "blog",
+  //   color: "yellow",
+  // },
   {
     path: "/contact-us",
     text: "contact",
