@@ -52,3 +52,23 @@
     min-height: 400px;
   }
 }
+
+@media (max-width: 576px) {
+  .imgContainer {
+    transform: translateX(150px);
+  }
+
+  .imgContainer img {
+    transform: scale(0.75) translateY(50px);
+  }
+}
+
+@media (max-width: 450px) {
+  .imgContainer {
+    transform: translateX(100px);
+  }
+
+  .imgContainer img {
+    object-position: bottom;
+  }
+}

@@ -122,13 +122,13 @@
 
   .navigationRow {
     flex-direction: column;
-    gap: 32px;
+    gap: 16px;
     align-items: center;
   }
 
   .contactPage .navigationRow {
     flex-direction: column;
-    gap: 32px;
+    gap: 16px;
     align-items: center;
   }
 
@@ -150,5 +150,10 @@
 
   .topRowItem:last-child > button {
     margin-left: 0;
+  }
+
+  .logo {
+    width: 100px !important;
+    height: 50px !important;
   }
 }

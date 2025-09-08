@@ -38,17 +38,19 @@
   .container {
     flex-direction: column;
     gap: 40px;
+    max-width: 280px;
+    margin: 0 auto;
   }
-  
+
   .inverted {
     flex-direction: column;
   }
-  
+
   .video {
     width: 280px;
     height: 280px;
   }
-  
+
   .description {
     padding: 0 20px;
   }

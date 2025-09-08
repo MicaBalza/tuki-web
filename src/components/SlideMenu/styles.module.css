@@ -130,6 +130,16 @@
 .sublink {
   font-size: 0.9rem;
   opacity: 0.8;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.activeLink {
+  font-weight: bold;
+}
+
+.activeMainLink {
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
 
 .backdrop {

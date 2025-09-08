@@ -10,8 +10,8 @@
 .imgContainer {
   position: relative;
   align-self: flex-end;
-  width: 800px;
-  height: 460px;
+  width: 610px;
+  height: 400px;
   flex-shrink: 0;
 }
 
@@ -36,19 +36,22 @@
 
 @media (max-width: 1024px) {
   .wrapper {
-    --padding: 15vw;
+    padding: 0 0 0 15vw;
     min-height: 360px;
+    flex-direction: row-reverse;
   }
 
   .imgContainer {
-    width: 600px;
-    height: 345px;
+    width: 400px;
+    height: 260px;
+    transform: scaleX(-1);
   }
 }
 
 @media (max-width: 768px) {
   .wrapper {
-    --padding: 10vw;
+    padding: 0 0 0 10vw;
+    min-height: 320px;
   }
 
   .text {
@@ -56,35 +59,20 @@
   }
 
   .imgContainer {
-    width: 400px;
-    height: 225px;
+    position: relative;
+    width: 300px;
+    height: 196px;
   }
 }
 
 @media (max-width: 576px) {
   .wrapper {
-    --padding: 0;
-    padding: 5vw 0 0;
-    flex-direction: column-reverse;
-    justify-content: center;
-    align-items: center;
-    min-height: auto;
+    padding: 0 0 0 5vw;
+    min-height: 220px;
   }
 
   .imgContainer {
     width: 200px;
-    height: 112px;
-    align-self: center;
-  }
-
-  .illustration,
-  .social-media,
-  .branding {
-    align-items: center;
-  }
-
-  .animation .imgContainer,
-  .motion-graphics .imgContainer {
-    align-self: flex-end;
+    height: 130px;
   }
 }

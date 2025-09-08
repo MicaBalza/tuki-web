@@ -33,9 +33,10 @@
 
 @media (max-width: 576px) {
   .container {
-    padding: 54px 0;
+    padding: 32px 0;
     background: url("../../../public/static/images/whoweare-background-vertical.png");
     background-color: var(--white);
+    gap: 20px;
   }
 
   .persons {

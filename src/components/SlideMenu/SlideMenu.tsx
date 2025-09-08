@@ -49,35 +49,43 @@ export default function SlideMenu() {
         {isOpen && (
           <div className={styles.content}>
             <div className={styles.mobileNavlinks}>
-              {ROUTES.map((route) => (
-                <div key={route.text} className={styles.mobileNavSection}>
-                  <Link
-                    href={route.path}
-                    className={`${styles.navlink} text-white pointer`}
-                    onClick={() => setIsOpen(false)}
-                  >
-                    {pathname.replace(`/${lng}`, "") === route.path ||
-                      pathname.replace(`${lng}`, "") === route.path}
-                    {t(route.text)}
-                  </Link>
+              {ROUTES.map((route) => {
+                const isActive = pathname.replace(`/${lng}`, "") === route.path;
+                return (
+                  <div key={route.text} className={styles.mobileNavSection}>
+                    <Link
+                      href={route.path}
+                      className={`text-white pointer ${isActive ? styles.activeMainLink : ""}`}
+                      onClick={() => setIsOpen(false)}
+                    >
+                      {t(route.text)}
+                    </Link>
                   {route.dropdown && (
                     <div className={styles.mobileSublinks}>
                       {route.dropdown
-                        .filter(item => item.text !== "pharmaceutical" && item.text !== "projects")
-                        .map((dropdownItem) => (
-                        <Link
-                          key={dropdownItem.text}
-                          href={dropdownItem.path}
-                          className={`${styles.sublink} text-white pointer`}
-                          onClick={() => setIsOpen(false)}
-                        >
-                          {t(dropdownItem.text)}
-                        </Link>
-                      ))}
+                        .filter(
+                          (item) =>
+                            item.text !== "pharmaceutical" &&
+                            item.text !== "projects"
+                        )
+                        .map((dropdownItem) => {
+                          const isSubActive = pathname.replace(`/${lng}`, "") === dropdownItem.path;
+                          return (
+                            <Link
+                              key={dropdownItem.text}
+                              href={dropdownItem.path}
+                              className={`${styles.sublink} text-white pointer ${isSubActive ? styles.activeLink : ""}`}
+                              onClick={() => setIsOpen(false)}
+                            >
+                              {t(dropdownItem.text)}
+                            </Link>
+                          );
+                        })}
                     </div>
                   )}
-                </div>
-              ))}
+                  </div>
+                );
+              })}
             </div>
             <div className={styles.footer}>
               <SocialLinks className="fill-white" />
