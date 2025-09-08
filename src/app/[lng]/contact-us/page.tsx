@@ -42,7 +42,7 @@ export default function Page(props: { params: Promise<tParams> }) {
               <EmailIcon />
               <div className="text-purple">
                 <p className="semibold">EMAIL</p>
-                <p>hello@tukistudio.tv</p>
+                <p>hola@tukistudio.tv</p>
               </div>
             </div>
           </div>

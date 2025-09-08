@@ -16,7 +16,7 @@ export async function POST(request: NextRequest) {
 
   const mailOptions: Mail.Options = {
     from: process.env.NEXT_MY_EMAIL,
-    to: "hello@tukistudio.tv",
+    to: "hola@tukistudio.tv",
     // cc: email, (uncomment this line if you want to send a copy to the sender)
     subject: `Message from ${name} (${email})`,
     text: `Móvil: ${tel}
