@@ -129,13 +129,13 @@ export default function PharmaceuticalServiceFAQ({
                     )}
                   </div>
                 ))}
-                <Button
-                  text={t("faq.hideButton")}
-                  className={styles.closeButton}
-                  onClick={() => setIsExpanded(!isExpanded)}
-                />
               </div>
             </div>
+            <Button
+              text={t("faq.hideButton")}
+              className={styles.closeButton}
+              onClick={() => setIsExpanded(!isExpanded)}
+            />
           </div>
         </div>
       )}
