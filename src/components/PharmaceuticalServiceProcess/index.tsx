@@ -30,12 +30,14 @@ export default function PharmaceuticalServiceProcess({
               <div className={`${styles.stepNumber} h1 text-light-green`}>
                 {stepNumber}
               </div>
-              <h4 className={`${styles.stepTitle} bold text-light-green`}>
-                {t(`processStepTitles.${stepKey}`)}
-              </h4>
-              <p className={`${styles.stepDescription} text-white`}>
-                {service.processSteps[stepKey]}
-              </p>
+              <div className={styles.processStepContent}>
+                <h4 className={`${styles.stepTitle} bold text-light-green`}>
+                  {t(`processStepTitles.${stepKey}`)}
+                </h4>
+                <p className={`${styles.stepDescription} text-white`}>
+                  {service.processSteps[stepKey]}
+                </p>
+              </div>
             </div>
           );
         })}
