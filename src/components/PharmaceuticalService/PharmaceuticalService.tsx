@@ -1,4 +1,5 @@
 import { useTranslation } from "@/i18n/client";
+import { getLocalizedPath } from "@/constants/localizedRoutes";
 import Image from "next/image";
 import { useParams, useRouter } from "next/navigation";
 import Button from "../Button";
@@ -24,7 +25,7 @@ const PharmaceuticalService = () => {
         <p className={styles.description}>{t(`pharmaceutical.description`)}</p>
         <Button
           text={t("button")}
-          onClick={() => push(`/pharmaceutical-services`)}
+          onClick={() => push(`/${lng}${getLocalizedPath("/pharmaceutical-services", lng as "en" | "es")}`)}
         />
       </div>
     </div>

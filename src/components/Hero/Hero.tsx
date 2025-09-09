@@ -1,6 +1,7 @@
 import { useParams, useRouter } from "next/navigation";
 
 import { useTranslation } from "@/i18n/client";
+import { getLocalizedPath } from "@/constants/localizedRoutes";
 import Button from "../Button";
 import styles from "./styles.module.css";
 
@@ -59,7 +60,7 @@ const Hero = () => {
         <div className={styles.text}>
           <p className={styles.subtitle}>{t("subtitle")}</p>
           <h1 className={styles.title}>{t("title")}</h1>
-          <Button text={t("button")} onClick={() => push("/services")} />
+          <Button text={t("button")} onClick={() => push(`/${lng}${getLocalizedPath("/services", lng as "en" | "es")}`)} />
         </div>
         <div
           className={styles.videoContainer}

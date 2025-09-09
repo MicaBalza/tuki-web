@@ -1,6 +1,7 @@
 "use client";
 
 import { useTranslation } from "@/i18n/client";
+import { getLocalizedPath } from "@/constants/localizedRoutes";
 import Image from "next/image";
 import Link from "next/link";
 import { useParams, usePathname, useRouter } from "next/navigation";
@@ -48,7 +49,7 @@ const Footer = () => {
           <div className={styles.topRowItem}>
             <Button
               text={t("cta-button")}
-              onClick={() => push(`/${lng}/contact-us`)}
+              onClick={() => push(`/${lng}${getLocalizedPath("/contact-us", lng as "en" | "es")}`)}
               darkBg={bgColor === "purple"}
             />
           </div>
@@ -71,7 +72,7 @@ const Footer = () => {
         {FOOTER_SECTIONS.map((section) => (
           <div key={section.title} className={styles.navigationColumn}>
             <Link
-              href={`/${lng}${section.path}`}
+              href={`/${lng}${getLocalizedPath(section.path, lng as "en" | "es")}`}
               className={styles.sectionTitle}
             >
               {tNav(section.title)}
@@ -81,7 +82,7 @@ const Footer = () => {
                 {section.items.map((item) => (
                   <li key={item.path}>
                     <Link
-                      href={`/${lng}${item.path}`}
+                      href={`/${lng}${getLocalizedPath(item.path, lng as "en" | "es")}`}
                       className={styles.sectionItem}
                     >
                       {tNav(item.text)}

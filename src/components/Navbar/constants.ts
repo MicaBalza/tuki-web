@@ -1,4 +1,7 @@
-export const ROUTES = [
+import { getLocalizedPath } from "@/constants/localizedRoutes";
+
+// Base routes structure (using English paths as canonical)
+const BASE_ROUTES = [
   {
     path: "/",
     text: "home",
@@ -69,6 +72,21 @@ export const ROUTES = [
     color: "pink",
   },
 ];
+
+// Function to get localized routes
+export function getLocalizedRoutes(language: "en" | "es") {
+  return BASE_ROUTES.map(route => ({
+    ...route,
+    path: getLocalizedPath(route.path, language),
+    dropdown: route.dropdown?.map(item => ({
+      ...item,
+      path: getLocalizedPath(item.path, language)
+    }))
+  }));
+}
+
+// Export default routes (for backward compatibility)
+export const ROUTES = BASE_ROUTES;
 
 export const NAVBAR_COLORS: Record<string, string> = {
   "/": "nude",

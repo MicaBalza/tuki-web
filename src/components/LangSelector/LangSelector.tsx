@@ -1,6 +1,7 @@
 import { useParams, usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
+import { getCanonicalPath, getLocalizedPath } from "@/constants/localizedRoutes";
 import Switch from "react-switch";
 import styles from "./styles.module.css";
 
@@ -22,11 +23,23 @@ const LangSelector = ({ invert }: Props) => {
   const [checked, setChecked] = useState(lng === "en");
 
   useEffect(() => {
-    if (checked) {
-      router.push(`/en${path.replace(lng as string, "")}`);
-    } else {
-      router.push(`/es${path.replace(lng as string, "")}`);
-    }
+    const currentLang = lng as "en" | "es";
+    const targetLang = checked ? "en" : "es";
+    
+    // Don't navigate if we're already on the target language
+    if (currentLang === targetLang) return;
+    
+    // Extract the localized path (removing the language prefix)
+    const pathWithoutLang = path.replace(`/${currentLang}`, "") || "/";
+    
+    // Convert the current localized path to canonical English path
+    const canonicalPath = getCanonicalPath(pathWithoutLang, currentLang);
+    
+    // Convert canonical path to target language localized path
+    const targetLocalizedPath = getLocalizedPath(canonicalPath, targetLang);
+    
+    // Navigate to the new localized URL
+    router.push(`/${targetLang}${targetLocalizedPath}`);
   }, [checked, lng, path, router]);
 
   const mainTextClass = invert ? "text-white" : "text-purple";

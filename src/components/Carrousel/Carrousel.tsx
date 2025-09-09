@@ -1,5 +1,6 @@
 import { SERVICES_DATA } from "@/constants/services";
 import { ServiceType } from "@/types/services";
+import { getLocalizedPath } from "@/constants/localizedRoutes";
 import Image from "next/image";
 import { useParams, useRouter } from "next/navigation";
 import { ButtonHTMLAttributes, useEffect, useRef } from "react";
@@ -41,7 +42,7 @@ const Carrousel = ({ service }: Props) => {
       key={service}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      onClick={() => push(`/services/${service}`)}
+      onClick={() => push(`/${lng}${getLocalizedPath(`/services/${service}`, lng as "en" | "es")}`)}
     >
       <Swiper
         ref={swiperRef}
@@ -75,7 +76,7 @@ const Carrousel = ({ service }: Props) => {
       <Button
         text={t(`${service}.title`)}
         inverted
-        onClick={() => push(`/services/${service}`)}
+        onClick={() => push(`/${lng}${getLocalizedPath(`/services/${service}`, lng as "en" | "es")}`)}
       />
     </div>
   );

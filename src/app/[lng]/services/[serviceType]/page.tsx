@@ -7,6 +7,7 @@ import Image from "next/image";
 import styles from "./page.module.css";
 
 import { SERVICES_DATA } from "@/constants/services";
+import { getLocalizedPath } from "@/constants/localizedRoutes";
 import { useTranslation } from "@/i18n/client";
 import { useRouter } from "next/navigation";
 
@@ -60,7 +61,7 @@ export default function Page(props: { params: Promise<tParams> }) {
                       ? styles.lastItem
                       : ""
                   } pointer`}
-                  onClick={() => push(`/services/${serviceType}/${project}`)}
+                  onClick={() => push(`/${lng}${getLocalizedPath(`/services/${serviceType}`, lng as "en" | "es")}/${project}`)}
                 >
                   <div
                     className={styles.serviceHover}

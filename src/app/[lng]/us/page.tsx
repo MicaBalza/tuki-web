@@ -4,6 +4,7 @@ import { use } from "react";
 import Button from "@/components/Button";
 import PageContainer from "@/components/PageContainer";
 import Profile from "@/components/Profile";
+import { getLocalizedPath } from "@/constants/localizedRoutes";
 import { useTranslation } from "@/i18n/client";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
@@ -27,7 +28,7 @@ export default function Us(props: { params: Promise<tParams> }) {
           <div className={styles.text}>
             <h1 className="h3">{t("title")}</h1>
             <p>{t("description")}</p>
-            <Button text={t("button")} onClick={() => push("/contact-us")} />
+            <Button text={t("button")} onClick={() => push(`/${lng}${getLocalizedPath("/contact-us", lng as "en" | "es")}`)} />
           </div>
           <div className={styles.imageContainer}>
             <Image

@@ -1,4 +1,5 @@
 import { useTranslation } from "@/i18n/client";
+import { getLocalizedPath } from "@/constants/localizedRoutes";
 import Image from "next/image";
 import Link from "next/link";
 import { useParams } from "next/navigation";
@@ -23,7 +24,7 @@ const WhatWeDo = () => {
           />
         </div>
 
-        <Link href={`/${lng}/services`}>
+        <Link href={`/${lng}${getLocalizedPath("/services", lng as "en" | "es")}`}>
           <h2 className={`text-purple ${styles.title}`}>{t("title")}</h2>
         </Link>
       </div>

@@ -1,5 +1,7 @@
 import { useTranslation } from "@/i18n/client";
+import { getLocalizedPath } from "@/constants/localizedRoutes";
 import Image from "next/image";
+import Link from "next/link";
 import { useParams, useRouter } from "next/navigation";
 import Button from "../Button";
 import styles from "./styles.module.css";
@@ -40,12 +42,12 @@ const PharmaceuticalServices = () => {
                   alt="Bullet"
                   className={styles.bullet}
                 />
-                <a
-                  href={`/${lng}/pharmaceutical-services/${serviceSlug}`}
+                <Link
+                  href={`/${lng}${getLocalizedPath(`/pharmaceutical-services/${serviceSlug}`, lng as "en" | "es")}`}
                   className={styles.serviceLink}
                 >
                   {item}
-                </a>
+                </Link>
               </li>
             );
           })}

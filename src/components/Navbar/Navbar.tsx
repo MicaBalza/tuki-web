@@ -13,7 +13,8 @@ import LangSelector from "../LangSelector";
 import ServiceTypeHeader from "../ServiceTypeHeader";
 import SlideMenu from "../SlideMenu";
 import SocialLinks from "../SocialLinks";
-import { NAVBAR_COLORS, ROUTES } from "./constants";
+import { getLocalizedPath } from "@/constants/localizedRoutes";
+import { NAVBAR_COLORS, getLocalizedRoutes } from "./constants";
 import styles from "./styles.module.css";
 
 const Navbar = () => {
@@ -48,6 +49,9 @@ const Navbar = () => {
 
   const color = NAVBAR_COLORS[pathname.replace(`${lng}`, "")] || "red";
   const bgIsDark = color === "red" || color === "green";
+  
+  // Get localized routes for current language
+  const localizedRoutes = getLocalizedRoutes(lng as "en" | "es");
 
   return (
     <nav className={`${styles.navbar} bg-${color}`}>
@@ -57,7 +61,7 @@ const Navbar = () => {
         }`}
       >
         <div
-          onClick={() => push("/")}
+          onClick={() => push(`/${lng}${getLocalizedPath("/", lng as "en" | "es")}`)}
           className="pointer"
           style={{ width: "179px", height: "100px" }}
         >
@@ -78,7 +82,7 @@ const Navbar = () => {
           )}
         </div>
         <div className={styles.navlinks}>
-          {ROUTES.map((route) => {
+          {localizedRoutes.map((route) => {
             const cleanPath = pathname.replace(`/${lng}`, "") || "/";
             const isExactMatch = cleanPath === route.path;
             const isNestedMatch =

@@ -1,5 +1,6 @@
 import { useTranslation } from "@/i18n/client";
 import { ServiceType } from "@/types/services";
+import { getLocalizedPath } from "@/constants/localizedRoutes";
 import Lottie from "lottie-react";
 import Image from "next/image";
 import { useParams, useRouter } from "next/navigation";
@@ -31,7 +32,7 @@ const Service = ({ service }: Props) => {
         <p className={styles.description}>{t(`${service}.description`)}</p>
         <Button
           text={t("button")}
-          onClick={() => push(`/services/${service}`)}
+          onClick={() => push(`/${lng}${getLocalizedPath(`/services/${service}`, lng as "en" | "es")}`)}
         />
       </div>
       <div className={styles.imgContainer}>

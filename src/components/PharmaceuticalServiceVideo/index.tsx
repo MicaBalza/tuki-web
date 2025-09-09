@@ -1,7 +1,8 @@
 "use client";
 
 import Button from "@/components/Button";
-import { useRouter } from "next/navigation";
+import { getLocalizedPath } from "@/constants/localizedRoutes";
+import { useParams, useRouter } from "next/navigation";
 import styles from "./styles.module.css";
 
 interface PharmaceuticalServiceVideoProps {
@@ -14,6 +15,7 @@ export default function PharmaceuticalServiceVideo({
   colors,
 }: PharmaceuticalServiceVideoProps) {
   const { push } = useRouter();
+  const { lng } = useParams();
 
   return (
     <div className={`${styles.thirdSection} bg-${colors.video}`}>
@@ -35,7 +37,7 @@ export default function PharmaceuticalServiceVideo({
         </div>
         <Button
           text="Ver más Videos Farma aquí :)"
-          onClick={() => push("/pharmaceutical-services")}
+          onClick={() => push(`/${lng}${getLocalizedPath("/pharmaceutical-services", lng as "en" | "es")}`)}
         />
       </div>
     </div>

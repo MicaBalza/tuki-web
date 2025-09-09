@@ -1,3 +1,4 @@
+import { getLocalizedPath, URL_MAPPINGS } from "@/constants/localizedRoutes";
 import { PHARMACEUTICAL_SERVICE_COLORS } from "@/constants/pharmaceuticalServices";
 import { SERVICES_DATA } from "@/constants/services";
 import { MetadataRoute } from "next";
@@ -13,56 +14,32 @@ export default function sitemap(): MetadataRoute.Sitemap {
   languages.forEach((lang) => {
     const langBaseUrl = `${baseUrl}/${lang}`;
 
-    // Static pages
-    const staticPages: MetadataRoute.Sitemap = [
-      {
-        url: langBaseUrl,
-        lastModified: new Date(lastModified),
-        changeFrequency: "yearly",
-        priority: lang === "es" ? 1 : 0.9, // Spanish is primary language
-      },
-      {
-        url: `${langBaseUrl}/us`,
-        lastModified: new Date(lastModified),
-        changeFrequency: "monthly",
-        priority: 0.3,
-      },
-      {
-        url: `${langBaseUrl}/services`,
-        lastModified: new Date(lastModified),
-        changeFrequency: "monthly",
-        priority: 0.5,
-      },
-      {
-        url: `${langBaseUrl}/contact-us`,
-        lastModified: new Date(lastModified),
-        changeFrequency: "monthly",
-        priority: 0.8,
-      },
-      {
-        url: `${langBaseUrl}/pharmaceutical-services`,
-        lastModified: new Date(lastModified),
-        changeFrequency: "monthly",
-        priority: 0.7,
-      },
-    ];
+    // Static pages with localized URLs
+    const staticPaths = ["/", "/us", "/services", "/contact-us", "/pharmaceutical-services"];
+    const staticPages: MetadataRoute.Sitemap = staticPaths.map((path) => ({
+      url: `${langBaseUrl}${getLocalizedPath(path, lang as "en" | "es")}`,
+      lastModified: new Date(lastModified),
+      changeFrequency: "monthly" as const,
+      priority: path === "/" ? (lang === "es" ? 1 : 0.9) : 0.5,
+    }));
 
-    // Service type pages (e.g., /en/services/animation)
+    // Service type pages (e.g., /en/services/animation or /es/servicios/animacion)
     const serviceTypePages: MetadataRoute.Sitemap = Object.keys(
       SERVICES_DATA
     ).map((serviceType) => ({
-      url: `${langBaseUrl}/services/${serviceType}`,
+      url: `${langBaseUrl}${getLocalizedPath(`/services/${serviceType}`, lang as "en" | "es")}`,
       lastModified: new Date(lastModified),
       changeFrequency: "monthly" as const,
       priority: 0.6,
     }));
 
-    // Individual project pages (e.g., /en/services/animation/shutterfly)
+    // Individual project pages (e.g., /en/services/animation/shutterfly or /es/servicios/animacion/shutterfly)
     const projectPages: MetadataRoute.Sitemap = [];
     Object.entries(SERVICES_DATA).forEach(([serviceType, projects]) => {
       Object.keys(projects).forEach((projectKey) => {
+        const basePath = `/services/${serviceType}/${projectKey}`;
         projectPages.push({
-          url: `${langBaseUrl}/services/${serviceType}/${projectKey}`,
+          url: `${langBaseUrl}${getLocalizedPath(`/services/${serviceType}`, lang as "en" | "es")}/${projectKey}`,
           lastModified: new Date(lastModified),
           changeFrequency: "yearly" as const,
           priority: 0.4,
@@ -74,7 +51,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     const pharmaceuticalPages: MetadataRoute.Sitemap = Object.keys(
       PHARMACEUTICAL_SERVICE_COLORS
     ).map((serviceId) => ({
-      url: `${langBaseUrl}/pharmaceutical-services/${serviceId}`,
+      url: `${langBaseUrl}${getLocalizedPath(`/pharmaceutical-services/${serviceId}`, lang as "en" | "es")}`,
       lastModified: new Date(lastModified),
       changeFrequency: "monthly" as const,
       priority: 0.6,

@@ -1,4 +1,5 @@
 import { useTranslation } from "@/i18n/client";
+import { getLocalizedPath } from "@/constants/localizedRoutes";
 import Link from "next/link";
 import styles from "./styles.module.css";
 
@@ -34,7 +35,7 @@ export default function ServicesBoard({ lng }: ServicesBoardProps) {
                 {serviceLinks.map((service) => (
                   <li key={service.key} className={styles.serviceItem}>
                     <Link
-                      href={`/${lng}/pharmaceutical-services/${service.url}`}
+                      href={`/${lng}${getLocalizedPath(`/pharmaceutical-services/${service.url}`, lng as "en" | "es")}`}
                       className={`${styles.serviceLink} text-purple h4`}
                     >
                       <img

@@ -3,7 +3,7 @@ import { MouseEvent, ReactNode, useRef, useState } from "react";
 import { useTranslation } from "@/i18n/client";
 import Link from "next/link";
 import { useParams, usePathname } from "next/navigation";
-import { ROUTES } from "../Navbar/constants";
+import { getLocalizedRoutes } from "../Navbar/constants";
 import SocialLinks from "../SocialLinks";
 import styles from "./styles.module.css";
 
@@ -19,6 +19,9 @@ export default function SlideMenu() {
   const containerRef = useRef<HTMLDivElement>(null);
   const { t } = useTranslation(lng as string, "navbar");
   const [isOpen, setIsOpen] = useState(false);
+  
+  // Get localized routes for current language
+  const localizedRoutes = getLocalizedRoutes(lng as "en" | "es");
 
   const handleBackdropClick = (event: MouseEvent<HTMLDivElement>) => {
     if (event.target === event.currentTarget) {
@@ -49,7 +52,7 @@ export default function SlideMenu() {
         {isOpen && (
           <div className={styles.content}>
             <div className={styles.mobileNavlinks}>
-              {ROUTES.map((route) => {
+              {localizedRoutes.map((route) => {
                 const isActive = pathname.replace(`/${lng}`, "") === route.path;
                 return (
                   <div key={route.text} className={styles.mobileNavSection}>

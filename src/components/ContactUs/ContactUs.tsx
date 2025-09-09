@@ -1,4 +1,5 @@
 import { useTranslation } from "@/i18n/client";
+import { getLocalizedPath } from "@/constants/localizedRoutes";
 import Lottie from "lottie-react";
 import Image from "next/image";
 import { useParams, useRouter } from "next/navigation";
@@ -13,7 +14,7 @@ const WhatWeDo = () => {
   return (
     <section
       className={`column ${styles.container} align-center`}
-      onClick={() => push("/contact-us")}
+      onClick={() => push(`/${lng}${getLocalizedPath("/contact-us", lng as "en" | "es")}`)}
     >
       <div className={styles.titleContainer}>
         <div className={styles.shapeContainer}>
