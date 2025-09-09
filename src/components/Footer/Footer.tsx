@@ -1,7 +1,7 @@
 "use client";
 
-import { useTranslation } from "@/i18n/client";
 import { getLocalizedPath } from "@/constants/localizedRoutes";
+import { useTranslation } from "@/i18n/client";
 import Image from "next/image";
 import Link from "next/link";
 import { useParams, usePathname, useRouter } from "next/navigation";
@@ -38,6 +38,7 @@ const Footer = () => {
             <Image
               src="/static/tuki-logo-full-white.png"
               alt="Tuki Studio"
+              title="Tuki Studio"
               width={150}
               height={75}
               className={styles.logo}
@@ -49,7 +50,14 @@ const Footer = () => {
           <div className={styles.topRowItem}>
             <Button
               text={t("cta-button")}
-              onClick={() => push(`/${lng}${getLocalizedPath("/contact-us", lng as "en" | "es")}`)}
+              onClick={() =>
+                push(
+                  `/${lng}${getLocalizedPath(
+                    "/contact-us",
+                    lng as "en" | "es"
+                  )}`
+                )
+              }
               darkBg={bgColor === "purple"}
             />
           </div>
@@ -72,7 +80,10 @@ const Footer = () => {
         {FOOTER_SECTIONS.map((section) => (
           <div key={section.title} className={styles.navigationColumn}>
             <Link
-              href={`/${lng}${getLocalizedPath(section.path, lng as "en" | "es")}`}
+              href={`/${lng}${getLocalizedPath(
+                section.path,
+                lng as "en" | "es"
+              )}`}
               className={styles.sectionTitle}
             >
               {tNav(section.title)}
@@ -82,7 +93,10 @@ const Footer = () => {
                 {section.items.map((item) => (
                   <li key={item.path}>
                     <Link
-                      href={`/${lng}${getLocalizedPath(item.path, lng as "en" | "es")}`}
+                      href={`/${lng}${getLocalizedPath(
+                        item.path,
+                        lng as "en" | "es"
+                      )}`}
                       className={styles.sectionItem}
                     >
                       {tNav(item.text)}

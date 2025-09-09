@@ -1,5 +1,5 @@
-import { useTranslation } from "@/i18n/client";
 import { getLocalizedPath } from "@/constants/localizedRoutes";
+import { useTranslation } from "@/i18n/client";
 import { useParams, useRouter } from "next/navigation";
 import Button from "../Button";
 import Profile from "../Profile";
@@ -17,10 +17,12 @@ const WhatWeDo = () => {
         <Profile person="nat" noDescription />
       </div>
       <div className="column g-24">
-        <h2 className="text-purple">{t("title")}</h2>
+        <h3 className="text-purple h2">{t("title")}</h3>
         <Button
           text={t("button")}
-          onClick={() => push(`/${lng}${getLocalizedPath("/us", lng as "en" | "es")}`)}
+          onClick={() =>
+            push(`/${lng}${getLocalizedPath("/us", lng as "en" | "es")}`)
+          }
           className={styles.desktopButton}
         />
       </div>

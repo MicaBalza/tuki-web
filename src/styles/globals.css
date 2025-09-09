@@ -101,12 +101,14 @@ h1,
 .h1 {
   font-size: clamp(1.5rem, 4vw, 2.25rem);
   font-weight: 400;
+  letter-spacing: normal;
 }
 
 h2,
 .h2 {
   font-size: clamp(1.25rem, 3vw, 2rem);
   font-weight: 400;
+  letter-spacing: normal;
 }
 
 h3,
@@ -120,11 +122,14 @@ h4,
 .h4 {
   font-size: 1.5rem;
   font-weight: 400;
+  letter-spacing: normal;
 }
 
 p,
 .p {
   font-size: clamp(0.75rem, 2vw, 1.125rem);
+  font-weight: 400;
+  letter-spacing: normal;
 }
 
 .bold {

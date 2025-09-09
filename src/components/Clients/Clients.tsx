@@ -29,7 +29,7 @@ const Footer = () => {
             className={styles.shape}
           />
         </div>
-        <h2 className={styles.title}>{t("title")}</h2>
+        <h3 className={`${styles.title} h2`}>{t("title")}</h3>
       </div>
       <div className={styles.marqueeContainer}>
         <div className={styles.marquee}>
@@ -38,6 +38,7 @@ const Footer = () => {
               <Image
                 src={`/static/images/logos/${logo}.png`}
                 alt={logo}
+                title={logo}
                 fill
                 className={styles.image}
               />
@@ -50,6 +51,7 @@ const Footer = () => {
               <Image
                 src={`/static/images/logos/${logo}.png`}
                 alt={logo}
+                title={logo}
                 fill
                 className={styles.image}
               />

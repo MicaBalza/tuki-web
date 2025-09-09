@@ -1,5 +1,5 @@
-import { useTranslation } from "@/i18n/client";
 import { getLocalizedPath } from "@/constants/localizedRoutes";
+import { useTranslation } from "@/i18n/client";
 import Image from "next/image";
 import Link from "next/link";
 import { useParams, useRouter } from "next/navigation";
@@ -19,6 +19,7 @@ const PharmaceuticalServices = () => {
         <Image
           src="/static/images/pharmaceutical-services.png"
           alt="Pharmaceutical Services"
+          title="Pharmaceutical Services"
           fill
           className={styles.image}
           unoptimized={true}
@@ -26,7 +27,7 @@ const PharmaceuticalServices = () => {
       </div>
       <div className={styles.textSection}>
         <h2 className={`${styles.title} text-purple`}>{t("title")}</h2>
-        <p className="text-purple">{t("subtitle")}</p>
+        <h3 className={`text-purple p`}>{t("subtitle")}</h3>
         <ul className={styles.list}>
           {listItems.map((item, index) => {
             const serviceSlug = [
@@ -43,7 +44,10 @@ const PharmaceuticalServices = () => {
                   className={styles.bullet}
                 />
                 <Link
-                  href={`/${lng}${getLocalizedPath(`/pharmaceutical-services/${serviceSlug}`, lng as "en" | "es")}`}
+                  href={`/${lng}${getLocalizedPath(
+                    `/pharmaceutical-services/${serviceSlug}`,
+                    lng as "en" | "es"
+                  )}`}
                   className={styles.serviceLink}
                 >
                   {item}

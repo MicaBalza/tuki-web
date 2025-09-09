@@ -1,5 +1,5 @@
-import { useTranslation } from "@/i18n/client";
 import { getLocalizedPath } from "@/constants/localizedRoutes";
+import { useTranslation } from "@/i18n/client";
 import Image from "next/image";
 import Link from "next/link";
 import { useParams } from "next/navigation";
@@ -24,8 +24,10 @@ const WhatWeDo = () => {
           />
         </div>
 
-        <Link href={`/${lng}${getLocalizedPath("/services", lng as "en" | "es")}`}>
-          <h2 className={`text-purple ${styles.title}`}>{t("title")}</h2>
+        <Link
+          href={`/${lng}${getLocalizedPath("/services", lng as "en" | "es")}`}
+        >
+          <h3 className={`text-purple ${styles.title} h2`}>{t("title")}</h3>
         </Link>
       </div>
       <div className={styles.videoContainer}>
@@ -39,13 +41,15 @@ const WhatWeDo = () => {
             <div className={styles.black} />
             <Image
               src="/static/images/reel.jpg"
-              alt=""
+              alt="Reel video"
+              title="Reel video"
               fill
               className={styles.videoFrame}
             />
             <Image
               src="/static/images/play.svg"
-              alt=""
+              alt="Play video"
+              title="Play video"
               width={146}
               height={155}
               className={styles.videoPlay}

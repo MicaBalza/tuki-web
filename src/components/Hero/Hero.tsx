@@ -1,13 +1,13 @@
 import { useParams, useRouter } from "next/navigation";
 
-import { useTranslation } from "@/i18n/client";
 import { getLocalizedPath } from "@/constants/localizedRoutes";
+import { useTranslation } from "@/i18n/client";
 import Button from "../Button";
 import styles from "./styles.module.css";
 
 import Lottie from "lottie-react";
 import Image from "next/image";
-import { useRef, useState, useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 import mainAnimation from "../../../public/static/lottie/main.json";
 
 const Hero = () => {
@@ -27,7 +27,7 @@ const Hero = () => {
       const lottie = lottieRef.current;
       audio.muted = isMuted;
       audio.loop = true;
-      
+
       if (!isMuted) {
         audio.play().catch(console.error);
         lottie?.play();
@@ -35,7 +35,7 @@ const Hero = () => {
         audio.pause();
         lottie?.pause();
       }
-      
+
       return () => {
         audio.pause();
         lottie?.pause();
@@ -58,14 +58,18 @@ const Hero = () => {
     <section className={styles.hero}>
       <div className={styles.container}>
         <div className={styles.text}>
-          <p className={styles.subtitle}>{t("subtitle")}</p>
-          <h1 className={styles.title}>{t("title")}</h1>
-          <Button text={t("button")} onClick={() => push(`/${lng}${getLocalizedPath("/services", lng as "en" | "es")}`)} />
+          <h1 className={`${styles.subtitle} p`}>{t("subtitle")}</h1>
+          <h3 className={`${styles.title} h1`}>{t("title")}</h3>
+          <Button
+            text={t("button")}
+            onClick={() =>
+              push(
+                `/${lng}${getLocalizedPath("/services", lng as "en" | "es")}`
+              )
+            }
+          />
         </div>
-        <div
-          className={styles.videoContainer}
-          onClick={handleSoundToggle}
-        >
+        <div className={styles.videoContainer} onClick={handleSoundToggle}>
           <audio
             ref={audioRef}
             src="/static/audio/main.mp3"
@@ -75,15 +79,16 @@ const Hero = () => {
           <div className={styles.videoSound}>
             <Image
               src={`/static/images/sound-${isMuted ? "off" : "on"}.svg`}
-              alt=""
+              alt={isMuted ? "Turn on the sound" : "Turn off the sound"}
+              title={isMuted ? "Turn on the sound" : "Turn off the sound"}
               width={0}
               height={0}
               style={{ width: "100%", height: "auto" }}
             />
           </div>
-          <Lottie 
+          <Lottie
             lottieRef={lottieRef}
-            animationData={mainAnimation} 
+            animationData={mainAnimation}
             loop={true}
             onLoopComplete={handleLoopComplete}
           />

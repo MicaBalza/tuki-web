@@ -25,7 +25,8 @@ export default function VideoPlayer({ videoSrc, autoplay }: VideoPlayerProps) {
           <div className={styles.black} />
           <Image
             src="/static/images/play.svg"
-            alt=""
+            alt="Play video"
+            title="Play video"
             width={146}
             height={155}
             className={styles.play}
