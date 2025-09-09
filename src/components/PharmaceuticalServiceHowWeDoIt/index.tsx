@@ -24,9 +24,9 @@ export default function PharmaceuticalServiceProcess({
   return (
     <div className={`${styles.secondSection} bg-${colors.howWeDoIt}`}>
       <div className={styles.secondSectionContent}>
-        <h3 className={styles.secondSectionTitle}>
+        <h2 className={`${styles.secondSectionTitle} h3`}>
           {t("howWeDoItSection.title")}
-        </h3>
+        </h2>
         <p className={styles.secondSectionDescription}>
           {service.howWeDoIt.description}
         </p>

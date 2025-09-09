@@ -30,14 +30,21 @@ export default function PharmaceuticalServiceVideo({
 
       <div className={styles.thirdSectionContentContainer}>
         <div className={styles.thirdSectionContent}>
-          <h3 className="text-purple text-center">{service.cover.title}</h3>
+          <p className="text-purple text-center h3">{service.cover.title}</p>
           <p className={styles.thirdSectionDescription}>
             {service.video.description}
           </p>
         </div>
         <Button
           text="Ver más Videos Farma aquí :)"
-          onClick={() => push(`/${lng}${getLocalizedPath("/pharmaceutical-services", lng as "en" | "es")}`)}
+          onClick={() =>
+            push(
+              `/${lng}${getLocalizedPath(
+                "/pharmaceutical-services",
+                lng as "en" | "es"
+              )}`
+            )
+          }
         />
       </div>
     </div>

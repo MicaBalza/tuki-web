@@ -29,7 +29,7 @@ export default function HeroSection({ lng, onButtonClick }: HeroSectionProps) {
         </div>
         <div className={styles.textContent}>
           <h1 className="text-purple bold">{t("hero.title")}</h1>
-          <p className="text-purple">{t("hero.subtitle")}</p>
+          <h3 className="text-purple p">{t("hero.subtitle")}</h3>
           <Button text={t("hero.button")} onClick={onButtonClick} />
         </div>
       </div>

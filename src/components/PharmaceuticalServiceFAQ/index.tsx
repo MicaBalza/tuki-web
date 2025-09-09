@@ -33,9 +33,11 @@ export default function PharmaceuticalServiceFAQ({
 
   // Get the correct FAQ section key
   const faqSectionKey = SERVICE_TYPE_MAPPING[serviceType] || serviceType;
-  
+
   // Get FAQ content from translations
-  const faqContent = t(`faq.${faqSectionKey}`, { returnObjects: true }) as Array<{
+  const faqContent = t(`faq.${faqSectionKey}`, {
+    returnObjects: true,
+  }) as Array<{
     question: string;
     answer: string;
   }>;
@@ -61,7 +63,7 @@ export default function PharmaceuticalServiceFAQ({
 
           <div className={styles.faqTitleContainer}>
             <div className={styles.faqTitle}>
-              <h3 className="text-purple h1 bold">{t("faq.title")}</h3>
+              <h2 className="text-purple h1 bold">{t("faq.title")}</h2>
               <p className="text-purple h4">{t("faq.subtitle")}</p>
             </div>
             <Button

@@ -16,9 +16,9 @@ export default function PharmaceuticalServiceProcess({
   return (
     <div className={styles.processSection}>
       <div className={styles.processHeader}>
-        <h3 className="text-light-green h1 bold">
+        <h2 className="text-light-green h1 bold">
           {t("processSection.title")}
-        </h3>
+        </h2>
         <p className="text-white h4">{t("processSection.subtitle")}</p>
       </div>
 

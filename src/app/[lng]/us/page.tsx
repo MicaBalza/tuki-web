@@ -28,7 +28,18 @@ export default function Us(props: { params: Promise<tParams> }) {
           <div className={styles.text}>
             <h1 className="h3">{t("title")}</h1>
             <p>{t("description")}</p>
-            <Button text={t("button")} onClick={() => push(`/${lng}${getLocalizedPath("/contact-us", lng as "en" | "es")}`)} />
+            <Button
+              text={t("button")}
+              onClick={() =>
+                push(
+                  `/${lng}${getLocalizedPath(
+                    "/contact-us",
+                    lng as "en" | "es"
+                  )}`
+                )
+              }
+              heading="h2"
+            />
           </div>
           <div className={styles.imageContainer}>
             <Image

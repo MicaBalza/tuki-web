@@ -6,7 +6,7 @@ interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
   inverted?: boolean;
   darkBg?: boolean;
   className?: string;
-  heading?: "h3";
+  heading?: "h2" | "h3";
 }
 
 const Button = ({
@@ -17,6 +17,8 @@ const Button = ({
   heading,
   ...props
 }: Props) => {
+  const Heading = heading ? heading : "h3";
+
   return (
     <button
       className={`${styles.button} ${inverted ? styles.inverted : ""} ${
@@ -24,7 +26,7 @@ const Button = ({
       } ${className || ""}`}
       {...props}
     >
-      {heading ? <h3 className="p">{text}</h3> : <p>{text}</p>}
+      {heading ? <Heading className="p">{text}</Heading> : <p>{text}</p>}
     </button>
   );
 };

@@ -38,8 +38,8 @@ export default function PharmaceuticalServiceHeader({
       </div>
 
       <div className={styles.headerDescription}>
-        <h2
-          className={`text-${coverTextColor}`}
+        <h4
+          className={`text-${coverTextColor} h2`}
           dangerouslySetInnerHTML={{ __html: service.cover.bigDescription }}
         />
         <p className={`text-${coverTextColor}`}>{service.cover.description}</p>

@@ -234,6 +234,7 @@ const ContactForm = ({ ...props }: Props) => {
               "_blank"
             );
           }}
+          heading="h2"
         />
       </div>
     </>

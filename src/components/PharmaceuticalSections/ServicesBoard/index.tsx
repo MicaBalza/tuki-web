@@ -1,5 +1,5 @@
-import { useTranslation } from "@/i18n/client";
 import { getLocalizedPath } from "@/constants/localizedRoutes";
+import { useTranslation } from "@/i18n/client";
 import Link from "next/link";
 import styles from "./styles.module.css";
 
@@ -30,12 +30,15 @@ export default function ServicesBoard({ lng }: ServicesBoardProps) {
               className={styles.boardImage}
             />
             <div className={styles.boardContent}>
-              <h2 className="text-magenta bold">{t("services.title")}</h2>
+              <p className="text-magenta bold h2">{t("services.title")}</p>
               <ul className={styles.servicesList}>
                 {serviceLinks.map((service) => (
                   <li key={service.key} className={styles.serviceItem}>
                     <Link
-                      href={`/${lng}${getLocalizedPath(`/pharmaceutical-services/${service.url}`, lng as "en" | "es")}`}
+                      href={`/${lng}${getLocalizedPath(
+                        `/pharmaceutical-services/${service.url}`,
+                        lng as "en" | "es"
+                      )}`}
                       className={`${styles.serviceLink} text-purple h4`}
                     >
                       <img
@@ -43,7 +46,7 @@ export default function ServicesBoard({ lng }: ServicesBoardProps) {
                         alt="Bullet"
                         className={styles.chevron}
                       />
-                      <span>{t(`services.${service.key}`)}</span>
+                      <h2 className="h4">{t(`services.${service.key}`)}</h2>
                     </Link>
                   </li>
                 ))}
