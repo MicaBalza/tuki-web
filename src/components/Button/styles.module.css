@@ -1,15 +1,18 @@
 .button {
   display: inline-block;
   min-width: fit-content;
-  padding: 1.25em 1em;
+  padding: 1em 0.75em;
   background-color: var(--light-green);
   color: var(--purple);
   font-family: inherit;
   font-size: clamp(0.875rem, 1.12vw, 1rem);
-  line-height: 0;
+  line-height: 1;
   border: 2px solid var(--purple);
   border-radius: 24px;
   cursor: pointer;
+  white-space: normal;
+  word-wrap: break-word;
+  text-align: center;
 }
 
 .inverted {
