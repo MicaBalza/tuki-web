@@ -11,7 +11,7 @@ const WhatWeDo = () => {
   const { push } = useRouter();
 
   return (
-    <section className={`row g-96 ${styles.container} justify-center`}>
+    <section className={`row ${styles.container} justify-center`}>
       <div className={styles.persons}>
         <Profile person="flor" noDescription />
         <Profile person="nat" noDescription />
