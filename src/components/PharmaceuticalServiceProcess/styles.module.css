@@ -75,6 +75,37 @@
 }
 
 /* Responsive Design */
+@media (min-width: 527px) and (max-width: 768px) {
+  .processSteps {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    max-width: none;
+    padding: 0 2rem;
+  }
+
+  .processStep {
+    flex: 1 1 calc(33.333% - 1.33rem);
+    min-width: 200px;
+    max-width: 300px;
+  }
+
+  .processStep:nth-child(odd),
+  .processStep:nth-child(even) {
+    margin-top: 0;
+  }
+
+  .processStep:nth-child(n + 4) {
+    margin-top: 2rem;
+  }
+
+  .stepDescription {
+    margin-left: 0;
+    margin-right: 0;
+    max-width: none;
+  }
+}
+
 @media (max-width: 526px) {
   .processSteps {
     flex-direction: column;
