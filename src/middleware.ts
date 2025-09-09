@@ -39,7 +39,53 @@ export function middleware(req: any) {
     
     // Convert Spanish URLs to canonical English paths for routing
     if (pathLang === "es" && localizedPath !== "/") {
-      const canonicalPath = getCanonicalPath(localizedPath, "es");
+      let canonicalPath = getCanonicalPath(localizedPath, "es");
+      
+      // Handle dynamic service paths like /servicios/ilustracion/project or /servicios-farmaceutica/service-name
+      if (canonicalPath === localizedPath) {
+        const pathSegments = localizedPath.split("/").filter(Boolean);
+        
+        // Handle /servicios/[service-type]/[project] pattern
+        if (pathSegments.length === 3 && pathSegments[0] === "servicios") {
+          const serviceType = pathSegments[1];
+          const project = pathSegments[2];
+          
+          // Map common Spanish service types to English
+          const serviceTypeMap: Record<string, string> = {
+            "ilustracion": "illustration",
+            "animacion": "animation", 
+            "redes-sociales": "social-media",
+            "editorial": "editorial",
+            "branding": "branding",
+            "motion-graphics": "motion-graphics"
+          };
+          
+          const englishServiceType = serviceTypeMap[serviceType];
+          if (englishServiceType) {
+            canonicalPath = `/services/${englishServiceType}/${project}`;
+          }
+        }
+        
+        // Handle /servicios-farmaceutica/[service-name] pattern  
+        else if (pathSegments.length === 2 && pathSegments[0] === "servicios-farmaceutica") {
+          const serviceName = pathSegments[1];
+          
+          // Map Spanish pharmaceutical service names to English
+          const pharmaServiceMap: Record<string, string> = {
+            "videos-institucionales-corporativos": "institutional-corporate-videos",
+            "lanzamiento-productos": "product-launch",
+            "tutorial-capacitacion": "tutorial-training",
+            "videos-promocion": "promotional-videos",
+            "eventos-conferencias": "events-conferences",
+            "videos-podcast": "podcast-videos"
+          };
+          
+          const englishServiceName = pharmaServiceMap[serviceName];
+          if (englishServiceName) {
+            canonicalPath = `/pharmaceutical-services/${englishServiceName}`;
+          }
+        }
+      }
       
       // If we found a canonical path different from the localized path,
       // rewrite the URL to the canonical structure for Next.js routing
