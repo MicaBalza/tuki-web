@@ -1,5 +1,5 @@
-import { useTranslation } from "@/i18n/client";
 import { getLocalizedPath } from "@/constants/localizedRoutes";
+import { useTranslation } from "@/i18n/client";
 import Image from "next/image";
 import { useParams, useRouter } from "next/navigation";
 import Button from "../Button";
@@ -21,11 +21,19 @@ const PharmaceuticalService = () => {
         />
       </div>
       <div className={styles.text}>
-        <h3 className={styles.title}>{t(`pharmaceutical.title`)}</h3>
+        <h1 className={`${styles.title} h1`}>{t(`pharmaceutical.title`)}</h1>
         <p className={styles.description}>{t(`pharmaceutical.description`)}</p>
         <Button
           text={t("button")}
-          onClick={() => push(`/${lng}${getLocalizedPath("/pharmaceutical-services", lng as "en" | "es")}`)}
+          onClick={() =>
+            push(
+              `/${lng}${getLocalizedPath(
+                "/pharmaceutical-services",
+                lng as "en" | "es"
+              )}`
+            )
+          }
+          heading="h3"
         />
       </div>
     </div>

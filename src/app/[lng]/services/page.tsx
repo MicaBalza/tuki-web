@@ -22,7 +22,7 @@ export default function Page(props: { params: Promise<tParams> }) {
   return (
     <PageContainer className="bg-white">
       <div className={styles.hero}>
-        <h1 className={`text-purple h2 ${styles.title}`}>{t("title")}</h1>
+        <p className={`text-purple h2 ${styles.title}`}>{t("title")}</p>
         <div className={styles.imageContainer}>
           <img
             src="/static/images/services.gif"

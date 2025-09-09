@@ -6,8 +6,8 @@ import Image from "next/image";
 
 import styles from "./page.module.css";
 
-import { SERVICES_DATA } from "@/constants/services";
 import { getLocalizedPath } from "@/constants/localizedRoutes";
+import { SERVICES_DATA } from "@/constants/services";
 import { useTranslation } from "@/i18n/client";
 import { useRouter } from "next/navigation";
 
@@ -61,15 +61,22 @@ export default function Page(props: { params: Promise<tParams> }) {
                       ? styles.lastItem
                       : ""
                   } pointer`}
-                  onClick={() => push(`/${lng}${getLocalizedPath(`/services/${serviceType}`, lng as "en" | "es")}/${project}`)}
+                  onClick={() =>
+                    push(
+                      `/${lng}${getLocalizedPath(
+                        `/services/${serviceType}`,
+                        lng as "en" | "es"
+                      )}/${project}`
+                    )
+                  }
                 >
                   <div
                     className={styles.serviceHover}
                     style={{ backgroundColor: getRandomColor() }}
                   >
-                    <h4 className="text-white uppercase bold">
+                    <h2 className="text-white uppercase bold h4">
                       {SERVICES_DATA[serviceType as string][project][0].name}
-                    </h4>
+                    </h2>
                   </div>
                   <Image
                     src={`/static/images/${projectFolder}/${project}/cover.${
