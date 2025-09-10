@@ -77,36 +77,118 @@ const Footer = () => {
             />
           </div>
         )}
-        {FOOTER_SECTIONS.map((section) => (
-          <div key={section.title} className={styles.navigationColumn}>
-            <Link
-              href={`/${lng}${getLocalizedPath(
-                section.path,
-                lng as "en" | "es"
-              )}`}
-              className={styles.sectionTitle}
-            >
-              {tNav(section.title)}
-            </Link>
-            {section.items.length > 0 && (
-              <ul className={styles.sectionItems}>
-                {section.items.map((item) => (
-                  <li key={item.path}>
-                    <Link
-                      href={`/${lng}${getLocalizedPath(
-                        item.path,
-                        lng as "en" | "es"
-                      )}`}
-                      className={styles.sectionItem}
-                    >
-                      {tNav(item.text)}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            )}
+        
+        {/* Desktop: All sections displayed normally */}
+        <div className={styles.desktopNavigation}>
+          {FOOTER_SECTIONS.map((section) => (
+            <div key={section.title} className={styles.navigationColumn}>
+              <Link
+                href={`/${lng}${getLocalizedPath(
+                  section.path,
+                  lng as "en" | "es"
+                )}`}
+                className={styles.sectionTitle}
+              >
+                {tNav(section.title)}
+              </Link>
+              {section.items.length > 0 && (
+                <ul className={styles.sectionItems}>
+                  {section.items.map((item) => (
+                    <li key={item.path}>
+                      <Link
+                        href={`/${lng}${getLocalizedPath(
+                          item.path,
+                          lng as "en" | "es"
+                        )}`}
+                        className={styles.sectionItem}
+                      >
+                        {tNav(item.text)}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          ))}
+        </div>
+
+        {/* Mobile: Two-column layout */}
+        <div className={styles.mobileNavigation}>
+          {/* First Column: Inicio, Servicios (with subsections) */}
+          <div className={styles.navigationColumn}>
+            {FOOTER_SECTIONS.filter(section => 
+              section.title === "home" || section.title === "services"
+            ).map((section) => (
+              <div key={section.title} className={styles.sectionGroup}>
+                <Link
+                  href={`/${lng}${getLocalizedPath(
+                    section.path,
+                    lng as "en" | "es"
+                  )}`}
+                  className={styles.sectionTitle}
+                >
+                  {tNav(section.title)}
+                </Link>
+                {section.items.length > 0 && (
+                  <ul className={styles.sectionItems}>
+                    {section.items.map((item) => (
+                      <li key={item.path}>
+                        <Link
+                          href={`/${lng}${getLocalizedPath(
+                            item.path,
+                            lng as "en" | "es"
+                          )}`}
+                          className={styles.sectionItem}
+                        >
+                          {tNav(item.text)}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            ))}
           </div>
-        ))}
+
+          {/* Second Column: Servicios Farmaceutica, Blog, Quienes Somos, Contacto */}
+          <div className={styles.navigationColumn}>
+            {FOOTER_SECTIONS.filter(section => 
+              section.title === "pharmaceutical-services" || 
+              section.title === "blog" || 
+              section.title === "us" || 
+              section.title === "contact"
+            ).map((section) => (
+              <div key={section.title} className={styles.sectionGroup}>
+                <Link
+                  href={`/${lng}${getLocalizedPath(
+                    section.path,
+                    lng as "en" | "es"
+                  )}`}
+                  className={styles.sectionTitle}
+                >
+                  {tNav(section.title)}
+                </Link>
+                {section.items.length > 0 && (
+                  <ul className={styles.sectionItems}>
+                    {section.items.map((item) => (
+                      <li key={item.path}>
+                        <Link
+                          href={`/${lng}${getLocalizedPath(
+                            item.path,
+                            lng as "en" | "es"
+                          )}`}
+                          className={styles.sectionItem}
+                        >
+                          {tNav(item.text)}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
 
       {/* Copyright and Social Links */}

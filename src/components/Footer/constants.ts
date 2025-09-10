@@ -96,11 +96,11 @@ export const FOOTER_SECTIONS = [
     path: "/us",
     items: [],
   },
-  {
-    title: "blog",
-    path: "/blog",
-    items: [],
-  },
+  // {
+  //   title: "blog",
+  //   path: "/blog",
+  //   items: [],
+  // },
   {
     title: "contact",
     path: "/contact-us",

@@ -54,6 +54,17 @@
   gap: 16px;
 }
 
+.mobileNavigation {
+  display: none;
+}
+
+.desktopNavigation {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
 .sectionTitle {
   font-weight: 700;
   font-size: 16px;
@@ -120,10 +131,18 @@
     gap: 12px;
   }
 
-  .navigationRow {
-    flex-direction: column;
+  .desktopNavigation {
+    display: none;
+  }
+
+  .mobileNavigation {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     gap: 16px;
-    align-items: center;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
   }
 
   .contactPage .navigationRow {
@@ -132,15 +151,42 @@
     align-items: center;
   }
 
+  .contactPage .mobileNavigation {
+    flex-direction: column;
+    align-items: center;
+  }
+
   .logoColumn {
     min-width: auto;
     margin-bottom: 16px;
+    width: 100%;
+    order: -1;
   }
 
-  .navigationColumn {
-    text-align: center;
-    width: 100%;
-    max-width: 300px;
+  .mobileNavigation .navigationColumn {
+    text-align: left;
+    width: calc(50% - 8px);
+    max-width: none;
+    gap: 16px;
+  }
+
+  .mobileNavigation .sectionTitle {
+    text-align: left;
+    margin-bottom: 0;
+  }
+
+  .mobileNavigation .sectionItems {
+    text-align: left;
+  }
+
+  .mobileNavigation .sectionItem {
+    text-align: left;
+  }
+
+  .mobileNavigation .sectionGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
   }
 
   .bottomRow {
