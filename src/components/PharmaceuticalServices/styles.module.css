@@ -77,10 +77,19 @@
     width: 100%;
     padding: 5vw 5vw;
   }
+
+  .bullet {
+    width: 20px;
+    height: 20px;
+  }
 }
 
 @media (max-width: 576px) {
   .imageSection {
     min-height: 250px;
+  }
+
+  .list {
+    gap: 12px;
   }
 }
