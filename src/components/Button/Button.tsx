@@ -1,8 +1,9 @@
-import { ButtonHTMLAttributes } from "react";
+import { ButtonHTMLAttributes, ReactNode } from "react";
 import styles from "./styles.module.css";
 
 interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
-  text: string;
+  text?: string;
+  children?: ReactNode;
   inverted?: boolean;
   darkBg?: boolean;
   className?: string;
@@ -11,6 +12,7 @@ interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 const Button = ({
   text,
+  children,
   inverted,
   darkBg,
   className,
@@ -18,6 +20,7 @@ const Button = ({
   ...props
 }: Props) => {
   const Heading = heading ? heading : "h3";
+  const content = children || text;
 
   return (
     <button
@@ -26,7 +29,7 @@ const Button = ({
       } ${className || ""}`}
       {...props}
     >
-      {heading ? <Heading className="p">{text}</Heading> : <p>{text}</p>}
+      {heading ? <Heading className="p">{content}</Heading> : <p>{content}</p>}
     </button>
   );
 };

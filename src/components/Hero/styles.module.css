@@ -26,7 +26,24 @@
 
 .title {
   color: var(--purple);
-  margin-bottom: 4vw;
+  margin-bottom: 20px;
+}
+
+.servicesLink {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--purple);
+  text-decoration: none;
+  margin-bottom: 48px;
+}
+
+.servicesLink:hover {
+  font-weight: 700;
+}
+
+.chevronIcon {
+  flex-shrink: 0;
 }
 
 .videoContainer {
