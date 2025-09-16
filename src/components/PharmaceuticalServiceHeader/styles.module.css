@@ -44,10 +44,6 @@
   font-size: clamp(1rem, 2.5vw, 1.75rem);
 }
 
-.headerButton {
-  margin-top: 2rem;
-}
-
 /* Responsive Design */
 @media (max-width: 1024px) {
   .headerSection {
@@ -81,10 +77,6 @@
 
   .headerImage img {
     object-fit: contain !important;
-  }
-
-  .headerButton {
-    margin-top: 1.5rem;
   }
 }
 

@@ -14,6 +14,14 @@
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+  position: relative;
+}
+
+.processButton {
+  position: absolute;
+  top: 50%;
+  right: -180px;
+  transform: translateY(-50%);
 }
 
 /* Process Steps */
@@ -147,5 +155,11 @@
     margin-left: 0;
     margin-right: 0;
     max-width: none;
+  }
+
+  .processButton {
+    position: static;
+    transform: none;
+    margin-top: 1rem;
   }
 }

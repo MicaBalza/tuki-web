@@ -454,7 +454,8 @@
   },
   "processSection": {
     "title": "Etapas del Proceso",
-    "subtitle": "Este es nuestro proceso de producción."
+    "subtitle": "Este es nuestro proceso de producción.",
+    "button": "Hablemos!"
   },
   "howWeDoItSection": {
     "title": "¿Cómo lo hacemos?"

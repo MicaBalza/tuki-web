@@ -70,6 +70,7 @@ export default function PharmaceuticalServiceFAQ({
               text={t("faq.showButton")}
               className={styles.faqButton}
               onClick={() => setIsExpanded(!isExpanded)}
+              inverted
             />
           </div>
         </div>
@@ -135,6 +136,7 @@ export default function PharmaceuticalServiceFAQ({
               text={t("faq.hideButton")}
               className={styles.closeButton}
               onClick={() => setIsExpanded(!isExpanded)}
+              inverted
             />
           </div>
         </div>

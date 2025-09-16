@@ -1,5 +1,7 @@
+import { getLocalizedPath } from "@/constants/localizedRoutes";
 import { useTranslation } from "@/i18n/client";
-import { useParams } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
+import Button from "../Button";
 import styles from "./styles.module.css";
 
 interface PharmaceuticalServiceProcessProps {
@@ -12,6 +14,7 @@ export default function PharmaceuticalServiceProcess({
   const params = useParams();
   const lng = params?.lng as string;
   const { t } = useTranslation(lng, "pharmaceutical-services");
+  const { push } = useRouter();
 
   return (
     <div className={styles.processSection}>
@@ -20,6 +23,15 @@ export default function PharmaceuticalServiceProcess({
           {t("processSection.title")}
         </h2>
         <p className="text-white h4">{t("processSection.subtitle")}</p>
+        <Button
+          text={t("processSection.button")}
+          onClick={() =>
+            push(
+              `/${lng}${getLocalizedPath("/contact-us", lng as "en" | "es")}`
+            )
+          }
+          className={styles.processButton}
+        />
       </div>
 
       <div className={styles.processSteps}>
