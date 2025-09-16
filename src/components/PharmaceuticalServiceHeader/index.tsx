@@ -1,5 +1,9 @@
 import { PHARMACEUTICAL_SERVICE_COLORS } from "@/constants/pharmaceuticalServices";
+import { useTranslation } from "@/i18n/client";
+import { openCalendarBooking } from "@/utils/calendar";
 import Image from "next/image";
+import { useParams } from "next/navigation";
+import Button from "../Button";
 import styles from "./styles.module.css";
 
 interface PharmaceuticalServiceHeaderProps {
@@ -11,6 +15,9 @@ export default function PharmaceuticalServiceHeader({
   service,
   serviceId,
 }: PharmaceuticalServiceHeaderProps) {
+  const { lng } = useParams();
+  const { t } = useTranslation(lng as string, "hero");
+  
   const coverTextColor = ["nude", "pink"].includes(
     PHARMACEUTICAL_SERVICE_COLORS[
       serviceId as keyof typeof PHARMACEUTICAL_SERVICE_COLORS
@@ -43,6 +50,12 @@ export default function PharmaceuticalServiceHeader({
           dangerouslySetInnerHTML={{ __html: service.cover.bigDescription }}
         />
         <p className={`text-${coverTextColor}`}>{service.cover.description}</p>
+        <Button
+          onClick={openCalendarBooking}
+          className={styles.headerButton}
+        >
+          <span dangerouslySetInnerHTML={{ __html: t("button") }} />
+        </Button>
       </div>
     </div>
   );

@@ -2,6 +2,7 @@ import { useParams, useRouter } from "next/navigation";
 
 import { getLocalizedPath } from "@/constants/localizedRoutes";
 import { useTranslation } from "@/i18n/client";
+import { openCalendarBooking } from "@/utils/calendar";
 import Button from "../Button";
 import styles from "./styles.module.css";
 
@@ -74,14 +75,7 @@ const Hero = () => {
             />
             {t("servicesLink")}
           </Link>
-          <Button
-            onClick={() => {
-              window.open(
-                "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1lzM-I0U1bAKaOZx-ToUdet2mUoli8n2RL5X2MDFzOsqGZxfxIeSfQs3isaQeJbbkMeOVfOLGU",
-                "_blank"
-              );
-            }}
-          >
+          <Button onClick={openCalendarBooking}>
             <span dangerouslySetInnerHTML={{ __html: t("button") }} />
           </Button>
         </div>
