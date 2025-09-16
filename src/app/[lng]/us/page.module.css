@@ -68,5 +68,9 @@
   .us {
     gap: 24px;
     padding: 24px 0;
+    background-image: url("/static/images/us-background-mobile.png");
+    background-size: contain;
+    background-repeat: repeat-y;
+    background-position: center;
   }
 }
