@@ -2,6 +2,7 @@
 
 import Button from "@/components/Button";
 import { getLocalizedPath } from "@/constants/localizedRoutes";
+import { useTranslation } from "@/i18n/client";
 import { useParams, useRouter } from "next/navigation";
 import styles from "./styles.module.css";
 
@@ -16,6 +17,7 @@ export default function PharmaceuticalServiceVideo({
 }: PharmaceuticalServiceVideoProps) {
   const { push } = useRouter();
   const { lng } = useParams();
+  const { t } = useTranslation(lng as string, "pharmaceutical-services");
 
   return (
     <div className={`${styles.thirdSection} bg-${colors.video}`}>
@@ -36,7 +38,7 @@ export default function PharmaceuticalServiceVideo({
           </p>
         </div>
         <Button
-          text="Ver más Videos Farma aquí :)"
+          inverted
           onClick={() =>
             push(
               `/${lng}${getLocalizedPath(
@@ -45,7 +47,9 @@ export default function PharmaceuticalServiceVideo({
               )}`
             )
           }
-        />
+        >
+          <span dangerouslySetInnerHTML={{ __html: t("video.button") }} />
+        </Button>
       </div>
     </div>
   );
