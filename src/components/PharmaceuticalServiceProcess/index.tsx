@@ -31,6 +31,7 @@ export default function PharmaceuticalServiceProcess({
             )
           }
           className={styles.processButton}
+          darkBg
         />
       </div>
 

@@ -53,6 +53,7 @@ export default function PharmaceuticalServiceProcess({
                 alt="Chevron down"
                 width={40}
                 height={40}
+                className={styles.chevronDown}
               />
             </div>
           ))}

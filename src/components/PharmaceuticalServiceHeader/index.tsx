@@ -17,7 +17,7 @@ export default function PharmaceuticalServiceHeader({
 }: PharmaceuticalServiceHeaderProps) {
   const { lng } = useParams();
   const { t } = useTranslation(lng as string, "hero");
-  
+
   const coverTextColor = ["nude", "pink"].includes(
     PHARMACEUTICAL_SERVICE_COLORS[
       serviceId as keyof typeof PHARMACEUTICAL_SERVICE_COLORS
@@ -46,14 +46,11 @@ export default function PharmaceuticalServiceHeader({
 
       <div className={styles.headerDescription}>
         <h4
-          className={`text-${coverTextColor} h2`}
+          className={`text-${coverTextColor} h2 ${styles.headerDescriptionTitle}`}
           dangerouslySetInnerHTML={{ __html: service.cover.bigDescription }}
         />
         <p className={`text-${coverTextColor}`}>{service.cover.description}</p>
-        <Button
-          onClick={openCalendarBooking}
-          className={styles.headerButton}
-        >
+        <Button onClick={openCalendarBooking} className={styles.headerButton}>
           <span dangerouslySetInnerHTML={{ __html: t("button") }} />
         </Button>
       </div>
