@@ -53,6 +53,10 @@
   padding: 2rem 0;
 }
 
+.processContainer:hover .chevronDown {
+  transform: rotate(180deg);
+}
+
 .processImage {
   position: relative;
   width: 100%;
@@ -94,8 +98,31 @@
   max-width: 300px;
 }
 
+/* Individual Expandable Sections for Mobile */
+.individualExpandableSection {
+  background: white;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  max-height: 0;
+  padding: 0;
+  display: none;
+}
+
+.individualExpandableSection.expanded {
+  max-height: 300px;
+  padding: 1rem;
+}
+
+.chevronRotated {
+  transform: rotate(180deg);
+}
+
+.chevronDown {
+  transition: transform 0.3s ease;
+}
+
 /* Responsive Design */
-@media (max-width: 526px) {
+@media (max-width: 768px) {
   .processImages {
     grid-template-columns: 1fr;
     gap: 1.5rem;
@@ -113,5 +140,59 @@
   .chevronDown {
     width: 30px;
     height: 30px;
+  }
+
+  /* Show individual expandable sections on mobile */
+  .individualExpandableSection {
+    display: block;
+    margin-top: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .individualExpandableSection .expandableItem {
+    padding: 0;
+  }
+
+  .individualExpandableSection .expandableItem p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  /* Hide the main expandable section on mobile */
+  .expandableSection {
+    display: none;
+  }
+
+  /* On mobile, disable the hover effect for the main expandable section */
+  .processContainer:hover .expandableSection {
+    opacity: 0;
+    max-height: 0;
+    padding: 0;
+  }
+}
+
+/* Desktop: Keep original behavior */
+@media (min-width: 769px) {
+  .individualExpandableSection {
+    display: none;
+  }
+
+  /* On desktop, prevent individual chevron rotation from click state */
+  .chevronRotated {
+    transform: none !important;
+  }
+
+  /* Ensure desktop hover rotation works */
+  .processContainer:hover .chevronDown {
+    transform: rotate(180deg) !important;
+  }
+}
+
+/* Mobile: Allow individual chevron rotation */
+@media (max-width: 768px) {
+  .chevronRotated {
+    transform: rotate(180deg) !important;
   }
 }
