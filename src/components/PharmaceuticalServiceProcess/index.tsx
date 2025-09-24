@@ -22,7 +22,9 @@ export default function PharmaceuticalServiceProcess({
         <h2 className="text-light-green h1 bold">
           {t("processSection.title")}
         </h2>
-        <p className="text-white h4">{t("processSection.subtitle")}</p>
+        <p className={`text-white ${styles.processSubtitle}`}>
+          {t("processSection.subtitle")}
+        </p>
         <Button
           text={t("processSection.button")}
           onClick={() =>

@@ -32,7 +32,9 @@ export default function PharmaceuticalServiceVideo({
 
       <div className={styles.thirdSectionContentContainer}>
         <div className={styles.thirdSectionContent}>
-          <p className="text-purple text-center h3">{service.cover.title}</p>
+          <p className="text-purple text-center bold h2">
+            {service.cover.title}
+          </p>
           <p className={styles.thirdSectionDescription}>
             {service.video.description}
           </p>

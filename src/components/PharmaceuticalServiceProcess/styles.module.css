@@ -17,6 +17,10 @@
   position: relative;
 }
 
+.processSubtitle {
+  font-size: clamp(1.2rem, 2vw, 1.875rem);
+}
+
 .processButton {
   position: absolute;
   top: 50%;

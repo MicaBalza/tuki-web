@@ -42,10 +42,7 @@
 }
 
 .thirdSectionDescription {
-  font-size: 1.1rem;
   color: var(--purple);
-  line-height: 1.6;
-  margin: 0;
 }
 
 /* Responsive Design */
