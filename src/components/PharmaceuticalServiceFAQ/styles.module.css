@@ -177,16 +177,15 @@
 }
 
 /* Responsive Design */
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .faqHeader {
     min-height: 200px;
-    padding: 2rem 1rem;
   }
 
   .faqTitleContainer {
     flex-direction: column;
     gap: 2rem;
-    padding: 0 2rem;
+    padding: 0 1rem;
   }
 
   .faqTitleContainer button {
@@ -194,36 +193,30 @@
   }
 
   .background {
-    position: relative;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
-  }
-
-  .questionImage {
-    width: 150px;
-    height: auto;
-    margin-bottom: 1rem;
+    justify-content: space-between;
   }
 
   .characterImage {
-    width: 200px;
-    height: auto;
+    display: none;
   }
 
   .expandedContainer {
     flex-direction: column;
-    margin: 2rem auto 0;
-    padding: 0 1rem;
-    max-width: 800px;
+    gap: 0;
   }
 
   .expandedLeft {
     margin-bottom: 2rem;
   }
 
+  .expandedRight {
+    padding: 0 8vw;
+  }
+
   .expandedQuestionImage {
-    width: 200px;
+    width: 150px;
     height: auto;
   }
 
@@ -234,33 +227,6 @@
 
   .faqColumn {
     width: 100%;
-  }
-}
-
-@media (max-width: 768px) {
-  .faqSection {
-    padding: 1rem;
-  }
-
-  .faqHeader {
-    min-height: 180px;
-    padding: 1rem;
-  }
-
-  .faqTitleContainer {
-    padding: 0 1rem;
-  }
-
-  .questionImage {
-    width: 100px;
-  }
-
-  .characterImage {
-    width: 150px;
-  }
-
-  .expandedQuestionImage {
-    width: 150px;
   }
 
   .faqQuestion {
