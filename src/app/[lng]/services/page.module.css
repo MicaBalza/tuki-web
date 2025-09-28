@@ -44,6 +44,18 @@
 }
 
 @media (max-width: 768px) {
+  .hero {
+    min-height: 300px;
+  }
+
+  .imageContainer {
+    width: 100%;
+  }
+
+  .image {
+    height: 100%;
+  }
+
   .services {
     grid-template-rows: repeat(3, 240px);
   }
