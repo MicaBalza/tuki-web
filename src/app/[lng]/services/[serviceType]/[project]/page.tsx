@@ -275,7 +275,7 @@ export async function generateMetadata({
   const projectData = SERVICES_DATA[serviceType as string][project as string];
 
   return {
-    title: `${capitalizeFirstLetter(t(serviceType))} - ${projectData[0].name}`,
+    title: `${capitalizeFirstLetter(t(`${serviceType}.title`))} - ${projectData[0].name}`,
     description: projectData[0].goal,
   };
 }
