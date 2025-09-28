@@ -75,30 +75,54 @@ const BASE_ROUTES = [
 
 // Function to get localized routes
 export function getLocalizedRoutes(language: "en" | "es") {
-  return BASE_ROUTES.map(route => ({
+  return BASE_ROUTES.map((route) => ({
     ...route,
     path: getLocalizedPath(route.path, language),
-    dropdown: route.dropdown?.map(item => ({
+    dropdown: route.dropdown?.map((item) => ({
       ...item,
-      path: getLocalizedPath(item.path, language)
-    }))
+      path: getLocalizedPath(item.path, language),
+    })),
   }));
 }
 
 // Export default routes (for backward compatibility)
 export const ROUTES = BASE_ROUTES;
 
-export const NAVBAR_COLORS: Record<string, string> = {
-  "/": "nude",
-  "//services": "nude",
-  "//pharmaceutical-services": "green",
-  "//us": "light-purple",
-  "//blog": "yellow",
-  "//contact-us": "pink",
-  "//services/illustration": "green",
-  "//services/animation": "yellow",
-  "//services/social-media": "light-purple",
-  "//services/editorial": "red",
-  "//services/branding": "pink",
-  "//services/motion-graphics": "light-purple",
-};
+// Generate navbar colors for all localized paths
+function generateNavbarColors(): Record<string, string> {
+  const colors: Record<string, string> = {};
+
+  // Base color mappings (using canonical paths)
+  const baseColors = {
+    "/": "nude",
+    "/services": "nude",
+    "/pharmaceutical-services": "green",
+    "/us": "light-purple",
+    "/blog": "yellow",
+    "/contact-us": "pink",
+    "/services/illustration": "green",
+    "/services/animation": "yellow",
+    "/services/social-media": "light-purple",
+    "/services/editorial": "red",
+    "/services/branding": "pink",
+    "/services/motion-graphics": "light-purple",
+  };
+
+  // Add colors for both English and Spanish paths
+  Object.entries(baseColors).forEach(([canonicalPath, color]) => {
+    // Add English path
+    const englishPath = getLocalizedPath(canonicalPath, "en");
+    const englishKey = canonicalPath === "/" ? "/" : `/${englishPath}`;
+    colors[englishKey] = color;
+
+    // Add Spanish path
+    const spanishPath = getLocalizedPath(canonicalPath, "es");
+    const spanishKey = canonicalPath === "/" ? "/" : `/${spanishPath}`;
+    colors[spanishKey] = color;
+  });
+
+  return colors;
+}
+
+export const NAVBAR_COLORS: Record<string, string> = generateNavbarColors();
+console.log("🌸 ~ NAVBAR_COLORS:", NAVBAR_COLORS);

@@ -1,5 +1,6 @@
 "use client";
 
+import { getLocalizedPath } from "@/constants/localizedRoutes";
 import { useTranslation } from "@/i18n/client";
 import { ServiceType } from "@/types/services";
 import { motion } from "framer-motion";
@@ -13,7 +14,6 @@ import LangSelector from "../LangSelector";
 import ServiceTypeHeader from "../ServiceTypeHeader";
 import SlideMenu from "../SlideMenu";
 import SocialLinks from "../SocialLinks";
-import { getLocalizedPath } from "@/constants/localizedRoutes";
 import { NAVBAR_COLORS, getLocalizedRoutes } from "./constants";
 import styles from "./styles.module.css";
 
@@ -48,8 +48,9 @@ const Navbar = () => {
   }, [pathname]);
 
   const color = NAVBAR_COLORS[pathname.replace(`${lng}`, "")] || "red";
+  console.log("🌸 ~ Navbar ~ color:", pathname.replace(`${lng}`, ""));
   const bgIsDark = color === "red" || color === "green";
-  
+
   // Get localized routes for current language
   const localizedRoutes = getLocalizedRoutes(lng as "en" | "es");
 
@@ -61,7 +62,9 @@ const Navbar = () => {
         }`}
       >
         <div
-          onClick={() => push(`/${lng}${getLocalizedPath("/", lng as "en" | "es")}`)}
+          onClick={() =>
+            push(`/${lng}${getLocalizedPath("/", lng as "en" | "es")}`)
+          }
           className="pointer"
           style={{ width: "179px", height: "100px" }}
         >
@@ -122,7 +125,11 @@ const Navbar = () => {
                   {t(route.text)}
                 </Link>
                 {route.dropdown && (
-                  <div className={`${styles.dropdown} ${isHovered ? styles.show : ''} bg-${color}`}>
+                  <div
+                    className={`${styles.dropdown} ${
+                      isHovered ? styles.show : ""
+                    } bg-${color}`}
+                  >
                     {route.dropdown.map((dropdownItem) => (
                       <Link
                         key={dropdownItem.text}
