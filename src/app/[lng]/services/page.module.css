@@ -62,6 +62,10 @@
 }
 
 @media (max-width: 576px) {
+  .hero {
+    min-height: 140px;
+  }
+
   .services {
     grid-template-columns: 1fr;
     grid-template-rows: none;
