@@ -95,7 +95,9 @@ export default function PharmaceuticalServiceFAQ({
                 {faqContent.slice(0, 5).map((faqItem, index) => (
                   <div key={index} className={styles.faqItem}>
                     <h2
-                      className={`${styles.faqQuestion} p`}
+                      className={`${styles.faqQuestion} ${
+                        expandedQuestion === index ? styles.expanded : ""
+                      } p`}
                       onClick={() => toggleQuestion(index)}
                     >
                       {faqItem.question}
@@ -115,7 +117,9 @@ export default function PharmaceuticalServiceFAQ({
                 {faqContent.slice(5).map((faqItem, index) => (
                   <div key={index + 5} className={styles.faqItem}>
                     <p
-                      className={styles.faqQuestion}
+                      className={`${styles.faqQuestion} ${
+                        expandedQuestion === index + 5 ? styles.expanded : ""
+                      }`}
                       onClick={() => toggleQuestion(index + 5)}
                     >
                       {faqItem.question}

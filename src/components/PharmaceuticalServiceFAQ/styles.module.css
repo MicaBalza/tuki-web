@@ -130,6 +130,10 @@
   padding-left: 2rem;
   transition: color 0.2s ease;
   position: relative;
+  font-weight: 400;
+}
+
+.faqQuestion.expanded {
   font-weight: 700;
 }
 
@@ -148,7 +152,7 @@
 }
 
 .faqQuestion:hover {
-  color: var(--light-purple);
+  font-weight: 700;
 }
 
 .faqAnswer {
