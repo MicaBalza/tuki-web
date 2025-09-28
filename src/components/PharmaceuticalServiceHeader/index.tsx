@@ -1,7 +1,6 @@
 import { PHARMACEUTICAL_SERVICE_COLORS } from "@/constants/pharmaceuticalServices";
 import { useTranslation } from "@/i18n/client";
 import { openCalendarBooking } from "@/utils/calendar";
-import Image from "next/image";
 import { useParams } from "next/navigation";
 import Button from "../Button";
 import styles from "./styles.module.css";
@@ -28,15 +27,13 @@ export default function PharmaceuticalServiceHeader({
 
   return (
     <div className={styles.headerSection}>
-      <div className={styles.headerImage}>
-        <Image
-          src={`/static/images/pharmaceutical-services/cover/${serviceId}.png`}
-          alt={service.cover.title}
-          fill
-          style={{ objectFit: "cover" }}
-          unoptimized={true}
-        />
-      </div>
+      <div
+        className={styles.headerImage}
+        style={{
+          backgroundImage: `url(/static/images/pharmaceutical-services/cover/${serviceId}.png)`
+        }}
+      ></div>
+      <div className={styles.imagePlaceholder}></div>
 
       <div className={styles.headerContent}>
         <h1 className={`text-${coverTextColor} bold ${styles.headerTitle}`}>

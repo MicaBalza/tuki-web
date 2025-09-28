@@ -9,10 +9,20 @@
 }
 
 .headerImage {
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  z-index: 1;
+}
+
+.imagePlaceholder {
   width: 30%;
   height: 368px;
-  overflow: hidden;
 }
 
 .headerContent {
@@ -25,6 +35,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  z-index: 2;
 }
 
 .headerTitle {
@@ -38,6 +49,8 @@
   gap: 1rem;
   width: 30%;
   text-align: center;
+  z-index: 2;
+  position: relative;
 }
 
 .headerDescription h4 {
@@ -46,6 +59,10 @@
 
 /* Responsive Design */
 @media (max-width: 1024px) {
+  .imagePlaceholder {
+    order: 1;
+  }
+
   .headerSection {
     flex-direction: column;
     min-height: auto;
@@ -60,22 +77,33 @@
     top: auto;
     transform: none;
     width: 60vw;
-    order: 1;
   }
 
   .headerDescription {
     width: 100%;
-    order: 2;
     gap: 1.5rem;
   }
 
-  .headerImage {
-    width: 100%;
-    height: 200px;
-    order: 3;
+  .imagePlaceholder {
+    height: 30vw;
   }
 
-  .headerImage img {
-    object-fit: contain !important;
+  .headerImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    z-index: 1;
+  }
+}
+
+/* Scale down image from 1440px and up */
+@media (max-width: 1439px) {
+  .headerImage {
+    background-size: 40vw;
   }
 }
