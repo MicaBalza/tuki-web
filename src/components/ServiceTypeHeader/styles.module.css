@@ -65,10 +65,17 @@
 
 @media (max-width: 450px) {
   .imgContainer {
-    transform: translateX(100px);
+    transform: translateX(60px);
   }
 
   .imgContainer img {
     object-position: bottom;
+  }
+}
+
+/* Specific styling for social-media service type */
+@media (max-width: 450px) {
+  .header[class*="bg-light-purple"] .imgContainer {
+    transform: translateX(100px);
   }
 }
