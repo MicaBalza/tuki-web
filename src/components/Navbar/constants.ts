@@ -125,4 +125,3 @@ function generateNavbarColors(): Record<string, string> {
 }
 
 export const NAVBAR_COLORS: Record<string, string> = generateNavbarColors();
-console.log("🌸 ~ NAVBAR_COLORS:", NAVBAR_COLORS);

@@ -48,7 +48,6 @@ const Navbar = () => {
   }, [pathname]);
 
   const color = NAVBAR_COLORS[pathname.replace(`${lng}`, "")] || "red";
-  console.log("🌸 ~ Navbar ~ color:", pathname.replace(`${lng}`, ""));
   const bgIsDark = color === "red" || color === "green";
 
   // Get localized routes for current language
