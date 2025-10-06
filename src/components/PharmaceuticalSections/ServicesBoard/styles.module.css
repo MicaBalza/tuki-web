@@ -43,15 +43,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 24px;
+  gap: 32px;
   top: 50%;
   left: 50%;
   transform: translate(-62%, -32%);
   width: 420px;
-}
-
-.boardContent > p {
-  font-size: clamp(0.8rem, 3vw, 2rem);
 }
 
 .servicesList {
@@ -59,7 +55,7 @@
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 20px;
 }
 
 .serviceItem {
@@ -73,7 +69,10 @@
   gap: 12px;
   text-decoration: none;
   transition: all 0.3s ease;
-  padding: 4px 0;
+}
+
+.serviceLink h2 {
+  font-size: clamp(0.8rem, 2.5vw, 1.65rem);
 }
 
 .serviceLink:hover {
@@ -151,10 +150,6 @@
     gap: 12px;
   }
 
-  .serviceLink h2 {
-    font-size: 1.2rem;
-  }
-
   .serviceLink img {
     width: 20px;
     height: 20px;
@@ -163,17 +158,13 @@
 
 @media (max-width: 576px) {
   .boardContent {
-    gap: 4px;
+    gap: 2vw;
     max-width: 45vw;
     transform: translate(-65%, -35%);
   }
 
   .servicesList {
-    gap: 2px;
-  }
-
-  .serviceLink h2 {
-    font-size: 0.75rem;
+    gap: 1vw;
   }
 
   .serviceLink img {
@@ -182,7 +173,16 @@
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 440px) {
+  .boardContent {
+    max-width: 45vw;
+    transform: translate(-65%, -35%);
+  }
+
+  .title {
+    font-size: 1rem;
+  }
+
   .boardContainer {
     max-width: 100%;
   }
@@ -192,14 +192,20 @@
   }
 
   .servicesList {
-    gap: 0;
+    gap: 2vw;
+  }
+}
+
+@media (max-width: 360px) {
+  .boardContent {
+    gap: 1vw;
   }
 
-  .serviceLink {
-    padding: 2px 0;
+  .servicesList {
+    gap: 1vw;
   }
 
   .serviceLink h2 {
-    font-size: 0.65rem;
+    font-size: 12px;
   }
 }

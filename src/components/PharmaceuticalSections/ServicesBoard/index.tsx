@@ -30,7 +30,9 @@ export default function ServicesBoard({ lng }: ServicesBoardProps) {
               className={styles.boardImage}
             />
             <div className={styles.boardContent}>
-              <p className="text-magenta bold h2">{t("services.title")}</p>
+              <p className={`${styles.title} text-magenta bold h1`}>
+                {t("services.title")}
+              </p>
               <ul className={styles.servicesList}>
                 {serviceLinks.map((service) => (
                   <li key={service.key} className={styles.serviceItem}>
@@ -39,14 +41,14 @@ export default function ServicesBoard({ lng }: ServicesBoardProps) {
                         `/pharmaceutical-services/${service.url}`,
                         lng as "en" | "es"
                       )}`}
-                      className={`${styles.serviceLink} text-purple h4`}
+                      className={`${styles.serviceLink} text-purple`}
                     >
                       <img
                         src="/static/icons/chevron_down.svg"
                         alt="Bullet"
                         className={styles.chevron}
                       />
-                      <h2 className="h4">{t(`services.${service.key}`)}</h2>
+                      <h2>{t(`services.${service.key}`)}</h2>
                     </Link>
                   </li>
                 ))}
