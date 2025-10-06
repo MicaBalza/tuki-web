@@ -246,9 +246,10 @@
   }
 
   .videoPlay {
-    transform: scale(0.6);
-    top: calc(50% - 46.5px);
-    left: calc(50% - 43.8px);
+    width: 44px;
+    height: 46px;
+    top: calc(50% - 23px);
+    left: calc(50% - 21px);
   }
 
   .sectionTitle {
