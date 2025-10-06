@@ -273,7 +273,7 @@
   .finalResult {
     flex-direction: column;
     gap: 32px;
-    height: auto;
+    height: 90vw;
   }
 
   .finalResultText > * {
