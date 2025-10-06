@@ -65,7 +65,7 @@
 /* Expandable Content */
 .expandedContainer {
   display: flex;
-  margin: 3rem auto 0;
+  margin: 3rem auto 2rem;
   gap: 2rem;
   max-width: 1400px;
   animation: fadeInDown 0.3s ease;
