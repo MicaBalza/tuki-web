@@ -317,6 +317,10 @@
     left: calc(50% - 25px);
   }
 
+  .oneTall {
+    height: 75vw;
+  }
+
   .twoWide {
     flex-direction: column;
     height: 85vw;
@@ -349,17 +353,17 @@
 
   .threeSquare {
     flex-direction: column;
-    height: 200vw;
+    height: 240vw;
   }
 
   .threeTall {
     flex-direction: column;
-    height: 128vw;
+    height: 300vw;
   }
 
   .fourWide {
     flex-direction: column;
-    height: 128vw;
+    height: 240vw;
   }
 
   .fourSquare {
