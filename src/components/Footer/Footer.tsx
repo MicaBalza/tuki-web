@@ -77,7 +77,7 @@ const Footer = () => {
             />
           </div>
         )}
-        
+
         {/* Desktop: All sections displayed normally */}
         <div className={styles.desktopNavigation}>
           {FOOTER_SECTIONS.map((section) => (
@@ -116,8 +116,9 @@ const Footer = () => {
         <div className={styles.mobileNavigation}>
           {/* First Column: Inicio, Servicios (with subsections) */}
           <div className={styles.navigationColumn}>
-            {FOOTER_SECTIONS.filter(section => 
-              section.title === "home" || section.title === "services"
+            {FOOTER_SECTIONS.filter(
+              (section) =>
+                section.title === "home" || section.title === "services"
             ).map((section) => (
               <div key={section.title} className={styles.sectionGroup}>
                 <Link
@@ -138,7 +139,7 @@ const Footer = () => {
                             item.path,
                             lng as "en" | "es"
                           )}`}
-                          className={styles.sectionItem}
+                          className={`${styles.sectionItem} p`}
                         >
                           {tNav(item.text)}
                         </Link>
@@ -152,11 +153,12 @@ const Footer = () => {
 
           {/* Second Column: Servicios Farmaceutica, Blog, Quienes Somos, Contacto */}
           <div className={styles.navigationColumn}>
-            {FOOTER_SECTIONS.filter(section => 
-              section.title === "pharmaceutical-services" || 
-              section.title === "blog" || 
-              section.title === "us" || 
-              section.title === "contact"
+            {FOOTER_SECTIONS.filter(
+              (section) =>
+                section.title === "pharmaceutical-services" ||
+                section.title === "blog" ||
+                section.title === "who-we-are" ||
+                section.title === "contact"
             ).map((section) => (
               <div key={section.title} className={styles.sectionGroup}>
                 <Link
@@ -177,7 +179,7 @@ const Footer = () => {
                             item.path,
                             lng as "en" | "es"
                           )}`}
-                          className={styles.sectionItem}
+                          className={`${styles.sectionItem} p`}
                         >
                           {tNav(item.text)}
                         </Link>
