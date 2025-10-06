@@ -333,7 +333,7 @@
 
   .threeSquare {
     flex-direction: column;
-    height: 128vw;
+    height: 200vw;
   }
 
   .threeTall {
@@ -348,16 +348,16 @@
 
   .fourSquare {
     flex-direction: column;
-    height: 128vw;
+    height: 300vw;
   }
 
   .fiveSquare {
     flex-direction: column;
-    height: 128vw;
+    height: 400vw;
   }
 
   .sixSquare {
     flex-direction: column;
-    height: 128vw;
+    height: 500vw;
   }
 }
