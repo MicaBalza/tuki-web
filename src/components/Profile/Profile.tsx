@@ -25,7 +25,7 @@ const Profile = ({ person, inverted, noDescription }: Props) => {
         src={`/static/video/${person}.mp4`}
         className={styles.video}
       ></video>
-      <div className={`column align-center g-40 ${styles.content}`}>
+      <div className={`column align-center ${styles.content}`}>
         <div className="column">
           <h3 className={styles.name}>{t(`${person}.name`)}</h3>
           <p className={styles.title}>{t(`${person}.title`)}</p>

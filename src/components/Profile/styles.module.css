@@ -5,6 +5,10 @@
   align-items: center;
 }
 
+.content {
+  gap: 40px;
+}
+
 .inverted {
   flex-direction: row-reverse;
 }
@@ -40,6 +44,10 @@
     gap: 40px;
     max-width: 280px;
     margin: 0 auto;
+  }
+
+  .content {
+    gap: 24px;
   }
 
   .inverted {
