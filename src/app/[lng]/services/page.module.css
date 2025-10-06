@@ -78,6 +78,11 @@
       "social-media"
       "branding";
   }
+
+  .title {
+    text-align: left;
+    max-width: 25vw;
+  }
 }
 
 .resources {

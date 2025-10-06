@@ -152,6 +152,11 @@
   z-index: 1;
 }
 
+.mobileLangSelector {
+  margin: 20px 0;
+  align-self: flex-start;
+}
+
 .footer {
   display: flex;
   gap: 20px;

@@ -4,6 +4,7 @@ import { useTranslation } from "@/i18n/client";
 import Link from "next/link";
 import { useParams, usePathname } from "next/navigation";
 import { getLocalizedRoutes } from "../Navbar/constants";
+import LangSelector from "../LangSelector";
 import SocialLinks from "../SocialLinks";
 import styles from "./styles.module.css";
 
@@ -90,9 +91,11 @@ export default function SlideMenu() {
                 );
               })}
             </div>
+            <div className={styles.mobileLangSelector}>
+              <LangSelector invert />
+            </div>
             <div className={styles.footer}>
               <SocialLinks className="fill-white" />
-              {/* <LangSelector invert /> */}
             </div>
           </div>
         )}
