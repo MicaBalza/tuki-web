@@ -17,10 +17,6 @@
   position: relative;
 }
 
-.processSubtitle {
-  font-size: clamp(1.2rem, 2vw, 1.875rem);
-}
-
 .processButton {
   position: absolute;
   top: 50%;
@@ -83,7 +79,6 @@
   max-width: 240px;
   margin-left: -40px;
   margin-right: -40px;
-  font-size: clamp(0.625rem, 1.5vw, 1rem);
 }
 
 /* Responsive Design */
@@ -119,6 +114,10 @@
 }
 
 @media (max-width: 526px) {
+  .processSection {
+    gap: 2rem;
+  }
+
   .processSteps {
     flex-direction: column;
     gap: 2rem;

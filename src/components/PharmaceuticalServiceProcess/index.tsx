@@ -22,7 +22,7 @@ export default function PharmaceuticalServiceProcess({
         <h2 className="text-light-green h1 bold">
           {t("processSection.title")}
         </h2>
-        <p className={`text-white ${styles.processSubtitle}`}>
+        <p className={`text-white ${styles.processSubtitle} h4`}>
           {t("processSection.subtitle")}
         </p>
         <Button
@@ -46,7 +46,7 @@ export default function PharmaceuticalServiceProcess({
                 {stepNumber}
               </div>
               <div className={styles.processStepContent}>
-                <h4 className={`${styles.stepTitle} bold text-light-green`}>
+                <h4 className={`${styles.stepTitle} h4 bold text-light-green`}>
                   {t(`processStepTitles.${stepKey}`)}
                 </h4>
                 <p className={`${styles.stepDescription} text-white`}>
