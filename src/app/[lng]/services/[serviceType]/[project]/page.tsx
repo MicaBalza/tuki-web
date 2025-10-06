@@ -5,6 +5,7 @@ import BackButton from "@/components/BackButton";
 
 import VideoPlayer from "@/components/VideoPlayer";
 import { SERVICES_DATA } from "@/constants/services";
+import { generateCanonicalMetadata } from "@/utils/canonical";
 import { capitalizeFirstLetter } from "@/utils/string";
 import Image from "next/image";
 import "swiper/css";
@@ -273,9 +274,17 @@ export async function generateMetadata({
   );
 
   const projectData = SERVICES_DATA[serviceType as string][project as string];
+  const canonicalPath = `/services/${serviceType}/${project}`;
+  const canonicalMeta = generateCanonicalMetadata(
+    canonicalPath,
+    lng as "en" | "es"
+  );
 
   return {
-    title: `${capitalizeFirstLetter(t(`${serviceType}.title`))} - ${projectData[0].name}`,
+    title: `${capitalizeFirstLetter(t(`${serviceType}.title`))} - ${
+      projectData[0].name
+    }`,
     description: projectData[0].goal,
+    ...canonicalMeta,
   };
 }

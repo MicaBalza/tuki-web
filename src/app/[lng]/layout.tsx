@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import { languages } from "@/i18n/settings";
 import "@/styles/globals.css";
 import { PageProps } from "@/types/i18n";
+import { generateCanonicalMetadata } from "@/utils/canonical";
 import { GoogleTagManager } from "@next/third-parties/google";
 import { dir } from "i18next";
 import type { Metadata } from "next";
@@ -23,13 +24,20 @@ const RethinkFont = localFont({
   ],
 });
 
-export const metadata: Metadata = {
-  title: "Tuki Studio",
-  description: "Le damos vida a tus ideas.",
-  verification: {
-    google: "google",
-  },
-};
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const resolvedParams = await params;
+  const { lng } = resolvedParams;
+  const canonicalMeta = generateCanonicalMetadata("/", lng as "en" | "es");
+
+  return {
+    title: "Tuki Studio",
+    description: "Le damos vida a tus ideas.",
+    verification: {
+      google: "google",
+    },
+    ...canonicalMeta,
+  };
+}
 
 export async function generateStaticParams() {
   return languages.map((lng) => ({ lng }));
