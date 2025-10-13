@@ -6,8 +6,9 @@ export async function POST(request: NextRequest) {
   const { email, name, tel, source, message } = await request.json();
 
   const transport = nodemailer.createTransport({
-    host: "mail.privateemail.com",
-    port: 587,
+    host: "smtp.zoho.eu",
+    port: 465,
+    secure: true,
     auth: {
       user: process.env.NEXT_MY_EMAIL,
       pass: process.env.NEXT_MY_PASSWORD,
@@ -17,7 +18,7 @@ export async function POST(request: NextRequest) {
   const mailOptions: Mail.Options = {
     from: process.env.NEXT_MY_EMAIL,
     to: "hola@tukistudio.tv",
-    // cc: email, (uncomment this line if you want to send a copy to the sender)
+    cc: "holanatbalza@gmail.com",
     subject: `Message from ${name} (${email})`,
     text: `Móvil: ${tel}
 ¿Cómo nos encontró?: ${source}
