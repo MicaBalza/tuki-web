@@ -13,5 +13,14 @@
     "message": "Message",
     "button": "Send"
   },
-  "schedule-button": "Schedule your appointment"
+  "schedule-button": "Schedule your appointment",
+  "modal": {
+    "loading": "Please wait...",
+    "success": "Email sent successfully!",
+    "back": "Back"
+  },
+  "errors": {
+    "required": "This field is required.",
+    "invalidEmail": "Invalid email"
+  }
 }

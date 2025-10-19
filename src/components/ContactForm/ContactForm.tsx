@@ -86,12 +86,12 @@ const ContactForm = ({ ...props }: Props) => {
             />
           </div>
           {isSendingEmail ? (
-            <p className="text-white">Espera un momento...</p>
+            <p className="text-white">{t("modal.loading")}</p>
           ) : (
             <>
-              <p className="text-white">¡Mail Enviado con éxito!</p>
+              <p className="text-white">{t("modal.success")}</p>
               <Button
-                text="Volver"
+                text={t("modal.back")}
                 onClick={() => {
                   setIsModalOpen(false);
                   setIsSendingEmail(false);
@@ -112,7 +112,7 @@ const ContactForm = ({ ...props }: Props) => {
               {...register("name", {
                 required: {
                   value: true,
-                  message: "Este campo es requerido.",
+                  message: t("errors.required"),
                 },
               })}
               required
@@ -128,12 +128,12 @@ const ContactForm = ({ ...props }: Props) => {
               {...register("email", {
                 required: {
                   value: true,
-                  message: "Este campo es requerido.",
+                  message: t("errors.required"),
                 },
                 pattern: {
                   value:
                     /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-                  message: "Email inválido",
+                  message: t("errors.invalidEmail"),
                 },
               })}
               type="email"

@@ -13,5 +13,14 @@
     "message": "Mensaje",
     "button": "Enviar"
   },
-  "schedule-button": "Agenda tu cita aquí"
+  "schedule-button": "Agenda tu cita aquí",
+  "modal": {
+    "loading": "Espera un momento...",
+    "success": "¡Mail Enviado con éxito!",
+    "back": "Volver"
+  },
+  "errors": {
+    "required": "Este campo es requerido.",
+    "invalidEmail": "Email inválido"
+  }
 }
