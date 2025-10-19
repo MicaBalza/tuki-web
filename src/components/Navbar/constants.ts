@@ -18,40 +18,40 @@ const BASE_ROUTES = [
       { path: "/services/editorial", text: "editorial" },
       { path: "/services/branding", text: "branding" },
       { path: "/services/motion-graphics", text: "motion-graphics" },
-      { path: "/pharmaceutical-services", text: "pharmaceutical" },
+      { path: "/health-services", text: "pharmaceutical" },
     ],
   },
   {
-    path: "/pharmaceutical-services",
-    text: "pharmaceutical-services",
+    path: "/health-services",
+    text: "health-services",
     color: "green",
     dropdown: [
       {
-        path: "/pharmaceutical-services/institutional-corporate-videos",
+        path: "/health-services/institutional-corporate-videos",
         text: "institutional-corporate-videos",
       },
       {
-        path: "/pharmaceutical-services/product-launch",
+        path: "/health-services/product-launch",
         text: "product-launch",
       },
       {
-        path: "/pharmaceutical-services/tutorial-training",
+        path: "/health-services/tutorial-training",
         text: "tutorial-training",
       },
       {
-        path: "/pharmaceutical-services/promotional-videos",
+        path: "/health-services/promotional-videos",
         text: "promotional-videos",
       },
       {
-        path: "/pharmaceutical-services/events-conferences",
+        path: "/health-services/events-conferences",
         text: "events-conferences",
       },
       {
-        path: "/pharmaceutical-services/podcast-videos",
+        path: "/health-services/podcast-videos",
         text: "podcast-videos",
       },
       {
-        path: "/pharmaceutical-services",
+        path: "/health-services",
         text: "projects",
       },
     ],
@@ -96,7 +96,7 @@ function generateNavbarColors(): Record<string, string> {
   const baseColors = {
     "/": "nude",
     "/services": "nude",
-    "/pharmaceutical-services": "green",
+    "/health-services": "green",
     "/us": "light-purple",
     "/blog": "yellow",
     "/contact-us": "pink",

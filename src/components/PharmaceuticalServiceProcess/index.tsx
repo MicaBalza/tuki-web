@@ -13,7 +13,7 @@ export default function PharmaceuticalServiceProcess({
 }: PharmaceuticalServiceProcessProps) {
   const params = useParams();
   const lng = params?.lng as string;
-  const { t } = useTranslation(lng, "pharmaceutical-services");
+  const { t } = useTranslation(lng, "health-services");
   const { push } = useRouter();
 
   return (

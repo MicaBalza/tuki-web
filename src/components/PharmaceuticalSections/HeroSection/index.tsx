@@ -9,7 +9,7 @@ interface HeroSectionProps {
 }
 
 export default function HeroSection({ lng, onButtonClick }: HeroSectionProps) {
-  const { t } = useTranslation(lng, "pharmaceutical-services");
+  const { t } = useTranslation(lng, "health-services");
 
   return (
     <section className={styles.section}>
@@ -22,7 +22,7 @@ export default function HeroSection({ lng, onButtonClick }: HeroSectionProps) {
                 lng as keyof typeof HERO_SECTION_VIDEO_URLS
               ] || HERO_SECTION_VIDEO_URLS.en
             }
-            title="Pharmaceutical Services Video"
+            title="Health Services Video"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
           />

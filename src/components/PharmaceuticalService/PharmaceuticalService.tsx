@@ -28,7 +28,7 @@ const PharmaceuticalService = () => {
           onClick={() =>
             push(
               `/${lng}${getLocalizedPath(
-                "/pharmaceutical-services",
+                "/health-services",
                 lng as "en" | "es"
               )}`
             )

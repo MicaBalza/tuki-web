@@ -20,22 +20,22 @@ export const COLOR_BY_PATH = [
     color: "white",
   },
   {
-    path: "/pharmaceutical-services/institutional-corporate-videos",
+    path: "/health-services/institutional-corporate-videos",
     bgColor: "light-purple",
     color: "white",
   },
   {
-    path: "/pharmaceutical-services/product-launch",
+    path: "/health-services/product-launch",
     bgColor: "light-purple",
     color: "white",
   },
   {
-    path: "/pharmaceutical-services/promotional-videos",
+    path: "/health-services/promotional-videos",
     bgColor: "light-purple",
     color: "white",
   },
   {
-    path: "/pharmaceutical-services/podcast-videos",
+    path: "/health-services/podcast-videos",
     bgColor: "light-purple",
     color: "white",
   },
@@ -57,38 +57,38 @@ export const FOOTER_SECTIONS = [
       { text: "editorial", path: "/services/editorial" },
       { text: "branding", path: "/services/branding" },
       { text: "motion-graphics", path: "/services/motion-graphics" },
-      { text: "pharmaceutical", path: "/pharmaceutical-services" },
+      { text: "pharmaceutical", path: "/health-services" },
     ],
   },
   {
-    title: "pharmaceutical-services",
-    path: "/pharmaceutical-services",
+    title: "health-services",
+    path: "/health-services",
     items: [
       {
         text: "institutional-corporate-videos",
-        path: "/pharmaceutical-services/institutional-corporate-videos",
+        path: "/health-services/institutional-corporate-videos",
       },
       {
         text: "product-launch",
-        path: "/pharmaceutical-services/product-launch",
+        path: "/health-services/product-launch",
       },
       {
         text: "tutorial-training",
-        path: "/pharmaceutical-services/tutorial-training",
+        path: "/health-services/tutorial-training",
       },
       {
         text: "promotional-videos",
-        path: "/pharmaceutical-services/promotional-videos",
+        path: "/health-services/promotional-videos",
       },
       {
         text: "events-conferences",
-        path: "/pharmaceutical-services/events-conferences",
+        path: "/health-services/events-conferences",
       },
       {
         text: "podcast-videos",
-        path: "/pharmaceutical-services/podcast-videos",
+        path: "/health-services/podcast-videos",
       },
-      { text: "projects", path: "/pharmaceutical-services" },
+      { text: "projects", path: "/health-services" },
     ],
   },
   {

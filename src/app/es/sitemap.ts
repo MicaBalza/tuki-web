@@ -17,7 +17,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/us",
     "/services",
     "/contact-us",
-    "/pharmaceutical-services",
+    "/health-services",
   ];
   const staticPages: MetadataRoute.Sitemap = staticPaths.map((path) => ({
     url: `${langBaseUrl}${getLocalizedPath(path, lang)}`,
@@ -57,7 +57,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     PHARMACEUTICAL_SERVICE_COLORS
   ).map((serviceId) => ({
     url: `${langBaseUrl}${getLocalizedPath(
-      `/pharmaceutical-services/${serviceId}`,
+      `/health-services/${serviceId}`,
       lang
     )}`,
     lastModified: new Date(lastModified),

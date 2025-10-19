@@ -8,7 +8,7 @@ interface ServicesBoardProps {
 }
 
 export default function ServicesBoard({ lng }: ServicesBoardProps) {
-  const { t } = useTranslation(lng, "pharmaceutical-services");
+  const { t } = useTranslation(lng, "health-services");
 
   const serviceLinks = [
     { key: "item1", url: "institutional-corporate-videos" },
@@ -38,7 +38,7 @@ export default function ServicesBoard({ lng }: ServicesBoardProps) {
                   <li key={service.key} className={styles.serviceItem}>
                     <Link
                       href={`/${lng}${getLocalizedPath(
-                        `/pharmaceutical-services/${service.url}`,
+                        `/health-services/${service.url}`,
                         lng as "en" | "es"
                       )}`}
                       className={`${styles.serviceLink} text-purple`}
@@ -60,7 +60,7 @@ export default function ServicesBoard({ lng }: ServicesBoardProps) {
           <div className={styles.character}>
             <img
               src="/static/images/pharmaceutical-services/girl.png"
-              alt="Pharmaceutical Services Character"
+              alt="Health Services Character"
               className={styles.characterImage}
             />
           </div>

@@ -40,11 +40,24 @@ export function middleware(req: any) {
     const pathLang = segments[1] as "en" | "es";
     const localizedPath = "/" + segments.slice(2).join("/");
 
+    // Redirect old pharmaceutical URLs to health URLs
+    if (localizedPath.startsWith("/servicios-farmaceutica")) {
+      const newPath = localizedPath.replace("/servicios-farmaceutica", "/servicios-salud");
+      const redirectUrl = new URL(`/${pathLang}${newPath}`, req.url);
+      return NextResponse.redirect(redirectUrl, 301); // Permanent redirect
+    }
+
+    if (localizedPath.startsWith("/pharmaceutical-services")) {
+      const newPath = localizedPath.replace("/pharmaceutical-services", "/health-services");
+      const redirectUrl = new URL(`/${pathLang}${newPath}`, req.url);
+      return NextResponse.redirect(redirectUrl, 301); // Permanent redirect
+    }
+
     // Convert Spanish URLs to canonical English paths for routing
     if (pathLang === "es" && localizedPath !== "/") {
       let canonicalPath = getCanonicalPath(localizedPath, "es");
 
-      // Handle dynamic service paths like /servicios/ilustracion/project or /servicios-farmaceutica/service-name
+      // Handle dynamic service paths like /servicios/ilustracion/project or /servicios-salud/service-name
       if (canonicalPath === localizedPath) {
         const pathSegments = localizedPath.split("/").filter(Boolean);
 
@@ -69,10 +82,10 @@ export function middleware(req: any) {
           }
         }
 
-        // Handle /servicios-farmaceutica/[service-name] pattern
+        // Handle /servicios-salud/[service-name] pattern
         else if (
           pathSegments.length === 2 &&
-          pathSegments[0] === "servicios-farmaceutica"
+          pathSegments[0] === "servicios-salud"
         ) {
           const serviceName = pathSegments[1];
 
@@ -89,7 +102,7 @@ export function middleware(req: any) {
 
           const englishServiceName = pharmaServiceMap[serviceName];
           if (englishServiceName) {
-            canonicalPath = `/pharmaceutical-services/${englishServiceName}`;
+            canonicalPath = `/health-services/${englishServiceName}`;
           }
         }
       }

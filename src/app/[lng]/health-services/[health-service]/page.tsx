@@ -12,13 +12,13 @@ import { notFound, useParams } from "next/navigation";
 
 type Params = {
   lng: string;
-  "pharmaceutical-service": string;
+  "health-service": string;
 };
 
 export default function PharmaceuticalServicePage() {
   const params = useParams() as Params;
-  const serviceId = params["pharmaceutical-service"];
-  const { t } = useTranslation(params.lng, "pharmaceutical-services");
+  const serviceId = params["health-service"];
+  const { t } = useTranslation(params.lng, "health-services");
 
   const service = t(`serviceDetails.${serviceId}`, { returnObjects: true });
   const colors =

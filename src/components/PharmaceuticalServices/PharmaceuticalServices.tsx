@@ -9,7 +9,7 @@ import styles from "./styles.module.css";
 const PharmaceuticalServices = () => {
   const { lng } = useParams();
   const { push } = useRouter();
-  const { t } = useTranslation(lng as string, "pharmaceutical-services");
+  const { t } = useTranslation(lng as string, "health-services");
 
   const listItems = [t("list.item1"), t("list.item2"), t("list.item3")];
 
@@ -18,8 +18,8 @@ const PharmaceuticalServices = () => {
       <div className={styles.imageSection}>
         <Image
           src="/static/images/pharmaceutical-services.png"
-          alt="Pharmaceutical Services"
-          title="Pharmaceutical Services"
+          alt="Health Services"
+          title="Health Services"
           fill
           className={styles.image}
           unoptimized={true}
@@ -45,7 +45,7 @@ const PharmaceuticalServices = () => {
                 />
                 <Link
                   href={`/${lng}${getLocalizedPath(
-                    `/pharmaceutical-services/${serviceSlug}`,
+                    `/health-services/${serviceSlug}`,
                     lng as "en" | "es"
                   )}`}
                   className={styles.serviceLink}
@@ -58,7 +58,7 @@ const PharmaceuticalServices = () => {
         </ul>
         <Button
           text={t("button")}
-          onClick={() => push(`/${lng}/pharmaceutical-services`)}
+          onClick={() => push(`/${lng}${getLocalizedPath("/health-services", lng as "en" | "es")}`)}
           className={styles.button}
         />
       </div>

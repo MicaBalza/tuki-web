@@ -10,7 +10,7 @@ interface ServicesGridProps {
 }
 
 export default function ServicesGrid({ lng }: ServicesGridProps) {
-  const { t } = useTranslation(lng, "pharmaceutical-services");
+  const { t } = useTranslation(lng, "health-services");
   const [selectedService, setSelectedService] = useState<ServiceImage | null>(
     null
   );

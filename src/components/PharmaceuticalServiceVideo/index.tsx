@@ -17,14 +17,14 @@ export default function PharmaceuticalServiceVideo({
 }: PharmaceuticalServiceVideoProps) {
   const { push } = useRouter();
   const { lng } = useParams();
-  const { t } = useTranslation(lng as string, "pharmaceutical-services");
+  const { t } = useTranslation(lng as string, "health-services");
 
   return (
     <div className={`${styles.thirdSection} bg-${colors.video}`}>
       <div className={styles.thirdSectionVideo}>
         <iframe
           src={service.video.videoUrl}
-          title="Pharmaceutical service video"
+          title="Health service video"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           className={styles.video}
         />
@@ -44,7 +44,7 @@ export default function PharmaceuticalServiceVideo({
           onClick={() =>
             push(
               `/${lng}${getLocalizedPath(
-                "/pharmaceutical-services",
+                "/health-services",
                 lng as "en" | "es"
               )}`
             )

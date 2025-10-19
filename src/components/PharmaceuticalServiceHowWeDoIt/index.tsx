@@ -15,7 +15,7 @@ export default function PharmaceuticalServiceProcess({
 }: PharmaceuticalServiceProcessProps) {
   const params = useParams();
   const lng = params?.lng as string;
-  const { t } = useTranslation(lng, "pharmaceutical-services");
+  const { t } = useTranslation(lng, "health-services");
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
 
   const processImages = [
@@ -63,11 +63,17 @@ export default function PharmaceuticalServiceProcess({
                   alt="Chevron down"
                   width={40}
                   height={40}
-                  className={`${styles.chevronDown} ${expandedIndex === index ? styles.chevronRotated : ''}`}
+                  className={`${styles.chevronDown} ${
+                    expandedIndex === index ? styles.chevronRotated : ""
+                  }`}
                 />
               </div>
 
-              <div className={`${styles.individualExpandableSection} ${expandedIndex === index ? styles.expanded : ''}`}>
+              <div
+                className={`${styles.individualExpandableSection} ${
+                  expandedIndex === index ? styles.expanded : ""
+                }`}
+              >
                 <div className={styles.expandableItem}>
                   <p>{service.howWeDoIt[processImage.key]}</p>
                 </div>

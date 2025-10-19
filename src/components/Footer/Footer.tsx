@@ -155,7 +155,7 @@ const Footer = () => {
           <div className={styles.navigationColumn}>
             {FOOTER_SECTIONS.filter(
               (section) =>
-                section.title === "pharmaceutical-services" ||
+                section.title === "health-services" ||
                 section.title === "blog" ||
                 section.title === "who-we-are" ||
                 section.title === "contact"

@@ -23,7 +23,7 @@ export default function PharmaceuticalServiceFAQ({
   lng,
   serviceType = "mainPage",
 }: PharmaceuticalServiceFAQProps) {
-  const { t } = useTranslation(lng, "pharmaceutical-services");
+  const { t } = useTranslation(lng, "health-services");
   const [isExpanded, setIsExpanded] = useState(false);
   const [expandedQuestion, setExpandedQuestion] = useState<number | null>(null);
 

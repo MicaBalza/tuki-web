@@ -55,7 +55,7 @@ This project implements proper canonical URLs and hreflang tags for multilingual
    - Services: `/src/app/[lng]/services/page.tsx`
    - Contact: `/src/app/[lng]/contact-us/page.tsx`
    - About: `/src/app/[lng]/us/page.tsx`
-   - Pharmaceutical Services: `/src/app/[lng]/pharmaceutical-services/page.tsx`
+   - Health Services: `/src/app/[lng]/health-services/page.tsx`
    - Project pages: `/src/app/[lng]/services/[serviceType]/[project]/page.tsx`
 
 ### How It Works
@@ -105,7 +105,7 @@ Pages to update:
 - `/src/app/[lng]/services/page.tsx`
 - `/src/app/[lng]/contact-us/page.tsx`
 - `/src/app/[lng]/us/page.tsx`
-- `/src/app/[lng]/pharmaceutical-services/page.tsx`
+- `/src/app/[lng]/health-services/page.tsx`
 - `/src/app/[lng]/services/[serviceType]/[project]/page.tsx`
 
 #### 4. Verification

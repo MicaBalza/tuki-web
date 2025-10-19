@@ -9,9 +9,9 @@ export const URL_MAPPINGS = {
     en: "/services",
     es: "/servicios",
   },
-  "/pharmaceutical-services": {
-    en: "/pharmaceutical-services", 
-    es: "/servicios-farmaceutica",
+  "/health-services": {
+    en: "/health-services", 
+    es: "/servicios-salud",
   },
   "/us": {
     en: "/us",
@@ -49,29 +49,29 @@ export const URL_MAPPINGS = {
   },
   
   // Pharmaceutical service pages
-  "/pharmaceutical-services/institutional-corporate-videos": {
-    en: "/pharmaceutical-services/institutional-corporate-videos",
-    es: "/servicios-farmaceutica/videos-institucionales-corporativos",
+  "/health-services/institutional-corporate-videos": {
+    en: "/health-services/institutional-corporate-videos",
+    es: "/servicios-salud/videos-institucionales-corporativos",
   },
-  "/pharmaceutical-services/product-launch": {
-    en: "/pharmaceutical-services/product-launch",
-    es: "/servicios-farmaceutica/lanzamiento-productos",
+  "/health-services/product-launch": {
+    en: "/health-services/product-launch",
+    es: "/servicios-salud/lanzamiento-productos",
   },
-  "/pharmaceutical-services/tutorial-training": {
-    en: "/pharmaceutical-services/tutorial-training", 
-    es: "/servicios-farmaceutica/tutorial-capacitacion",
+  "/health-services/tutorial-training": {
+    en: "/health-services/tutorial-training", 
+    es: "/servicios-salud/tutorial-capacitacion",
   },
-  "/pharmaceutical-services/promotional-videos": {
-    en: "/pharmaceutical-services/promotional-videos",
-    es: "/servicios-farmaceutica/videos-promocion",
+  "/health-services/promotional-videos": {
+    en: "/health-services/promotional-videos",
+    es: "/servicios-salud/videos-promocion",
   },
-  "/pharmaceutical-services/events-conferences": {
-    en: "/pharmaceutical-services/events-conferences",
-    es: "/servicios-farmaceutica/eventos-conferencias", 
+  "/health-services/events-conferences": {
+    en: "/health-services/events-conferences",
+    es: "/servicios-salud/eventos-conferencias", 
   },
-  "/pharmaceutical-services/podcast-videos": {
-    en: "/pharmaceutical-services/podcast-videos",
-    es: "/servicios-farmaceutica/videos-podcast",
+  "/health-services/podcast-videos": {
+    en: "/health-services/podcast-videos",
+    es: "/servicios-salud/videos-podcast",
   },
 } as const;
 
@@ -115,8 +115,8 @@ export function getLocalizedPath(path: string, language: "en" | "es"): string {
     }
   }
   
-  // Handle /pharmaceutical-services/[service-name] pattern  
-  else if (pathSegments.length === 2 && pathSegments[0] === "pharmaceutical-services") {
+  // Handle /health-services/[service-name] pattern
+  else if (pathSegments.length === 2 && pathSegments[0] === "health-services") {
     const serviceName = pathSegments[1];
     
     if (language === "es") {
@@ -132,7 +132,7 @@ export function getLocalizedPath(path: string, language: "en" | "es"): string {
       
       const spanishServiceName = pharmaServiceMap[serviceName];
       if (spanishServiceName) {
-        return `/servicios-farmaceutica/${spanishServiceName}`;
+        return `/servicios-salud/${spanishServiceName}`;
       }
     }
   }
@@ -179,8 +179,8 @@ export function getCanonicalPath(localizedPath: string, language: "en" | "es"): 
       }
     }
     
-    // Handle /servicios-farmaceutica/[service-name] pattern  
-    else if (pathSegments.length === 2 && pathSegments[0] === "servicios-farmaceutica") {
+    // Handle /servicios-salud/[service-name] pattern
+    else if (pathSegments.length === 2 && pathSegments[0] === "servicios-salud") {
       const serviceName = pathSegments[1];
       
       // Map Spanish pharmaceutical service names to English
@@ -195,7 +195,7 @@ export function getCanonicalPath(localizedPath: string, language: "en" | "es"): 
       
       const englishServiceName = pharmaServiceMap[serviceName];
       if (englishServiceName) {
-        return `/pharmaceutical-services/${englishServiceName}`;
+        return `/health-services/${englishServiceName}`;
       }
     }
     
