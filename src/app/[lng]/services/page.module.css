@@ -17,6 +17,7 @@
   font-size: clamp(1rem, 3vw, 2rem);
 }
 
+
 .services {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -82,6 +83,14 @@
   .title {
     text-align: left;
     max-width: 25vw;
+  }
+}
+
+@media (max-width: 400px) {
+  .title {
+    font-size: clamp(0.9rem, 2.5vw, 1.5rem);
+    line-height: 1.2;
+    max-width: 30vw;
   }
 }
 
