@@ -96,6 +96,14 @@
   .text {
     width: 90vw;
   }
+
+  .title {
+    margin-bottom: 12px;
+  }
+
+  .servicesLink {
+    margin-bottom: 24px;
+  }
 }
 
 @media (min-width: 1441px) {
