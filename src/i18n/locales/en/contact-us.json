@@ -17,7 +17,11 @@
   "modal": {
     "loading": "Please wait...",
     "success": "Email sent successfully!",
-    "back": "Back"
+    "error": "Error sending message",
+    "errorDescription": "Please try again or contact us directly.",
+    "back": "Back",
+    "retry": "Retry",
+    "cancel": "Cancel"
   },
   "errors": {
     "required": "This field is required.",

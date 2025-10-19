@@ -17,7 +17,11 @@
   "modal": {
     "loading": "Espera un momento...",
     "success": "¡Mail Enviado con éxito!",
-    "back": "Volver"
+    "error": "Error al enviar el mensaje",
+    "errorDescription": "Por favor, intenta nuevamente o contáctanos directamente.",
+    "back": "Volver",
+    "retry": "Reintentar",
+    "cancel": "Cancelar"
   },
   "errors": {
     "required": "Este campo es requerido.",

@@ -28,6 +28,8 @@ const ContactForm = ({ ...props }: Props) => {
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isSendingEmail, setIsSendingEmail] = useState(false);
+  const [emailError, setEmailError] = useState<string | null>(null);
+  const [emailSuccess, setEmailSuccess] = useState(false);
 
   const options = [
     { value: "instagram", label: "Instagram" },
@@ -47,24 +49,45 @@ const ContactForm = ({ ...props }: Props) => {
   async function sendMail(formData: Inputs) {
     setIsModalOpen(true);
     setIsSendingEmail(true);
+    setEmailError(null);
+    setEmailSuccess(false);
 
     const apiEndpoint = "/api/email";
 
-    fetch(apiEndpoint, {
-      method: "POST",
-      body: JSON.stringify(formData),
-    })
-      .then((res) => res.json())
-      .then(() => {
-        setIsSendingEmail(false);
-      })
-      .catch((err) => {
-        setIsModalOpen(false);
-        alert(err);
+    try {
+      const response = await fetch(apiEndpoint, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
       });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || t("modal.error"));
+      }
+
+      setIsSendingEmail(false);
+      setEmailSuccess(true);
+    } catch (err) {
+      setIsSendingEmail(false);
+      const errorMessage =
+        err instanceof Error ? err.message : t("modal.error");
+      setEmailError(errorMessage);
+    }
   }
 
   const closeModal = () => {
+    setIsModalOpen(false);
+    setEmailError(null);
+    setEmailSuccess(false);
+    setIsSendingEmail(false);
+  };
+
+  const handleRetry = () => {
+    setEmailError(null);
     setIsModalOpen(false);
   };
 
@@ -72,31 +95,51 @@ const ContactForm = ({ ...props }: Props) => {
     <>
       <Modal isModalOpen={isModalOpen} onClose={closeModal}>
         <div className={styles.modalContent}>
-          <div className={styles.gifContainer}>
-            <Image
-              src={
-                isSendingEmail
-                  ? "/static/images/contact-form/loading.gif"
-                  : "/static/images/contact-form/success.gif"
-              }
-              alt=""
-              fill
-              style={{ objectFit: "cover" }}
-              unoptimized={true}
-            />
-          </div>
-          {isSendingEmail ? (
+          {!emailError && (
+            <div className={styles.gifContainer}>
+              <Image
+                src={
+                  isSendingEmail
+                    ? "/static/images/contact-form/loading.gif"
+                    : "/static/images/contact-form/success.gif"
+                }
+                alt=""
+                fill
+                style={{ objectFit: "cover" }}
+                unoptimized={true}
+              />
+            </div>
+          )}
+          {emailError ? (
+            <>
+              <p className="text-white">{t("modal.error")}</p>
+              <p
+                className="text-white"
+                style={{ fontSize: "14px", opacity: 0.8, marginBottom: "16px" }}
+              >
+                {t("modal.errorDescription")}
+              </p>
+              <div
+                style={{
+                  display: "flex",
+                  gap: "12px",
+                  justifyContent: "center",
+                }}
+              >
+                <Button text={t("modal.retry")} onClick={handleRetry} />
+                <Button
+                  text={t("modal.cancel")}
+                  onClick={closeModal}
+                  inverted
+                />
+              </div>
+            </>
+          ) : isSendingEmail ? (
             <p className="text-white">{t("modal.loading")}</p>
           ) : (
             <>
               <p className="text-white">{t("modal.success")}</p>
-              <Button
-                text={t("modal.back")}
-                onClick={() => {
-                  setIsModalOpen(false);
-                  setIsSendingEmail(false);
-                }}
-              />
+              <Button text={t("modal.back")} onClick={closeModal} />
             </>
           )}
         </div>
