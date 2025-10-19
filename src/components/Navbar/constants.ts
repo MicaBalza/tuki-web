@@ -3,11 +3,6 @@ import { getLocalizedPath } from "@/constants/localizedRoutes";
 // Base routes structure (using English paths as canonical)
 const BASE_ROUTES = [
   {
-    path: "/",
-    text: "home",
-    color: "nude",
-  },
-  {
     path: "/services",
     text: "services",
     color: "nude",
