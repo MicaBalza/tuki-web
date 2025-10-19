@@ -1,0 +1,36 @@
+{
+  "banner": {
+    "title": "Preferencias de Cookies",
+    "description": "Utilizamos cookies para mejorar tu experiencia de navegación, mostrar contenido personalizado y analizar nuestro tráfico. Al hacer clic en \"Aceptar Todas\", das tu consentimiento para el uso de cookies.",
+    "acceptAll": "Aceptar Todas",
+    "rejectAll": "Rechazar Todas",
+    "preferences": "Preferencias",
+    "savePreferences": "Guardar Preferencias",
+    "close": "Cerrar"
+  },
+  "preferences": {
+    "title": "Preferencias de Cookies",
+    "description": "Gestiona tus preferencias de cookies. Puedes habilitar o deshabilitar diferentes tipos de cookies a continuación.",
+    "essential": {
+      "title": "Cookies Esenciales",
+      "description": "Estas cookies son necesarias para el funcionamiento del sitio web y no se pueden desactivar. Normalmente solo se establecen en respuesta a acciones realizadas por ti.",
+      "required": "Siempre Activas"
+    },
+    "analytics": {
+      "title": "Cookies de Análisis",
+      "description": "Estas cookies nos ayudan a entender cómo los visitantes interactúan con nuestro sitio web recopilando e informando información de forma anónima."
+    },
+    "marketing": {
+      "title": "Cookies de Marketing",
+      "description": "Estas cookies se utilizan para hacer que los mensajes publicitarios sean más relevantes para ti y rastrear la efectividad de nuestras campañas publicitarias."
+    },
+    "preferences": {
+      "title": "Cookies de Preferencias",
+      "description": "Estas cookies permiten que el sitio web recuerde las elecciones que haces y proporcione características mejoradas y más personales."
+    }
+  },
+  "policy": {
+    "text": "Conoce más en nuestra",
+    "link": "Política de Cookies"
+  }
+}
