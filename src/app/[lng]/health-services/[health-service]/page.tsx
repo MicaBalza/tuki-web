@@ -34,7 +34,7 @@ export default function PharmaceuticalServicePage() {
     <PageContainer className={`bg-${colors.cover}`}>
       <PharmaceuticalServiceHeader service={service} serviceId={serviceId} />
       <PharmaceuticalServiceHowWeDoIt service={service} colors={colors} />
-      <PharmaceuticalServiceVideo service={service} colors={colors} />
+      <PharmaceuticalServiceVideo service={service} colors={colors} serviceId={serviceId} />
       <PharmaceuticalServiceProcess service={service} />
       <PharmaceuticalServiceFAQ lng={params.lng} serviceType={serviceId} />
     </PageContainer>

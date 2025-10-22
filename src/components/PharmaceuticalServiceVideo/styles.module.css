@@ -23,6 +23,53 @@
   border: none;
 }
 
+/* Video Overlay and Play Button */
+.videoOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.videoBlack {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--black);
+  opacity: 0.5;
+  z-index: 1;
+  transition: opacity 0.3s ease;
+}
+
+.videoOverlay:hover .videoBlack {
+  opacity: 0.3;
+}
+
+.videoPlaceholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.videoPlay {
+  position: relative;
+  z-index: 2;
+  transition: transform 0.3s ease;
+}
+
+.videoOverlay:hover .videoPlay {
+  transform: scale(1.1);
+}
+
 .thirdSectionContentContainer {
   display: flex;
   flex-direction: column;
@@ -54,5 +101,17 @@
 
   .thirdSectionVideo {
     height: 300px;
+  }
+
+  .videoPlay {
+    width: 60px;
+    height: 64px;
+  }
+}
+
+@media (max-width: 768px) {
+  .videoPlay {
+    width: 50px;
+    height: 53px;
   }
 }
