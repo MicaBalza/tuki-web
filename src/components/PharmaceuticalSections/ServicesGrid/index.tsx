@@ -65,6 +65,16 @@ export default function ServicesGrid({ lng }: ServicesGridProps) {
                         alt={service.alt}
                         className={styles.gridImage}
                       />
+                      <div className={styles.playOverlay}>
+                        <div className={styles.playBlack} />
+                        <Image
+                          src="/static/images/play.svg"
+                          alt="Play video"
+                          width={60}
+                          height={64}
+                          className={styles.playButton}
+                        />
+                      </div>
                       <div className={styles.imageButton}>
                         <Button
                           text={t(`modal.${service.titleKey}.title`)}
@@ -89,6 +99,16 @@ export default function ServicesGrid({ lng }: ServicesGridProps) {
                         alt={service.alt}
                         className={styles.gridImage}
                       />
+                      <div className={styles.playOverlay}>
+                        <div className={styles.playBlack} />
+                        <Image
+                          src="/static/images/play.svg"
+                          alt="Play video"
+                          width={60}
+                          height={64}
+                          className={styles.playButton}
+                        />
+                      </div>
                       <div className={styles.imageButton}>
                         <Button
                           text={t(`modal.${service.titleKey}.title`)}

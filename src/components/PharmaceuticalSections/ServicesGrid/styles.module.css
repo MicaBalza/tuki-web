@@ -72,12 +72,50 @@
   flex: 6;
 }
 
+/* Play Button Overlay */
+.playOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.playBlack {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--black);
+  opacity: 0.6;
+  z-index: 1;
+  transition: opacity 0.3s ease;
+}
+
+.gridItem:hover .playBlack {
+  opacity: 0.3;
+}
+
+.playButton {
+  position: relative;
+  z-index: 2;
+  transition: transform 0.3s ease;
+}
+
+.gridItem:hover .playButton {
+  transform: scale(1.1);
+}
+
 /* Image Button */
 .imageButton {
   position: absolute;
   bottom: 16px;
   right: 16px;
   pointer-events: none;
+  z-index: 3;
 }
 
 /* Modal Styles */
@@ -250,6 +288,11 @@
     height: 46px;
     top: calc(50% - 23px);
     left: calc(50% - 21px);
+  }
+
+  .playButton {
+    width: 40px;
+    height: 42px;
   }
 
   .sectionTitle {
