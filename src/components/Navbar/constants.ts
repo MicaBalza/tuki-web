@@ -13,7 +13,7 @@ const BASE_ROUTES = [
       { path: "/services/editorial", text: "editorial" },
       { path: "/services/branding", text: "branding" },
       { path: "/services/motion-graphics", text: "motion-graphics" },
-      { path: "/health-services", text: "pharmaceutical" },
+      { path: "/health-services", text: "health" },
     ],
   },
   {
