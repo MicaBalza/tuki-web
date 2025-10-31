@@ -5,6 +5,23 @@
   gap: 6px;
   margin-top: 8px;
 }
+
+.nameRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.linkedin {
+  display: flex;
+  align-items: center;
+  color: var(--purple);
+  transition: opacity 0.2s ease;
+}
+
+.linkedin:hover {
+  opacity: 0.8;
+}
 .reviews {
   display: flex;
   flex-direction: column;
