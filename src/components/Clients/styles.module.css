@@ -24,42 +24,13 @@
   color: var(--purple);
 }
 
-.imageContainer {
-  flex-shrink: 0;
-  position: relative;
-  width: 252px;
-  height: 168px;
-}
-
 .marqueeContainer {
   --gap: 1rem;
   position: relative;
-  display: flex;
+  /* keep a simple container for the LogoLoop component */
+  display: block;
   overflow: hidden;
   user-select: none;
-  gap: var(--gap);
-}
-
-.marquee {
-  flex-shrink: 0;
-  display: flex;
-  justify-content: space-around;
-  gap: var(--gap);
-  min-width: 100%;
-  animation: scroll 20s linear infinite;
-}
-
-.marqueeContainer:hover .marquee {
-  animation-play-state: paused;
-}
-
-@keyframes scroll {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(calc(-100% - var(--gap)));
-  }
 }
 
 .shape {
@@ -79,23 +50,11 @@
 }
 
 @media (max-width: 768px) {
-  .imageContainer {
-    width: 202px;
-    height: 134px;
-  }
-}
-
-@media (max-width: 576px) {
   .clients {
     padding: 50px 0;
   }
 
   .titleContainer {
     gap: 8px;
-  }
-
-  .imageContainer {
-    width: 162px;
-    height: 107px;
   }
 }
