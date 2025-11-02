@@ -85,6 +85,38 @@
   border: 1px solid rgba(106, 104, 212, 0.08);
 }
 
+/* looping carousel styles */
+.carouselContainer {
+  --gap: clamp(20px, 4vw, 36px);
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: var(--gap);
+  align-items: center;
+}
+
+.loop {
+  flex-shrink: 0;
+  display: flex;
+  gap: var(--gap);
+  min-width: 100%;
+  animation: review-scroll 28s linear infinite;
+}
+
+.carouselContainer:hover .loop {
+  animation-play-state: paused;
+}
+
+@keyframes review-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+
 .left {
   display: flex;
   flex-direction: column;
@@ -167,6 +199,16 @@
     gap: 20px;
   }
 
+  /* disable looping animation on mobile - show stacked column */
+  .carouselContainer {
+    display: block;
+  }
+
+  .loop {
+    animation: none;
+    display: block;
+  }
+
   .card {
     flex: none;
     width: 100%;
@@ -192,5 +234,10 @@
 
   .quoteText {
     padding-top: 6px;
+  }
+
+  /* hide duplicated loop track on mobile so content isn't repeated */
+  .carouselContainer .loop[aria-hidden="true"] {
+    display: none;
   }
 }
