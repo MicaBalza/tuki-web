@@ -68,9 +68,7 @@
   .services {
     grid-template-rows: repeat(3, 240px);
   }
-}
 
-@media (max-width: 768px) {
   .title {
     left: 10vw;
     transform: none;
@@ -106,7 +104,7 @@
   }
 
   .title {
-    max-width: 25vw;
+    overflow: visible;
   }
 }
 
