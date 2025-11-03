@@ -24,6 +24,7 @@
   position: relative;
   width: 90vw;
   max-width: 1044px;
+  aspect-ratio: 1152/640;
   overflow: hidden;
   cursor: pointer;
 }
