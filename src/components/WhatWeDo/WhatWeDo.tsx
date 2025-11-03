@@ -44,7 +44,7 @@ const WhatWeDo = () => {
               alt="Reel video"
               title="Reel video"
               fill
-              sizes="(max-width: 375px) 90vw, (max-width: 768px) 90vw, 1044px"
+              sizes="(max-width: 375px) 80vw, (max-width: 768px) 80vw, 1044px"
               quality={90}
               priority
               blurDataURL="/static/images/reel-375x318.jpg"
