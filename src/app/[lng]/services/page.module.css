@@ -15,8 +15,16 @@
   left: 10vw;
   flex-shrink: 0;
   font-size: clamp(1rem, 3vw, 2rem);
+  white-space: nowrap;
 }
 
+.titleMobile {
+  display: none;
+}
+
+.titleDesktop {
+  display: inline;
+}
 
 .services {
   display: grid;
@@ -62,6 +70,23 @@
   }
 }
 
+@media (max-width: 768px) {
+  .title {
+    left: 10vw;
+    transform: none;
+    text-align: left;
+    white-space: normal;
+  }
+
+  .titleDesktop {
+    display: none;
+  }
+
+  .titleMobile {
+    display: inline;
+  }
+}
+
 @media (max-width: 576px) {
   .hero {
     min-height: 140px;
@@ -81,7 +106,6 @@
   }
 
   .title {
-    text-align: left;
     max-width: 25vw;
   }
 }
