@@ -6,6 +6,7 @@ import { CookieProvider } from "@/contexts/CookieContext";
 import { languages } from "@/i18n/settings";
 import { PageProps } from "@/types/i18n";
 import { generateCanonicalMetadata } from "@/utils/canonical";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { dir } from "i18next";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
@@ -78,6 +79,7 @@ export default async function RootLayout(
           <Footer />
           <CookieBanner />
         </CookieProvider>
+        <SpeedInsights />
       </body>
     </html>
   );
