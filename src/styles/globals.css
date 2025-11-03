@@ -1,30 +1,17 @@
-@import "../styles/colors.css";
+/* Import order optimized for performance */
 @import "tailwindcss";
+@import "../styles/colors.css";
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
+/* Only essential base styles - most are in critical.css */
 html,
 body {
-  max-width: 100vw;
-  overflow-x: hidden;
-  background-color: var(--nude);
   font-family: "Roboto", sans-serif;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
 img {
-  max-width: 100%;
   pointer-events: none;
 }
 

@@ -1,3 +1,7 @@
+const withBundleAnalyzer = require("@next/bundle-analyzer")({
+  enabled: process.env.ANALYZE === "true",
+});
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // Target modern browsers to reduce polyfills and transpilation
@@ -6,13 +10,14 @@ const nextConfig = {
     removeConsole: process.env.NODE_ENV === "production",
   },
 
-  // Optimize for modern browsers
-  swcMinify: true,
+  // Note: swcMinify is now default in Next.js 15+ (removed deprecated option)
+  // Note: optimizeFonts is now default in Next.js 15+ (removed deprecated option)
 
-  experimental: {
-    // Use modern JavaScript output
-    modernBrowsers: true,
-  },
+  // Enable compression
+  compress: true,
+
+  // Production source maps for debugging (disable for smaller builds)
+  productionBrowserSourceMaps: false,
 };
 
-module.exports = nextConfig;
+module.exports = withBundleAnalyzer(nextConfig);

@@ -15,12 +15,20 @@ export default function GoogleTagManager({ gtmId }: GoogleTagManagerProps) {
     if (typeof window !== "undefined" && window.gtag) {
       // Update consent mode based on user preferences
       window.gtag("consent", "update", {
-        analytics_storage: consentState.consent.analytics ? "granted" : "denied",
+        analytics_storage: consentState.consent.analytics
+          ? "granted"
+          : "denied",
         ad_storage: consentState.consent.marketing ? "granted" : "denied",
         ad_user_data: consentState.consent.marketing ? "granted" : "denied",
-        ad_personalization: consentState.consent.marketing ? "granted" : "denied",
-        functionality_storage: consentState.consent.preferences ? "granted" : "denied",
-        personalization_storage: consentState.consent.preferences ? "granted" : "denied",
+        ad_personalization: consentState.consent.marketing
+          ? "granted"
+          : "denied",
+        functionality_storage: consentState.consent.preferences
+          ? "granted"
+          : "denied",
+        personalization_storage: consentState.consent.preferences
+          ? "granted"
+          : "denied",
         security_storage: "granted", // Always granted for essential functionality
       });
     }
@@ -28,12 +36,12 @@ export default function GoogleTagManager({ gtmId }: GoogleTagManagerProps) {
 
   return (
     <>
-      {/* Google Tag Manager - gtag.js */}
+      {/* Google Tag Manager - gtag.js - Lazy loaded to not block render */}
       <Script
         src={`https://www.googletagmanager.com/gtag/js?id=${gtmId}`}
-        strategy="afterInteractive"
+        strategy="lazyOnload"
       />
-      <Script id="gtag-init" strategy="afterInteractive">
+      <Script id="gtag-init" strategy="lazyOnload">
         {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
