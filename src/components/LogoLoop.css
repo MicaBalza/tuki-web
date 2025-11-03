@@ -46,7 +46,7 @@
   align-items: center;
 }
 
-.logoloop__item img {
+.logoloop__item .logoloop__image {
   height: var(--logoloop-logoHeight);
   width: auto;
   display: block;
@@ -91,7 +91,7 @@
 
 .logoloop--fade::before,
 .logoloop--fade::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   bottom: 0;

@@ -83,6 +83,7 @@
   background: var(--white);
   border-radius: 30px;
   border: 1px solid rgba(106, 104, 212, 0.08);
+  max-width: 1040px;
 }
 
 /* looping carousel styles */
