@@ -40,10 +40,15 @@ const WhatWeDo = () => {
           >
             <div className={styles.black} />
             <Image
-              src="/static/images/reel.jpg"
+              src="/static/images/reel-1152x640.jpg"
               alt="Reel video"
               title="Reel video"
               fill
+              sizes="(max-width: 375px) 375px, (max-width: 768px) 768px, 1152px"
+              quality={90}
+              priority
+              blurDataURL="/static/images/reel-375x318.jpg"
+              placeholder="blur"
               className={styles.videoFrame}
             />
             <Image
