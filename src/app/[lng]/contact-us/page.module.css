@@ -8,6 +8,7 @@
 
 .formContainer {
   width: auto;
+  gap: 24px;
 }
 
 .imageContainer {
@@ -40,9 +41,5 @@
   .imageContainer {
     width: 100%;
     height: 300px;
-  }
-
-  .formContainer {
-    gap: 24px;
   }
 }
