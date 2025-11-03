@@ -40,17 +40,14 @@ const WhatWeDo = () => {
           >
             <div className={styles.black} />
             <Image
-              src="/static/images/reel-1152x640.jpg"
+              src="/static/images/reel.jpg"
               alt="Reel video"
               title="Reel video"
               fill
-              sizes="(max-width: 375px) 80vw, (max-width: 768px) 80vw, 1044px"
-              quality={90}
+              sizes="(max-width: 420px) 370px, (max-width: 768px) 690px, 1044px"
+              quality={85}
               priority
-              blurDataURL="/static/images/reel-375x318.jpg"
-              placeholder="blur"
               className={styles.videoFrame}
-              fetchPriority="high"
             />
             <Image
               src="/static/images/play.svg"
