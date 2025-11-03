@@ -50,6 +50,7 @@ const WhatWeDo = () => {
               blurDataURL="/static/images/reel-375x318.jpg"
               placeholder="blur"
               className={styles.videoFrame}
+              fetchPriority="high"
             />
             <Image
               src="/static/images/play.svg"
