@@ -44,7 +44,7 @@ const WhatWeDo = () => {
               alt="Reel video"
               title="Reel video"
               fill
-              sizes="(max-width: 420px) 80vw, (max-width: 768px) 50vw, 1044px"
+              sizes="(max-width: 768px) 90vw, 1044px"
               quality={85}
               priority
               className={styles.videoFrame}

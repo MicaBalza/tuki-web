@@ -21,6 +21,7 @@ const PharmaceuticalServices = () => {
           alt="Health Services"
           title="Health Services"
           fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           className={styles.image}
           unoptimized={true}
         />
@@ -58,7 +59,14 @@ const PharmaceuticalServices = () => {
         </ul>
         <Button
           text={t("button")}
-          onClick={() => push(`/${lng}${getLocalizedPath("/health-services", lng as "en" | "es")}`)}
+          onClick={() =>
+            push(
+              `/${lng}${getLocalizedPath(
+                "/health-services",
+                lng as "en" | "es"
+              )}`
+            )
+          }
           className={styles.button}
         />
       </div>
