@@ -24,11 +24,11 @@ export default function Page(props: { params: Promise<tParams> }) {
       <div className={styles.hero}>
         <p className={`text-purple h2 ${styles.title}`}>
           <span className={styles.titleDesktop}>{t("title")}</span>
-          <span className={styles.titleMobile}>
+          {/* <span className={styles.titleMobile}>
             {t("title").split(" ").slice(0, 3).join(" ")}
             <br />
             {t("title").split(" ").slice(3).join(" ")}
-          </span>
+          </span> */}
         </p>
         <div className={styles.imageContainer}>
           <img
