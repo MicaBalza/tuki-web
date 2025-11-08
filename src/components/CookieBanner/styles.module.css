@@ -100,6 +100,19 @@
   color: var(--dark-purple);
 }
 
+.policyLink {
+  background: transparent;
+  color: var(--purple);
+  text-decoration: underline;
+  border: none;
+  padding: 12px 16px;
+  min-width: auto;
+}
+
+.policyLink:hover {
+  color: var(--dark-purple);
+}
+
 /* Preferences Modal */
 .modal {
   position: fixed;
@@ -124,6 +137,7 @@
   max-height: 80vh;
   overflow-y: auto;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  position: relative;
 }
 
 .modalHeader {
@@ -252,6 +266,109 @@
 
 .saveButton:hover {
   background: var(--dark-purple);
+}
+
+/* View toggle top-right */
+.viewToggle {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+}
+
+.inlineLink {
+  background: transparent;
+  border: none;
+  color: var(--purple);
+  text-decoration: underline;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 4px 8px;
+}
+
+.inlineLink:hover {
+  color: var(--dark-purple);
+}
+
+.policyWrapper {
+  margin-top: 32px; /* space below toggle */
+}
+
+.policyContent {
+  font-size: 13px;
+  color: var(--dark-purple);
+  line-height: 1.5;
+  display: block;
+}
+
+/* Markdown styles for policy */
+.policyContent h1,
+.policyContent h2,
+.policyContent h3,
+.policyContent h4,
+.policyContent h5,
+.policyContent h6 {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 18px 0 8px 0;
+  color: var(--purple);
+}
+.policyContent h1 {
+  font-size: 16px;
+}
+.policyContent h2 {
+  font-size: 15px;
+}
+.policyContent h3 {
+  font-size: 14px;
+}
+.policyContent h4 {
+  font-size: 13px;
+}
+.policyContent h5 {
+  font-size: 13px;
+}
+.policyContent h6 {
+  font-size: 13px;
+}
+.policyContent p {
+  margin: 8px 0;
+}
+.policyContent ul,
+.policyContent ol {
+  margin: 8px 0 8px 20px;
+  font-size: 13px;
+}
+.policyContent li {
+  margin-bottom: 4px;
+}
+.policyContent table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0;
+  font-size: 12px;
+}
+.policyContent th,
+.policyContent td {
+  border: 1px solid var(--light-purple);
+  padding: 6px 8px;
+  text-align: left;
+}
+.policyContent th {
+  background: var(--light-purple);
+  font-weight: 600;
+}
+.policyContent tr:nth-child(even) td {
+  background: #f8f6ff;
+}
+.policyContent strong {
+  font-weight: 600;
+  color: var(--purple);
+}
+.policyContent blockquote {
+  border-left: 3px solid var(--light-purple);
+  padding-left: 12px;
+  color: var(--purple);
+  margin: 8px 0;
 }
 
 /* Mobile Responsive */
