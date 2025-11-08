@@ -115,6 +115,7 @@
 }
 
 .chevronDown {
+  margin: 0 auto;
   transition: transform 0.3s ease;
 }
 
