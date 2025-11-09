@@ -332,14 +332,17 @@
 }
 .policyContent p {
   margin: 8px 0;
+  color: var(--dark-purple);
 }
 .policyContent ul,
 .policyContent ol {
   margin: 8px 0 8px 20px;
   font-size: 13px;
+  color: var(--dark-purple);
 }
 .policyContent li {
   margin-bottom: 4px;
+  color: var(--dark-purple);
 }
 .policyContent table {
   width: 100%;
@@ -352,10 +355,12 @@
   border: 1px solid var(--light-purple);
   padding: 6px 8px;
   text-align: left;
+  color: var(--dark-purple);
 }
 .policyContent th {
   background: var(--light-purple);
   font-weight: 600;
+  color: var(--purple);
 }
 .policyContent tr:nth-child(even) td {
   background: #f8f6ff;
@@ -367,8 +372,21 @@
 .policyContent blockquote {
   border-left: 3px solid var(--light-purple);
   padding-left: 12px;
-  color: var(--purple);
+  color: var(--dark-purple);
   margin: 8px 0;
+  font-style: italic;
+}
+.policyContent hr {
+  border: none;
+  border-top: 1px solid var(--light-purple);
+  margin: 16px 0;
+}
+.policyContent a {
+  color: var(--purple);
+  text-decoration: underline;
+}
+.policyContent a:hover {
+  color: var(--dark-purple);
 }
 
 /* Mobile Responsive */

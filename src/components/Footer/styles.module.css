@@ -107,6 +107,27 @@
   padding-top: 24px;
 }
 
+.verticalDivider {
+  display: inline-block;
+  width: 1px;
+  height: 24px;
+  background: var(--light-purple);
+}
+
+.cookieConfigLink {
+  background: none;
+  border: none;
+  font-size: 13px;
+
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.cookieConfigLink:hover {
+  text-decoration: underline;
+  color: var(--dark-purple);
+}
+
 .copyright {
   font-size: 14px;
   white-space: nowrap;
