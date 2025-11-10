@@ -1,7 +1,7 @@
 /* Import order optimized for performance */
 @import "tailwindcss";
 @import "../styles/colors.css";
-@import "tw-animate-css";
+/* Animation CSS deferred - loaded after critical styles */
 
 @custom-variant dark (&:is(.dark *));
 

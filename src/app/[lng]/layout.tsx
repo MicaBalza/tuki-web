@@ -68,6 +68,11 @@ export default async function RootLayout(
 
   return (
     <html lang={lng} dir={dir(lng)}>
+      <head>
+        {/* Preconnect to external domains to speed up third-party connections */}
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+      </head>
       <body className={RethinkFont.className}>
         <CookieProvider>
           {/* GTM scripts are lazy via strategy="lazyOnload" inside component */}

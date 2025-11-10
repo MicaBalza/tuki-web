@@ -1,6 +1,7 @@
+"use client";
+import { getLocalizedPath } from "@/constants/localizedRoutes";
 import { SERVICES_DATA } from "@/constants/services";
 import { ServiceType } from "@/types/services";
-import { getLocalizedPath } from "@/constants/localizedRoutes";
 import Image from "next/image";
 import { useParams, useRouter } from "next/navigation";
 import { ButtonHTMLAttributes, useEffect, useRef } from "react";
@@ -8,6 +9,7 @@ import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperRef, SwiperSlide } from "swiper/react";
 import Button from "../Button";
 
+// Swiper CSS - loaded only when this component is used
 import "swiper/css";
 import "swiper/css/bundle";
 
@@ -42,7 +44,14 @@ const Carrousel = ({ service }: Props) => {
       key={service}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      onClick={() => push(`/${lng}${getLocalizedPath(`/services/${service}`, lng as "en" | "es")}`)}
+      onClick={() =>
+        push(
+          `/${lng}${getLocalizedPath(
+            `/services/${service}`,
+            lng as "en" | "es"
+          )}`
+        )
+      }
     >
       <Swiper
         ref={swiperRef}
@@ -76,7 +85,14 @@ const Carrousel = ({ service }: Props) => {
       <Button
         text={t(`${service}.title`)}
         inverted
-        onClick={() => push(`/${lng}${getLocalizedPath(`/services/${service}`, lng as "en" | "es")}`)}
+        onClick={() =>
+          push(
+            `/${lng}${getLocalizedPath(
+              `/services/${service}`,
+              lng as "en" | "es"
+            )}`
+          )
+        }
       />
     </div>
   );

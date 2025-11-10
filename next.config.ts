@@ -1,9 +1,11 @@
+import { NextConfig } from "next";
+
 const withBundleAnalyzer = require("@next/bundle-analyzer")({
   enabled: process.env.ANALYZE === "true",
 });
 
 /** @type {import('next').NextConfig} */
-const nextConfig = {
+const nextConfig: NextConfig = {
   // Target modern browsers to reduce polyfills and transpilation
   compiler: {
     // Remove console.log in production (optional optimization)
@@ -18,6 +20,13 @@ const nextConfig = {
 
   // Production source maps for debugging (disable for smaller builds)
   productionBrowserSourceMaps: false,
+
+  // Optimize CSS loading
+  experimental: {
+    // Enable CSS optimization for better tree-shaking
+    optimizeCss: true,
+    inlineCss: true,
+  },
 };
 
 module.exports = withBundleAnalyzer(nextConfig);
