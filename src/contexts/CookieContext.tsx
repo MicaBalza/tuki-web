@@ -1,7 +1,13 @@
 "use client";
 
 import { CookieConsent, CookieConsentState } from "@/types/cookies";
-import React, { createContext, useContext, useEffect, useState, ReactNode } from "react";
+import {
+  createContext,
+  ReactNode,
+  useContext,
+  useEffect,
+  useState,
+} from "react";
 
 interface CookieContextType {
   consentState: CookieConsentState;
@@ -39,7 +45,7 @@ export function CookieProvider({ children }: { children: ReactNode }) {
     if (storedConsent && consentDate) {
       // Check if consent is still valid (12 months)
       const consentTimestamp = parseInt(consentDate);
-      const twelveMonthsAgo = Date.now() - (12 * 30 * 24 * 60 * 60 * 1000);
+      const twelveMonthsAgo = Date.now() - 12 * 30 * 24 * 60 * 60 * 1000;
 
       if (consentTimestamp > twelveMonthsAgo) {
         const parsedConsent = JSON.parse(storedConsent);
@@ -110,11 +116,11 @@ export function CookieProvider({ children }: { children: ReactNode }) {
   };
 
   const showPreferences = () => {
-    setConsentState(prev => ({ ...prev, showBanner: true }));
+    setConsentState((prev) => ({ ...prev, showBanner: true }));
   };
 
   const hideBanner = () => {
-    setConsentState(prev => ({ ...prev, showBanner: false }));
+    setConsentState((prev) => ({ ...prev, showBanner: false }));
   };
 
   return (

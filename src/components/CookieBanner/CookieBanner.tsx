@@ -19,7 +19,7 @@ export default function CookieBanner() {
   return (
     <>
       {/* Main Banner */}
-      {consentState.showBanner && (
+      {consentState.showBanner ? (
         <div className={styles.banner}>
           <div className={styles.container}>
             <div className={styles.content}>
@@ -60,7 +60,7 @@ export default function CookieBanner() {
             </div>
           </div>
         </div>
-      )}
+      ) : null}
 
       {/* Preferences / Policy Modal */}
       <CookiePreferencesModal
