@@ -1,6 +1,6 @@
 import CookieBanner from "@/components/CookieBanner";
 import Footer from "@/components/Footer";
-import GoogleTagManager from "@/components/GoogleTagManager";
+import GoogleTagManager from "@/components/GoogleTagManager"; // Already lazy loads scripts internally
 import Navbar from "@/components/Navbar";
 import { CookieProvider } from "@/contexts/CookieContext";
 import { languages } from "@/i18n/settings";
@@ -15,6 +15,7 @@ import "../critical.css";
 // Main CSS will be loaded but not block render
 import "@/styles/globals.css";
 
+// Reduce font preload to avoid render-blocking request (bold weight often not needed for above-the-fold)
 const RethinkFont = localFont({
   src: [
     {
@@ -28,8 +29,8 @@ const RethinkFont = localFont({
       style: "bold",
     },
   ],
-  display: "swap", // Use font-display: swap for better performance
-  preload: true, // Preload the font
+  display: "swap",
+  // Removed preload to prevent font request from competing with LCP image/content
   fallback: ["system-ui", "-apple-system", "sans-serif"],
 });
 
@@ -69,6 +70,7 @@ export default async function RootLayout(
     <html lang={lng} dir={dir(lng)}>
       <body className={RethinkFont.className}>
         <CookieProvider>
+          {/* GTM scripts are lazy via strategy="lazyOnload" inside component */}
           <GoogleTagManager
             gtmId={process.env.NEXT_GOOGLE_TAG_MANAGER_ID || ""}
           />
@@ -76,9 +78,11 @@ export default async function RootLayout(
             <Navbar />
           </header>
           {children}
+          {/* Footer and CookieBanner loaded dynamically to defer their JS */}
           <Footer />
           <CookieBanner />
         </CookieProvider>
+        {/* Non-critical performance analytics deferred */}
         <SpeedInsights />
       </body>
     </html>

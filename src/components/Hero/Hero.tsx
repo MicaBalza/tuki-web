@@ -1,3 +1,4 @@
+"use client";
 import { useParams, useRouter } from "next/navigation";
 
 import { getLocalizedPath } from "@/constants/localizedRoutes";
@@ -6,11 +7,17 @@ import { openCalendarBooking } from "@/utils/calendar";
 import Button from "../Button";
 import styles from "./styles.module.css";
 
-import Lottie from "lottie-react";
+import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import mainAnimation from "../../../public/static/lottie/main.json";
+
+// Dynamically import Lottie to avoid adding it to the initial JS bundle
+const Lottie = dynamic(() => import("lottie-react"), {
+  ssr: false,
+  loading: () => <div style={{ width: "100%", height: "100%" }} />,
+});
 
 const Hero = () => {
   const { lng } = useParams();
@@ -19,9 +26,28 @@ const Hero = () => {
 
   const audioRef = useRef<HTMLAudioElement>(null);
   const lottieRef = useRef<any>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   const [isMuted, setIsMuted] = useState(true);
   const [hasUserInteracted, setHasUserInteracted] = useState(false);
+  const [showAnimation, setShowAnimation] = useState(false);
+
+  // Only load/play animation when in viewport
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setShowAnimation(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "100px" }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
     if (audioRef.current && hasUserInteracted) {
@@ -79,12 +105,17 @@ const Hero = () => {
             <span dangerouslySetInnerHTML={{ __html: t("button") }} />
           </Button>
         </div>
-        <div className={styles.videoContainer} onClick={handleSoundToggle}>
+        <div
+          className={styles.videoContainer}
+          onClick={handleSoundToggle}
+          ref={containerRef}
+        >
           <audio
             ref={audioRef}
             src="/static/audio/main.mp3"
             muted={isMuted}
             loop
+            preload="none" /* Avoid fetching audio before user interaction */
           />
           <div className={styles.videoSound}>
             <Image
@@ -96,12 +127,14 @@ const Hero = () => {
               style={{ width: "100%", height: "auto" }}
             />
           </div>
-          <Lottie
-            lottieRef={lottieRef}
-            animationData={mainAnimation}
-            loop={true}
-            onLoopComplete={handleLoopComplete}
-          />
+          {showAnimation && (
+            <Lottie
+              lottieRef={lottieRef}
+              animationData={mainAnimation}
+              loop={true}
+              onLoopComplete={handleLoopComplete}
+            />
+          )}
         </div>
       </div>
     </section>
