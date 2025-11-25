@@ -164,7 +164,6 @@ const Reviews = () => {
             }}
             pagination={{
               clickable: true,
-              el: `.${styles.swiperPagination}`,
             }}
             className={styles.mobileSwiper}
           >
@@ -214,7 +213,6 @@ const Reviews = () => {
               />
             </svg>
           </button>
-          <div className={styles.swiperPagination}></div>
         </div>
       ) : (
         <div className={styles.carouselContainer}>

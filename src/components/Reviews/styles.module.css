@@ -193,7 +193,7 @@
 
 .mobileSwiper {
   width: 100%;
-  padding-bottom: 20px;
+  padding-bottom: 30px !important;
   display: flex;
   align-items: center;
 }
@@ -243,17 +243,18 @@
 }
 
 /* Swiper Pagination Dots */
-.swiperPagination {
+.mobileSwiper :global(.swiper-pagination) {
   position: absolute;
-  bottom: 20px;
-  left: 50%;
+  bottom: 10px !important;
+  left: 50% !important;
   transform: translateX(-50%);
   display: flex;
+  justify-content: center;
   gap: 8px;
   z-index: 10;
 }
 
-.swiperPagination :global(.swiper-pagination-bullet) {
+.mobileSwiper :global(.swiper-pagination-bullet) {
   width: 12px;
   height: 12px;
   background: var(--purple);
@@ -261,9 +262,10 @@
   border-radius: 50%;
   cursor: pointer;
   transition: all 0.3s ease;
+  margin: 0 !important;
 }
 
-.swiperPagination :global(.swiper-pagination-bullet-active) {
+.mobileSwiper :global(.swiper-pagination-bullet-active) {
   opacity: 1;
   width: 32px;
   border-radius: 6px;
