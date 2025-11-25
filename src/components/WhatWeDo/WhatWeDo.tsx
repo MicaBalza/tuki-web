@@ -48,6 +48,7 @@ const WhatWeDo = () => {
               quality={85}
               priority
               className={styles.videoFrame}
+              fetchPriority="high"
             />
             <Image
               src="/static/images/play.svg"
