@@ -52,28 +52,6 @@
   display: none;
 }
 
-.card {
-  /* roughly double the previous widths on larger viewports */
-  flex: 0 0 clamp(560px, 60vw, 1040px);
-  display: block;
-
-  /* padding reduced by ~50% */
-  padding: clamp(5px, 1vw, 9px);
-  border-radius: 28px;
-  cursor: pointer;
-  scroll-snap-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-4px);
-}
-
-.card:focus-visible {
-  outline: none;
-  box-shadow: 0 0 0 4px rgba(106, 104, 212, 0.15);
-}
-
 .cardInner {
   display: flex;
   gap: clamp(20px, 4vw, 36px);
@@ -85,38 +63,7 @@
   border-radius: 30px;
   border: 1px solid rgba(106, 104, 212, 0.08);
   max-width: 1040px;
-}
-
-/* looping carousel styles */
-.carouselContainer {
-  --gap: clamp(20px, 4vw, 36px);
-  position: relative;
-  display: flex;
-  overflow: hidden;
-  user-select: none;
-  gap: var(--gap);
-  align-items: center;
-}
-
-.loop {
-  flex-shrink: 0;
-  display: flex;
-  gap: var(--gap);
-  min-width: 100%;
-  animation: review-scroll 28s linear infinite;
-}
-
-.carouselContainer:hover .loop {
-  animation-play-state: paused;
-}
-
-@keyframes review-scroll {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(calc(-100% - var(--gap)));
-  }
+  margin: 0 auto;
 }
 
 .left {
@@ -180,20 +127,21 @@
 .quote {
   margin: 0;
   color: rgba(0, 0, 0, 0.78);
-  font-size: clamp(0.75rem, 2vw, 1rem);
-  line-height: 1.2;
+  font-size: clamp(0.75rem, 1.5vw, 0.9rem);
+  line-height: 1.3;
+  text-align: left;
 }
 
-/* Mobile Carousel Wrapper */
-.mobileCarouselWrapper {
+/* Carousel Wrapper */
+.carouselWrapper {
   position: relative;
-  padding: 0 60px 60px;
+  padding: 0 80px 60px;
   max-width: 100%;
 }
 
-.mobileSwiper {
+.swiper {
   width: 100%;
-  padding-bottom: 30px !important;
+  padding-bottom: 50px !important;
   display: flex;
   align-items: center;
 }
@@ -201,7 +149,7 @@
 /* Swiper Navigation Buttons */
 .swiperButton {
   position: absolute;
-  top: 50%;
+  top: 40%;
   transform: translateY(-50%);
   width: 44px;
   height: 44px;
@@ -235,15 +183,15 @@
 }
 
 .swiperButtonPrev {
-  left: 10px;
+  left: 5vw;
 }
 
 .swiperButtonNext {
-  right: 10px;
+  right: 5vw;
 }
 
 /* Swiper Pagination Dots */
-.mobileSwiper :global(.swiper-pagination) {
+.swiper :global(.swiper-pagination) {
   position: absolute;
   bottom: 10px !important;
   left: 50% !important;
@@ -254,7 +202,7 @@
   z-index: 10;
 }
 
-.mobileSwiper :global(.swiper-pagination-bullet) {
+.swiper :global(.swiper-pagination-bullet) {
   width: 12px;
   height: 12px;
   background: var(--purple);
@@ -265,7 +213,7 @@
   margin: 0 !important;
 }
 
-.mobileSwiper :global(.swiper-pagination-bullet-active) {
+.swiper :global(.swiper-pagination-bullet-active) {
   opacity: 1;
   width: 32px;
   border-radius: 6px;
@@ -281,38 +229,12 @@
     margin-bottom: 36px;
   }
 
-  .carousel {
-    flex-direction: column;
-    align-items: stretch;
-    overflow-x: hidden;
-    overflow-y: auto;
-    padding: 0 20px;
-    gap: 20px;
-  }
-
-  /* disable looping animation on mobile - show stacked column */
-  .carouselContainer {
-    display: block;
-  }
-
-  .loop {
-    animation: none;
-    display: block;
-  }
-
-  .card {
-    flex: none;
-    width: 100%;
-    max-width: 75vw;
-    margin: 0 auto;
-    border-radius: 24px;
-  }
-
   .cardInner {
     flex-direction: column;
     text-align: center;
     gap: 16px;
     min-height: auto;
+    width: 75vw;
   }
 
   .left {
@@ -329,21 +251,12 @@
     padding-top: 6px;
   }
 
-  /* hide duplicated loop track on mobile so content isn't repeated */
-  .carouselContainer .loop[aria-hidden="true"] {
-    display: none;
-  }
-
-  .quote {
-    text-align: left;
-  }
-
   /* Mobile carousel specific adjustments */
-  .mobileCarouselWrapper {
+  .carouselWrapper {
     padding: 0 50px 50px;
   }
 
-  .mobileSwiper > div {
+  .swiper > div {
     align-items: center;
   }
 
