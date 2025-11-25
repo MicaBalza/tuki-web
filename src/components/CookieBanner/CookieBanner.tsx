@@ -46,13 +46,13 @@ export default function CookieBanner() {
                 {t("policy.link")}
               </button>
               <button
-                className={`${styles.button} ${styles.rejectAll}`}
+                className={`${styles.button} ${styles.primary}`}
                 onClick={rejectAll}
               >
                 {t("banner.rejectAll")}
               </button>
               <button
-                className={`${styles.button} ${styles.acceptAll}`}
+                className={`${styles.button} ${styles.primary}`}
                 onClick={acceptAll}
               >
                 {t("banner.acceptAll")}

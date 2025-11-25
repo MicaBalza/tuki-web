@@ -68,22 +68,12 @@
   min-width: 100px;
 }
 
-.acceptAll {
+.primary {
   background: var(--purple);
   color: white;
 }
 
-.acceptAll:hover {
-  background: var(--dark-purple);
-}
-
-.rejectAll {
-  background: transparent;
-  color: var(--purple);
-  border: 1px solid var(--purple);
-}
-
-.rejectAll:hover {
+.primary:hover {
   background: var(--light-purple);
 }
 
