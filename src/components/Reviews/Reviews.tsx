@@ -1,10 +1,18 @@
+"use client";
 import LinkedinIcon from "@/assets/icons/Linkedin";
 import LogoLoop from "@/components/LogoLoop";
 import { useTranslation } from "@/i18n/client";
 import Image from "next/image";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
+import { Navigation, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 import styles from "./styles.module.css";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 const LogoLoopAny: any = LogoLoop;
 
@@ -145,8 +153,68 @@ const Reviews = () => {
         <h3 className={`h2 text-purple`}>{t("title")}</h3>
       </div>
       {isMobile ? (
-        <div className={styles.carousel}>
-          {reviews.map((r, i) => renderCard(r, i))}
+        <div className={styles.mobileCarouselWrapper}>
+          <Swiper
+            modules={[Navigation, Pagination]}
+            spaceBetween={20}
+            slidesPerView={1}
+            navigation={{
+              prevEl: `.${styles.swiperButtonPrev}`,
+              nextEl: `.${styles.swiperButtonNext}`,
+            }}
+            pagination={{
+              clickable: true,
+              el: `.${styles.swiperPagination}`,
+            }}
+            className={styles.mobileSwiper}
+          >
+            {reviews.map((review, index) => (
+              <SwiperSlide key={`slide-${index}`}>
+                {renderCard(review, index)}
+              </SwiperSlide>
+            ))}
+          </Swiper>
+          <button
+            className={`${styles.swiperButtonPrev} ${styles.swiperButton}`}
+            aria-label="Previous review"
+          >
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M15 18L9 12L15 6"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </button>
+          <button
+            className={`${styles.swiperButtonNext} ${styles.swiperButton}`}
+            aria-label="Next review"
+          >
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9 18L15 12L9 6"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </button>
+          <div className={styles.swiperPagination}></div>
         </div>
       ) : (
         <div className={styles.carouselContainer}>

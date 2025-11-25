@@ -22,6 +22,7 @@
 .linkedin:hover {
   opacity: 0.8;
 }
+
 .reviews {
   display: flex;
   flex-direction: column;
@@ -179,12 +180,99 @@
 .quote {
   margin: 0;
   color: rgba(0, 0, 0, 0.78);
-  font-size: 1rem;
+  font-size: clamp(0.75rem, 2vw, 1rem);
+  line-height: 1.2;
+}
+
+/* Mobile Carousel Wrapper */
+.mobileCarouselWrapper {
+  position: relative;
+  padding: 0 60px 60px;
+  max-width: 100%;
+}
+
+.mobileSwiper {
+  width: 100%;
+  padding-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+/* Swiper Navigation Buttons */
+.swiperButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  background: var(--white);
+  border: 2px solid var(--purple);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  color: var(--purple);
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.swiperButton:hover {
+  background: var(--purple);
+  color: var(--white);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.swiperButton:active {
+  transform: translateY(-50%) scale(0.95);
+}
+
+.swiperButton.swiper-button-disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.swiperButtonPrev {
+  left: 10px;
+}
+
+.swiperButtonNext {
+  right: 10px;
+}
+
+/* Swiper Pagination Dots */
+.swiperPagination {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 10;
+}
+
+.swiperPagination :global(.swiper-pagination-bullet) {
+  width: 12px;
+  height: 12px;
+  background: var(--purple);
+  opacity: 0.3;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.swiperPagination :global(.swiper-pagination-bullet-active) {
+  opacity: 1;
+  width: 32px;
+  border-radius: 6px;
 }
 
 @media (max-width: 768px) {
   .reviews {
-    padding: 72px 0;
+    padding: 40px 0;
+    gap: 0;
   }
 
   .header {
@@ -213,6 +301,8 @@
   .card {
     flex: none;
     width: 100%;
+    max-width: 75vw;
+    margin: 0 auto;
     border-radius: 24px;
   }
 
@@ -240,5 +330,31 @@
   /* hide duplicated loop track on mobile so content isn't repeated */
   .carouselContainer .loop[aria-hidden="true"] {
     display: none;
+  }
+
+  .quote {
+    text-align: left;
+  }
+
+  /* Mobile carousel specific adjustments */
+  .mobileCarouselWrapper {
+    padding: 0 50px 50px;
+  }
+
+  .mobileSwiper > div {
+    align-items: center;
+  }
+
+  .swiperButton {
+    width: 36px;
+    height: 36px;
+  }
+
+  .swiperButtonPrev {
+    left: 3vw;
+  }
+
+  .swiperButtonNext {
+    right: 3vw;
   }
 }
