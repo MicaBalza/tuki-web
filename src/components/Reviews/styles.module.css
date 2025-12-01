@@ -226,7 +226,7 @@
   }
 
   .header {
-    margin-bottom: 36px;
+    margin-bottom: 20px;
   }
 
   .cardInner {
@@ -253,11 +253,7 @@
 
   /* Mobile carousel specific adjustments */
   .carouselWrapper {
-    padding: 0 50px 50px;
-  }
-
-  .swiper > div {
-    align-items: center;
+    padding: 0 50px;
   }
 
   .swiperButton {
