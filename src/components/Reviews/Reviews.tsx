@@ -89,6 +89,8 @@ const Reviews = () => {
             clickable: true,
           }}
           className={styles.swiper}
+          autoHeight
+          loop
         >
           {reviews.map((review, index) => (
             <SwiperSlide key={`slide-${index}`}>
@@ -100,41 +102,24 @@ const Reviews = () => {
           className={`${styles.swiperButtonPrev} ${styles.swiperButton}`}
           aria-label="Previous review"
         >
-          <svg
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M15 18L9 12L15 6"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
+          <Image
+            src="/static/icons/chevron_right.svg"
+            alt="Previous"
+            width={25}
+            height={25}
+            style={{ transform: "rotate(180deg)" }}
+          />
         </button>
         <button
           className={`${styles.swiperButtonNext} ${styles.swiperButton}`}
           aria-label="Next review"
         >
-          <svg
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M9 18L15 12L9 6"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
+          <Image
+            src="/static/icons/chevron_right.svg"
+            alt="Next"
+            width={25}
+            height={25}
+          />
         </button>
       </div>
     </section>

@@ -142,8 +142,7 @@
 .swiper {
   width: 100%;
   padding-bottom: 50px !important;
-  display: flex;
-  align-items: center;
+  display: block;
 }
 
 /* Swiper Navigation Buttons */
@@ -167,27 +166,25 @@
 }
 
 .swiperButton:hover {
-  background: var(--purple);
+  background: var(--light-purple);
   color: var(--white);
   transform: translateY(-50%) scale(1.1);
-}
-
-.swiperButton:active {
-  transform: translateY(-50%) scale(0.95);
-}
-
-.swiperButton.swiper-button-disabled {
-  opacity: 0.3;
-  cursor: not-allowed;
-  pointer-events: none;
 }
 
 .swiperButtonPrev {
   left: 5vw;
 }
 
+.swiperButtonPrev img {
+  margin-right: 2px;
+}
+
 .swiperButtonNext {
   right: 5vw;
+}
+
+.swiperButtonNext img {
+  margin-left: 2px;
 }
 
 /* Swiper Pagination Dots */
@@ -257,8 +254,8 @@
   }
 
   .swiperButton {
-    width: 36px;
-    height: 36px;
+    width: 25px; /* Reduced size by 30% */
+    height: 25px; /* Reduced size by 30% */
   }
 
   .swiperButtonPrev {
