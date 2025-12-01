@@ -172,7 +172,7 @@
 }
 
 .swiperButtonPrev {
-  left: 5vw;
+  left: calc(50vw - 512px - 120px);
 }
 
 .swiperButtonPrev img {
@@ -180,7 +180,7 @@
 }
 
 .swiperButtonNext {
-  right: 5vw;
+  right: calc(50vw - 512px - 120px);
 }
 
 .swiperButtonNext img {
@@ -214,6 +214,16 @@
   opacity: 1;
   width: 32px;
   border-radius: 6px;
+}
+
+@media (max-width: 1300px) {
+  .swiperButtonPrev {
+    left: 5vw;
+  }
+
+  .swiperButtonNext {
+    right: 5vw;
+  }
 }
 
 @media (max-width: 768px) {
