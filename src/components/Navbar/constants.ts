@@ -6,21 +6,9 @@ const BASE_ROUTES = [
     path: "/services",
     text: "services",
     color: "nude",
-    dropdown: [
-      { path: "/services/illustration", text: "illustration" },
-      { path: "/services/animation", text: "animation" },
-      { path: "/services/social-media", text: "social-media" },
-      { path: "/services/editorial", text: "editorial" },
-      { path: "/services/branding", text: "branding" },
-      { path: "/services/motion-graphics", text: "motion-graphics" },
-      { path: "/health-services", text: "health" },
-    ],
-  },
-  {
-    path: "/health-services",
-    text: "health-services",
-    color: "green",
-    dropdown: [
+    description: "services-description",
+    image: "/static/images/section-hero/servicios-hero.png",
+    dropdownLeft: [
       {
         path: "/health-services/institutional-corporate-videos",
         text: "institutional-corporate-videos",
@@ -47,10 +35,33 @@ const BASE_ROUTES = [
       },
       {
         path: "/health-services",
-        text: "projects",
+        text: "all-services",
       },
     ],
+    dropdownRightTitle: {
+      path: "/services",
+      text: "other-services",
+    },
+    dropdownRight: [
+      { path: "/services/illustration", text: "illustration" },
+      { path: "/services/animation", text: "animation" },
+      { path: "/services/social-media", text: "social-media" },
+      { path: "/services/editorial", text: "editorial" },
+      { path: "/services/branding", text: "branding" },
+      { path: "/services/motion-graphics", text: "motion-graphics" },
+      { path: "/health-services", text: "health" },
+    ],
   },
+  // {
+  //   path: "/health-services",
+  //   text: "health-services",
+  //   color: "green",
+  //   description: "health-services-description",
+  //   image: "/static/images/section-hero/servicios-hero.png",
+  //   dropdown: [
+
+  //   ],
+  // },
   {
     path: "/us",
     text: "who-we-are",
@@ -70,13 +81,27 @@ const BASE_ROUTES = [
 
 // Function to get localized routes
 export function getLocalizedRoutes(language: "en" | "es") {
-  return BASE_ROUTES.map((route) => ({
+  return BASE_ROUTES.map((route: any) => ({
     ...route,
     path: getLocalizedPath(route.path, language),
-    dropdown: route.dropdown?.map((item) => ({
+    dropdown: route.dropdown?.map((item: any) => ({
       ...item,
       path: getLocalizedPath(item.path, language),
     })),
+    dropdownLeft: route.dropdownLeft?.map((item: any) => ({
+      ...item,
+      path: getLocalizedPath(item.path, language),
+    })),
+    dropdownRight: route.dropdownRight?.map((item: any) => ({
+      ...item,
+      path: getLocalizedPath(item.path, language),
+    })),
+    dropdownRightTitle: route.dropdownRightTitle
+      ? {
+          ...route.dropdownRightTitle,
+          path: getLocalizedPath(route.dropdownRightTitle.path, language),
+        }
+      : undefined,
   }));
 }
 

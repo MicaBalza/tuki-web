@@ -97,7 +97,9 @@ const Navbar = () => {
               <div
                 key={route.text}
                 className={`${styles.navlinkContainer} ${
-                  route.dropdown ? styles.hasDropdown : ""
+                  route.dropdown || route.dropdownLeft || route.dropdownRight
+                    ? styles.hasDropdown
+                    : ""
                 }`}
                 onMouseEnter={() => setHoveredRoute(route.path)}
                 onMouseLeave={() => setHoveredRoute(null)}
@@ -123,23 +125,118 @@ const Navbar = () => {
                   )}
                   {t(route.text)}
                 </Link>
-                {route.dropdown && (
+                {(route.dropdown ||
+                  route.dropdownLeft ||
+                  route.dropdownRight) && (
                   <div
-                    className={`${styles.dropdown} ${
+                    className={`${styles.dropdownFullWidth} ${
                       isHovered ? styles.show : ""
-                    } bg-${color}`}
+                    } bg-${route.color || color}`}
                   >
-                    {route.dropdown.map((dropdownItem) => (
-                      <Link
-                        key={dropdownItem.text}
-                        href={dropdownItem.path}
-                        className={`${styles.dropdownItem} ${
-                          bgIsDark ? "text-white" : "text-purple"
-                        } pointer`}
-                      >
-                        {t(dropdownItem.text)}
-                      </Link>
-                    ))}
+                    <div className={styles.dropdownContent}>
+                      <div className={styles.dropdownLeft}>
+                        <h4
+                          className={`${styles.dropdownTitle} bold ${
+                            route.color === "red" || route.color === "green"
+                              ? "text-white"
+                              : "text-purple"
+                          }`}
+                        >
+                          {t(route.text)}
+                        </h4>
+                        <p
+                          className={`${styles.dropdownDescription} ${
+                            route.color === "red" || route.color === "green"
+                              ? "text-white"
+                              : "text-purple"
+                          }`}
+                        >
+                          {t(route.description || "")}
+                        </p>
+                      </div>
+                      <div className={styles.dropdownMiddle}>
+                        {route.dropdownLeft && (
+                          <div className={styles.dropdownColumn}>
+                            {route.dropdownLeft.map((dropdownItem: any) => (
+                              <Link
+                                key={dropdownItem.text}
+                                href={dropdownItem.path}
+                                className={`${styles.dropdownItemFullWidth} ${
+                                  route.color === "red" ||
+                                  route.color === "green"
+                                    ? "text-white"
+                                    : "text-purple"
+                                } pointer`}
+                              >
+                                {t(dropdownItem.text)}
+                              </Link>
+                            ))}
+                          </div>
+                        )}
+                        {route.dropdownRight && (
+                          <div className={styles.dropdownColumn}>
+                            {route.dropdownRightTitle && (
+                              <Link
+                                href={route.dropdownRightTitle.path}
+                                className={`${styles.dropdownColumnTitle} ${
+                                  route.color === "red" ||
+                                  route.color === "green"
+                                    ? "text-white"
+                                    : "text-purple"
+                                } pointer`}
+                              >
+                                {t(route.dropdownRightTitle.text)}
+                              </Link>
+                            )}
+                            {route.dropdownRight.map((dropdownItem: any) => (
+                              <Link
+                                key={dropdownItem.text}
+                                href={dropdownItem.path}
+                                className={`${styles.dropdownItemFullWidth} ${
+                                  route.color === "red" ||
+                                  route.color === "green"
+                                    ? "text-white"
+                                    : "text-purple"
+                                } pointer`}
+                              >
+                                {t(dropdownItem.text)}
+                              </Link>
+                            ))}
+                          </div>
+                        )}
+                        {route.dropdown &&
+                          !route.dropdownLeft &&
+                          !route.dropdownRight && (
+                            <>
+                              {route.dropdown.map((dropdownItem: any) => (
+                                <Link
+                                  key={dropdownItem.text}
+                                  href={dropdownItem.path}
+                                  className={`${styles.dropdownItemFullWidth} ${
+                                    route.color === "red" ||
+                                    route.color === "green"
+                                      ? "text-white"
+                                      : "text-purple"
+                                  } pointer`}
+                                >
+                                  {t(dropdownItem.text)}
+                                </Link>
+                              ))}
+                            </>
+                          )}
+                      </div>
+                      <div className={styles.dropdownRight}>
+                        {route.image && (
+                          <Image
+                            src="/static/images/pharmaceutical-services.png"
+                            alt={t(route.text)}
+                            width={400}
+                            height={400}
+                            className={styles.dropdownImage}
+                          />
+                        )}
+                      </div>
+                    </div>
                   </div>
                 )}
               </div>

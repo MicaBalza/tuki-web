@@ -111,19 +111,119 @@
   margin-top: 8px;
 }
 
-.dropdownItem {
-  display: block;
-  padding: 12px 20px;
-  font-size: 0.75rem;
+.dropdownFullWidth {
+  position: fixed;
+  top: 76px;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  transform: translateY(-30px);
+  padding: 60px 5vw 60px calc(5vw + 44px);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+  transition-delay: 0.5s;
+  z-index: 20;
+}
+
+.dropdownFullWidth.show {
+  opacity: 1;
+  visibility: visible;
+  animation: dropdownSlideDown 0.4s ease-out forwards;
+  transition-delay: 0s;
+}
+
+.dropdownContent {
+  display: flex;
+  gap: 60px;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.dropdownLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 40%;
+}
+
+.dropdownDescription {
+  max-width: 50%;
+}
+
+.dropdownMiddle {
+  display: flex;
+  gap: 40px;
+}
+
+.dropdownColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.dropdownColumn:not(:first-child) {
+  border-left: 1px solid var(--purple);
+  padding-left: 40px;
+  align-items: center;
+}
+
+.dropdownColumnTitle {
   text-transform: uppercase;
   text-align: center;
-  color: var(--purple);
   text-decoration: none;
-  transition: background-color 0.2s ease;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.dropdownRight {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.dropdownImage {
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: contain;
+}
+
+.dropdownItemFullWidth {
+  text-transform: uppercase;
+  text-align: left;
+  text-decoration: none;
+  transition: font-weight 0.2s ease;
+}
+
+.dropdownColumn:not(:first-child) .dropdownItemFullWidth {
+  text-align: center;
+}
+
+.dropdownItemFullWidth:hover {
+  font-weight: 700;
 }
 
 .dropdownItem:hover {
   font-weight: 700;
+}
+
+@keyframes dropdownSlideDown {
+  0% {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  60% {
+    transform: translateY(10px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -133,6 +233,20 @@
   }
 
   .slideMenu {
+    display: none;
+  }
+
+  .dropdown {
+    display: none;
+  }
+
+  .dropdownFullWidth {
+    display: block;
+  }
+}
+
+@media (max-width: 1023px) {
+  .dropdownFullWidth {
     display: none;
   }
 }

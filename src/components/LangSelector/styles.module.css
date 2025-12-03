@@ -7,7 +7,6 @@
 
 .switch {
   border: 1px solid var(--purple);
-  transform: translateY(-4px);
 }
 
 .switch > div:first-child {
