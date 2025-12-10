@@ -3,8 +3,8 @@ import { MouseEvent, ReactNode, useRef, useState } from "react";
 import { useTranslation } from "@/i18n/client";
 import Link from "next/link";
 import { useParams, usePathname } from "next/navigation";
-import { getLocalizedRoutes } from "../Navbar/constants";
 import LangSelector from "../LangSelector";
+import { getLocalizedRoutes } from "../Navbar/constants";
 import SocialLinks from "../SocialLinks";
 import styles from "./styles.module.css";
 
@@ -20,7 +20,7 @@ export default function SlideMenu() {
   const containerRef = useRef<HTMLDivElement>(null);
   const { t } = useTranslation(lng as string, "navbar");
   const [isOpen, setIsOpen] = useState(false);
-  
+
   // Get localized routes for current language
   const localizedRoutes = getLocalizedRoutes(lng as "en" | "es");
 
@@ -59,34 +59,44 @@ export default function SlideMenu() {
                   <div key={route.text} className={styles.mobileNavSection}>
                     <Link
                       href={route.path}
-                      className={`text-white pointer ${isActive ? styles.activeMainLink : ""}`}
+                      className={`text-white pointer ${
+                        isActive ? styles.activeMainLink : ""
+                      }`}
                       onClick={() => setIsOpen(false)}
                     >
                       {t(route.text)}
                     </Link>
-                  {route.dropdown && (
-                    <div className={styles.mobileSublinks}>
-                      {route.dropdown
-                        .filter(
-                          (item) =>
-                            item.text !== "pharmaceutical" &&
-                            item.text !== "projects"
-                        )
-                        .map((dropdownItem) => {
-                          const isSubActive = pathname.replace(`/${lng}`, "") === dropdownItem.path;
-                          return (
-                            <Link
-                              key={dropdownItem.text}
-                              href={dropdownItem.path}
-                              className={`${styles.sublink} text-white pointer ${isSubActive ? styles.activeLink : ""}`}
-                              onClick={() => setIsOpen(false)}
-                            >
-                              {t(dropdownItem.text)}
-                            </Link>
-                          );
-                        })}
-                    </div>
-                  )}
+                    {route.dropdown && (
+                      <div className={styles.mobileSublinks}>
+                        {route.dropdown
+                          .filter(
+                            (item: { text: string; path: string }) =>
+                              item.text !== "pharmaceutical" &&
+                              item.text !== "projects"
+                          )
+                          .map(
+                            (dropdownItem: { text: string; path: string }) => {
+                              const isSubActive: boolean =
+                                pathname.replace(`/${lng}`, "") ===
+                                dropdownItem.path;
+                              return (
+                                <Link
+                                  key={dropdownItem.text}
+                                  href={dropdownItem.path}
+                                  className={`${
+                                    styles.sublink
+                                  } text-white pointer ${
+                                    isSubActive ? styles.activeLink : ""
+                                  }`}
+                                  onClick={() => setIsOpen(false)}
+                                >
+                                  {t(dropdownItem.text)}
+                                </Link>
+                              );
+                            }
+                          )}
+                      </div>
+                    )}
                   </div>
                 );
               })}
