@@ -1,0 +1,302 @@
+.section {
+  position: relative;
+  background-color: var(--light-purple);
+  color: var(--color-white);
+  z-index: 1;
+  padding: 80px 0;
+}
+
+.sectionContent {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.sectionTitle {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.projectsGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.gridRow {
+  display: flex;
+  gap: 24px;
+  width: 100%;
+}
+
+.gridItem {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.gridItem:hover .gridImage {
+  transform: scale(1.05);
+}
+
+.gridItem:hover .imageButton button {
+  background-color: var(--light-green);
+  color: var(--purple);
+}
+
+.gridImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+/* Row 1 and 3: First image wider */
+.wideFirst {
+  flex: 6;
+}
+
+.narrowSecond {
+  flex: 4;
+}
+
+/* Row 2: First image smaller */
+.narrowFirst {
+  flex: 4;
+}
+
+.wideSecond {
+  flex: 6;
+}
+
+/* Play Button Overlay */
+.playOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.playBlack {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--black);
+  opacity: 0.6;
+  z-index: 1;
+  transition: opacity 0.3s ease;
+}
+
+.gridItem:hover .playBlack {
+  opacity: 0.3;
+}
+
+.playButton {
+  position: relative;
+  z-index: 2;
+  transition: transform 0.3s ease;
+}
+
+.gridItem:hover .playButton {
+  transform: scale(1.1);
+}
+
+/* Image Button */
+.imageButton {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  pointer-events: none;
+  z-index: 3;
+}
+
+/* Modal Styles */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(178, 174, 233, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  background: var(--purple);
+  padding: 40px;
+  border-radius: 12px;
+  max-width: 1200px;
+  width: 95%;
+  max-height: 85vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.closeButton {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: var(--white);
+  line-height: 1;
+}
+
+.closeButton:hover {
+  opacity: 0.7;
+}
+
+.modalBody {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.videoContainer {
+  flex: 1.5;
+  aspect-ratio: 16/9;
+  position: relative;
+  cursor: pointer;
+}
+
+.videoOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  cursor: pointer;
+}
+
+.videoContainer:hover .videoFrame {
+  opacity: 0.3;
+}
+
+.videoBlack {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--black);
+  z-index: 1;
+  border-radius: 8px;
+}
+
+.videoFrame {
+  position: absolute;
+  top: 0;
+  object-fit: cover;
+  opacity: 0.4;
+  z-index: 2;
+  border-radius: 8px;
+}
+
+.videoPlay {
+  position: absolute;
+  top: calc(50% - 77.5px);
+  left: calc(50% - 73px);
+  z-index: 4;
+}
+
+.videoIframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 8px;
+}
+
+.contentContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+}
+
+.modalTitle {
+  color: var(--light-green);
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.modalDescription {
+  color: var(--white);
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .section {
+    padding: 60px 0;
+  }
+
+  .projectsGrid {
+    gap: 16px;
+  }
+
+  .gridRow {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .gridItem {
+    flex: 1 !important;
+  }
+
+  .modalContent {
+    max-width: 98%;
+    padding: 20px;
+  }
+
+  .modalBody {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .videoContainer {
+    flex: 1;
+  }
+
+  .modalTitle {
+    font-size: 1.6rem;
+  }
+
+  .modalDescription {
+    font-size: 1.1rem;
+  }
+
+  .videoPlay {
+    width: 44px;
+    height: 46px;
+    top: calc(50% - 23px);
+    left: calc(50% - 21px);
+  }
+
+  .playButton {
+    width: 40px;
+    height: 42px;
+  }
+
+  .sectionTitle {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+}

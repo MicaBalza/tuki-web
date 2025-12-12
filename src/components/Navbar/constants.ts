@@ -67,6 +67,11 @@ const BASE_ROUTES = [
     text: "who-we-are",
     color: "light-purple",
   },
+  {
+    path: "/projects",
+    text: "projects",
+    color: "nude",
+  },
   // {
   //   path: "/blog",
   //   text: "blog",
@@ -118,6 +123,7 @@ function generateNavbarColors(): Record<string, string> {
     "/services": "nude",
     "/health-services": "green",
     "/us": "light-purple",
+    "/projects": "nude",
     "/blog": "yellow",
     "/contact-us": "pink",
     "/services/illustration": "green",
