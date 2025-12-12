@@ -135,7 +135,7 @@ const Navbar = () => {
                   >
                     <div className={styles.dropdownContent}>
                       <div className={styles.dropdownLeft}>
-                        <h4
+                        <p
                           className={`${styles.dropdownTitle} bold ${
                             route.color === "red" || route.color === "green"
                               ? "text-white"
@@ -143,7 +143,7 @@ const Navbar = () => {
                           }`}
                         >
                           {t(route.text)}
-                        </h4>
+                        </p>
                         <p
                           className={`${styles.dropdownDescription} ${
                             route.color === "red" || route.color === "green"
@@ -228,7 +228,7 @@ const Navbar = () => {
                       <div className={styles.dropdownRight}>
                         {route.image && (
                           <Image
-                            src="/static/images/pharmaceutical-services.png"
+                            src="/static/images/toolbar.png"
                             alt={t(route.text)}
                             width={400}
                             height={400}
