@@ -25,51 +25,55 @@ const Reviews = () => {
   const { t } = useTranslation(lng as string, "reviews");
   const reviews = t("items", { returnObjects: true }) as Review[];
 
-  const renderCard = (review: Review, index: number) => (
-    <div className={styles.cardInner} key={`card-${index}`}>
-      <div className={styles.left}>
-        <div className={styles.avatar} aria-hidden="true">
-          <Image
-            src={encodeURI(review.image as string)}
-            alt={`${review.name} photo`}
-            width={84}
-            height={84}
-            className={styles.avatarImg}
-          />
-        </div>
-        <div className={styles.identityCentered}>
-          <div className={styles.nameRow}>
-            <p className={`h4 bold ${styles.name}`}>{review.name}</p>
-            {review.linkedin && (
-              <a
-                href={review.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.linkedin}
-                aria-label="LinkedIn Profile"
-              >
-                <LinkedinIcon />
-              </a>
-            )}
-          </div>
-          <p className={styles.role}>{review.role}</p>
-        </div>
-      </div>
+  const renderCard = (review: Review, index: number) => {
+    const isLastTwo = index >= reviews.length - 2;
 
-      <div className={styles.quoteWrap}>
-        <div className={styles.quoteText}>
-          {review.quote.split("\n\n").map((paragraph, paragraphIndex) => (
-            <p
-              key={`${review.name}-${paragraphIndex}`}
-              className={styles.quote}
-            >
-              {paragraph}
-            </p>
-          ))}
+    return (
+      <div className={styles.cardInner} key={`card-${index}`}>
+        <div className={styles.left}>
+          <div className={styles.avatar} aria-hidden="true">
+            <Image
+              src={encodeURI(review.image as string)}
+              alt={`${review.name} photo`}
+              width={84}
+              height={84}
+              className={isLastTwo ? styles.avatarImgScaled : styles.avatarImg}
+            />
+          </div>
+          <div className={styles.identityCentered}>
+            <div className={styles.nameRow}>
+              <p className={`h4 bold ${styles.name}`}>{review.name}</p>
+              {review.linkedin && (
+                <a
+                  href={review.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.linkedin}
+                  aria-label="LinkedIn Profile"
+                >
+                  <LinkedinIcon />
+                </a>
+              )}
+            </div>
+            <p className={styles.role}>{review.role}</p>
+          </div>
+        </div>
+
+        <div className={styles.quoteWrap}>
+          <div className={styles.quoteText}>
+            {review.quote.split("\n\n").map((paragraph, paragraphIndex) => (
+              <p
+                key={`${review.name}-${paragraphIndex}`}
+                className={styles.quote}
+              >
+                {paragraph}
+              </p>
+            ))}
+          </div>
         </div>
       </div>
-    </div>
-  );
+    );
+  };
 
   return (
     <section className={styles.reviews}>
