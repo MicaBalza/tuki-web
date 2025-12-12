@@ -55,6 +55,14 @@ export default function SlideMenu() {
             <div className={styles.mobileNavlinks}>
               {localizedRoutes.map((route) => {
                 const isActive = pathname.replace(`/${lng}`, "") === route.path;
+                
+                // Combine all dropdown items from different sources
+                const allDropdownItems = [
+                  ...(route.dropdownLeft || []),
+                  ...(route.dropdown || []),
+                  ...(route.dropdownRight || []),
+                ];
+
                 return (
                   <div key={route.text} className={styles.mobileNavSection}>
                     <Link
@@ -66,9 +74,9 @@ export default function SlideMenu() {
                     >
                       {t(route.text)}
                     </Link>
-                    {route.dropdown && (
+                    {allDropdownItems.length > 0 && (
                       <div className={styles.mobileSublinks}>
-                        {route.dropdown
+                        {allDropdownItems
                           .filter(
                             (item: { text: string; path: string }) =>
                               item.text !== "pharmaceutical" &&
