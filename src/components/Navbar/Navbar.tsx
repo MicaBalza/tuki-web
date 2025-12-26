@@ -131,24 +131,20 @@ const Navbar = () => {
                   <div
                     className={`${styles.dropdownFullWidth} ${
                       isHovered ? styles.show : ""
-                    } bg-${route.color || color}`}
+                    } bg-${color}`}
                   >
                     <div className={styles.dropdownContent}>
                       <div className={styles.dropdownLeft}>
                         <p
                           className={`${styles.dropdownTitle} bold ${
-                            route.color === "red" || route.color === "green"
-                              ? "text-white"
-                              : "text-purple"
+                            bgIsDark ? "text-white" : "text-purple"
                           }`}
                         >
                           {t(route.text)}
                         </p>
                         <p
                           className={`${styles.dropdownDescription} ${
-                            route.color === "red" || route.color === "green"
-                              ? "text-white"
-                              : "text-purple"
+                            bgIsDark ? "text-white" : "text-purple"
                           }`}
                         >
                           {t(route.description || "")}
@@ -162,10 +158,7 @@ const Navbar = () => {
                                 key={dropdownItem.text}
                                 href={dropdownItem.path}
                                 className={`${styles.dropdownItemFullWidth} ${
-                                  route.color === "red" ||
-                                  route.color === "green"
-                                    ? "text-white"
-                                    : "text-purple"
+                                  bgIsDark ? "text-white" : "text-purple"
                                 } pointer`}
                               >
                                 {t(dropdownItem.text)}
@@ -179,10 +172,7 @@ const Navbar = () => {
                               <Link
                                 href={route.dropdownRightTitle.path}
                                 className={`${styles.dropdownColumnTitle} ${
-                                  route.color === "red" ||
-                                  route.color === "green"
-                                    ? "text-white"
-                                    : "text-purple"
+                                  bgIsDark ? "text-white" : "text-purple"
                                 } pointer`}
                               >
                                 {t(route.dropdownRightTitle.text)}
@@ -193,10 +183,7 @@ const Navbar = () => {
                                 key={dropdownItem.text}
                                 href={dropdownItem.path}
                                 className={`${styles.dropdownItemFullWidth} ${
-                                  route.color === "red" ||
-                                  route.color === "green"
-                                    ? "text-white"
-                                    : "text-purple"
+                                  bgIsDark ? "text-white" : "text-purple"
                                 } pointer`}
                               >
                                 {t(dropdownItem.text)}
@@ -213,10 +200,7 @@ const Navbar = () => {
                                   key={dropdownItem.text}
                                   href={dropdownItem.path}
                                   className={`${styles.dropdownItemFullWidth} ${
-                                    route.color === "red" ||
-                                    route.color === "green"
-                                      ? "text-white"
-                                      : "text-purple"
+                                    bgIsDark ? "text-white" : "text-purple"
                                   } pointer`}
                                 >
                                   {t(dropdownItem.text)}
