@@ -230,8 +230,8 @@ const Navbar = () => {
                           <Image
                             src="/static/images/toolbar.png"
                             alt={t(route.text)}
-                            width={400}
-                            height={400}
+                            width={440}
+                            height={440}
                             className={styles.dropdownImage}
                           />
                         )}
