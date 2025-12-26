@@ -161,3 +161,9 @@
   display: flex;
   gap: 20px;
 }
+
+.divider {
+  border: none;
+  border-top: 1px solid var(--white);
+  margin: 4px 0;
+}

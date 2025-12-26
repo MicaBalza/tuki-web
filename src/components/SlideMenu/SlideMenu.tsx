@@ -55,13 +55,11 @@ export default function SlideMenu() {
             <div className={styles.mobileNavlinks}>
               {localizedRoutes.map((route) => {
                 const isActive = pathname.replace(`/${lng}`, "") === route.path;
-                
-                // Combine all dropdown items from different sources
-                const allDropdownItems = [
-                  ...(route.dropdownLeft || []),
-                  ...(route.dropdown || []),
-                  ...(route.dropdownRight || []),
-                ];
+
+                // Get dropdown items from left and right separately
+                const dropdownLeftItems = route.dropdownLeft || [];
+                const dropdownRightItems = route.dropdownRight || [];
+                const dropdownItems = route.dropdown || [];
 
                 return (
                   <div key={route.text} className={styles.mobileNavSection}>
@@ -74,13 +72,16 @@ export default function SlideMenu() {
                     >
                       {t(route.text)}
                     </Link>
-                    {allDropdownItems.length > 0 && (
+
+                    {/* Show dropdownLeft items (Services section) */}
+                    {dropdownLeftItems.length > 0 && (
                       <div className={styles.mobileSublinks}>
-                        {allDropdownItems
+                        {dropdownLeftItems
                           .filter(
                             (item: { text: string; path: string }) =>
                               item.text !== "pharmaceutical" &&
-                              item.text !== "projects"
+                              item.text !== "projects" &&
+                              item.text !== "all-services"
                           )
                           .map(
                             (dropdownItem: { text: string; path: string }) => {
@@ -105,6 +106,90 @@ export default function SlideMenu() {
                           )}
                       </div>
                     )}
+
+                    {/* Show "Other services" title and dropdownRight items */}
+                    {dropdownRightItems.length > 0 &&
+                      route.dropdownRightTitle && (
+                        <>
+                          <hr className={styles.divider} />
+                          <Link
+                            href={route.dropdownRightTitle.path}
+                            className={`text-white pointer ${
+                              pathname.replace(`/${lng}`, "") ===
+                              route.dropdownRightTitle.path
+                                ? styles.activeMainLink
+                                : ""
+                            }`}
+                            onClick={() => setIsOpen(false)}
+                          >
+                            {t(route.dropdownRightTitle.text)}
+                          </Link>
+                          <div className={styles.mobileSublinks}>
+                            {dropdownRightItems.map(
+                              (dropdownItem: {
+                                text: string;
+                                path: string;
+                              }) => {
+                                const isSubActive: boolean =
+                                  pathname.replace(`/${lng}`, "") ===
+                                  dropdownItem.path;
+                                return (
+                                  <Link
+                                    key={dropdownItem.text}
+                                    href={dropdownItem.path}
+                                    className={`${
+                                      styles.sublink
+                                    } text-white pointer ${
+                                      isSubActive ? styles.activeLink : ""
+                                    }`}
+                                    onClick={() => setIsOpen(false)}
+                                  >
+                                    {t(dropdownItem.text)}
+                                  </Link>
+                                );
+                              }
+                            )}
+                          </div>
+                        </>
+                      )}
+
+                    {/* Show regular dropdown items if no left/right structure */}
+                    {dropdownItems.length > 0 &&
+                      !dropdownLeftItems.length &&
+                      !dropdownRightItems.length && (
+                        <div className={styles.mobileSublinks}>
+                          {dropdownItems
+                            .filter(
+                              (item: { text: string; path: string }) =>
+                                item.text !== "pharmaceutical" &&
+                                item.text !== "projects"
+                            )
+                            .map(
+                              (dropdownItem: {
+                                text: string;
+                                path: string;
+                              }) => {
+                                const isSubActive: boolean =
+                                  pathname.replace(`/${lng}`, "") ===
+                                  dropdownItem.path;
+                                return (
+                                  <Link
+                                    key={dropdownItem.text}
+                                    href={dropdownItem.path}
+                                    className={`${
+                                      styles.sublink
+                                    } text-white pointer ${
+                                      isSubActive ? styles.activeLink : ""
+                                    }`}
+                                    onClick={() => setIsOpen(false)}
+                                  >
+                                    {t(dropdownItem.text)}
+                                  </Link>
+                                );
+                              }
+                            )}
+                        </div>
+                      )}
                   </div>
                 );
               })}
