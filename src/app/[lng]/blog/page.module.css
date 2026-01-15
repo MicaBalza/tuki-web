@@ -1,0 +1,7 @@
+.blogPage {
+  padding: 0;
+}
+
+.blogPage > * {
+  width: 100%;
+}
