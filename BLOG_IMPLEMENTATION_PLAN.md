@@ -304,18 +304,57 @@ Images stored in `public/static/images/blog/` directory
 - Focus states on interactive elements
 - ARIA labels where needed
 
-## Future Enhancements (Not in Initial Implementation)
+## Individual Blog Post Pages
+
+### Implementation Complete ✅
+
+Created dynamic route structure for individual blog post pages:
+
+**File Structure**:
+
+- `src/app/[lng]/blog/[slug]/page.tsx` - Dynamic blog post page
+- `src/app/[lng]/blog/[slug]/page.module.css` - Post page styles
+
+**Features**:
+
+- Dynamic routing by slug
+- Date display matching blog landing page format
+- Rich HTML content rendering (h1-h3, p, ol, ul, blockquote)
+- Styled numbered lists with purple circle numbers
+- FAQ section with nude background blockquotes
+- Responsive design (desktop, tablet, mobile)
+- 404 handling for non-existent posts
+- Internationalization support (ES/EN)
+- Maximum content width: 900px
+- Clean typography and spacing
+
+**Content Structure** (from constants):
+
+- HTML-formatted content with semantic tags
+- Multiple heading levels for hierarchy
+- Ordered lists for benefits/steps
+- Unordered lists for quick tips
+- Blockquotes for FAQ sections
+- Strong tags for emphasis
+
+**Route Pattern**:
+
+- ES: `/es/blog/videos-institucionales-corporativos-empresa`
+- EN: `/en/blog/institutional-corporate-videos-company`
+
+## Future Enhancements
 
 - Pagination for AllPosts
 - Category filtering
 - Search functionality
-- Individual blog post pages
 - Dynamic data fetching from CMS/API
 - Loading states
 - Error handling
 - Social sharing buttons
 - Read time estimation
-- Related posts section
+- Related posts section at bottom of individual posts
+- Back to blog button
+- Next/Previous post navigation
 
 ## Additional Requirements
 

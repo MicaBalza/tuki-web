@@ -1,5 +1,6 @@
 import { BlogPost } from "@/types/blog";
 import Image from "next/image";
+import Link from "next/link";
 import styles from "./BlogHero.module.css";
 
 interface BlogHeroProps {
@@ -65,7 +66,7 @@ export default function BlogHero({ post, lng }: BlogHeroProps) {
 
   return (
     <section className={styles.hero}>
-      <div className={styles.container}>
+      <Link href={`/${lng}/blog/${post.slug}`} className={styles.container}>
         <div className={styles.content}>
           <p className={styles.date}>{formatDate(post.date)}</p>
           <h1 className={styles.title}>{post.title}</h1>
@@ -74,7 +75,13 @@ export default function BlogHero({ post, lng }: BlogHeroProps) {
               <p key={index}>{paragraph}</p>
             ))}
           </div>
-          <div className={styles.scrollIndicator} onClick={scrollToLatestPosts}>
+          <div
+            className={styles.scrollIndicator}
+            onClick={(e) => {
+              e.preventDefault();
+              scrollToLatestPosts();
+            }}
+          >
             <svg
               width="24"
               height="24"
@@ -100,7 +107,7 @@ export default function BlogHero({ post, lng }: BlogHeroProps) {
             style={{ objectFit: "cover" }}
           />
         </div>
-      </div>
+      </Link>
     </section>
   );
 }

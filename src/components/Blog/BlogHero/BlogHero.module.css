@@ -17,6 +17,14 @@
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
   align-items: center;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.container:hover {
+  opacity: 0.95;
 }
 
 .content {

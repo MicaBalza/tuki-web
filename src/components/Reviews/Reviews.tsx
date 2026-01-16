@@ -26,8 +26,6 @@ const Reviews = () => {
   const reviews = t("items", { returnObjects: true }) as Review[];
 
   const renderCard = (review: Review, index: number) => {
-    const isLastTwo = index >= reviews.length - 2;
-
     return (
       <div className={styles.cardInner} key={`card-${index}`}>
         <div className={styles.left}>
@@ -37,7 +35,7 @@ const Reviews = () => {
               alt={`${review.name} photo`}
               width={84}
               height={84}
-              className={isLastTwo ? styles.avatarImgScaled : styles.avatarImg}
+              className={styles.avatarImg}
             />
           </div>
           <div className={styles.identityCentered}>
