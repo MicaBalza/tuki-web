@@ -75,6 +75,7 @@ export const blogPostsES: BlogPost[] = [
     `,
     date: "2025-12-05",
     thumbnail: "/static/images/blog/0.jpg",
+    headerImage: "/static/images/blog/0.jpg",
     category: "Vídeos Explicativos",
     featured: true,
   },
@@ -160,6 +161,7 @@ export const blogPostsES: BlogPost[] = [
     `,
     date: "2025-12-01",
     thumbnail: "/static/images/blog/1.jpg",
+    headerImage: "/static/images/blog/1.jpg",
     category: "Vídeos Institucionales",
     featured: false,
   },
@@ -239,6 +241,7 @@ export const blogPostsEN: BlogPost[] = [
     `,
     date: "2025-12-05",
     thumbnail: "/static/images/blog/0.jpg",
+    headerImage: "/static/images/blog/0.jpg",
     category: "Explainer Videos",
     featured: true,
   },
@@ -324,6 +327,7 @@ export const blogPostsEN: BlogPost[] = [
     `,
     date: "2025-12-01",
     thumbnail: "/static/images/blog/1.jpg",
+    headerImage: "/static/images/blog/1.jpg",
     category: "Institutional Videos",
     featured: false,
   },
@@ -337,7 +341,7 @@ export function getBlogPosts(language: "en" | "es"): BlogPost[] {
 // Helper function to get a single blog post by slug and language
 export function getBlogPostBySlug(
   slug: string,
-  language: "en" | "es"
+  language: "en" | "es",
 ): BlogPost | undefined {
   const posts = getBlogPosts(language);
   return posts.find((post) => post.slug === slug);

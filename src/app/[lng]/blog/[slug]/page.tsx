@@ -4,6 +4,7 @@ import { getBlogPostBySlug } from "@/constants/blogPosts";
 import { notFound } from "next/navigation";
 import { use } from "react";
 import styles from "./page.module.css";
+import Image from "next/image";
 
 type tParams = {
   lng: string;
@@ -58,9 +59,26 @@ export default function BlogPostPage(props: { params: Promise<tParams> }) {
   return (
     <PageContainer className={styles.blogPostPage}>
       <article className={styles.article}>
-        <div className={styles.header}>
-          <p className={styles.date}>{formattedDate}</p>
-          <h1 className={styles.title}>{post.title}</h1>
+        <div className={styles.hero}>
+          <div className={styles.heroText}>
+            <p className={styles.date}>{formattedDate}</p>
+            <h1 className={styles.title}>{post.title}</h1>
+            {post.excerpt && (
+              <p className={styles.excerpt}>{post.excerpt}</p>
+            )}
+          </div>
+          {post.headerImage && (
+            <div className={styles.heroImage}>
+              <Image
+                src={post.headerImage}
+                alt={post.title}
+                width={600}
+                height={400}
+                className={styles.image}
+                priority
+              />
+            </div>
+          )}
         </div>
 
         <div
