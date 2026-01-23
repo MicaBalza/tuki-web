@@ -1,0 +1,29 @@
+src/constants/blogPosts.ts
+  bc168ea9fb5825a5 78,164,244,330
+src/app/[lng]/blog/[slug]/page.tsx
+  bc168ea9fb5825a5 7,62-81
+src/app/[lng]/blog/[slug]/page.module.css
+  bc168ea9fb5825a5 9,11,14-20,23-24,30,33,40-46,49-63,71-72,187-198,203-204,227,230-233,236-237,244-245
+src/types/blog.ts
+  bc168ea9fb5825a5 9
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.37",
+  "base_commit_sha": "08d297c7be824093bf75ab173474f73a5cbf2e2a",
+  "prompts": {
+    "bc168ea9fb5825a5": {
+      "agent_id": {
+        "tool": "github-copilot",
+        "id": "a8b10cf2-3392-4c03-a272-7edfb02d8762",
+        "model": "copilot/claude-sonnet-4.5"
+      },
+      "human_author": "Mica Balza <mica.balza@gmail.com>",
+      "messages": [],
+      "total_additions": 95,
+      "total_deletions": 11,
+      "accepted_lines": 94,
+      "overriden_lines": 0
+    }
+  }
+}
