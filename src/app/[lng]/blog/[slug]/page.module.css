@@ -19,11 +19,13 @@
   margin-right: auto;
 }
 
-.textSection {
-  margin-bottom: 60px;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
+.sectionTitle {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin: 0 0 30px;
+  color: var(--purple);
+  text-align: center;
 }
 
 /* #region HERO SECTION */
@@ -306,6 +308,21 @@
 }
 /* #endregion UNORDERED LIST SECTION */
 
+.textSection {
+  margin-bottom: 60px;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.textContent {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--black);
+}
+
 /* #region FAQ SECTION */
 .faqSection {
   margin-bottom: 80px;
@@ -452,36 +469,6 @@
   .content blockquote strong {
     font-size: 18px;
   }
-}
-
-.sectionTitle {
-  font-size: 30px;
-  font-weight: 700;
-  line-height: 1.3;
-  margin: 0 0 30px;
-  color: var(--purple);
-  text-align: center;
-}
-
-.sectionContent {
-  font-size: 18px;
-  line-height: 1.6;
-  color: var(--black);
-}
-
-.sectionContent p {
-  margin: 16px 0;
-  line-height: 1.8;
-}
-
-.sectionContent ul,
-.sectionContent ol {
-  margin: 20px 0;
-  padding-left: 30px;
-}
-
-.sectionContent li {
-  margin-bottom: 12px;
 }
 
 /* Responsive styles for sections */

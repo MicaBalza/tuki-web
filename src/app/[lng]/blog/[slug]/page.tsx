@@ -21,7 +21,7 @@ function renderSection(section: BlogSection, index: number) {
             <h2 className={styles.sectionTitle}>{section.title}</h2>
           )}
           {section.content && (
-            <p className={styles.sectionContent}>{section.content}</p>
+            <p className={styles.textContent}>{section.content}</p>
           )}
         </div>
       );
