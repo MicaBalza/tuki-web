@@ -21,10 +21,7 @@ function renderSection(section: BlogSection, index: number) {
             <h2 className={styles.sectionTitle}>{section.title}</h2>
           )}
           {section.content && (
-            <div
-              className={styles.sectionContent}
-              dangerouslySetInnerHTML={{ __html: section.content }}
-            />
+            <p className={styles.sectionContent}>{section.content}</p>
           )}
         </div>
       );
@@ -88,6 +85,22 @@ function renderSection(section: BlogSection, index: number) {
                 <li key={idx} dangerouslySetInnerHTML={{ __html: item }} />
               ))}
             </ol>
+          )}
+        </div>
+      );
+
+    case "unorderedList":
+      return (
+        <div key={index} className={styles.unorderedListSection}>
+          {section.title && (
+            <h2 className={styles.sectionTitle}>{section.title}</h2>
+          )}
+          {section.items && (
+            <ul className={styles.bulletedList}>
+              {section.items.map((item, idx) => (
+                <li key={idx} dangerouslySetInnerHTML={{ __html: item }} />
+              ))}
+            </ul>
           )}
         </div>
       );
