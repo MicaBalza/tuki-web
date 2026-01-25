@@ -1,5 +1,5 @@
 export interface BlogSection {
-  type: "text" | "video" | "list" | "faq";
+  type: "text" | "video" | "list" | "faq" | "tip";
   title?: string;
   content?: string;
   subtitle?: string;

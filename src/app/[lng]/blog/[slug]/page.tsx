@@ -111,6 +111,17 @@ function renderSection(section: BlogSection, index: number) {
         </div>
       );
 
+    case "tip":
+      return (
+        <div key={index} className={styles.tipSection}>
+          <div className={styles.tipContent}>
+            <div className={styles.tipTitle}>{section.title}</div>
+            <div className={styles.tipDivider}></div>
+            <div className={styles.tipText}>{section.content}</div>
+          </div>
+        </div>
+      );
+
     default:
       return null;
   }

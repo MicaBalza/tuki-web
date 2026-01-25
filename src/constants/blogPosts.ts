@@ -41,9 +41,10 @@ export const blogPostsES: BlogPost[] = [
         ],
       },
       {
-        type: "text",
-        content: `<p><strong>Consejo Tuki</strong><br>
-        Crear versiones breves del vídeo para redes o anuncios digitales mantiene la coherencia del mensaje y amplifica el alcance del lanzamiento.</p>`,
+        type: "tip",
+        title: "Consejo Tuki",
+        content:
+          "Crear versiones breves del vídeo para redes o anuncios digitales mantiene la coherencia del mensaje y amplifica el alcance del lanzamiento.",
       },
       {
         type: "text",
@@ -194,9 +195,10 @@ export const blogPostsES: BlogPost[] = [
         ],
       },
       {
-        type: "text",
-        content: `<p><strong>Consejo Tuki</strong><br>
-        Acompañar el vídeo con subtítulos, transcripción y metadatos relevantes potencia su posicionamiento en Google y YouTube.</p>`,
+        type: "tip",
+        title: "Consejo Tuki",
+        content:
+          "Acompañar el vídeo con subtítulos, transcripción y metadatos relevantes potencia su posicionamiento en Google y YouTube.",
       },
       {
         type: "text",
@@ -353,9 +355,10 @@ export const blogPostsEN: BlogPost[] = [
         ],
       },
       {
-        type: "text",
-        content: `<p><strong>Tuki Tip</strong><br>
-        Creating short versions of the video for social media or digital ads maintains message coherence and amplifies launch reach.</p>`,
+        type: "tip",
+        title: "Tuki Tip",
+        content:
+          "Creating short versions of the video for social media or digital ads maintains message coherence and amplifies launch reach.",
       },
       {
         type: "text",
@@ -504,9 +507,10 @@ export const blogPostsEN: BlogPost[] = [
         ],
       },
       {
-        type: "text",
-        content: `<p><strong>Tuki Tip</strong><br>
-        Accompanying the video with subtitles, transcription, and relevant metadata boosts its positioning on Google and YouTube.</p>`,
+        type: "tip",
+        title: "Tuki Tip",
+        content:
+          "Accompanying the video with subtitles, transcription, and relevant metadata boosts its positioning on Google and YouTube.",
       },
       {
         type: "text",
