@@ -139,13 +139,13 @@ export const blogPostsES: BlogPost[] = [
       {
         type: "unorderedList",
         title: "¿Cómo crear un vídeo institucional efectivo?",
-        content: `<ul>
-          <li>Definí claramente el propósito y público objetivo.</li>
-          <li>Usá storytelling corporativo centrado en valores, historia y propósito.</li>
-          <li>Mantené la duración óptima (1–2 minutos) para máxima retención.</li>
-          <li>Prestá atención a calidad visual, sonido y animaciones.</li>
-          <li>Cada escena debe reforzar la identidad de la empresa.</li>
-        </ul>`,
+        items: [
+          "Definí claramente el propósito y público objetivo.",
+          "Usá storytelling corporativo centrado en valores, historia y propósito.",
+          "Mantené la duración óptima (1–2 minutos) para máxima retención.",
+          "Prestá atención a calidad visual, sonido y animaciones.",
+          "Cada escena debe reforzar la identidad de la empresa.",
+        ],
       },
       {
         type: "text",
@@ -226,13 +226,13 @@ export const blogPostsEN: BlogPost[] = [
       {
         type: "unorderedList",
         title: "How to create an effective explainer video?",
-        content: `<ul>
-          <li>Define the focus: what problem does your product solve.</li>
-          <li>Visual storytelling: simple, human stories generate empathy.</li>
-          <li>Show real functionality: demos and animations facilitate understanding.</li>
-          <li>Duration optimization: 60–90 seconds for maximum attention.</li>
-          <li>Pay attention to technical details: sound, rhythm, and graphic design reinforce perceived quality.</li>
-        </ul>`,
+        items: [
+          "Define the focus: what problem does your product solve.",
+          "Visual storytelling: simple, human stories generate empathy.",
+          "Show real functionality: demos and animations facilitate understanding.",
+          "Duration optimization: 60–90 seconds for maximum attention.",
+          "Pay attention to technical details: sound, rhythm, and graphic design reinforce perceived quality.",
+        ],
       },
       {
         type: "text",
@@ -314,13 +314,13 @@ export const blogPostsEN: BlogPost[] = [
       {
         type: "unorderedList",
         title: "How to create an effective institutional video?",
-        content: `<ul>
-          <li>Clearly define the purpose and target audience.</li>
-          <li>Use corporate storytelling focused on values, history, and purpose.</li>
-          <li>Maintain optimal duration (1–2 minutes) for maximum retention.</li>
-          <li>Pay attention to visual quality, sound, and animations.</li>
-          <li>Every scene should reinforce the company's identity.</li>
-        </ul>`,
+        items: [
+          "Clearly define the purpose and target audience.",
+          "Use corporate storytelling focused on values, history, and purpose.",
+          "Maintain optimal duration (1–2 minutes) for maximum retention.",
+          "Pay attention to visual quality, sound, and animations.",
+          "Every scene should reinforce the company's identity.",
+        ],
       },
       {
         type: "text",
