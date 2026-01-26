@@ -62,14 +62,14 @@ const BASE_ROUTES = [
   //   ],
   // },
   {
-    path: "/us",
-    text: "who-we-are",
-    color: "light-purple",
-  },
-  {
     path: "/projects",
     text: "projects",
     color: "nude",
+  },
+  {
+    path: "/us",
+    text: "who-we-are",
+    color: "light-purple",
   },
   {
     path: "/contact-us",
