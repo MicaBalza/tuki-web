@@ -108,19 +108,35 @@ function renderSection(section: BlogSection, index: number) {
     case "faq":
       return (
         <div key={index} className={styles.faqSection}>
-          {section.title && (
-            <h2 className={styles.sectionTitle}>{section.title}</h2>
-          )}
-          {section.questions && (
-            <div className={styles.faqList}>
-              {section.questions.map((q, idx) => (
-                <div key={idx} className={styles.faqItem}>
-                  <h3 className={styles.faqQuestion}>{q.question}</h3>
-                  <p className={styles.faqAnswer}>{q.answer}</p>
-                </div>
-              ))}
+          <div className={styles.faqSectionRow}>
+            <div className={styles.faqColLeft}>
+              <img
+                src="/static/images/pharmaceutical-services/question.png"
+                alt="Question mark"
+                className={styles.questionImage}
+              />
+              <div className={styles.faqColTitle}>
+                Preguntas Frecuentes
+                <br />
+                <span className={styles.faqColSubtitle}>(FAQ)</span>
+              </div>
             </div>
-          )}
+            <div className={styles.faqColRight}>
+              {section.title && (
+                <h2 className={styles.faqSectionTitle}>{section.title}</h2>
+              )}
+              {section.questions && (
+                <div className={styles.faqList}>
+                  {section.questions.map((q, idx) => (
+                    <div key={idx} className={styles.faqItem}>
+                      <h3 className={styles.faqQuestion}>{q.question}</h3>
+                      <p className={styles.faqAnswer}>{q.answer}</p>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          </div>
         </div>
       );
 
