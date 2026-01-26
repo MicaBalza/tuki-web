@@ -167,7 +167,11 @@ const Navbar = () => {
                           </div>
                         )}
                         {route.dropdownRight && (
-                          <div className={styles.dropdownColumn}>
+                          <div
+                            className={`${styles.dropdownColumn} ${
+                              bgIsDark ? styles.whiteLine : ""
+                            }`}
+                          >
                             {route.dropdownRightTitle && (
                               <Link
                                 href={route.dropdownRightTitle.path}

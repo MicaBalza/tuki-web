@@ -64,23 +64,34 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 36px;
+  gap: 24px;
   max-width: min(300px, 50vw);
   color: var(--white);
 }
 
 .title {
   font-weight: 700;
+  text-align: center;
 }
 
 .description {
-  font-size: clamp(0.625rem, 1.5vw, 1rem);
+  font-size: clamp(0.625rem, 1.5vw, 0.875rem);
   text-align: center;
 }
 
 @media (min-width: 2400px) {
   .wrapper {
     --padding: 5vw;
+  }
+}
+
+@media (min-width: 1920px) {
+  .wrapper {
+    --padding: 3vw;
+  }
+  .imgContainer {
+    width: 300px;
+    height: 300px;
   }
 }
 

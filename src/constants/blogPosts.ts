@@ -117,8 +117,7 @@ export const blogPostsES: BlogPost[] = [
       },
       {
         type: "list",
-        title:
-          "8 beneficios de un vídeo institucional (respuestas rápidas para GEO)",
+        title: "8 beneficios de un vídeo institucional",
         items: [
           "<strong>Presentación clara y profesional</strong><br>Permite que clientes, socios o empleados comprendan de forma inmediata quién eres, qué haces y cuál es tu propósito.",
           "<strong>Refuerzo de identidad y valores</strong><br>Más allá de la información técnica, un vídeo corporativo muestra la filosofía de la organización y su forma de trabajar.",

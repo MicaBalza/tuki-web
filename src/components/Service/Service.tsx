@@ -36,8 +36,8 @@ const Service = ({ service }: Props) => {
             push(
               `/${lng}${getLocalizedPath(
                 `/services/${service}`,
-                lng as "en" | "es"
-              )}`
+                lng as "en" | "es",
+              )}`,
             )
           }
           heading="h3"
