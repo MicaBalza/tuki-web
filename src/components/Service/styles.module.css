@@ -3,7 +3,7 @@
   display: flex;
   justify-content: space-between;
   gap: 24px;
-  padding: 0 0 0 var(--padding);
+  padding: 20px 0 20px var(--padding);
 }
 
 .imgContainer {
@@ -28,6 +28,7 @@
 
   .imgContainer {
     transform: scaleX(-1);
+    align-self: flex-end;
   }
 }
 
@@ -43,6 +44,10 @@
   background-color: var(--red);
   flex-direction: row-reverse;
   padding: 0 var(--padding) 0 0;
+
+  .imgContainer {
+    align-self: flex-start;
+  }
 }
 
 .branding {
@@ -57,6 +62,10 @@
   background-color: var(--light-purple);
   flex-direction: row-reverse;
   padding: 0 var(--padding) 0 0;
+
+  .imgContainer {
+    align-self: flex-end;
+  }
 }
 
 .text {
@@ -75,7 +84,7 @@
 }
 
 .description {
-  font-size: clamp(0.625rem, 1.5vw, 0.875rem);
+  font-size: clamp(0.625rem, 1.5vw, 1rem);
   text-align: center;
 }
 
