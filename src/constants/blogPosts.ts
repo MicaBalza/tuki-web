@@ -69,19 +69,19 @@ export const blogPostsES: BlogPost[] = [
         questions: [
           {
             question:
-              "¿Cuál es la duración ideal de un vídeo explicativo para un producto?",
+              "> ¿Cuál es la duración ideal de un vídeo explicativo para un producto?",
             answer:
               "La duración ideal de un vídeo explicativo está entre 60 y 90 segundos. En ese tiempo es posible explicar el problema, mostrar la solución y destacar los beneficios principales del producto sin saturar al espectador ni perder claridad.",
           },
           {
             question:
-              "¿Qué elementos hacen que un vídeo sea efectivo en un lanzamiento de producto?",
+              "> ¿Qué elementos hacen que un vídeo sea efectivo en un lanzamiento de producto?",
             answer:
               "Un vídeo efectivo de lanzamiento combina un mensaje claro, una narrativa sencilla, un diseño visual coherente con la marca y un ritmo ágil. También es clave centrarse en el valor que aporta el producto y mostrar su funcionamiento de forma visual, especialmente cuando se trata de información técnica o compleja.",
           },
           {
             question:
-              "¿Cómo ayuda un vídeo explicativo a mejorar la comprensión y adopción del producto?",
+              "> ¿Cómo ayuda un vídeo explicativo a mejorar la comprensión y adopción del producto?",
             answer:
               "Un vídeo explicativo traduce conceptos técnicos en imágenes, animaciones y ejemplos fáciles de entender. Esto reduce barreras de comprensión, acelera la toma de decisiones y facilita que el público confíe en el producto, aumentando las probabilidades de adopción y uso.",
           },
@@ -157,19 +157,19 @@ export const blogPostsES: BlogPost[] = [
         title: "Preguntas frecuentes sobre vídeos institucionales",
         questions: [
           {
-            question: "¿Por qué son importantes los vídeos institucionales?",
+            question: "> ¿Por qué son importantes los vídeos institucionales?",
             answer:
               "Los vídeos institucionales son importantes porque permiten comunicar quién es una organización, qué hace y cuáles son sus valores de forma clara y memorable. Ayudan a generar una primera impresión profesional, refuerzan la identidad de marca y facilitan que clientes, socios y empleados confíen en la empresa desde el primer contacto.",
           },
           {
             question:
-              "¿Cómo ayudan los vídeos institucionales a generar confianza en clientes y empleados?",
+              "> ¿Cómo ayudan los vídeos institucionales a generar confianza en clientes y empleados?",
             answer:
               "Un vídeo institucional muestra personas reales, procesos, espacios y mensajes coherentes, lo que transmite transparencia y credibilidad. Para los clientes, refuerza la percepción de profesionalismo; para los empleados, ayuda a comprender la misión, visión y cultura de la organización, creando mayor alineación interna.",
           },
           {
             question:
-              "¿Qué duración y formato son ideales para un vídeo corporativo?",
+              "> ¿Qué duración y formato son ideales para un vídeo corporativo?",
             answer:
               "La duración ideal de un vídeo institucional suele estar entre 1 y 2 minutos. Este tiempo permite comunicar el mensaje principal sin perder la atención del espectador. El formato debe adaptarse al canal de uso, por ejemplo versión horizontal para web y presentaciones, y versiones más cortas o adaptadas para redes sociales y eventos.",
           },
@@ -245,19 +245,19 @@ export const blogPostsEN: BlogPost[] = [
         questions: [
           {
             question:
-              "What is the ideal duration of an explainer video for a product?",
+              "> What is the ideal duration of an explainer video for a product?",
             answer:
               "The ideal duration of an explainer video is between 60 and 90 seconds. In that time, it's possible to explain the problem, show the solution, and highlight the main benefits of the product without overwhelming the viewer or losing clarity.",
           },
           {
             question:
-              "What elements make a video effective in a product launch?",
+              "> What elements make a video effective in a product launch?",
             answer:
               "An effective launch video combines a clear message, simple narrative, visual design consistent with the brand, and an agile rhythm. It's also key to focus on the value the product provides and show its functionality visually, especially when dealing with technical or complex information.",
           },
           {
             question:
-              "How does an explainer video help improve product understanding and adoption?",
+              "> How does an explainer video help improve product understanding and adoption?",
             answer:
               "An explainer video translates technical concepts into images, animations, and easy-to-understand examples. This reduces comprehension barriers, accelerates decision-making, and makes it easier for the audience to trust the product, increasing the likelihood of adoption and use.",
           },
@@ -332,19 +332,19 @@ export const blogPostsEN: BlogPost[] = [
         title: "FAQs about institutional videos",
         questions: [
           {
-            question: "Why are institutional videos important?",
+            question: "> Why are institutional videos important?",
             answer:
               "Institutional videos are important because they allow you to communicate who an organization is, what it does, and what its values are in a clear and memorable way. They help generate a professional first impression, reinforce brand identity, and make it easier for clients, partners, and employees to trust the company from the first contact.",
           },
           {
             question:
-              "How do institutional videos help generate trust in clients and employees?",
+              "> How do institutional videos help generate trust in clients and employees?",
             answer:
               "An institutional video shows real people, processes, spaces, and consistent messages, which conveys transparency and credibility. For clients, it reinforces the perception of professionalism; for employees, it helps understand the organization's mission, vision, and culture, creating greater internal alignment.",
           },
           {
             question:
-              "What duration and format are ideal for a corporate video?",
+              "> What duration and format are ideal for a corporate video?",
             answer:
               "The ideal duration of an institutional video is usually between 1 and 2 minutes. This time allows you to communicate the main message without losing the viewer's attention. The format should adapt to the channel of use, for example horizontal version for web and presentations, and shorter or adapted versions for social media and events.",
           },
