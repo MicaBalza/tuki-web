@@ -2,7 +2,9 @@
 import Button from "@/components/Button";
 import PageContainer from "@/components/PageContainer";
 import { getBlogPostBySlug } from "@/constants/blogPosts";
+import { useTranslation } from "@/i18n/client";
 import { BlogSection } from "@/types/blog";
+import { TFunction } from "i18next";
 import Lottie from "lottie-react";
 import Image from "next/image";
 import { notFound } from "next/navigation";
@@ -15,7 +17,11 @@ type tParams = {
   slug: string;
 };
 
-function renderSection(section: BlogSection, index: number) {
+function renderSection(
+  section: BlogSection,
+  index: number,
+  t: TFunction<"blog-post", undefined>,
+) {
   switch (section.type) {
     case "text":
       return (
@@ -119,7 +125,7 @@ function renderSection(section: BlogSection, index: number) {
                 className={styles.questionImage}
               />
               <div className={styles.faqColTitle}>
-                Preguntas Frecuentes
+                {t("faqTitle")}
                 <br />
                 <span className={styles.faqColSubtitle}>(FAQ)</span>
               </div>
@@ -162,6 +168,7 @@ function renderSection(section: BlogSection, index: number) {
 export default function BlogPostPage(props: { params: Promise<tParams> }) {
   const params = use(props.params);
   const post = getBlogPostBySlug(params.slug, params.lng as "en" | "es");
+  const { t } = useTranslation(params.lng, "blog-post");
 
   if (!post) {
     notFound();
@@ -232,7 +239,7 @@ export default function BlogPostPage(props: { params: Promise<tParams> }) {
           {post.sections && post.sections.length > 0 ? (
             <div className={styles.sections}>
               {post.sections.map((section, index) =>
-                renderSection(section, index),
+                renderSection(section, index, t),
               )}
             </div>
           ) : (
@@ -246,13 +253,8 @@ export default function BlogPostPage(props: { params: Promise<tParams> }) {
         {/* Last row: two columns */}
         <div className={styles.lastRowSection}>
           <div className={styles.lastRowLeft}>
-            <h2 className={styles.lastRowTitle}>
-              {/* TODO: t('blog.projectsTitle') */}Explora nuestros proyectos
-            </h2>
-            <p className={styles.lastRowSubtitle}>
-              {/* TODO: t('blog.projectsSubtitle') */}Ver ejemplos de nuestros
-              vídeos institucionales
-            </p>
+            <h2 className={styles.lastRowTitle}>{t("projectsTitle")}</h2>
+            <p className={styles.lastRowSubtitle}>{t("projectsSubtitle")}</p>
             <div className={styles.videoPlayer}>
               <div className={styles.videoContainer}>
                 <iframe
@@ -268,12 +270,15 @@ export default function BlogPostPage(props: { params: Promise<tParams> }) {
             <div className={styles.imageContainer}>
               <Lottie animationData={hamburguerAnimation} />
             </div>
-            <Button className={styles.lastRowButton} text="Escribenos" />
-            <p className={styles.lastRowText}>
-              Agenda una consulta con nuestro equipo y descubre cómo podemos
-              contar la historia de tu organización con claridad, emoción y
-              propósito.
-            </p>
+            <Button
+              className={styles.lastRowButton}
+              text={t("contactButton")}
+              onClick={() => {
+                window.location.href =
+                  params.lng === "es" ? "/contacto" : "/contact-us";
+              }}
+            />
+            <p className={styles.lastRowText}>{t("contactText")}</p>
           </div>
         </div>
       </article>
