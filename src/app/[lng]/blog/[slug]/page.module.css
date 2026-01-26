@@ -127,7 +127,6 @@
 }
 
 .videoContent p {
-  margin: 0 0 16px;
   color: var(--black);
 }
 
@@ -324,7 +323,6 @@
 /* #endregion TEXT SECTION */
 
 /* #region FAQ SECTION */
-
 .faqSection {
   width: 100%;
   background: var(--nude);
@@ -518,11 +516,15 @@
 /* Responsive */
 @media (max-width: 1024px) {
   .blogPostPage {
-    padding-top: 120px;
+    padding-top: 60px;
   }
 
-  .article {
-    padding: 0 32px;
+  .hero {
+    max-width: 90vw;
+  }
+
+  .sections > *:not(.tipSection):not(.faqSection) {
+    max-width: 90vw;
   }
 
   .hero {
@@ -541,29 +543,16 @@
     font-size: 16px;
   }
 
-  .content h1 {
-    font-size: 36px;
+  .videoSection {
+    gap: 60px;
   }
 
-  .content h2 {
-    font-size: 28px;
-  }
-
-  .content h3 {
-    font-size: 22px;
+  .sectionTitle {
+    font-size: 32px;
   }
 }
 
 @media (max-width: 768px) {
-  .blogPostPage {
-    padding-top: 100px;
-    padding-bottom: 60px;
-  }
-
-  .article {
-    padding: 0 20px;
-  }
-
   .hero {
     grid-template-columns: 1fr;
     gap: 40px;
@@ -582,58 +571,6 @@
     font-size: 16px;
   }
 
-  .content {
-    font-size: 16px;
-  }
-
-  .content h1 {
-    font-size: 28px;
-    margin: 40px 0 20px;
-  }
-
-  .content h2 {
-    font-size: 24px;
-    margin: 35px 0 18px;
-  }
-
-  .content h3 {
-    font-size: 20px;
-    margin: 30px 0 15px;
-  }
-
-  .content ol li {
-    padding-left: 45px;
-    margin-bottom: 25px;
-  }
-
-  .content ol li::before {
-    width: 32px;
-    height: 32px;
-    font-size: 16px;
-  }
-
-  .content blockquote {
-    padding: 25px;
-    margin: 35px 0;
-  }
-
-  .content blockquote strong {
-    font-size: 18px;
-  }
-}
-
-/* Responsive styles for sections */
-@media (max-width: 1024px) {
-  .videoSection {
-    gap: 60px;
-  }
-
-  .sectionTitle {
-    font-size: 32px;
-  }
-}
-
-@media (max-width: 768px) {
   .sections {
     padding: 0;
   }
@@ -641,7 +578,6 @@
   .videoSection {
     grid-template-columns: 1fr;
     gap: 40px;
-    padding: 40px 0;
     margin-bottom: 60px;
   }
 
@@ -675,7 +611,6 @@
   }
 
   .numberedList li {
-    padding-left: 50px;
     margin-bottom: 28px;
     font-size: 15px;
   }
@@ -703,6 +638,8 @@
   }
 
   .tipContent {
+    flex-direction: column;
+    gap: 20px;
     padding: 0 20px;
   }
 
@@ -713,7 +650,9 @@
   }
 
   .tipDivider {
-    display: none;
+    width: 100%;
+    background-color: var(--light-green);
+    height: 2px;
   }
 
   .tipTitle {
