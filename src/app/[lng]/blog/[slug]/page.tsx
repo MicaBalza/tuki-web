@@ -1,10 +1,13 @@
 "use client";
+import Button from "@/components/Button";
 import PageContainer from "@/components/PageContainer";
 import { getBlogPostBySlug } from "@/constants/blogPosts";
 import { BlogSection } from "@/types/blog";
+import Lottie from "lottie-react";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { use } from "react";
+import hamburguerAnimation from "../../../../../public/static/lottie/hamburguer.json";
 import styles from "./page.module.css";
 
 type tParams = {
@@ -238,6 +241,40 @@ export default function BlogPostPage(props: { params: Promise<tParams> }) {
               dangerouslySetInnerHTML={{ __html: post.content || "" }}
             />
           )}
+        </div>
+
+        {/* Last row: two columns */}
+        <div className={styles.lastRowSection}>
+          <div className={styles.lastRowLeft}>
+            <h2 className={styles.lastRowTitle}>
+              {/* TODO: t('blog.projectsTitle') */}Explora nuestros proyectos
+            </h2>
+            <p className={styles.lastRowSubtitle}>
+              {/* TODO: t('blog.projectsSubtitle') */}Ver ejemplos de nuestros
+              vídeos institucionales
+            </p>
+            <div className={styles.videoPlayer}>
+              <div className={styles.videoContainer}>
+                <iframe
+                  src="https://www.youtube.com/embed/EUH6stzUVv8?si=SVeuM00QiJQCKoRf"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className={styles.iframe}
+                />
+              </div>
+            </div>
+          </div>
+          <div className={styles.lastRowRight}>
+            <div className={styles.imageContainer}>
+              <Lottie animationData={hamburguerAnimation} />
+            </div>
+            <Button className={styles.lastRowButton} text="Escribenos" />
+            <p className={styles.lastRowText}>
+              Agenda una consulta con nuestro equipo y descubre cómo podemos
+              contar la historia de tu organización con claridad, emoción y
+              propósito.
+            </p>
+          </div>
         </div>
       </article>
     </PageContainer>
