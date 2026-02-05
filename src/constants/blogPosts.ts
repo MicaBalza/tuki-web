@@ -112,7 +112,7 @@ export const blogPostsES: BlogPost[] = [
         subtitleContent:
           "<p>En este proyecto mostramos cómo un vídeo institucional puede reflejar la identidad y los valores de una compañía, transmitiendo confianza y propósito.</p>",
         videoUrl:
-          "https://www.youtube.com/embed/TJ9wgTCbOS4?si=OB6ltq-ohAvY7mHd",
+          "https://youtu.be/gnDsqOadtmI",
         videoCaption: "Vídeo institucional – Tuki Studio",
       },
       {
