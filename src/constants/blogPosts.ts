@@ -287,7 +287,7 @@ export const blogPostsEN: BlogPost[] = [
         subtitleContent:
           "<p>In this project, we show how an institutional video can reflect a company's identity and values, conveying trust and purpose.</p>",
         videoUrl:
-          "https://www.youtube.com/embed/TJ9wgTCbOS4?si=OB6ltq-ohAvY7mHd",
+          "https://youtu.be/gnDsqOadtmI",
         videoCaption: "Institutional video – Tuki Studio",
       },
       {
