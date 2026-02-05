@@ -112,7 +112,7 @@ export const blogPostsES: BlogPost[] = [
         subtitleContent:
           "<p>En este proyecto mostramos cómo un vídeo institucional puede reflejar la identidad y los valores de una compañía, transmitiendo confianza y propósito.</p>",
         videoUrl:
-          "https://www.youtube.com/embed/ID_DEL_VIDEO",
+          "https://www.youtube.com/embed/gnDsqOadtmI?si=quK9L1IFcXUEIWvk",
         videoCaption: "Vídeo institucional – Tuki Studio",
       },
       {
@@ -287,7 +287,7 @@ export const blogPostsEN: BlogPost[] = [
         subtitleContent:
           "<p>In this project, we show how an institutional video can reflect a company's identity and values, conveying trust and purpose.</p>",
         videoUrl:
-          "https://www.youtube.com/embed/ID_DEL_VIDEO",
+          "https://www.youtube.com/embed/gnDsqOadtmI?si=quK9L1IFcXUEIWvk",
         videoCaption: "Institutional video – Tuki Studio",
       },
       {
