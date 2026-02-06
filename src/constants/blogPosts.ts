@@ -372,3 +372,4 @@ export function getFeaturedPost(language: "en" | "es"): BlogPost | undefined {
   const posts = getBlogPosts(language);
   return posts.find((post) => post.featured);
 }
+
