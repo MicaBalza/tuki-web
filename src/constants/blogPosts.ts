@@ -10,8 +10,8 @@ export const blogPostsES: BlogPost[] = [
     excerpt:
       "Presentar una innovación o un nuevo producto al mercado exige más que una buena idea.\n\nHay que lograr que el público entienda su propósito, funcionamiento y beneficios en cuestión de segundos.",
     date: "2025-12-05",
-    thumbnail: "/static/images/blog/0.jpg",
-    headerImage: "/static/images/blog/0.jpg",
+    thumbnail: "/static/images/blog/1.jpg",
+    headerImage: "/static/images/blog/1.jpg",
     category: "Vídeos Explicativos",
     featured: true,
     sections: [
@@ -26,7 +26,7 @@ export const blogPostsES: BlogPost[] = [
         subtitleContent:
           "<p>En este proyecto mostramos cómo una narrativa audiovisual bien construida puede hacer que un producto tecnológico se entienda, se valore y genere confianza.</p>",
         videoUrl:
-          "https://www.youtube.com/embed/TJ9wgTCbOS4?si=OB6ltq-ohAvY7mHd",
+          "https://www.youtube.com/embed/gnDsqOadtmI?si=quK9L1IFcXUEIWvk",
         videoCaption: "Vídeo explicativo – Tuki Studio",
       },
       {
@@ -97,8 +97,8 @@ export const blogPostsES: BlogPost[] = [
     excerpt:
       "Los vídeos institucionales ayudan a que tus clientes, empleados y socios comprendan quién eres y cuáles son tus valores. Permiten comunicar la identidad de la organización de manera clara, confiable y atractiva.",
     date: "2025-12-01",
-    thumbnail: "/static/images/blog/1.jpg",
-    headerImage: "/static/images/blog/1.jpg",
+    thumbnail: "/static/images/blog/0.jpg",
+    headerImage: "/static/images/blog/0.jpg",
     category: "Vídeos Institucionales",
     featured: false,
     sections: [
@@ -112,7 +112,7 @@ export const blogPostsES: BlogPost[] = [
         subtitleContent:
           "<p>En este proyecto mostramos cómo un vídeo institucional puede reflejar la identidad y los valores de una compañía, transmitiendo confianza y propósito.</p>",
         videoUrl:
-          "https://www.youtube.com/embed/gnDsqOadtmI?si=quK9L1IFcXUEIWvk",
+       "https://www.youtube.com/embed/TJ9wgTCbOS4?si=OB6ltq-ohAvY7mHd",
         videoCaption: "Vídeo institucional – Tuki Studio",
       },
       {
@@ -187,8 +187,8 @@ export const blogPostsEN: BlogPost[] = [
     excerpt:
       "Presenting an innovation or new product to the market requires more than just a good idea.\n\nYou need to get your audience to understand its purpose, how it works, and its benefits in a matter of seconds.",
     date: "2025-12-05",
-    thumbnail: "/static/images/blog/0.jpg",
-    headerImage: "/static/images/blog/0.jpg",
+    thumbnail: "/static/images/blog/1.jpg",
+    headerImage: "/static/images/blog/1.jpg",
     category: "Explainer Videos",
     featured: true,
     sections: [
@@ -202,7 +202,7 @@ export const blogPostsEN: BlogPost[] = [
         subtitleContent:
           "<p>In this project, we show how a well-constructed audiovisual narrative can make a technological product understandable, valuable, and trustworthy.</p>",
         videoUrl:
-          "https://www.youtube.com/embed/TJ9wgTCbOS4?si=OB6ltq-ohAvY7mHd",
+        "https://www.youtube.com/embed/gnDsqOadtmI?si=quK9L1IFcXUEIWvk",
         videoCaption: "Explainer video – Tuki Studio",
       },
       {
@@ -272,8 +272,8 @@ export const blogPostsEN: BlogPost[] = [
     excerpt:
       "Institutional videos help your clients, employees, and partners understand who you are and what your values are. They allow you to communicate your organization's identity in a clear, reliable, and attractive way.",
     date: "2025-12-01",
-    thumbnail: "/static/images/blog/1.jpg",
-    headerImage: "/static/images/blog/1.jpg",
+    thumbnail: "/static/images/blog/0.jpg",
+    headerImage: "/static/images/blog/0.jpg",
     category: "Institutional Videos",
     featured: false,
     sections: [
@@ -287,7 +287,7 @@ export const blogPostsEN: BlogPost[] = [
         subtitleContent:
           "<p>In this project, we show how an institutional video can reflect a company's identity and values, conveying trust and purpose.</p>",
         videoUrl:
-          "https://www.youtube.com/embed/gnDsqOadtmI?si=quK9L1IFcXUEIWvk",
+             "https://www.youtube.com/embed/TJ9wgTCbOS4?si=OB6ltq-ohAvY7mHd",
         videoCaption: "Institutional video – Tuki Studio",
       },
       {
