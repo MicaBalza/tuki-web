@@ -46,7 +46,7 @@ export const projectImages: ProjectImage[] = [
     url: "project-5",
     titleKey: "project5",
     descriptionKey: "project5",
-    videoUrl: "https://www.youtube.com/embed/IgW_bnobZpQ?si=Pnn4Q3k5GzcSCz5u",
+    videoUrl: "https://www.youtube.com/embed/GhoINBVsiDg?si=nOWXodexcF-E72jv",
   },
   {
     src: "/static/images/projects/video-placeholders/video-podcast.jpg",
