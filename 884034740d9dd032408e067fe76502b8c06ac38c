@@ -1,0 +1,25 @@
+src/constants/blogPosts.ts
+  67a46b0e9514fe71 179-195,199-213,217-252,254-255,258-262,264-269,276-306,482-606,611-614
+src/app/[lng]/blog/[slug]/page.tsx
+  67a46b0e9514fe71 33,35-36
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.1.4",
+  "base_commit_sha": "884034740d9dd032408e067fe76502b8c06ac38c",
+  "prompts": {
+    "67a46b0e9514fe71": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "79e99449-6b04-4cf2-8daf-b3b05ef91403",
+        "model": "claude-opus-4-6"
+      },
+      "human_author": "Mica Balza <mica.balza@gmail.com>",
+      "messages": [],
+      "total_additions": 264,
+      "total_deletions": 2,
+      "accepted_lines": 244,
+      "overriden_lines": 9
+    }
+  }
+}
