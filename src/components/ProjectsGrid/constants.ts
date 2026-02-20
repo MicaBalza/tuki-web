@@ -48,12 +48,20 @@ export const projectImages: ProjectImage[] = [
     descriptionKey: "project5",
     videoUrl: "https://www.youtube.com/embed/GhoINBVsiDg?si=nOWXodexcF-E72jv",
   },
-  {
-    src: "/static/images/projects/video-placeholders/video-podcast.jpg",
+    {
+    src: "/static/images/projects/video-placeholders/LESS_TM.jpg",
     alt: "Project 6",
     url: "project-6",
     titleKey: "project6",
     descriptionKey: "project6",
+    videoUrl: "https://www.youtube.com/embed/bvRlEHGr4w0?si=S331D7eOJfMMoMbE",
+  },
+  {
+    src: "/static/images/projects/video-placeholders/video-podcast.jpg",
+    alt: "Project 7",
+    url: "project-7",
+    titleKey: "project7",
+    descriptionKey: "project7",
     videoUrl: "https://www.youtube.com/embed/LpTJtHcmwus?si=LfvnDUz4zM1BuJOg",
   },
 ];
