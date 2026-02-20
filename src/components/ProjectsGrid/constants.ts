@@ -56,12 +56,20 @@ export const projectImages: ProjectImage[] = [
     descriptionKey: "project6",
     videoUrl: "https://www.youtube.com/embed/bvRlEHGr4w0?si=S331D7eOJfMMoMbE",
   },
-  {
-    src: "/static/images/projects/video-placeholders/video-podcast.jpg",
+   {
+    src: "/static/images/pharmaceutical-services/video-placeholders/Fluid.jpg",
     alt: "Project 7",
     url: "project-7",
     titleKey: "project7",
     descriptionKey: "project7",
+    videoUrl: "https://www.youtube.com/embed/6j60_3nSc0M?si=cBVFj_Ve5C8Hp65K",
+  },
+  {
+    src: "/static/images/projects/video-placeholders/video-podcast.jpg",
+    alt: "Project 8",
+    url: "project-8",
+    titleKey: "project8",
+    descriptionKey: "project8",
     videoUrl: "https://www.youtube.com/embed/LpTJtHcmwus?si=LfvnDUz4zM1BuJOg",
   },
 ];
