@@ -30,7 +30,10 @@ function renderSection(
             <h2 className={styles.sectionTitle}>{section.title}</h2>
           )}
           {section.content && (
-            <p className={styles.textContent}>{section.content}</p>
+            <div
+              className={styles.textContent}
+              dangerouslySetInnerHTML={{ __html: section.content }}
+            />
           )}
         </div>
       );
@@ -224,7 +227,7 @@ export default function BlogPostPage(props: { params: Promise<tParams> }) {
             {post.headerImage && (
               <div className={styles.heroImage}>
                 <Image
-                  src={post.headerImage}
+                  src={`/static/images/blog/${post.id}.jpg`}
                   alt={post.title}
                   width={600}
                   height={400}

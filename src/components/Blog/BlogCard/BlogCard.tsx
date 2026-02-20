@@ -57,7 +57,7 @@ export default function BlogCard({ post, size = "small", lng }: BlogCardProps) {
     >
       <div className={styles.thumbnail}>
         <Image
-          src={post.thumbnail}
+          src={`/static/images/blog/${post.id}.jpg`}
           alt={post.title}
           fill
           style={{ objectFit: "cover" }}

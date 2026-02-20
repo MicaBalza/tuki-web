@@ -112,7 +112,7 @@ export const blogPostsES: BlogPost[] = [
         subtitleContent:
           "<p>En este proyecto mostramos cómo un vídeo institucional puede reflejar la identidad y los valores de una compañía, transmitiendo confianza y propósito.</p>",
         videoUrl:
-       "https://www.youtube.com/embed/TJ9wgTCbOS4?si=OB6ltq-ohAvY7mHd",
+          "https://www.youtube.com/embed/TJ9wgTCbOS4?si=OB6ltq-ohAvY7mHd",
         videoCaption: "Vídeo institucional – Tuki Studio",
       },
       {
@@ -176,6 +176,134 @@ export const blogPostsES: BlogPost[] = [
       },
     ],
   },
+  {
+    id: "3",
+    slug: "animacion-3d-cientifica-espana-salud-pharma-biotech",
+    title:
+      "Animación 3D científica en España para marketing y comunicación en salud, pharma y biotech",
+    excerpt:
+      "Si trabajas en marketing o comunicación dentro del sector salud, pharma o biotech en España o Europa, sabes lo difícil que puede ser transmitir información científica de forma clara, rápida y memorable.\n\nLa animación 3D científica se ha convertido en una de las herramientas más eficaces para simplificar conceptos complejos, captar la atención y mejorar la comprensión en audiencias exigentes como médicos, equipos comerciales o stakeholders.",
+    date: "2026-02-20",
+    thumbnail: "/static/images/blog/0.jpg",
+    headerImage: "/static/images/blog/0.jpg",
+    category: "Animación 3D Científica",
+    featured: false,
+    sections: [
+      {
+        type: "text",
+        title:
+          "Qué es la animación 3D científica y por qué es clave en el sector salud en España y Europa",
+        content: `La animación 3D científica permite representar visualmente procesos biológicos, mecanismos de acción, datos clínicos o funcionamiento de productos de forma clara, precisa y atractiva.
+        En sectores altamente técnicos como pharma, biotech y salud en España y Europa, esta herramienta se ha convertido en un recurso estratégico para marketing, comunicación y formación.
+        Cada vez más empresas farmacéuticas, biotecnológicas y del ámbito healthcare utilizan animación 3D para comunicar ciencia de manera eficiente en distintos mercados y audiencias.`,
+      },
+      {
+        type: "unorderedList",
+        title:
+          "Qué preguntas hacerte antes de incorporar animación 3D científica en tu empresa pharma o biotech",
+        items: [
+          "<strong>Definición de objetivos de comunicación científica</strong><br>¿Mi mensaje científico es demasiado complejo para explicarlo solo con texto o gráficos estáticos? ¿Necesito mejorar la comprensión de mecanismos de acción, datos clínicos o beneficios del producto?",
+          "<strong>Estrategia de marketing omnicanal</strong><br>¿Quiero un contenido adaptable a distintos canales (presentaciones, redes sociales, formación)? ¿Mi comunicación es consistente en todos los mercados o hay diferencias entre regiones?",
+          "<strong>Impacto en lanzamientos y eventos</strong><br>¿Busco aumentar el impacto en lanzamientos, congresos médicos o campañas digitales?",
+        ],
+      },
+      {
+        type: "text",
+        title:
+          "El desafío de la comunicación científica en salud, pharma y biotech",
+        content: `En el sector salud, pharma y biotech, tanto en España como en Europa, los equipos de marketing y comunicación se enfrentan a un reto constante:
+        Los profesionales sanitarios no tienen tiempo para consumir contenidos largos o complejos. La información técnica puede perder claridad si se presenta solo en texto o diapositivas densas. La falta de coherencia entre canales y mercados internacionales puede generar confusión.
+        La animación 3D científica permite transformar estos desafíos en oportunidades, facilitando la comprensión y mejorando la eficacia de la comunicación.`,
+      },
+      {
+        type: "list",
+        title:
+          "Beneficios de la animación 3D científica para marketing en España y mercados internacionales",
+        items: [
+          "<strong>Claridad inmediata en conceptos científicos complejos</strong><br>Explica procesos y mecanismos de forma visual, mejorando la comprensión y la retención.",
+          "<strong>Impacto en lanzamientos, congresos y eventos médicos</strong><br>Capta la atención en ferias, congresos en España y Europa, presentaciones y plataformas digitales.",
+          "<strong>Flexibilidad para estrategias globales y locales</strong><br>Permite adaptar el contenido a distintos idiomas, formatos y audiencias sin perder coherencia.",
+          "<strong>Mayor engagement y adopción de productos</strong><br>Genera confianza y facilita la toma de decisiones en profesionales sanitarios y equipos comerciales.",
+        ],
+      },
+      {
+        type: "unorderedList",
+        title:
+          "Cómo aplicar la animación 3D científica en tu estrategia de marketing pharma",
+        items: [
+          "<strong>Contenidos para diferentes canales y países</strong><br>Un mismo proyecto puede convertirse en: un video completo para presentaciones médicas o lanzamiento de producto, clips cortos para redes sociales y campañas digitales, material formativo para equipos comerciales en distintos países.",
+          "<strong>Estrategia omnicanal en salud y biotech</strong><br>Esto permite construir una comunicación consistente en España, Europa y mercados internacionales.",
+        ],
+      },
+      {
+        type: "list",
+        title:
+          "Cómo trabajan los estudios de animación 3D científica en España",
+        items: [
+          "<strong>Fase 1: Definición estratégica</strong><br>Objetivo, público y mensaje científico a comunicar.",
+          "<strong>Fase 2: Desarrollo creativo</strong><br>Guion, storyboard y estilo visual adaptado al sector pharma o biotech.",
+          "<strong>Fase 3: Producción 3D científica</strong><br>Modelado, animación y desarrollo visual con precisión técnica.",
+          "<strong>Fase 4: Revisión y validación</strong><br>Feedback continuo para asegurar rigor científico y coherencia.",
+          "<strong>Fase 5: Entrega y adaptación</strong><br>Adaptación del contenido a distintos formatos, idiomas y canales.",
+        ],
+      },
+      {
+        type: "tip",
+        title:
+          "Consejo Tuki: cómo usar animación 3D científica en tu estrategia",
+        content:
+          "Antes de desarrollar tu animación, define claramente el objetivo: lanzamiento de producto, formación interna, comunicación científica o campaña digital. Esto permitirá crear un contenido reutilizable en distintos canales y mercados.",
+      },
+      {
+        type: "video",
+        title: "Ejemplo de animación 3D científica para marketing en salud",
+        content:
+          "<p>En campañas de lanzamiento de productos o presentaciones médicas, una animación 3D puede mostrar mecanismos de acción, resultados o beneficios de forma visual e intuitiva, facilitando la comprensión inmediata y aumentando la recordación del mensaje.</p>",
+        videoUrl:
+          "https://www.youtube.com/embed/bvRlEHGr4w0?si=wP_I_GC3E6qDWZo1",
+        videoCaption: "Animación 3D científica – Tuki Studio",
+      },
+      {
+        type: "text",
+        title:
+          "Animación 3D científica para empresas en España: el enfoque de Tuki Studio",
+        content: `En Tuki Studio trabajamos con empresas de salud, pharma y biotech en España y Europa para transformar información compleja en contenido visual claro, atractivo y estratégico.
+        <strong>Estrategia de comunicación científica orientada a marketing:</strong> Adaptamos el contenido técnico a objetivos de marketing y ventas.
+        <strong>Diseño visual alineado con la identidad de marca:</strong> Creamos piezas coherentes con la imagen de cada empresa.
+        <strong>Contenidos escalables para mercados internacionales:</strong> Desarrollamos animaciones 3D adaptables a diferentes idiomas, formatos y audiencias.
+        <strong>Producción integral de proyectos:</strong> Nos encargamos de todo el proceso: guion, storyboard, animación y entrega final.
+        Así conseguimos que tu mensaje se entienda, se recuerde y genere impacto real.`,
+      },
+      {
+        type: "faq",
+        title: "Preguntas frecuentes sobre animación 3D científica en España",
+        questions: [
+          {
+            question:
+              "> ¿Cuál es la duración ideal de un vídeo de animación 3D científica?",
+            answer:
+              "Entre 60 y 120 segundos, ideal para mantener la atención en profesionales sanitarios.",
+          },
+          {
+            question:
+              "> ¿Cómo ayuda la animación 3D a campañas de marketing pharma o biotech?",
+            answer:
+              "Simplifica información compleja, mejora el engagement y asegura coherencia en todos los canales.",
+          },
+          {
+            question: "> ¿Se puede adaptar el contenido a diferentes países?",
+            answer:
+              "Sí, permite versiones en distintos idiomas manteniendo consistencia visual.",
+          },
+          {
+            question: "> ¿Es útil para formación de equipos comerciales?",
+            answer:
+              "Sí, facilita la comprensión del producto y mejora la comunicación con médicos y clientes.",
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 export const blogPostsEN: BlogPost[] = [
@@ -202,7 +330,7 @@ export const blogPostsEN: BlogPost[] = [
         subtitleContent:
           "<p>In this project, we show how a well-constructed audiovisual narrative can make a technological product understandable, valuable, and trustworthy.</p>",
         videoUrl:
-        "https://www.youtube.com/embed/gnDsqOadtmI?si=quK9L1IFcXUEIWvk",
+          "https://www.youtube.com/embed/gnDsqOadtmI?si=quK9L1IFcXUEIWvk",
         videoCaption: "Explainer video – Tuki Studio",
       },
       {
@@ -287,7 +415,7 @@ export const blogPostsEN: BlogPost[] = [
         subtitleContent:
           "<p>In this project, we show how an institutional video can reflect a company's identity and values, conveying trust and purpose.</p>",
         videoUrl:
-             "https://www.youtube.com/embed/TJ9wgTCbOS4?si=OB6ltq-ohAvY7mHd",
+          "https://www.youtube.com/embed/TJ9wgTCbOS4?si=OB6ltq-ohAvY7mHd",
         videoCaption: "Institutional video – Tuki Studio",
       },
       {
@@ -351,11 +479,139 @@ export const blogPostsEN: BlogPost[] = [
       },
     ],
   },
+  {
+    id: "3",
+    slug: "scientific-3d-animation-spain-health-pharma-biotech",
+    title:
+      "Scientific 3D Animation in Spain for Marketing and Communication in Health, Pharma and Biotech",
+    excerpt:
+      "If you work in marketing or communication within the health, pharma, or biotech sector in Spain or Europe, you know how difficult it can be to convey scientific information clearly, quickly, and memorably.\n\nScientific 3D animation has become one of the most effective tools for simplifying complex concepts, capturing attention, and improving comprehension among demanding audiences such as doctors, sales teams, or stakeholders.",
+    date: "2026-02-20",
+    thumbnail: "/static/images/blog/0.jpg",
+    headerImage: "/static/images/blog/0.jpg",
+    category: "Scientific 3D Animation",
+    featured: false,
+    sections: [
+      {
+        type: "text",
+        title:
+          "What is scientific 3D animation and why is it key in the health sector in Spain and Europe",
+        content: `<p>Scientific 3D animation allows you to visually represent biological processes, mechanisms of action, clinical data, or product functionality in a clear, precise, and attractive way.</p>
+        <p>In highly technical sectors such as pharma, biotech, and health in Spain and Europe, this tool has become a strategic resource for marketing, communication, and training.</p>
+        <p>More and more pharmaceutical, biotechnology, and healthcare companies are using 3D animation to communicate science efficiently across different markets and audiences.</p>`,
+      },
+      {
+        type: "unorderedList",
+        title:
+          "What questions to ask yourself before incorporating scientific 3D animation in your pharma or biotech company",
+        items: [
+          "<strong>Defining scientific communication objectives</strong><br>Is my scientific message too complex to explain with text or static graphics alone? Do I need to improve understanding of mechanisms of action, clinical data, or product benefits?",
+          "<strong>Omnichannel marketing strategy</strong><br>Do I want content adaptable to different channels (presentations, social media, training)? Is my communication consistent across all markets or are there differences between regions?",
+          "<strong>Impact on launches and events</strong><br>Am I looking to increase impact at launches, medical congresses, or digital campaigns?",
+        ],
+      },
+      {
+        type: "text",
+        title:
+          "The challenge of scientific communication in health, pharma and biotech",
+        content: `<p>In the health, pharma, and biotech sector, both in Spain and Europe, marketing and communication teams face a constant challenge:</p>
+        <p>Healthcare professionals don't have time to consume long or complex content. Technical information can lose clarity if presented only in text or dense slides. Lack of coherence between channels and international markets can create confusion.</p>
+        <p>Scientific 3D animation transforms these challenges into opportunities, facilitating comprehension and improving communication effectiveness.</p>`,
+      },
+      {
+        type: "list",
+        title:
+          "Benefits of scientific 3D animation for marketing in Spain and international markets",
+        items: [
+          "<strong>Immediate clarity on complex scientific concepts</strong><br>Explains processes and mechanisms visually, improving comprehension and retention.",
+          "<strong>Impact at launches, congresses and medical events</strong><br>Captures attention at trade shows, congresses in Spain and Europe, presentations, and digital platforms.",
+          "<strong>Flexibility for global and local strategies</strong><br>Allows adapting content to different languages, formats, and audiences without losing coherence.",
+          "<strong>Greater engagement and product adoption</strong><br>Builds trust and facilitates decision-making among healthcare professionals and sales teams.",
+        ],
+      },
+      {
+        type: "unorderedList",
+        title:
+          "How to apply scientific 3D animation in your pharma marketing strategy",
+        items: [
+          "<strong>Content for different channels and countries</strong><br>A single project can become: a full video for medical presentations or product launches, short clips for social media and digital campaigns, training material for sales teams in different countries.",
+          "<strong>Omnichannel strategy in health and biotech</strong><br>This allows building consistent communication across Spain, Europe, and international markets.",
+        ],
+      },
+      {
+        type: "list",
+        title: "How scientific 3D animation studios work in Spain",
+        items: [
+          "<strong>Phase 1: Strategic definition</strong><br>Objective, audience, and scientific message to communicate.",
+          "<strong>Phase 2: Creative development</strong><br>Script, storyboard, and visual style adapted to the pharma or biotech sector.",
+          "<strong>Phase 3: Scientific 3D production</strong><br>Modeling, animation, and visual development with technical precision.",
+          "<strong>Phase 4: Review and validation</strong><br>Continuous feedback to ensure scientific rigor and coherence.",
+          "<strong>Phase 5: Delivery and adaptation</strong><br>Adaptation of content to different formats, languages, and channels.",
+        ],
+      },
+      {
+        type: "tip",
+        title: "Tuki Tip: how to use scientific 3D animation in your strategy",
+        content:
+          "Before developing your animation, clearly define the objective: product launch, internal training, scientific communication, or digital campaign. This will allow you to create reusable content across different channels and markets.",
+      },
+      {
+        type: "video",
+        title: "Example of scientific 3D animation for health marketing",
+        content:
+          "<p>In product launch campaigns or medical presentations, a 3D animation can show mechanisms of action, results, or benefits in a visual and intuitive way, facilitating immediate comprehension and increasing message recall.</p>",
+        videoUrl: "https://www.youtube.com/embed/bvRlEHGr4w0",
+        videoCaption: "Scientific 3D animation – Tuki Studio",
+      },
+      {
+        type: "text",
+        title:
+          "Scientific 3D animation for companies in Spain: Tuki Studio's approach",
+        content: `<p>At Tuki Studio, we work with health, pharma, and biotech companies in Spain and Europe to transform complex information into clear, attractive, and strategic visual content.</p>
+        <p><strong>Scientific communication strategy oriented to marketing:</strong> We adapt technical content to marketing and sales objectives.</p>
+        <p><strong>Visual design aligned with brand identity:</strong> We create pieces consistent with each company's image.</p>
+        <p><strong>Scalable content for international markets:</strong> We develop 3D animations adaptable to different languages, formats, and audiences.</p>
+        <p><strong>Comprehensive project production:</strong> We handle the entire process: script, storyboard, animation, and final delivery.</p>
+        <p>This way, we ensure your message is understood, remembered, and generates real impact.</p>`,
+      },
+      {
+        type: "faq",
+        title: "FAQs about scientific 3D animation in Spain",
+        questions: [
+          {
+            question:
+              "> What is the ideal duration of a scientific 3D animation video?",
+            answer:
+              "Between 60 and 120 seconds, ideal for maintaining attention among healthcare professionals.",
+          },
+          {
+            question:
+              "> How does 3D animation help pharma or biotech marketing campaigns?",
+            answer:
+              "It simplifies complex information, improves engagement, and ensures coherence across all channels.",
+          },
+          {
+            question: "> Can the content be adapted to different countries?",
+            answer:
+              "Yes, it allows versions in different languages while maintaining visual consistency.",
+          },
+          {
+            question: "> Is it useful for training sales teams?",
+            answer:
+              "Yes, it facilitates product understanding and improves communication with doctors and clients.",
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 // Helper function to get blog posts by language
 export function getBlogPosts(language: "en" | "es"): BlogPost[] {
-  return language === "es" ? blogPostsES : blogPostsEN;
+  const posts = language === "es" ? blogPostsES : blogPostsEN;
+  return [...posts].sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
+  );
 }
 
 // Helper function to get a single blog post by slug and language
@@ -372,4 +628,3 @@ export function getFeaturedPost(language: "en" | "es"): BlogPost | undefined {
   const posts = getBlogPosts(language);
   return posts.find((post) => post.featured);
 }
-
