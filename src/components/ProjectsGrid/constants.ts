@@ -65,11 +65,19 @@ export const projectImages: ProjectImage[] = [
     videoUrl: "https://www.youtube.com/embed/6j60_3nSc0M?si=cBVFj_Ve5C8Hp65K",
   },
   {
-    src: "/static/images/projects/video-placeholders/video-podcast.jpg",
+    src: "/static/images/pharmaceutical-services/video-placeholders/Neuro_Swan.jpg",
     alt: "Project 8",
     url: "project-8",
     titleKey: "project8",
     descriptionKey: "project8",
+    videoUrl: "https://www.youtube.com/embed/xq0JJKl555c?si=rS1NZgP9AtiTYdJW",
+  },
+  {
+    src: "/static/images/projects/video-placeholders/video-podcast.jpg",
+    alt: "Project 9",
+    url: "project-9",
+    titleKey: "project9",
+    descriptionKey: "project9",
     videoUrl: "https://www.youtube.com/embed/LpTJtHcmwus?si=LfvnDUz4zM1BuJOg",
   },
 ];
