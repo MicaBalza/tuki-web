@@ -1,0 +1,77 @@
+import { getLocalizedPath } from "@/constants/localizedRoutes";
+import { useTranslation } from "@/i18n/client";
+import Image from "next/image";
+import Link from "next/link";
+import { useParams, useRouter } from "next/navigation";
+import Button from "../Button";
+import styles from "./styles.module.css";
+
+const PharmaceuticalServices = () => {
+  const { lng } = useParams();
+  const { push } = useRouter();
+  const { t } = useTranslation(lng as string, "health-services");
+
+  const listItems = [t("list.item1"), t("list.item2"), t("list.item3")];
+
+  return (
+    <section className={styles.container}>
+      <div className={styles.imageSection}>
+        <Image
+          src="/static/images/pharmaceutical-services.png"
+          alt="Health Services"
+          title="Health Services"
+          fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          className={styles.image}
+          unoptimized={true}
+        />
+      </div>
+      <div className={styles.textSection}>
+        <h2 className={`${styles.title} text-purple`}>{t("title")}</h2>
+        <h3 className={`text-purple p`}>{t("subtitle")}</h3>
+        <ul className={styles.list}>
+          {listItems.map((item, index) => {
+            const serviceSlug = [
+              "promotional-videos",
+              "product-launch",
+              "events-conferences",
+            ][index];
+
+            return (
+              <li key={index} className={`${styles.listItem} text-white`}>
+                <img
+                  src="/static/icons/chevron_right.svg"
+                  alt="Bullet"
+                  className={styles.bullet}
+                />
+                <Link
+                  href={`/${lng}${getLocalizedPath(
+                    `/health-services/${serviceSlug}`,
+                    lng as "en" | "es"
+                  )}`}
+                  className={styles.serviceLink}
+                >
+                  {item}
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
+        <Button
+          text={t("button")}
+          onClick={() =>
+            push(
+              `/${lng}${getLocalizedPath(
+                "/health-services",
+                lng as "en" | "es"
+              )}`
+            )
+          }
+          className={styles.button}
+        />
+      </div>
+    </section>
+  );
+};
+
+export default PharmaceuticalServices;

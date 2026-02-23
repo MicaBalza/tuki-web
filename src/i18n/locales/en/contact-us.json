@@ -1,0 +1,30 @@
+{
+  "title": "Contact us",
+  "page": {
+    "title": "Are you ready to start? We are too!",
+    "description": "Send us an email to hola@tukistudio.tv or fill out the following form:",
+    "mobile": "MOBILE"
+  },
+  "form": {
+    "name": "Name",
+    "mobile": "Mobile",
+    "source": "How did you find us?",
+    "acquaintances": "Acquaintances",
+    "message": "Message",
+    "button": "Send"
+  },
+  "schedule-button": "Schedule your appointment",
+  "modal": {
+    "loading": "Please wait...",
+    "success": "Email sent successfully!",
+    "error": "Error sending message",
+    "errorDescription": "Please try again or contact us directly.",
+    "back": "Back",
+    "retry": "Retry",
+    "cancel": "Cancel"
+  },
+  "errors": {
+    "required": "This field is required.",
+    "invalidEmail": "Invalid email"
+  }
+}

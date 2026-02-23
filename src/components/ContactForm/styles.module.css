@@ -1,0 +1,46 @@
+.input {
+  border: 1px solid var(--purple);
+  border-radius: 4px;
+  background-color: var(--pink);
+}
+
+.input::placeholder {
+  color: var(--purple);
+}
+
+.input:-webkit-autofill,
+.input:-webkit-autofill:hover,
+.input:-webkit-autofill:focus,
+.input:-webkit-autofill:active {
+  background-color: var(--pink);
+}
+
+.select {
+  border: 1px solid var(--purple);
+  border-radius: 4px;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236a68d4' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 16px;
+  background-color: var(--pink);
+}
+
+.modalContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 12px;
+}
+
+.gifContainer {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+.errorMessage {
+  font-size: 12px;
+  color: var(--red);
+}

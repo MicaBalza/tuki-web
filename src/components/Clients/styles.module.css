@@ -1,0 +1,60 @@
+.clients {
+  padding: 80px 0;
+  background-color: var(--yellow);
+  text-align: center;
+}
+
+.titleContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  top: 80px;
+  margin-bottom: 52px;
+}
+
+.shapeContainer {
+  position: relative;
+  width: 10vw;
+  max-width: 60px;
+  height: 7vw;
+}
+
+.title {
+  color: var(--purple);
+}
+
+.marqueeContainer {
+  --gap: 1rem;
+  position: relative;
+  /* keep a simple container for the LogoLoop component */
+  display: block;
+  overflow: hidden;
+  user-select: none;
+}
+
+.shape {
+  animation: spin 12s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .clients {
+    padding: 50px 0;
+  }
+
+  .titleContainer {
+    gap: 8px;
+  }
+}

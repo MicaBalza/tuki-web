@@ -1,0 +1,111 @@
+.hero {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 0 0 20vw;
+  background-color: var(--nude);
+  text-align: center;
+}
+
+.title {
+  position: absolute;
+  top: 10vw;
+  left: 10vw;
+  flex-shrink: 0;
+  font-size: clamp(1rem, 3vw, 2rem);
+}
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, 440px);
+  grid-template-areas:
+    "illustration illustration illustration illustration animation animation"
+    "editorial editorial motion-graphics motion-graphics motion-graphics motion-graphics "
+    "social-media social-media social-media branding branding branding";
+  gap: 24px;
+  width: min(90vw, 1380px);
+  margin: 0 auto;
+  padding: 48px 0;
+  background-color: var(--white);
+}
+
+.imageContainer {
+  position: relative;
+  display: flex;
+  width: 60%;
+  margin-left: auto;
+}
+
+.image {
+  height: 100%;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 300px;
+  }
+
+  .imageContainer {
+    width: 100%;
+  }
+
+  .image {
+    height: 100%;
+  }
+
+  .services {
+    grid-template-rows: repeat(3, 240px);
+  }
+}
+
+@media (max-width: 576px) {
+  .hero {
+    min-height: 140px;
+  }
+
+  .services {
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+    grid-auto-rows: 200px;
+    grid-template-areas:
+      "illustration"
+      "animation"
+      "editorial"
+      "motion-graphics"
+      "social-media"
+      "branding";
+  }
+
+  .title {
+    text-align: left;
+    max-width: 25vw;
+  }
+}
+
+@media (max-width: 400px) {
+  .title {
+    font-size: clamp(0.9rem, 2.5vw, 1.5rem);
+    line-height: 1.2;
+    max-width: 30vw;
+  }
+}
+
+.resources {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(640px, 1fr));
+}
+
+@media (max-width: 768px) {
+  .resources {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 2560px) {
+  .resources {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

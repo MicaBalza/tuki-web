@@ -1,0 +1,91 @@
+.titleContainer {
+  display: flex;
+  align-items: center;
+  gap: 2.2vw;
+}
+
+.shapeContainer {
+  position: relative;
+  width: 10vw;
+  max-width: 82px;
+  height: 7vw;
+}
+
+.title:hover {
+  color: var(--light-purple);
+}
+
+.container {
+  padding-block: 60px;
+  background-color: var(--white);
+}
+
+.videoContainer {
+  position: relative;
+  width: 90vw;
+  max-width: 1044px;
+  aspect-ratio: 1152/640;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.videoContainer:hover .videoFrame {
+  opacity: 0.3;
+}
+
+.black {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--black);
+  z-index: 1;
+}
+
+.videoFrame {
+  position: absolute;
+  top: 0;
+  object-fit: cover;
+  opacity: 0.4;
+  z-index: 1;
+}
+
+.videoPlay {
+  position: absolute;
+  top: calc(50% - 75px);
+  left: calc(50% - 70px);
+  z-index: 2;
+}
+
+.video {
+  width: 100%;
+  max-width: 1044px;
+  height: auto;
+}
+
+.shape {
+  animation: shake 2s linear infinite; /* Apply the animation */
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  75% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@media (max-width: 576px) {
+  .videoPlay {
+    transform: scale(0.5);
+  }
+}

@@ -1,0 +1,145 @@
+.wrapper {
+  --padding: 6vw;
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 20px 0 20px var(--padding);
+}
+
+.imgContainer {
+  position: relative;
+  width: 360px;
+  height: 360px;
+  flex-shrink: 0;
+}
+
+.illustration {
+  background-color: var(--green);
+}
+
+.animation {
+  background-color: var(--yellow);
+  flex-direction: row-reverse;
+  padding: 0 var(--padding) 0 0;
+
+  .text {
+    color: var(--purple);
+  }
+
+  .imgContainer {
+    transform: scaleX(-1);
+    align-self: flex-end;
+  }
+}
+
+.social-media {
+  background-color: var(--purple);
+}
+
+.social-media button:hover {
+  background-color: var(--magenta);
+}
+
+.editorial {
+  background-color: var(--red);
+  flex-direction: row-reverse;
+  padding: 0 var(--padding) 0 0;
+
+  .imgContainer {
+    align-self: flex-start;
+  }
+}
+
+.branding {
+  background-color: var(--pink);
+
+  .text {
+    color: var(--purple);
+  }
+}
+
+.motion-graphics {
+  background-color: var(--light-purple);
+  flex-direction: row-reverse;
+  padding: 0 var(--padding) 0 0;
+
+  .imgContainer {
+    align-self: flex-end;
+  }
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  max-width: min(300px, 50vw);
+  color: var(--white);
+}
+
+.title {
+  font-weight: 700;
+  text-align: center;
+}
+
+.description {
+  font-size: clamp(0.625rem, 1.5vw, 1rem);
+  text-align: center;
+}
+
+@media (min-width: 2400px) {
+  .wrapper {
+    --padding: 5vw;
+  }
+}
+
+@media (min-width: 1920px) {
+  .wrapper {
+    --padding: 3vw;
+  }
+  .imgContainer {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .wrapper {
+    --padding: 20vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    --padding: 10vw;
+  }
+
+  .text {
+    gap: 12px;
+  }
+}
+
+@media (max-width: 576px) {
+  .wrapper {
+    --padding: 5vw;
+    justify-content: center;
+    min-height: 220px;
+  }
+
+  .imgContainer {
+    width: 180px;
+    height: 180px;
+  }
+
+  .illustration,
+  .social-media,
+  .branding {
+    align-items: center;
+  }
+
+  .animation .imgContainer,
+  .motion-graphics .imgContainer {
+    align-self: flex-end;
+  }
+}

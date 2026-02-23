@@ -1,0 +1,44 @@
+.langLink {
+  display: flex;
+  align-items: flex-start;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+}
+
+.switch {
+  border: 1px solid var(--purple);
+}
+
+.switch > div:first-child {
+  background-color: transparent !important;
+}
+
+.switch > div > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.switch > div:nth-child(2) {
+  width: 40px !important;
+  border-radius: 100px !important;
+}
+
+.switch > div:nth-child(2) > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100% !important;
+}
+
+.text {
+  font-size: 12px;
+}
+
+.checked > div:nth-child(2) {
+  transform: translateX(39px) !important;
+}
+
+.invert {
+  border: 1px solid var(--white);
+}

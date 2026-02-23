@@ -1,0 +1,298 @@
+.identityCentered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.nameRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.linkedin {
+  display: flex;
+  align-items: center;
+  color: var(--purple);
+  transition: opacity 0.2s ease;
+}
+
+.linkedin:hover {
+  opacity: 0.8;
+}
+
+.reviews {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  padding: 68px 0;
+  background: var(--nude);
+}
+
+.header {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.carousel {
+  display: flex;
+  gap: clamp(24px, 5vw, 48px);
+  padding: 0 clamp(24px, 12vw, 160px) 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scroll-padding: 0 clamp(24px, 12vw, 160px);
+  -webkit-overflow-scrolling: touch;
+}
+
+.carousel::-webkit-scrollbar {
+  height: 6px;
+  display: none;
+}
+
+.cardInner {
+  display: flex;
+  gap: clamp(20px, 4vw, 36px);
+  align-items: center;
+  min-height: 260px;
+  /* padding reduced by ~50% for denser cards */
+  padding: clamp(14px, 3vw, 20px);
+  background: var(--white);
+  border-radius: 30px;
+  border: 1px solid rgba(106, 104, 212, 0.08);
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  /* narrower vertical column to leave more room for centered quote */
+  flex: 0 0 220px;
+  text-align: center;
+}
+
+.avatar {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background: #dedede;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.avatarImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.avatarPlaceholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--purple);
+  background: var(--nude);
+}
+
+.avatarImgScaled {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: scale(1.15);
+}
+
+.quoteWrap {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quoteText {
+  text-align: center;
+}
+
+.identity {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.name {
+  color: var(--purple);
+}
+
+.role {
+  color: var(--gray);
+  font-size: 0.95rem;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.quote {
+  margin: 0;
+  color: rgba(0, 0, 0, 0.78);
+  font-size: clamp(0.75rem, 1.5vw, 0.9rem);
+  line-height: 1.3;
+  text-align: left;
+}
+
+/* Carousel Wrapper */
+.carouselWrapper {
+  position: relative;
+  padding: 0 80px 60px;
+  max-width: 100%;
+}
+
+.swiper {
+  width: 100%;
+  padding-bottom: 50px !important;
+  display: block;
+}
+
+/* Swiper Navigation Buttons */
+.swiperButton {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  background: var(--white);
+  border: 2px solid var(--purple);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  color: var(--purple);
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.swiperButton:hover {
+  background: var(--light-purple);
+  color: var(--white);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.swiperButtonPrev {
+  left: calc(50vw - 512px - 120px);
+}
+
+.swiperButtonPrev img {
+  margin-right: 2px;
+}
+
+.swiperButtonNext {
+  right: calc(50vw - 512px - 120px);
+}
+
+.swiperButtonNext img {
+  margin-left: 2px;
+}
+
+/* Swiper Pagination Dots */
+.swiper :global(.swiper-pagination) {
+  position: absolute;
+  bottom: 10px !important;
+  left: 50% !important;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  z-index: 10;
+}
+
+.swiper :global(.swiper-pagination-bullet) {
+  width: 12px;
+  height: 12px;
+  background: var(--purple);
+  opacity: 0.3;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 0 !important;
+}
+
+.swiper :global(.swiper-pagination-bullet-active) {
+  opacity: 1;
+  width: 32px;
+  border-radius: 6px;
+}
+
+@media (max-width: 1300px) {
+  .swiperButtonPrev {
+    left: 5vw;
+  }
+
+  .swiperButtonNext {
+    right: 5vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .reviews {
+    padding: 40px 0;
+    gap: 0;
+  }
+
+  .header {
+    margin-bottom: 20px;
+  }
+
+  .cardInner {
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+    min-height: auto;
+    width: 75vw;
+  }
+
+  .left {
+    justify-content: center;
+    flex: 0 0 auto;
+  }
+
+  .avatar {
+    width: 72px;
+    height: 72px;
+  }
+
+  .quoteText {
+    padding-top: 6px;
+  }
+
+  /* Mobile carousel specific adjustments */
+  .carouselWrapper {
+    padding: 0 50px;
+  }
+
+  .swiperButton {
+    width: 25px; /* Reduced size by 30% */
+    height: 25px; /* Reduced size by 30% */
+  }
+
+  .swiperButtonPrev {
+    left: 3vw;
+  }
+
+  .swiperButtonNext {
+    right: 3vw;
+  }
+}

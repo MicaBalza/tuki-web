@@ -1,0 +1,30 @@
+{
+  "title": "Contáctanos",
+  "page": {
+    "title": "¿Estáis listxs para comenzar? ¡Nosotrxs también!",
+    "description": "Envíanos un correo a hola@tukistudio.tv ó completa el siguiente formulario:",
+    "mobile": "MÓVIL"
+  },
+  "form": {
+    "name": "Nombre",
+    "mobile": "Móvil",
+    "source": "¿Cómo nos has encontrado?",
+    "acquaintances": "Conocidxs",
+    "message": "Mensaje",
+    "button": "Enviar"
+  },
+  "schedule-button": "Agenda tu cita aquí",
+  "modal": {
+    "loading": "Espera un momento...",
+    "success": "¡Mail Enviado con éxito!",
+    "error": "Error al enviar el mensaje",
+    "errorDescription": "Por favor, intenta nuevamente o contáctanos directamente.",
+    "back": "Volver",
+    "retry": "Reintentar",
+    "cancel": "Cancelar"
+  },
+  "errors": {
+    "required": "Este campo es requerido.",
+    "invalidEmail": "Email inválido"
+  }
+}

@@ -1,0 +1,81 @@
+.header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 300px;
+}
+
+.titleContainer {
+  position: absolute;
+  display: grid;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding-top: 50px;
+  z-index: 1;
+}
+
+.titleContainer h1 {
+  width: min(80vw, 900px);
+  margin: 0 auto;
+}
+
+.imgContainer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100vw;
+  height: 100%;
+  overflow: hidden;
+}
+
+.imgContainer img {
+  object-fit: cover;
+  object-position: right top;
+}
+
+@media (min-width: 768px) {
+  .imgContainer img {
+    object-fit: contain;
+  }
+}
+
+@media (min-width: 1024px) {
+  .imgContainer img {
+    transform: scale(1.2) translate(-15vw);
+  }
+}
+
+@media (min-width: 1440px) {
+  .header {
+    min-height: 400px;
+  }
+}
+
+@media (max-width: 576px) {
+  .imgContainer {
+    transform: translateX(150px);
+  }
+
+  .imgContainer img {
+    transform: scale(0.75) translateY(50px);
+  }
+}
+
+@media (max-width: 450px) {
+  .imgContainer {
+    transform: translateX(60px);
+  }
+
+  .imgContainer img {
+    object-position: bottom;
+  }
+}
+
+/* Specific styling for social-media service type */
+@media (max-width: 450px) {
+  .header[class*="bg-light-purple"] .imgContainer {
+    transform: translateX(100px);
+  }
+}

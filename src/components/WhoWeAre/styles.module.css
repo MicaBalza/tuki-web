@@ -1,0 +1,47 @@
+.container {
+  padding: 108px 0;
+  background: url("../../../public/static/images/whoweare-background.png");
+  background-position: center;
+  background-size: cover;
+  background-color: var(--white);
+  gap: 96px;
+}
+
+.persons {
+  display: flex;
+  gap: 48px;
+  padding: 0 20px;
+}
+
+.mobileButton {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column-reverse;
+    gap: 36px;
+  }
+
+  .desktopButton {
+    display: none;
+  }
+
+  .mobileButton {
+    display: inline-block;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding: 32px 0;
+    background: url("../../../public/static/images/whoweare-background-vertical.png");
+    background-color: var(--white);
+    gap: 20px;
+  }
+
+  .persons {
+    flex-direction: column;
+    gap: 24px;
+  }
+}

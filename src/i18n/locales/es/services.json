@@ -1,0 +1,32 @@
+{
+  "illustration": {
+    "title": "Ilustración",
+    "description": "Creamos ilustraciones para potenciar tu marca, desde contenido para redes sociales y marketing hasta packaging, editorial y personajes. También diseñamos ilustraciones para espacios, aportando creatividad y personalidad a cada proyecto."
+  },
+  "animation": {
+    "title": "Animación",
+    "description": "Damos vida a tus ideas a través del movimiento. Creamos GIFs, animaciones 2D/3D y efectos visuales para potenciar tus proyectos. Desde contenido dinámico para redes sociales hasta animación de personajes, transformamos conceptos en experiencias visuales."
+  },
+  "social-media": {
+    "title": "Social Media",
+    "description": "Impulsamos tu marca con contenido visual y dinámico. Creamos ilustraciones, animaciones y todo tipo de videos para redes sociales, desde motion graphics hasta contenido audiovisual que conecte con tu audiencia y refuerce tu identidad."
+  },
+  "editorial": {
+    "title": "Editorial",
+    "description": "Damos vida a las palabras a través del diseño. Nos encargamos de la creación y maquetación de libros, revistas, folletos y diarios, transformamos el contenido para que deje de ser solo texto y también se exprese visualmente."
+  },
+  "branding": {
+    "title": "Branding",
+    "description": "Damos personalidad a tu marca. Diseñamos y desarrollamos todos los elementos visuales que necesitas, desde logotipos hasta paletas de colores, tipografías y más, para que tu identidad se conecte de manera única con tu audiencia."
+  },
+  "motion-graphics": {
+    "title": "Motion Graphics",
+    "description": "Movemos tus ideas de forma creativa. Creamos motion graphics dinámicos para videos corporativos, explicativos, lanzamientos de productos y más, utilizando el movimiento para comunicar tus ideas."
+  },
+  "pharmaceutical": {
+    "title": "Industria Médica",
+    "description": "Creamos contenido audiovisual para la industria de la Salud, desde videos institucionales y promocionales hasta tutoriales y material para eventos."
+  },
+  "button": "Echa un vistazo",
+  "title": "Esto es lo que hacemos"
+}

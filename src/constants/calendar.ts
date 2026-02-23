@@ -1,0 +1,1 @@
+export const GOOGLE_CALENDAR_URL = "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1lzM-I0U1bAKaOZx-ToUdet2mUoli8n2RL5X2MDFzOsqGZxfxIeSfQs3isaQeJbbkMeOVfOLGU";

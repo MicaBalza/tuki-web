@@ -1,0 +1,36 @@
+.button {
+  display: inline-block;
+  min-width: fit-content;
+  padding: 1em 0.75em;
+  background-color: var(--light-green);
+  color: var(--purple);
+  font-family: inherit;
+  font-size: clamp(0.875rem, 1.12vw, 1rem);
+  line-height: 1;
+  border: 2px solid var(--purple);
+  border-radius: 24px;
+  cursor: pointer;
+  white-space: normal;
+  word-wrap: break-word;
+  text-align: center;
+}
+
+.inverted {
+  background-color: var(--purple);
+  color: var(--light-green);
+  border: 2px solid var(--light-green);
+}
+
+.button:hover {
+  background-color: var(--purple);
+  color: var(--white);
+}
+
+.darkBg:hover {
+  background-color: var(--magenta);
+}
+
+.inverted:hover {
+  background-color: var(--light-green);
+  color: var(--purple);
+}

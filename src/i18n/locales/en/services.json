@@ -1,0 +1,32 @@
+{
+  "illustration": {
+    "title": "Illustration",
+    "description": "We create illustrations to enhance your brand, from social media and marketing content to packaging, editorial and characters. We also design illustrations for spaces, bringing creativity and personality to each project."
+  },
+  "animation": {
+    "title": "Animation",
+    "description": "We bring your ideas to life through movement. We create GIFs, 2D/3D animations and visual effects to enhance your projects. From dynamic social media content to character animation, we transform concepts into visual experiences."
+  },
+  "social-media": {
+    "title": "Social Media",
+    "description": "We boost your brand with visual and dynamic content. We create illustrations, animations and all types of videos for social media, from motion graphics to audiovisual content that connects with your audience and reinforces your identity."
+  },
+  "editorial": {
+    "title": "Editorial",
+    "description": "We bring words to life through design. We handle the creation and layout of books, magazines, brochures and newspapers, transforming content so it's not just text but also expresses itself visually."
+  },
+  "branding": {
+    "title": "Branding",
+    "description": "We give personality to your brand. We design and develop all the visual elements you need, from logos to color palettes, typography and more, so your identity connects uniquely with your audience."
+  },
+  "motion-graphics": {
+    "title": "Motion Graphics",
+    "description": "We move your ideas creatively. We create dynamic motion graphics for corporate videos, explainer videos, product launches and more, using movement to communicate your ideas."
+  },
+ "pharmaceutical": {
+    "title": "Medical Industry",
+    "description": "We create audiovisual content for the health industry, from institutional and promotional videos to tutorials and event materials."
+  },
+  "button": "Take a look",
+  "title": "This is what we do"
+}
