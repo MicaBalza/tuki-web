@@ -1,4 +1,5 @@
 import { memo, useCallback, useEffect, useMemo, useRef, useState } from "react";
+import Image from "next/image"; // <- Import Next.js Image
 import "./LogoLoop.css";
 
 const ANIMATION_CONFIG = {
@@ -31,7 +32,6 @@ const useResizeObserver = (callback, elements, dependencies) => {
     return () => {
       observers.forEach((observer) => observer?.disconnect());
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, dependencies);
 };
 
@@ -68,7 +68,6 @@ const useImageLoader = (seqRef, onLoad, dependencies) => {
         img.removeEventListener("error", handleImageLoad);
       });
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, dependencies);
 };
 
@@ -235,16 +234,13 @@ export const LogoLoop = memo(
           {item.node}
         </span>
       ) : (
-        <img
+        <Image
           src={item.src}
-          srcSet={item.srcSet}
-          sizes={item.sizes}
+          alt={item.alt ?? ""}
           width={item.width}
           height={item.height}
-          alt={item.alt ?? ""}
           title={item.title}
           loading="lazy"
-          decoding="async"
           draggable={false}
           className="logoloop__image"
         />
