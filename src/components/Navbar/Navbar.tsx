@@ -21,7 +21,8 @@ const Navbar = () => {
   const { push } = useRouter();
   const pathname = usePathname();
   const { lng, serviceType } = useParams();
-  const { t } = useTranslation(lng as string, "navbar");
+  const currentLng = lng as "en" | "es";
+  const { t } = useTranslation(currentLng, "navbar");
 
   const [scrolled, setScrolled] = useState(false);
   const [hoveredRoute, setHoveredRoute] = useState<string | null>(null);
@@ -29,29 +30,26 @@ const Navbar = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY || document.documentElement.scrollTop;
-      if (scrollTop > 105) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
+      setScrolled(scrollTop > 105);
     };
 
     window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   useEffect(() => {
     setHoveredRoute(null);
   }, [pathname]);
 
-  const color = NAVBAR_COLORS[pathname.replace(`${lng}`, "")] || "red";
+  const color =
+    NAVBAR_COLORS[pathname.replace(`/${currentLng}`, "")] || "red";
   const bgIsDark = color === "red" || color === "green";
 
-  // Get localized routes for current language
-  const localizedRoutes = getLocalizedRoutes(lng as "en" | "es");
+  const localizedRoutes = getLocalizedRoutes(currentLng);
+
+  // Helper seguro para construir rutas
+  const buildHref = (path: string) =>
+    `/${currentLng}${getLocalizedPath(path, currentLng)}`;
 
   return (
     <nav className={`${styles.navbar} bg-${color}`}>
@@ -60,10 +58,9 @@ const Navbar = () => {
           scrolled ? `${styles.scrolled} bg-${color}` : ""
         }`}
       >
+        {/* Logo */}
         <div
-          onClick={() =>
-            push(`/${lng}${getLocalizedPath("/", lng as "en" | "es")}`)
-          }
+          onClick={() => push(buildHref("/"))}
           className="pointer"
           style={{ width: "179px", height: "100px" }}
         >
@@ -71,24 +68,27 @@ const Navbar = () => {
             <Image
               src="/static/tuki-logo-white.png"
               alt="Tuki Logo"
-              width="179"
-              height="100"
+              width={179}
+              height={100}
               unoptimized
             />
           ) : (
             <Lottie
               animationData={tukiLogoAnimation}
-              loop={true}
+              loop
               style={{ width: "179px", height: "100px" }}
             />
           )}
         </div>
+
         <div className={styles.navlinks}>
           {localizedRoutes.map((route) => {
-            const cleanPath = pathname.replace(`/${lng}`, "") || "/";
+            const cleanPath =
+              pathname.replace(`/${currentLng}`, "") || "/";
             const isExactMatch = cleanPath === route.path;
             const isNestedMatch =
-              route.path !== "/" && cleanPath.startsWith(route.path + "/");
+              route.path !== "/" &&
+              cleanPath.startsWith(route.path + "/");
             const isActive = isExactMatch || isNestedMatch;
             const isHovered = hoveredRoute === route.path;
             const showUnderline = isActive || isHovered;
@@ -97,15 +97,18 @@ const Navbar = () => {
               <div
                 key={route.text}
                 className={`${styles.navlinkContainer} ${
-                  route.dropdown || route.dropdownLeft || route.dropdownRight
+                  route.dropdown ||
+                  route.dropdownLeft ||
+                  route.dropdownRight
                     ? styles.hasDropdown
                     : ""
                 }`}
                 onMouseEnter={() => setHoveredRoute(route.path)}
                 onMouseLeave={() => setHoveredRoute(null)}
               >
+                {/* Link principal */}
                 <Link
-                  href={route.path}
+                  href={buildHref(route.path)}
                   className={`${styles.navlink} ${
                     isActive ? styles.active : ""
                   } ${bgIsDark ? "text-white" : "text-purple"} pointer`}
@@ -125,6 +128,8 @@ const Navbar = () => {
                   )}
                   {t(route.text)}
                 </Link>
+
+                {/* Dropdown */}
                 {(route.dropdown ||
                   route.dropdownLeft ||
                   route.dropdownRight) && (
@@ -150,69 +155,58 @@ const Navbar = () => {
                           {t(route.description || "")}
                         </p>
                       </div>
+
                       <div className={styles.dropdownMiddle}>
-                        {route.dropdownLeft && (
-                          <div className={styles.dropdownColumn}>
-                            {route.dropdownLeft.map((dropdownItem: any) => (
-                              <Link
-                                key={dropdownItem.text}
-                                href={dropdownItem.path}
-                                className={`${styles.dropdownItemFullWidth} ${
-                                  bgIsDark ? "text-white" : "text-purple"
-                                } pointer`}
-                              >
-                                {t(dropdownItem.text)}
-                              </Link>
-                            ))}
-                          </div>
-                        )}
-                        {route.dropdownRight && (
-                          <div
-                            className={`${styles.dropdownColumn} ${
-                              bgIsDark ? styles.whiteLine : ""
-                            }`}
+                        {route.dropdownLeft?.map((item: any) => (
+                          <Link
+                            key={item.text}
+                            href={buildHref(item.path)}
+                            className={`${styles.dropdownItemFullWidth} ${
+                              bgIsDark ? "text-white" : "text-purple"
+                            } pointer`}
                           >
-                            {route.dropdownRightTitle && (
-                              <Link
-                                href={route.dropdownRightTitle.path}
-                                className={`${styles.dropdownColumnTitle} ${
-                                  bgIsDark ? "text-white" : "text-purple"
-                                } pointer`}
-                              >
-                                {t(route.dropdownRightTitle.text)}
-                              </Link>
+                            {t(item.text)}
+                          </Link>
+                        ))}
+
+                        {route.dropdownRightTitle && (
+                          <Link
+                            href={buildHref(
+                              route.dropdownRightTitle.path
                             )}
-                            {route.dropdownRight.map((dropdownItem: any) => (
-                              <Link
-                                key={dropdownItem.text}
-                                href={dropdownItem.path}
-                                className={`${styles.dropdownItemFullWidth} ${
-                                  bgIsDark ? "text-white" : "text-purple"
-                                } pointer`}
-                              >
-                                {t(dropdownItem.text)}
-                              </Link>
-                            ))}
-                          </div>
+                            className={`${styles.dropdownColumnTitle} ${
+                              bgIsDark ? "text-white" : "text-purple"
+                            } pointer`}
+                          >
+                            {t(route.dropdownRightTitle.text)}
+                          </Link>
                         )}
-                        {route.dropdown &&
-                          !route.dropdownLeft &&
-                          !route.dropdownRight && (
-                            <>
-                              {route.dropdown.map((dropdownItem: any) => (
-                                <Link
-                                  key={dropdownItem.text}
-                                  href={dropdownItem.path}
-                                  className={`${styles.dropdownItemFullWidth} ${
-                                    bgIsDark ? "text-white" : "text-purple"
-                                  } pointer`}
-                                >
-                                  {t(dropdownItem.text)}
-                                </Link>
-                              ))}
-                            </>
-                          )}
+
+                        {route.dropdownRight?.map((item: any) => (
+                          <Link
+                            key={item.text}
+                            href={buildHref(item.path)}
+                            className={`${styles.dropdownItemFullWidth} ${
+                              bgIsDark ? "text-white" : "text-purple"
+                            } pointer`}
+                          >
+                            {t(item.text)}
+                          </Link>
+                        ))}
+
+                        {route.dropdown?.map((item: any) => (
+                          <Link
+                            key={item.text}
+                            href={buildHref(item.path)}
+                            className={`${styles.dropdownItemFullWidth} ${
+                              bgIsDark ? "text-white" : "text-purple"
+                            } pointer`}
+                          >
+                            {t(item.text)}
+                          </Link>
+                        ))}
                       </div>
+
                       <div className={styles.dropdownRight}>
                         {route.image && (
                           <Image
@@ -230,6 +224,7 @@ const Navbar = () => {
               </div>
             );
           })}
+
           <LangSelector invert={bgIsDark} />
           <SocialLinks className={bgIsDark ? "fill-white" : ""} />
         </div>
@@ -238,7 +233,10 @@ const Navbar = () => {
           <SlideMenu />
         </div>
       </div>
-      {serviceType && <ServiceTypeHeader type={serviceType as ServiceType} />}
+
+      {serviceType && (
+        <ServiceTypeHeader type={serviceType as ServiceType} />
+      )}
     </nav>
   );
 };
