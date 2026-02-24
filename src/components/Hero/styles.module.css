@@ -104,16 +104,16 @@
   .servicesLink {
     margin-bottom: 24px;
   }
-  .buttons {
+ .buttons {
   display: flex;
-  gap: 1rem;
+  gap: 1.25rem; /* ligero espacio entre botones */
   margin-top: 1.5rem;
 }
 
 .note {
   margin-top: 0.75rem;
   font-size: 0.9rem;
-  color: var(--purple);
+  color: var(--purple); /* mismo color que el resto del texto */
   text-align: center;
 }
 
