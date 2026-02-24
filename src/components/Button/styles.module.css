@@ -21,6 +21,12 @@
   border: 2px solid var(--light-green);
 }
 
+.alternative {
+  background-color: #F8E1C1; /* fondo alternativo */
+  color: #6A68D4;           /* texto morado */
+  border: 2px solid #6A68D4;
+}
+
 .button:hover {
   background-color: var(--purple);
   color: var(--white);
@@ -33,11 +39,6 @@
 .inverted:hover {
   background-color: var(--light-green);
   color: var(--purple);
-}
-.alternative {
-  background-color: #F8E1C1; /* nuevo fondo */
-  color: #6A68D4; /* texto morado */
-  border: 2px solid #6A68D4;
 }
 
 .alternative:hover {
