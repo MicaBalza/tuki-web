@@ -104,7 +104,7 @@
   .servicesLink {
     margin-bottom: 24px;
   }
- .buttons {
+.buttons {
   display: flex;
   gap: 1.25rem; /* ligero espacio entre botones */
   margin-top: 1.5rem;
