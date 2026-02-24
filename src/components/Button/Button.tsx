@@ -5,6 +5,7 @@ interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
   text?: string;
   children?: ReactNode;
   inverted?: boolean;
+  alternative?: boolean; // 👈 nueva variante
   darkBg?: boolean;
   className?: string;
   heading?: "h2" | "h3";
@@ -14,6 +15,7 @@ const Button = ({
   text,
   children,
   inverted,
+  alternative,
   darkBg,
   className,
   heading,
@@ -24,12 +26,18 @@ const Button = ({
 
   return (
     <button
-      className={`${styles.button} ${inverted ? styles.inverted : ""} ${
-        darkBg ? styles.darkBg : ""
-      } ${className || ""}`}
+      className={`${styles.button}
+        ${inverted ? styles.inverted : ""}
+        ${alternative ? styles.alternative : ""}
+        ${darkBg ? styles.darkBg : ""}
+        ${className || ""}`}
       {...props}
     >
-      {heading ? <Heading className="p">{content}</Heading> : <p>{content}</p>}
+      {heading ? (
+        <Heading className="p">{content}</Heading>
+      ) : (
+        <p>{content}</p>
+      )}
     </button>
   );
 };
