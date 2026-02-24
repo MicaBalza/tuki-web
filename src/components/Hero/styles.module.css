@@ -32,8 +32,9 @@
 /* 👇 BOTONES */
 .buttons {
   display: flex;
-  gap: 1.25rem; /* espacio entre botones */
+  gap: 1.25rem;
   margin-top: 1.5rem;
+  flex-wrap: wrap; /* permite que bajen si no caben */
 }
 
 .videoContainer {
@@ -69,6 +70,8 @@
 
   .text {
     width: 90vw;
+    align-items: center; /* centra contenido en mobile */
+    text-align: center;
   }
 
   .title {
@@ -76,7 +79,8 @@
   }
 
   .buttons {
-    flex-direction: column;
+    flex-direction: row;   /* 👈 se mantienen horizontales */
+    justify-content: center;
     gap: 0.75rem;
   }
 }
