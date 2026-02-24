@@ -99,10 +99,6 @@ const Hero = () => {
             />
           </div>
 
-          {/* Nota debajo */}
-          <p className={styles.note}>{t("note")}</p>
-        </div>
-
         <div
           className={styles.videoContainer}
           onClick={handleSoundToggle}
