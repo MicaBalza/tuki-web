@@ -1,6 +1,5 @@
 "use client";
-import { useParams, useRouter } from "next/navigation";
-import { getLocalizedPath } from "@/constants/localizedRoutes";
+import { useParams } from "next/navigation";
 import { useTranslation } from "@/i18n/client";
 import { openCalendarBooking } from "@/utils/calendar";
 import Button from "../Button";
@@ -18,7 +17,6 @@ const Lottie = dynamic(() => import("lottie-react"), {
 const Hero = () => {
   const { lng } = useParams();
   const { t } = useTranslation(lng as string, "hero");
-  const { push } = useRouter();
 
   const audioRef = useRef<HTMLAudioElement>(null);
   const lottieRef = useRef<any>(null);
@@ -31,6 +29,7 @@ const Hero = () => {
   useEffect(() => {
     const el = containerRef.current;
     if (!el) return;
+
     const observer = new IntersectionObserver(
       (entries) => {
         if (entries[0].isIntersecting) {
@@ -40,6 +39,7 @@ const Hero = () => {
       },
       { rootMargin: "100px" }
     );
+
     observer.observe(el);
     return () => observer.disconnect();
   }, []);
@@ -48,6 +48,7 @@ const Hero = () => {
     if (audioRef.current && hasUserInteracted) {
       const audio = audioRef.current;
       const lottie = lottieRef.current;
+
       audio.muted = isMuted;
       audio.loop = true;
 
@@ -80,25 +81,37 @@ const Hero = () => {
   return (
     <section className={styles.hero}>
       <div className={styles.container}>
+        {/* TEXT COLUMN */}
         <div className={styles.text}>
-          <h1 className={`${styles.subtitle} p`}>{t("subtitle")}</h1>
-          <h3 className={`${styles.title} h1`}>{t("title")}</h3>
+          <h1 className={`${styles.subtitle} p`}>
+            {t("subtitle")}
+          </h1>
 
-          {/* Botones */}
+          <h3 className={`${styles.title} h1`}>
+            {t("title")}
+          </h3>
+
           <div className={styles.buttons}>
             <Button onClick={openCalendarBooking}>
-              <span dangerouslySetInnerHTML={{ __html: t("button") }} />
+              <span
+                dangerouslySetInnerHTML={{ __html: t("button") }}
+              />
             </Button>
 
             <Button
               alternative
               onClick={() =>
-                window.open("https://www.tukistudio.tv/en/services", "_blank")
+                window.open(
+                  "https://www.tukistudio.tv/en/services",
+                  "_blank"
+                )
               }
               text={t("servicesButton")}
             />
           </div>
+        </div>
 
+        {/* VIDEO COLUMN */}
         <div
           className={styles.videoContainer}
           onClick={handleSoundToggle}
@@ -111,6 +124,7 @@ const Hero = () => {
             loop
             preload="none"
           />
+
           <div className={styles.videoSound}>
             <Image
               src={`/static/images/sound-${isMuted ? "off" : "on"}.svg`}
@@ -121,6 +135,7 @@ const Hero = () => {
               style={{ width: "100%", height: "auto" }}
             />
           </div>
+
           {showAnimation && (
             <Lottie
               lottieRef={lottieRef}
