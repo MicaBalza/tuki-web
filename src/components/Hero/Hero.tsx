@@ -88,7 +88,7 @@ const Hero = () => {
           <h3 className={`${styles.title} h1`}>{t("title")}</h3>
 
           {/* Contenedor de botones */}
-       <div className={styles.buttons}>
+      <div className={styles.buttons}>
   <Button onClick={openCalendarBooking}>
     <span dangerouslySetInnerHTML={{ __html: t("button") }} />
   </Button>
@@ -104,7 +104,6 @@ const Hero = () => {
 
 {/* Nota debajo de los botones */}
 <p className={styles.note}>{t("note")}</p>
-        </div>
 
         <div
           className={styles.videoContainer}
