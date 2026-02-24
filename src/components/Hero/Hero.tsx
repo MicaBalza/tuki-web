@@ -88,22 +88,22 @@ const Hero = () => {
           <h3 className={`${styles.title} h1`}>{t("title")}</h3>
 
           {/* Contenedor de botones */}
-          <div className={styles.buttons}>
-            <Button onClick={openCalendarBooking}>
-              <span dangerouslySetInnerHTML={{ __html: t("button") }} />
-            </Button>
+       <div className={styles.buttons}>
+  <Button onClick={openCalendarBooking}>
+    <span dangerouslySetInnerHTML={{ __html: t("button") }} />
+  </Button>
 
-            <Button
-              alternative
-              onClick={() =>
-                window.open(
-                  "https://www.tukistudio.tv/en/services",
-                  "_blank"
-                )
-              }
-              text={t("servicesButton")}
-            />
-          </div>
+  <Button
+    alternative
+    onClick={() =>
+      window.open("https://www.tukistudio.tv/en/services", "_blank")
+    }
+    text={t("servicesButton")}
+  />
+</div>
+
+{/* Nota debajo de los botones */}
+<p className={styles.note}>{t("note")}</p>
         </div>
 
         <div
