@@ -1,15 +1,12 @@
 "use client";
 import { useParams, useRouter } from "next/navigation";
-
 import { getLocalizedPath } from "@/constants/localizedRoutes";
 import { useTranslation } from "@/i18n/client";
 import { openCalendarBooking } from "@/utils/calendar";
 import Button from "../Button";
 import styles from "./styles.module.css";
-
 import dynamic from "next/dynamic";
 import Image from "next/image";
-import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import mainAnimation from "../../../public/static/lottie/main.json";
 
@@ -87,23 +84,24 @@ const Hero = () => {
           <h1 className={`${styles.subtitle} p`}>{t("subtitle")}</h1>
           <h3 className={`${styles.title} h1`}>{t("title")}</h3>
 
-          {/* Contenedor de botones */}
-      <div className={styles.buttons}>
-  <Button onClick={openCalendarBooking}>
-    <span dangerouslySetInnerHTML={{ __html: t("button") }} />
-  </Button>
+          {/* Botones */}
+          <div className={styles.buttons}>
+            <Button onClick={openCalendarBooking}>
+              <span dangerouslySetInnerHTML={{ __html: t("button") }} />
+            </Button>
 
-  <Button
-    alternative
-    onClick={() =>
-      window.open("https://www.tukistudio.tv/en/services", "_blank")
-    }
-    text={t("servicesButton")}
-  />
-</div>
+            <Button
+              alternative
+              onClick={() =>
+                window.open("https://www.tukistudio.tv/en/services", "_blank")
+              }
+              text={t("servicesButton")}
+            />
+          </div>
 
-{/* Nota debajo de los botones */}
-<p className={styles.note}>{t("note")}</p>
+          {/* Nota debajo */}
+          <p className={styles.note}>{t("note")}</p>
+        </div>
 
         <div
           className={styles.videoContainer}
