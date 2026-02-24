@@ -13,7 +13,6 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import mainAnimation from "../../../public/static/lottie/main.json";
 
-// Dynamically import Lottie to avoid adding it to the initial JS bundle
 const Lottie = dynamic(() => import("lottie-react"), {
   ssr: false,
   loading: () => <div style={{ width: "100%", height: "100%" }} />,
@@ -32,7 +31,6 @@ const Hero = () => {
   const [hasUserInteracted, setHasUserInteracted] = useState(false);
   const [showAnimation, setShowAnimation] = useState(false);
 
-  // Only load/play animation when in viewport
   useEffect(() => {
     const el = containerRef.current;
     if (!el) return;
@@ -88,23 +86,26 @@ const Hero = () => {
         <div className={styles.text}>
           <h1 className={`${styles.subtitle} p`}>{t("subtitle")}</h1>
           <h3 className={`${styles.title} h1`}>{t("title")}</h3>
-          <Link
-            href={`/${lng}${getLocalizedPath("/services", lng as "en" | "es")}`}
-            className={`${styles.servicesLink} h4`}
-          >
-            <Image
-              src="/static/icons/chevron_right.svg"
-              alt="Arrow"
-              width={28}
-              height={28}
-              className={styles.chevronIcon}
+
+          {/* Contenedor de botones */}
+          <div className={styles.buttons}>
+            <Button onClick={openCalendarBooking}>
+              <span dangerouslySetInnerHTML={{ __html: t("button") }} />
+            </Button>
+
+            <Button
+              alternative
+              onClick={() =>
+                window.open(
+                  "https://www.tukistudio.tv/en/services",
+                  "_blank"
+                )
+              }
+              text={t("servicesButton")}
             />
-            {t("servicesLink")}
-          </Link>
-          <Button onClick={openCalendarBooking}>
-            <span dangerouslySetInnerHTML={{ __html: t("button") }} />
-          </Button>
+          </div>
         </div>
+
         <div
           className={styles.videoContainer}
           onClick={handleSoundToggle}
@@ -115,7 +116,7 @@ const Hero = () => {
             src="/static/audio/main.mp3"
             muted={isMuted}
             loop
-            preload="none" /* Avoid fetching audio before user interaction */
+            preload="none"
           />
           <div className={styles.videoSound}>
             <Image
