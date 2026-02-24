@@ -1,6 +1,7 @@
 {
   "subtitle": "Creative studio based in Barcelona",
   "title": "We create videos for the health industry.",
-  "button": "Let's talk <strong>15 min</strong> no strings attached ;)",
-  "servicesButton": "Check out our Services!"
+  "button": "Let's talk <strong>15 min</strong>",
+  "servicesButton": "Check out our Services!",
+  "note": "no strings attached ;)"
 }
