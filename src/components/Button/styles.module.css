@@ -35,12 +35,12 @@
   color: var(--purple);
 }
 .alternative {
-  background-color: #F9DCBB;
-  color: #6A68D4;
+  background-color: #F8E1C1; /* nuevo fondo */
+  color: #6A68D4; /* texto morado */
   border: 2px solid #6A68D4;
 }
 
 .alternative:hover {
   background-color: #6A68D4;
-  color: #F9DCBB;
+  color: #F8E1C1;
 }
