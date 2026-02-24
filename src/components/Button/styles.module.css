@@ -34,3 +34,13 @@
   background-color: var(--light-green);
   color: var(--purple);
 }
+.alternative {
+  background-color: #F9DCBB;
+  color: #6A68D4;
+  border: 2px solid #6A68D4;
+}
+
+.alternative:hover {
+  background-color: #6A68D4;
+  color: #F9DCBB;
+}
