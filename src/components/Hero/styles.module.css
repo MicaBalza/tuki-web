@@ -36,13 +36,6 @@
   margin-top: 1.5rem;
 }
 
-/* 👇 NOTA */
-.note {
-  margin-top: 0.75rem;
-  font-size: 0.9rem;
-  color: var(--purple);
-}
-
 .videoContainer {
   position: relative;
   cursor: pointer;
