@@ -16,6 +16,10 @@
   transition: all 0.2s ease-out;
 }
 
+.scrolled {
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
 .navlinks {
   display: none;
   gap: 3vw;

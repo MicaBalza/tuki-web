@@ -117,7 +117,7 @@ function generateNavbarColors(): Record<string, string> {
   const colors: Record<string, string> = {};
 
   // Base color mappings (using canonical paths)
-  const baseColors = {
+  const baseColors: Record<string, string> = {
     "/": "nude",
     "/services": "nude",
     "/health-services": "green",
@@ -135,15 +135,9 @@ function generateNavbarColors(): Record<string, string> {
 
   // Add colors for both English and Spanish paths
   Object.entries(baseColors).forEach(([canonicalPath, color]) => {
-    // Add English path
-    const englishPath = getLocalizedPath(canonicalPath, "en");
-    const englishKey = canonicalPath === "/" ? "/" : `/${englishPath}`;
-    colors[englishKey] = color;
-
-    // Add Spanish path
-    const spanishPath = getLocalizedPath(canonicalPath, "es");
-    const spanishKey = canonicalPath === "/" ? "/" : `/${spanishPath}`;
-    colors[spanishKey] = color;
+    // getLocalizedPath already returns paths with leading slash (e.g., "/servicios-salud")
+    colors[getLocalizedPath(canonicalPath, "en")] = color;
+    colors[getLocalizedPath(canonicalPath, "es")] = color;
   });
 
   return colors;

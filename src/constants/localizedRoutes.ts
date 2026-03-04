@@ -25,6 +25,10 @@ export const URL_MAPPINGS = {
     en: "/contact-us",
     es: "/contacto",
   },
+  "/blog": {
+    en: "/blog",
+    es: "/blog",
+  },
 
   // Service pages
   "/services/illustration": {
