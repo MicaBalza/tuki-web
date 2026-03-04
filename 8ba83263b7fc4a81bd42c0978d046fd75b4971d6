@@ -1,0 +1,29 @@
+src/i18n/locales/en/navbar.json
+  793bb6606384a770 25-26
+src/components/Navbar/Navbar.tsx
+  793bb6606384a770 239-241,243-250
+src/i18n/locales/es/navbar.json
+  793bb6606384a770 25-26
+src/components/Navbar/styles.module.css
+  793bb6606384a770 67-69,75-76,167-168,172
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.1.8",
+  "base_commit_sha": "8ba83263b7fc4a81bd42c0978d046fd75b4971d6",
+  "prompts": {
+    "793bb6606384a770": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "3eee84cc-9330-4b5e-958b-a8036c6d8f15",
+        "model": "claude-opus-4-6"
+      },
+      "human_author": "micaela-balza <micaela.balza@waterplan.com>",
+      "messages": [],
+      "total_additions": 29,
+      "total_deletions": 12,
+      "accepted_lines": 23,
+      "overriden_lines": 0
+    }
+  }
+}
