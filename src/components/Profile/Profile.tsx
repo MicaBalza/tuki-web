@@ -18,13 +18,8 @@ const Profile = ({ person, inverted, noDescription }: Props) => {
         noDescription ? "g-16" : styles.container
       } ${inverted ? styles.inverted : ""}`}
     >
-      <video
-        autoPlay
-        muted
-        loop
-        src={`/static/video/${person}.mp4`}
-        className={styles.video}
-      ></video>
+      {/* [PAGESPEED TEST] Video commented out */}
+      <div className={styles.video} style={{ background: "#d0c4e0", borderRadius: "50%" }} />
       <div className={`column align-center ${styles.content}`}>
         <div className="column">
           <h3 className={styles.name}>{t(`${person}.name`)}</h3>
