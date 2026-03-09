@@ -1,0 +1,35 @@
+src/components/Profile/Profile.tsx
+  56bb1125f94349ab 21-22
+src/components/Clients/Clients.tsx
+  56bb1125f94349ab 1,3,6,15,19-21
+src/components/Reviews/Reviews.tsx
+  56bb1125f94349ab 4,6-8,11-14,29,36-45,48-60
+src/components/Hero/Hero.tsx
+  56bb1125f94349ab 7-11,13-16,22-28,63-65
+src/components/WhatWeDo/WhatWeDo.tsx
+  56bb1125f94349ab 3,6,12-13,18,25,27-29
+src/components/PharmaceuticalServices/PharmaceuticalServices.tsx
+  56bb1125f94349ab 3,18,20,35-36
+src/components/ContactUs/ContactUs.tsx
+  56bb1125f94349ab 3-4,6,19,24
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.1.8",
+  "base_commit_sha": "eb2af1430a6b4c6836b3f9458974553fdd14c9fa",
+  "prompts": {
+    "56bb1125f94349ab": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "5945a1f3-04cb-443c-8ec7-815e0bf59ceb",
+        "model": "claude-opus-4-6"
+      },
+      "human_author": "micaela-balza <micaela.balza@waterplan.com>",
+      "messages": [],
+      "total_additions": 81,
+      "total_deletions": 320,
+      "accepted_lines": 79,
+      "overriden_lines": 0
+    }
+  }
+}
