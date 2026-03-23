@@ -61,8 +61,8 @@ const Navbar = () => {
         {/* Logo */}
         <div
           onClick={() =>
-            push(`/${lng}${getLocalizedPath("/", lng as "en" | "es")}`)
-          }
+            push(getLocalizedPath("/", lng as "en" | "es"))
+}
           className="pointer"
           style={{ width: "179px", height: "100px" }}
         >
@@ -105,7 +105,7 @@ const Navbar = () => {
                 onMouseLeave={() => setHoveredRoute(null)}
               >
                 <Link
-                  href={`/${lng}${route.path}`}
+                  href={route.path}
                   className={`${styles.navlink} ${
                     isActive ? styles.active : ""
                   } ${bgIsDark ? "text-white" : "text-purple"} pointer`}
@@ -159,7 +159,7 @@ const Navbar = () => {
                             {route.dropdownLeft.map((dropdownItem: any) => (
                               <Link
                                 key={dropdownItem.text}
-                                href={`/${lng}${dropdownItem.path}`}
+                                href={dropdownItem.path}
                                 className={`${styles.dropdownItemFullWidth} ${
                                   bgIsDark ? "text-white" : "text-purple"
                                 } pointer`}
@@ -178,7 +178,7 @@ const Navbar = () => {
                           >
                             {route.dropdownRightTitle && (
                               <Link
-                                href={`/${lng}${route.dropdownRightTitle.path}`}
+                               href={route.dropdownRightTitle.path}
                                 className={`${styles.dropdownColumnTitle} ${
                                   bgIsDark ? "text-white" : "text-purple"
                                 } pointer`}
@@ -190,7 +190,7 @@ const Navbar = () => {
                             {route.dropdownRight.map((dropdownItem: any) => (
                               <Link
                                 key={dropdownItem.text}
-                                href={`/${lng}${dropdownItem.path}`}
+                                href={dropdownItem.path}
                                 className={`${styles.dropdownItemFullWidth} ${
                                   bgIsDark ? "text-white" : "text-purple"
                                 } pointer`}
@@ -207,7 +207,7 @@ const Navbar = () => {
                           route.dropdown.map((dropdownItem: any) => (
                             <Link
                               key={dropdownItem.text}
-                              href={`/${lng}${dropdownItem.path}`}
+                             href={dropdownItem.path}
                               className={`${styles.dropdownItemFullWidth} ${
                                 bgIsDark ? "text-white" : "text-purple"
                               } pointer`}
