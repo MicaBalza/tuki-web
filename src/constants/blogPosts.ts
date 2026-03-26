@@ -304,6 +304,105 @@ export const blogPostsES: BlogPost[] = [
       },
     ],
   },
+  {
+    id: "4",
+    slug: "animacion-3d-videos-cientificos-oncologia-espana",
+    title: "Animación 3D y videos científicos para oncología en España",
+    excerpt:
+      "Si trabajas en marketing, comunicación o investigación dentro de biomedicina y oncología, sabes lo complejo que es transmitir información científica sobre tratamientos como inmunoterapia, quimioterapia o radioterapia de manera clara, rápida y memorable.",
+    date: "2026-03-26",
+    thumbnail: "/static/images/blog/4.png",
+    headerImage: "/static/images/blog/4.png",
+    category: "Animación 3D Científica",
+    featured: false,
+    sections: [
+      {
+        type: "text",
+        title: "Animación 3D y videos científicos para oncología en España",
+        content: `<p>La animación 3D científica para cáncer, los videos oncológicos explicativos y las animaciones de mecanismos de acción son herramientas estratégicas que permiten:</p>
+        <p>Explicar procesos complejos, desde cómo actúa un tratamiento en un tumor metastásico hasta la interacción celular en un cáncer de mama o leucemia.</p>
+        <p>Generar confianza en stakeholders, médicos y equipos comerciales.</p>
+        <p>Integrar la comunicación científica en campañas de marketing, lanzamientos y formación interna.</p>`,
+      },
+      {
+        type: "text",
+        title: "Por qué los videos son esenciales en comunicación oncológica",
+        content: `<p>En oncología y biomedicina, los equipos de marketing y comunicación enfrentan tres desafíos principales:</p>
+        <p><strong>Tiempo limitado:</strong> Profesionales sanitarios no pueden consumir contenidos largos o densos.</p>
+        <p><strong>Complejidad técnica:</strong> La información sobre tratamientos y mecanismos de acción puede perder claridad si solo se presenta en texto o gráficos estáticos.</p>
+        <p><strong>Incoherencia entre canales:</strong> Diferencias de mensaje entre regiones o plataformas generan confusión y menor eficacia en campañas.</p>
+        <p>Los videos científicos y animaciones 3D de cáncer permiten comunicar conceptos complejos de manera visual, rápida y coherente, asegurando que el mensaje llegue correctamente a médicos, equipos comerciales y stakeholders, tanto en España como en mercados internacionales.</p>
+        <p>Por ejemplo, una animación de mecanismo de acción de inmunoterapia puede mostrar cómo las células reconocen y eliminan células tumorales, aumentando la comprensión inmediata en presentaciones médicas o congresos.</p>`,
+      },
+      {
+        type: "video",
+        title: "Beneficios concretos de la animación 3D en oncología",
+        content: `<p><strong>Claridad inmediata:</strong> Comprensión instantánea de mecanismos complejos.</p>
+        <p><strong>Impacto reforzado:</strong> Mayor retención y engagement en presentaciones, ferias y redes sociales.</p>
+        <p><strong>Seguridad en el mensaje:</strong> Alineación de contenido en todos los canales y mercados.</p>`,
+        videoUrl: "https://www.youtube.com/embed/es1L9GHtR9M",
+        videoCaption: "Video oncológico – Tuki Studio",
+      },
+      {
+        type: "unorderedList",
+        title: "Tipos de videos para proyectos oncológicos",
+        items: [
+          "<strong>Animación 3D de células y mecanismos de acción</strong><br>Explica cómo tratamientos como inmunoterapia, quimioterapia o terapias dirigidas impactan a nivel celular. Facilita la comprensión de procesos como apoptosis, inhibición de tumores o interacción con el sistema inmunológico.",
+          "<strong>Videos de lanzamiento de fármacos oncológicos</strong><br>Presenta resultados de ensayos clínicos, beneficios terapéuticos y aplicaciones de nuevos fármacos o tratamientos. Clips pensados para congresos oncológicos, redes sociales y presentaciones médicas.",
+          "<strong>Videos corporativos de investigación y laboratorio</strong><br>Muestra trayectoria de laboratorio, equipos de investigación y procesos de descubrimiento científico. Ideal para startups biotech, centros de investigación y departamentos de I+D.",
+          "<strong>Videos explicativos de radioterapia y diagnóstico molecular</strong><br>Animaciones que muestran radioterapia explicada, biopsia guiada por imagen o uso de diagnóstico molecular en cáncer. Útiles para pacientes, médicos o equipos comerciales.",
+        ],
+      },
+      {
+        type: "tip",
+        title: "Consejo Tuki",
+        content:
+          "Antes de desarrollar tu video oncológico o de biomedicina —ya sea sobre inmunoterapia, quimioterapia, radioterapia o diagnóstico molecular— define claramente tu objetivo: lanzamiento de fármaco, comunicación interna o educación médica.",
+      },
+      {
+        type: "list",
+        title:
+          "Cómo trabajamos con empresas de biomedicina y oncología en España",
+        items: [
+          "<strong>Brief inicial</strong><br>Objetivo, público, mensaje científico y formato.",
+          "<strong>Desarrollo creativo</strong><br>Guion, storyboard y estilo visual adaptado al contenido técnico.",
+          "<strong>Producción 3D</strong><br>Modelado, animación, integración de datos clínicos.",
+          "<strong>Revisión y validación</strong><br>Feedback continuo para garantizar rigor y alineación.",
+          "<strong>Entrega final</strong><br>Adaptado a presentaciones médicas, redes sociales y plataformas digitales.",
+        ],
+      },
+      {
+        type: "faq",
+        title: "Preguntas frecuentes",
+        questions: [
+          {
+            question:
+              "> ¿Cuál es la duración ideal de un vídeo de animación 3D para oncología?",
+            answer:
+              "Entre 60 y 120 segundos, suficiente para explicar conceptos técnicos complejos sin perder atención.",
+          },
+          {
+            question:
+              "> ¿Cómo ayuda la animación 3D de cáncer a campañas de marketing oncológico?",
+            answer:
+              "Simplifica contenidos sobre mecanismos de acción, mejora engagement, refuerza presentaciones de inmunoterapia y asegura coherencia en todos los canales.",
+          },
+          {
+            question:
+              "> ¿Se puede reutilizar el contenido en diferentes mercados?",
+            answer:
+              "Sí, una animación bien diseñada permite adaptaciones rápidas a distintos idiomas y formatos, incluyendo mercados europeos o internacionales.",
+          },
+          {
+            question:
+              "> ¿Por qué es útil para formación de equipos comerciales o médicos?",
+            answer:
+              "Facilita la comprensión de tratamientos, mecanismos biológicos y diagnósticos complejos, acelerando capacitación y consistencia de mensajes.",
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 export const blogPostsEN: BlogPost[] = [
@@ -599,6 +698,102 @@ export const blogPostsEN: BlogPost[] = [
             question: "> Is it useful for training sales teams?",
             answer:
               "Yes, it facilitates product understanding and improves communication with doctors and clients.",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: "4",
+    slug: "3d-animation-scientific-videos-oncology-spain",
+    title: "3D Animation and Scientific Videos for Oncology in Spain",
+    excerpt:
+      "If you work in marketing, communications, or research within biomedicine and oncology, you know how complex it is to convey scientific information about treatments like immunotherapy, chemotherapy, or radiotherapy in a clear, fast, and memorable way.",
+    date: "2026-03-26",
+    thumbnail: "/static/images/blog/4.png",
+    headerImage: "/static/images/blog/4.png",
+    category: "Scientific 3D Animation",
+    featured: false,
+    sections: [
+      {
+        type: "text",
+        title: "3D Animation and Scientific Videos for Oncology in Spain",
+        content: `<p>Scientific 3D animation for cancer, oncology explainer videos, and mechanism of action animations are strategic tools that enable:</p>
+        <p>Explaining complex processes, from how a treatment acts on a metastatic tumor to cellular interaction in breast cancer or leukemia.</p>
+        <p>Building trust with stakeholders, doctors, and sales teams.</p>
+        <p>Integrating scientific communication into marketing campaigns, launches, and internal training.</p>`,
+      },
+      {
+        type: "text",
+        title: "Why videos are essential in oncology communication",
+        content: `<p>In oncology and biomedicine, marketing and communications teams face three main challenges:</p>
+        <p><strong>Limited time:</strong> Healthcare professionals cannot consume long or dense content.</p>
+        <p><strong>Technical complexity:</strong> Information about treatments and mechanisms of action can lose clarity when presented only in text or static graphics.</p>
+        <p><strong>Inconsistency across channels:</strong> Message differences between regions or platforms create confusion and reduce campaign effectiveness.</p>
+        <p>Scientific videos and 3D cancer animations allow complex concepts to be communicated visually, quickly, and coherently, ensuring the message reaches doctors, sales teams, and stakeholders correctly, both in Spain and international markets.</p>
+        <p>For example, an immunotherapy mechanism of action animation can show how cells recognize and eliminate tumor cells, increasing immediate understanding in medical presentations or congresses.</p>`,
+      },
+      {
+        type: "video",
+        title: "Concrete benefits of 3D animation in oncology",
+        content: `<p><strong>Immediate clarity:</strong> Instant understanding of complex mechanisms.</p>
+        <p><strong>Enhanced impact:</strong> Greater retention and engagement in presentations, trade shows, and social media.</p>
+        <p><strong>Message consistency:</strong> Content alignment across all channels and markets.</p>`,
+        videoUrl: "https://www.youtube.com/embed/es1L9GHtR9M",
+        videoCaption: "Oncology video – Tuki Studio",
+      },
+      {
+        type: "unorderedList",
+        title: "Types of videos for oncology projects",
+        items: [
+          "<strong>3D cell and mechanism of action animation</strong><br>Explains how treatments like immunotherapy, chemotherapy, or targeted therapies impact at the cellular level. Facilitates understanding of processes like apoptosis, tumor inhibition, or interaction with the immune system.",
+          "<strong>Oncology drug launch videos</strong><br>Presents clinical trial results, therapeutic benefits, and applications of new drugs or treatments. Clips designed for oncology congresses, social media, and medical presentations.",
+          "<strong>Research and laboratory corporate videos</strong><br>Showcases laboratory trajectory, research teams, and scientific discovery processes. Ideal for biotech startups, research centers, and R&D departments.",
+          "<strong>Radiotherapy and molecular diagnostics explainer videos</strong><br>Animations showing radiotherapy explained, image-guided biopsy, or use of molecular diagnostics in cancer. Useful for patients, doctors, or sales teams.",
+        ],
+      },
+      {
+        type: "tip",
+        title: "Tuki Tip",
+        content:
+          "Before developing your oncology or biomedicine video — whether about immunotherapy, chemotherapy, radiotherapy, or molecular diagnostics — clearly define your objective: drug launch, internal communication, or medical education.",
+      },
+      {
+        type: "list",
+        title: "How we work with biomedicine and oncology companies in Spain",
+        items: [
+          "<strong>Initial brief</strong><br>Objective, audience, scientific message, and format.",
+          "<strong>Creative development</strong><br>Script, storyboard, and visual style adapted to technical content.",
+          "<strong>3D production</strong><br>Modeling, animation, clinical data integration.",
+          "<strong>Review and validation</strong><br>Continuous feedback to ensure accuracy and alignment.",
+          "<strong>Final delivery</strong><br>Adapted for medical presentations, social media, and digital platforms.",
+        ],
+      },
+      {
+        type: "faq",
+        title: "Frequently Asked Questions",
+        questions: [
+          {
+            question:
+              "> What is the ideal duration of a 3D animation video for oncology?",
+            answer:
+              "Between 60 and 120 seconds, enough to explain complex technical concepts without losing attention.",
+          },
+          {
+            question:
+              "> How does 3D cancer animation help oncology marketing campaigns?",
+            answer:
+              "It simplifies mechanism of action content, improves engagement, reinforces immunotherapy presentations, and ensures coherence across all channels.",
+          },
+          {
+            question: "> Can the content be reused in different markets?",
+            answer:
+              "Yes, a well-designed animation allows quick adaptations to different languages and formats, including European or international markets.",
+          },
+          {
+            question: "> Why is it useful for training sales or medical teams?",
+            answer:
+              "It facilitates understanding of treatments, biological mechanisms, and complex diagnostics, accelerating training and message consistency.",
           },
         ],
       },
