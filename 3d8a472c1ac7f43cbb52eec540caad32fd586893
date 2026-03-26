@@ -1,0 +1,23 @@
+src/middleware.ts
+  fcc229e237a166b5 33-34,123-135
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.1.20",
+  "base_commit_sha": "3d8a472c1ac7f43cbb52eec540caad32fd586893",
+  "prompts": {
+    "fcc229e237a166b5": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "a12025d0-b698-4b7c-b5c6-fa8c494c248e",
+        "model": "claude-opus-4-6"
+      },
+      "human_author": "micaela-balza <micaela.balza@waterplan.com>",
+      "messages": [],
+      "total_additions": 15,
+      "total_deletions": 6,
+      "accepted_lines": 15,
+      "overriden_lines": 0
+    }
+  }
+}
