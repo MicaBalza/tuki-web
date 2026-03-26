@@ -30,8 +30,8 @@ export function middleware(req: any) {
   }
 
   // Check if pathname starts with language code
-  const pathnameHasLang = languages.some((loc) =>
-    pathname.startsWith(`/${loc}`)
+  const pathnameHasLang = languages.some(
+    (loc) => pathname === `/${loc}` || pathname.startsWith(`/${loc}/`)
   );
 
   if (pathnameHasLang) {
@@ -120,8 +120,17 @@ export function middleware(req: any) {
     response.cookies.set(cookieName, pathLang);
     return response;
   } else {
-  // Rewrite instead of redirect to avoid extra roundtrip
-  const rewriteUrl = new URL(`/${lng}${pathname}`, req.url);
-  return NextResponse.rewrite(rewriteUrl);
-}
+    // No language prefix — resolve the canonical path and prepend the detected language
+    let resolvedPath = pathname;
+
+    if (lng === "es" && pathname !== "/") {
+      const canonicalPath = getCanonicalPath(pathname, "es");
+      if (canonicalPath !== pathname) {
+        resolvedPath = canonicalPath;
+      }
+    }
+
+    const rewriteUrl = new URL(`/${lng}${resolvedPath}`, req.url);
+    return NextResponse.rewrite(rewriteUrl);
+  }
 }
