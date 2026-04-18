@@ -1,0 +1,36 @@
+src/constants/blogPosts.ts
+  1c076bf197bb980a 406-519,916-1029
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.3.0",
+  "base_commit_sha": "f6a2d940518d393d300a591863f5c2b4e11cc5c2",
+  "prompts": {
+    "1c076bf197bb980a": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "9619933d-3407-4e84-9fa0-fdf22b5e53fb",
+        "model": "claude-opus-4-6"
+      },
+      "human_author": "micaela-balza",
+      "messages": [],
+      "total_additions": 228,
+      "total_deletions": 0,
+      "accepted_lines": 228,
+      "overriden_lines": 0
+    },
+    "73a9957be0d2a7dc": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "bf0c4b16-5b36-4f5e-a62e-9501c8618307",
+        "model": "claude-opus-4-6"
+      },
+      "human_author": "micaela-balza",
+      "messages": [],
+      "total_additions": 1297,
+      "total_deletions": 1,
+      "accepted_lines": 1296,
+      "overriden_lines": 0
+    }
+  }
+}
