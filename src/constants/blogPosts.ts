@@ -403,6 +403,120 @@ export const blogPostsES: BlogPost[] = [
       },
     ],
   },
+  {
+    id: "5",
+    slug: "infografia-cientifica-salud-pharma-biotecnologia-espana",
+    title:
+      "Infografía científica para salud, pharma y biotecnología en España",
+    excerpt:
+      "Si trabajas en marketing, comunicación o investigación dentro del sector salud, pharma o biotecnología, sabes lo difícil que puede ser simplificar información técnica sin perder rigor.\n\nLa infografía científica se ha convertido en una herramienta clave para transformar datos complejos en contenido visual claro, directo y fácil de entender.",
+    date: "2026-04-16",
+    thumbnail: "/static/images/blog/5.jpg",
+    headerImage: "/static/images/blog/5.jpg",
+    category: "Infografía Científica",
+    featured: false,
+    sections: [
+      {
+        type: "text",
+        title: "Por qué la infografía es clave en comunicación científica",
+        content: `<p>Los equipos de marketing y comunicación en salud enfrentan varios desafíos:</p>
+        <p>Exceso de información técnica.</p>
+        <p>Falta de tiempo del público objetivo.</p>
+        <p>Dificultad para explicar datos complejos.</p>
+        <p>La infografía médica y científica permite condensar información en un formato visual que facilita la comprensión inmediata.</p>`,
+      },
+      {
+        type: "unorderedList",
+        title:
+          "Cómo se utiliza la infografía científica en proyectos reales",
+        items: [
+          "Explicación del mecanismo de acción de un fármaco",
+          "Visualización de resultados de ensayos clínicos",
+          "Comunicación de procesos de diagnóstico o tratamiento",
+          "Presentación de líneas de investigación o desarrollo",
+          "Material para congresos y presentaciones científicas",
+        ],
+      },
+      {
+        type: "list",
+        title: "Beneficios de usar infografía en comunicación científica",
+        items: [
+          "<strong>Mejor comprensión del mensaje</strong><br>Reduce la complejidad del contenido.",
+          "<strong>Mayor retención de información</strong><br>Facilita recordar datos clave.",
+          "<strong>Versatilidad de uso</strong><br>Puede adaptarse a web, presentaciones o redes sociales.",
+          "<strong>Estandarización visual</strong><br>Unifica la comunicación de la marca o proyecto.",
+        ],
+      },
+      {
+        type: "text",
+        title:
+          "Tipos de infografías científicas para pharma y biotecnología",
+        content: `<p><strong>Infografías de mecanismos de acción</strong></p>
+        <p>Representan visualmente cómo actúa un tratamiento o compuesto a nivel biológico o molecular. Se utilizan especialmente en oncología, inmunoterapia, terapias avanzadas y biotecnología aplicada.</p>
+        <p><strong>Infografías para lanzamiento de producto</strong></p>
+        <p>Sintetizan información clave sobre nuevos productos o desarrollos científicos. Incluyen beneficios principales, datos clínicos relevantes, posicionamiento del producto y mensajes clave para comunicación comercial.</p>
+        <p><strong>Infografías corporativas y científicas</strong></p>
+        <p>Explican procesos internos, capacidades o resultados de investigación. Son habituales en empresas farmacéuticas, biotecnológicas y centros de investigación y desarrollo.</p>
+        <p><strong>Infografías animadas para comunicación digital</strong></p>
+        <p>La infografía puede evolucionar a formato animado para ampliar su impacto y versatilidad. Se utiliza en LinkedIn, presentaciones corporativas, webs institucionales, congresos y eventos científicos.</p>`,
+      },
+      {
+        type: "list",
+        title: "Cómo trabajamos en Tuki Studio",
+        items: [
+          "<strong>Brief inicial</strong><br>Definición de objetivo, público y mensaje.",
+          "<strong>Arquitectura de contenido</strong><br>Organización de la información científica.",
+          "<strong>Diseño visual</strong><br>Desarrollo de la pieza gráfica alineada a la marca.",
+          "<strong>Animación (opcional)</strong><br>Transformación en contenido dinámico.",
+          "<strong>Entrega final</strong><br>Formatos adaptados a distintos canales.",
+        ],
+      },
+      {
+        type: "tip",
+        title: "Consejo Tuki",
+        content:
+          "Antes de desarrollar una infografía científica, es importante definir con claridad qué información se quiere comunicar, a qué público está dirigida y en qué canales se va a utilizar. Esto permite diseñar una pieza más eficiente, clara y adaptable a diferentes usos dentro de la estrategia de comunicación.",
+      },
+      {
+        type: "video",
+        title: "Aquí puedes ver cómo una infografía cobra vida en 3D",
+        content:
+          "<p>Aquí puedes ver cómo la animación 3D nos permitió visualizar un proceso científico complejo de forma clara y comprensible.</p>",
+        videoUrl: "https://www.youtube.com/embed/CXZ1WobE_H8",
+        videoCaption: "Infografía científica animada – Tuki Studio",
+      },
+      {
+        type: "faq",
+        title: "Preguntas frecuentes sobre infografía científica",
+        questions: [
+          {
+            question:
+              "> ¿Qué diferencia hay entre una infografía y un video?",
+            answer:
+              "La infografía sintetiza información en un formato visual estructurado, mientras que el video permite desarrollar una narrativa más extensa y explicativa.",
+          },
+          {
+            question:
+              "> ¿Se pueden animar las infografías científicas?",
+            answer:
+              "Sí. Las infografías pueden convertirse en piezas animadas para redes sociales, presentaciones o campañas digitales.",
+          },
+          {
+            question:
+              "> ¿Para qué sirve una infografía en pharma o biotecnología?",
+            answer:
+              "Sirve para explicar procesos complejos, comunicar datos científicos y mejorar la comprensión entre equipos técnicos y no técnicos.",
+          },
+          {
+            question:
+              "> ¿Cuándo conviene usar infografía en lugar de otros formatos?",
+            answer:
+              "Cuando es necesario simplificar información compleja, estructurar datos o crear contenido reutilizable para diferentes canales.",
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 export const blogPostsEN: BlogPost[] = [
@@ -794,6 +908,120 @@ export const blogPostsEN: BlogPost[] = [
             question: "> Why is it useful for training sales or medical teams?",
             answer:
               "It facilitates understanding of treatments, biological mechanisms, and complex diagnostics, accelerating training and message consistency.",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: "5",
+    slug: "scientific-infographics-health-pharma-biotechnology-spain",
+    title:
+      "Scientific Infographics for Health, Pharma and Biotechnology in Spain",
+    excerpt:
+      "If you work in marketing, communications, or research within the health, pharma, or biotechnology sector, you know how difficult it can be to simplify technical information without losing accuracy.\n\nScientific infographics have become a key tool for transforming complex data into clear, direct, and easy-to-understand visual content.",
+    date: "2026-04-16",
+    thumbnail: "/static/images/blog/5.jpg",
+    headerImage: "/static/images/blog/5.jpg",
+    category: "Scientific Infographics",
+    featured: false,
+    sections: [
+      {
+        type: "text",
+        title: "Why infographics are key in scientific communication",
+        content: `<p>Marketing and communication teams in healthcare face several challenges:</p>
+        <p>Excess of technical information.</p>
+        <p>Limited time from the target audience.</p>
+        <p>Difficulty explaining complex data.</p>
+        <p>Medical and scientific infographics allow condensing information into a visual format that facilitates immediate comprehension.</p>`,
+      },
+      {
+        type: "unorderedList",
+        title:
+          "How scientific infographics are used in real projects",
+        items: [
+          "Explanation of a drug's mechanism of action",
+          "Visualization of clinical trial results",
+          "Communication of diagnostic or treatment processes",
+          "Presentation of research or development pipelines",
+          "Material for congresses and scientific presentations",
+        ],
+      },
+      {
+        type: "list",
+        title: "Benefits of using infographics in scientific communication",
+        items: [
+          "<strong>Better message comprehension</strong><br>Reduces content complexity.",
+          "<strong>Greater information retention</strong><br>Makes it easier to remember key data.",
+          "<strong>Versatility of use</strong><br>Can be adapted for web, presentations, or social media.",
+          "<strong>Visual standardization</strong><br>Unifies brand or project communication.",
+        ],
+      },
+      {
+        type: "text",
+        title:
+          "Types of scientific infographics for pharma and biotechnology",
+        content: `<p><strong>Mechanism of action infographics</strong></p>
+        <p>Visually represent how a treatment or compound acts at a biological or molecular level. They are especially used in oncology, immunotherapy, advanced therapies, and applied biotechnology.</p>
+        <p><strong>Product launch infographics</strong></p>
+        <p>Synthesize key information about new products or scientific developments. They include main benefits, relevant clinical data, product positioning, and key messages for commercial communication.</p>
+        <p><strong>Corporate and scientific infographics</strong></p>
+        <p>Explain internal processes, capabilities, or research results. They are common in pharmaceutical companies, biotechnology firms, and research and development centers.</p>
+        <p><strong>Animated infographics for digital communication</strong></p>
+        <p>Infographics can evolve into animated formats to expand their impact and versatility. They are used on LinkedIn, corporate presentations, institutional websites, congresses, and scientific events.</p>`,
+      },
+      {
+        type: "list",
+        title: "How we work at Tuki Studio",
+        items: [
+          "<strong>Initial brief</strong><br>Definition of objective, audience, and message.",
+          "<strong>Content architecture</strong><br>Organization of scientific information.",
+          "<strong>Visual design</strong><br>Development of the graphic piece aligned with the brand.",
+          "<strong>Animation (optional)</strong><br>Transformation into dynamic content.",
+          "<strong>Final delivery</strong><br>Formats adapted to different channels.",
+        ],
+      },
+      {
+        type: "tip",
+        title: "Tuki Tip",
+        content:
+          "Before developing a scientific infographic, it is important to clearly define what information you want to communicate, who the target audience is, and which channels it will be used in. This allows designing a more efficient, clear, and adaptable piece for different uses within the communication strategy.",
+      },
+      {
+        type: "video",
+        title: "See how an infographic comes to life in 3D",
+        content:
+          "<p>Here you can see how 3D animation allowed us to visualize a complex scientific process in a clear and comprehensible way.</p>",
+        videoUrl: "https://www.youtube.com/embed/CXZ1WobE_H8",
+        videoCaption: "Animated scientific infographic – Tuki Studio",
+      },
+      {
+        type: "faq",
+        title: "Frequently asked questions about scientific infographics",
+        questions: [
+          {
+            question:
+              "> What is the difference between an infographic and a video?",
+            answer:
+              "An infographic synthesizes information in a structured visual format, while a video allows developing a more extensive and explanatory narrative.",
+          },
+          {
+            question:
+              "> Can scientific infographics be animated?",
+            answer:
+              "Yes. Infographics can be turned into animated pieces for social media, presentations, or digital campaigns.",
+          },
+          {
+            question:
+              "> What is an infographic used for in pharma or biotechnology?",
+            answer:
+              "It is used to explain complex processes, communicate scientific data, and improve understanding between technical and non-technical teams.",
+          },
+          {
+            question:
+              "> When is it better to use an infographic instead of other formats?",
+            answer:
+              "When it is necessary to simplify complex information, structure data, or create reusable content for different channels.",
           },
         ],
       },
