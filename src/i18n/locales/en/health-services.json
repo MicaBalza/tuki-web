@@ -5,16 +5,12 @@
     "button": "Scroll and see our projects"
   },
   "services": {
-    "title": "Services",
-    "item1": "Immunological Drug: Vaccines",
-    "item2": "Product Launch",
-    "item3": "Tutorial: Medical Device",
-    "item4": "Promotional Campaign",
-    "item5": "Events & Conferences",
-    "item6": "LESS™",
-    "item7": "Fluid",
-    "item8": "Neuro Swan",
-    "item9": "Video Podcast"
+    "item1": "Institutional & Corporate Videos",
+    "item2": "Product Launch & Presentation",
+    "item3": "Tutorials & Training",
+    "item4": "Promotional Videos",
+    "item5": "Content for Events & Conferences",
+    "item6": "Podcast Video Production"
   },
   "grid": {
     "title": "This is what we do"
