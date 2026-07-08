@@ -12,14 +12,11 @@ export default function ServicesBoard({ lng }: ServicesBoardProps) {
 
   const serviceLinks = [
   { key: "item1", url: "institutional-corporate-videos" },
-  { key: "item2", url: "product-launch" },
-  { key: "item3", url: "tutorial-training" },
-  { key: "item4", url: "promotional-videos" },
-  { key: "item5", url: "events-conferences" },
-  { key: "item6", url: "less-tm" },
-  { key: "item7", url: "fluid" },
-  { key: "item8", url: "neuro-swan" },
-  { key: "item9", url: "video-podcast" },
+    { key: "item2", url: "product-launch" },
+    { key: "item3", url: "tutorial-training" },
+    { key: "item4", url: "promotional-videos" },
+    { key: "item5", url: "events-conferences" },
+    { key: "item6", url: "podcast-videos" },
   ];
 
   return (
