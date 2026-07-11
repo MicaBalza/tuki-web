@@ -6,15 +6,12 @@
   },
   "services": {
     "title": "Services",
-    "item1": "Immunological Drug: Vaccines",
-    "item2": "Product Launch",
-    "item3": "Tutorial: Medical Device",
-    "item4": "Promotional Campaign",
-    "item5": "Events & Conferences",
-    "item6": "LESS™",
-    "item7": "Fluid",
-    "item8": "Neuro Swan",
-    "item9": "Video Podcast"
+    "item1": "Institutional & Corporate Videos",
+    "item2": "Product Launch & Presentation",
+    "item3": "Tutorials & Training",
+    "item4": "Promotional Videos",
+    "item5": "Content for Events & Conferences",
+    "item6": "Podcast Video Production"
   },
   "grid": {
     "title": "This is what we do"
@@ -28,35 +25,29 @@
   },
   "button": "Discover all our services :)",
   "modal": {
-    "project1": {
-      "title": "Institutional and Corporate Videos",
-      "subtitle": "Eyam – Gemini",
-      "description": "This video for Eyam's Gemini product, developed with MyeVideo / Medevice Digital, was conceived with that purpose: to present the brand's innovation and commitment to quality.\n\nFrom concept to final delivery, at Tuki Studio we handled the creative direction, script development, and coordination of the entire production team."
+    "institutional": {
+      "title": "Institutional & Corporate Videos",
+      "description": "Selection of institutional videos created at MyeVideo / Medevice Digital. From concept to final delivery, at Tuki Studio we handle creative direction, script development and production team coordination."
     },
-    "project2": {
-      "title": "Product Presentation and Launch",
-      "subtitle": "Juna",
-      "description": "In this launch video we showcase the Juna product, the problem it solves, and the benefits it provides, accompanied by real-world use examples.\n\nAt Tuki Studio we led the creative approach, visual narrative, and comprehensive production, as part of the MyeVideo / Medevice Digital team."
+    "productLaunch": {
+      "title": "Product Launch & Presentation",
+      "description": "Launch clips designed to highlight the best of each product. At Tuki Studio we lead the creative approach, visual narrative and comprehensive production, as part of the MyeVideo / Medevice Digital team."
     },
-    "project3": {
-      "title": "Tutorials and Training",
-      "subtitle": "SinglePass",
-      "description": "Tutorial video that clearly and thoroughly explains how SinglePass works and its correct step-by-step application.\n\nAt Tuki Studio we developed the script, visual proposal, and supervised the entire creative process, during our time at MyeVideo / Medevice Digital."
+    "tutorials": {
+      "title": "Tutorials & Training",
+      "description": "Educational video clips designed to make the complex simple. Script development, visual proposal and supervision of the entire creative process, produced by Tuki Studio during our time at MyeVideo / Medevice Digital."
     },
-    "project4": {
-      "title": "Market Promotion and Differentiation",
-      "subtitle": "Delta ICE",
-      "description": "The objective of this video was to present Delta Development Teams' Delta ICE, highlighting the problem it solves and the features that differentiate it from its competitors.\n\nFrom Tuki Studio we took on the creative direction and general coordination, working alongside the MyeVideo / Medevice Digital team."
+    "promotional": {
+      "title": "Promotional Videos",
+      "description": "Promotional pieces created for campaigns, social media and presentations. From Tuki Studio we handle creative direction and general coordination, working as part of the MyeVideo / Medevice Digital team."
     },
-    "project5": {
-      "title": "Content for Events and Conferences",
-      "subtitle": "EBR – Wise System",
-      "description": "Promotional video designed to quickly showcase the main features of the EBR Wise System at conference booths, events, and presentations.\n\nAt Tuki Studio we developed the concept, visual script, and supervised production, within our work with MyeVideo / Medevice Digital."
+    "events": {
+      "title": "Content for Events & Conferences",
+      "description": "Content designed for big screens and key moments. Concept, visual script and production supervision by Tuki Studio, within our work at MyeVideo / Medevice Digital."
     },
-    "project6": {
-      "title": "Video Podcasts",
-      "subtitle": "Rick Froehlich - Video Podcast",
-      "description": "In this project we incorporated visual and graphic elements to accompany the client's audio.\n\nThrough dynamic subtitles and coherent branding integration, we achieved a more attractive format adaptable to social media.\n\nVisual design, editing, and audiovisual narrative by Tuki Studio, in collaboration with MyeVideo / Medevice Digital."
+    "podcast": {
+      "title": "Podcast Video Production",
+      "description": "Visual design, editing and narrative for video podcasts. Project developed by Tuki Studio as part of the MyeVideo / Medevice Digital team."
     }
   },
   "faq": {
