@@ -11,7 +11,7 @@ export default function ServicesBoard({ lng }: ServicesBoardProps) {
   const { t } = useTranslation(lng, "health-services");
 
   const serviceLinks = [
-  { key: "item1", url: "institutional-corporate-videos" },
+    { key: "item1", url: "institutional-corporate-videos" },
     { key: "item2", url: "product-launch" },
     { key: "item3", url: "tutorial-training" },
     { key: "item4", url: "promotional-videos" },
