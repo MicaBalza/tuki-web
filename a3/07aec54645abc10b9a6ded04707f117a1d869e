@@ -1,0 +1,19 @@
+src/i18n/locales/en/projects.json
+  s_8d6d0ea6a7d65e::t_5f62863be71bc6 32-46
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.12",
+  "base_commit_sha": "a307aec54645abc10b9a6ded04707f117a1d869e",
+  "prompts": {},
+  "sessions": {
+    "s_8d6d0ea6a7d65e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "9ab61eaf-bc3a-4850-be56-b4766913092a",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "micaela-balza <micaela.balza@waterplan.com>"
+    }
+  }
+}
