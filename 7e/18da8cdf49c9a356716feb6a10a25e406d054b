@@ -1,0 +1,25 @@
+src/i18n/locales/en/health-services.json
+  s_8d6d0ea6a7d65e::t_6e0e02489c5b6a 48-59
+src/components/PharmaceuticalSections/ServicesGrid/constants.ts
+  s_8d6d0ea6a7d65e::t_7f99e7f38424cd 12,14,17,20,25,28,30,33,36,41,44,46,49,52-63,65-71,73-76,81
+  s_8d6d0ea6a7d65e::t_08c9e5f945d3c7 72
+  s_8d6d0ea6a7d65e::t_41922e7245d1e3 64
+src/i18n/locales/es/health-services.json
+  s_8d6d0ea6a7d65e::t_1811f90995aeaf 48-59
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.12",
+  "base_commit_sha": "7e18da8cdf49c9a356716feb6a10a25e406d054b",
+  "prompts": {},
+  "sessions": {
+    "s_8d6d0ea6a7d65e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "9ab61eaf-bc3a-4850-be56-b4766913092a",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "micaela-balza <micaela.balza@waterplan.com>"
+    }
+  }
+}
